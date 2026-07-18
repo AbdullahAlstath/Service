@@ -1,2 +1,8 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Normalize text files to LF and stop CRLF-conversion warnings
+* text=auto eol=lf
+# Treat these as binary (never touch)
+*.png binary
+*.webp binary
+*.pdf binary
+*.ico binary
+*.zip binary

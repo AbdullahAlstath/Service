@@ -1,0 +1,23 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# Backups & work-in-progress snapshots
+*.bak
+*.bak_*
+index.html.bak*
+pdf-editor.html.bak*
+
+# Scratch / calibration renders (regenerated as needed)
+ef_*.png
+ef_*.pdf
+wad_*.png
+wad_*.pdf
+*_cells.png
+*_marks.pdf
+_mnt_sync_test.txt
+
+# Temp working dirs
+ppm_pages_tmp/
+test_marks/
