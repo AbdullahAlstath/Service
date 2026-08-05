@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Panther System|Panther Procedures|Service Procedures|Upgrading Software at Current Panther Instrument Locations" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Run Instrument Setup (Loading Firmware)</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/PantherServiceManualStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript" src="../../Skins/Default/Scripts/Topic Toolbar.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-device-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../Startup/01_Startup.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherServiceManual@hologic.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1><a name="kanchor969"></a><a name="kanchor970"></a>Run Instrument Setup (Loading Firmware)</h1>
+                                        <h2>Time Required</h2>
+                                        <ul>
+                                            <li>Up to 1 hour</li>
+                                        </ul>
+                                        <p>The following Instrument Setup for Firmware procedures on specific System SW&#160;can be found below:</p>
+                                        <ul>
+                                            <li>
+                                                <p><a href="#v5.x" class="MCXref xref">Instrument Setup for Firmware v5.3.2.7 and lower (System SW v5.3.3.0 and below)</a>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p><a href="#v6.x" class="MCXref xref">Instrument Setup for Firmware v6.2  (System SW v6.2)</a>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p><a href="#v7.x" class="MCXref xref">Instrument Setup for Firmware v7.1 and above (System SW v7 and above)</a>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>If any hardware upgrades are required (i.e. RTFs, etc), install the upgrades first, then run Firmware.</p>
+                                        <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>Screen shots are for reference <b>ONLY</b>. </p>
+                                        <h2><a name="v5.x"></a><a targets="Software v5" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Software v5"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Instrument Setup for Firmware v5.3.2.7 and lower (System SW v5.3.3.0 and below)</a>
+                                        </h2>
+                                        <ol style="display: none;" data-mc-target-name="Software v5">
+                                            <li value="1"><a targets="Firmware_Install_01" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firmware_Install_01"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />From the FSE&#160;Shield, Click on the <b>Instrument Setup</b> icon.</a>
+                                                <p class="image" style="display: none;" data-mc-target-name="Firmware_Install_01">
+                                                    <img src="../Resources/Images/Firmware/Firm_Ins_1.PNG" />
+                                                </p>
+                                                <p class="Indent"><a targets="Firmware_Install_02" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firmware_Install_02"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />A yellow-highlighted Active X warning may appear near the top of the page.</a>
+                                                </p>
+                                                <p class="image" style="display: none;" data-mc-target-name="Firmware_Install_02">
+                                                    <img src="../Resources/Images/Firmware/Firm_Ins_2.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="2"><a targets="Firmware_Install_03" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firmware_Install_03"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Right-click on the yellow-highlighted prompt.</a>
+                                                <p class="image" style="display: none;" data-mc-target-name="Firmware_Install_03">
+                                                    <img src="../Resources/Images/Firmware/Firm_Ins_3.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="3">Select the <b>Allow Blocked Content</b> option.<p class="Indent"><a targets="Firmware_Install_04" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firmware_Install_04"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />A security warning dialog box appears.</a></p><p class="Indent" style="display: none;" data-mc-target-name="Firmware_Install_04"><img src="../Resources/Images/Firmware/Firm_Ins_4.PNG" /></p></li>
+                                            <li value="4">Click <b>Yes</b>.<p class="Indent"><a targets="Firmware_Install_05" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firmware_Install_05"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />The main <i>Panther Instrument Setup</i> page appears.</a></p><p class="image" style="display: none;" data-mc-target-name="Firmware_Install_05"><img src="../Resources/Images/Firmware/Firm_Ins_5.PNG" /></p></li>
+                                            <li value="5"><a targets="Firmware_Install_06" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firmware_Install_06"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Click the <b>Select Ini File</b> button.</a>
+                                                <p class="image" style="display: none;" data-mc-target-name="Firmware_Install_06">
+                                                    <img src="../Resources/Images/Firmware/image004.jpg" />
+                                                </p>
+                                                <p class="Indent"><a targets="Firmware_Install_07" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firmware_Install_07"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />An <i>Open</i> dialog box appears.</a>
+                                                </p>
+                                                <p class="image" style="display: none;" data-mc-target-name="Firmware_Install_07">
+                                                    <img src="../Resources/Images/Firmware/Firmware_02.png" />
+                                                </p>
+                                            </li>
+                                            <li value="6">Select <b>Parameter.ini</b> and click <b>Open</b>.</li>
+                                            <li value="7"><a targets="Firmware_Install_08" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firmware_Install_08"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Click <b>Read all parameters Upgrade Firmware Set all normal parameters to default Overwrite parameter from Ini-File</b>.</a>
+                                                <p class="image" style="display: none;" data-mc-target-name="Firmware_Install_08">
+                                                    <img src="../Resources/Images/Firmware/Firmware_03.png" />
+                                                </p>
+                                            </li>
+                                            <li value="8">Click <b>Yes</b>.<p class="Indent"><a targets="Firmware_Install_09" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firmware_Install_09"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />A <i>Downloading Active</i> message appears. The firmware upgrade can take up to 1 hour.</a></p><p class="image" style="display: none;" data-mc-target-name="Firmware_Install_09"><img src="../Resources/Images/Firmware/Firmware_04.png" /></p><p class="Indent"><a targets="Firmware_Install_8a" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firmware_Install_8a"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />When installing new modules or PCBs the following message may appear.</a></p><p class="Indent" style="display: none;" data-mc-target-name="Firmware_Install_8a"><img src="../Resources/Images/Firmware/Firmware_09_408x232.png" style="width: 408;height: 232;" /></p><p class="Indent"><a targets="Firmware_Install_10" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firmware_Install_10"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />A <i>Firmware Upgrade</i> successfully Finished dialog box appears.</a></p><p class="image" style="display: none;" data-mc-target-name="Firmware_Install_10"><img src="../Resources/Images/Firmware/Firmware_05.png" /></p></li>
+                                            <li value="9">Click                          <b>OK</b>.</li>
+                                            <li value="10">If downloading firmware on a ATLAS (ROKA/IEH) System, please follow TB-01307 and update all incubator parameters per the TB.</li>
+                                            <li value="11">Make sure to update X-Axis parameters if changed prior to downloading firmware, TB-02024.</li>
+                                            <li value="12">If this is an installation, continue to <a href="PIP_Align/PIP_Alignment.htm">Pipettor Teaching</a>.</li>
+                                        </ol>
+                                        <h2><a name="v6.x"></a><a targets="Run IS FW v6.2" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Run IS FW v6.2"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Instrument Setup for Firmware v6.2  (System SW v6.2)</a>
+                                        </h2>
+                                        <div style="display: none;" data-mc-target-name="Run IS FW v6.2">
+                                            <p><a targets="v6.2 FW Panther" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="v6.2 FW Panther"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Run Instrument Setup (Panther)</a>
+                                            </p>
+                                            <ol style="display: none;" data-mc-target-name="v6.2 FW Panther">
+                                                <li value="1">From the FSE Shield, ensure no other programs are running.</li>
+                                                <li value="2">Click <b>Instrument Setup</b> on the Panther Fusion shield.</li>
+                                                <li value="3">Click <b>Select XML File</b>.</li>
+                                                <li value="4">In the Explorer window, select the appropriate firmware XML file.<br />Refer to the applicable Technical Bulletin (TB) for your installation.</li>
+                                                <li value="5">Click <b>Full Instrument Setup</b>. <br />The script will automatically update firmware and parameters on Panther modules. <br />This process will take 15–50 minutes.<br /><p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>A prompt may appear during this process stating that a new COP PCB may have been installed and asking whether or not to continue. Select <b>Yes</b> if this message appears. This should have no effect on the firmware upload if new modules have been installed.</p></li>
+                                                <li value="6">Click <b>OK</b> when the script confirms that firmware has been uploaded successfully. <br />Verify that there are no issues in the instrument setup run report that appears and then close the report. <br />If firmware is not uploaded successfully, suspend this procedure and troubleshoot.</li>
+                                            </ol>
+                                            <p><a targets="v6.2 FW Fusion" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="v6.2 FW Fusion"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Run Instrument&#160;Setup (Fusion)</a>
+                                            </p>
+                                            <ol style="display: none;" data-mc-target-name="v6.2 FW Fusion">
+                                                <li value="1">With the Instrument Setup program still open, click <b>Select XML File</b>.</li>
+                                                <li value="2">In the Explorer window, select the appropriate firmware XML file.<br />Refer to the applicable Technical Bulletin (TB) for your installation.</li>
+                                                <li value="3">Click <b>Full Instrument Setup</b>. The script will automatically update firmware and parameters on Fusion modules. <br />This process can take 15-30 minutes.<br /><p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>A prompt may appear during this process stating that a new COP PCB may have been installed and asking whether or not to continue. <br />Select <b>Yes</b> if this message appears. This should have no effect on the firmware upload if new modules have been installed.</p></li>
+                                                <li value="4">Click <b>OK</b> when the script confirms that firmware has been uploaded successfully. <br />Verify that there are no issues in the instrument setup run report that appears and then close the report. <br />If firmware is not uploaded successfully, suspend this procedure and troubleshoot.</li>
+                                                <li value="5">If downloading firmware on a ATLAS (ROKA/IEH) System, please follow TB-01307 and update all incubator parameters per the TB.</li>
+                                                <li value="6">Make sure to update X-Axis parameters if changed prior to downloading firmware, TB-02024.</li>
+                                                <li value="7">If this is an installation, continue to <a href="PIP_Align/PIP_Alignment.htm">Pipettor Teaching</a>.</li>
+                                            </ol>
+                                        </div>
+                                        <h2><a name="v7.x"></a><a targets="Software v7" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Software v7"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Instrument Setup for Firmware v7.1 and above (System SW v7 and above)</a>
+                                        </h2>
+                                        <ol style="display: none;" data-mc-target-name="Software v7">
+                                            <li value="1">From the FSE Shield Click on <b>Instrument Setup</b>.</li>
+                                            <li value="2"><a targets="Splash_Screen_01;Splash_Screen_02" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Splash_Screen_01;Splash_Screen_02"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />The following Instrument Setup Splash Screen will appear.</a>
+                                                <br />
+                                                <p>
+                                                    <img src="../Resources/Images/Firmware/IS Splash Screen_callout_573x481.png" alt="" title="" style="width: 573;height: 481;display: none;" data-mc-target-name="Splash_Screen_01" />
+                                                    <br />
+                                                    <br />
+                                                    <img src="../Resources/Images/Firmware/IS_Splash_Screen_02_callout_576x410.png" alt="" title="" style="width: 576;height: 410;display: none;" data-mc-target-name="Splash_Screen_02" />
+                                                </p>
+                                                <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span><span class="bold">Screenshots are for reference only</span>.</p>
+                                                <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span><a targets="Dip_Switches;Select PandF" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dip_Switches;Select PandF"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />If Panther Fusion, ensure all 8 Sidecar COP's  dip switches are facing down.</a>
+                                                    <br />
+                                                    <img src="../Resources/Images/COP/COP_Replace/COP-RR-04_391x388.png" style="width: 391;height: 388;display: none;" data-mc-target-name="Dip_Switches" />
+                                                    <br />
+                                                </p>
+                                            </li>
+                                            <li value="3">Select the options that apply in each of the following sections.<ol style="list-style-type: lower-alpha;"><li value="1"><a targets="Splash_Screen_03" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Splash_Screen_03"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Instrument Department</a><ol style="list-style-type: lower-roman;"><li value="1">If the instrument is Panther, select <span class="bold">only</span> Panther.</li><li value="2">If the instrument is a Panther Fusion, select both Panther and Fusion.<br /></li></ol></li><p><img src="../Resources/Images/Firmware/IS_Splash_Screen_04.png" alt="" title="" style="display: none;" data-mc-target-name="Splash_Screen_03" /></p><li value="2">Optional Modules<ol style="list-style-type: lower-roman;"><li value="1"><a targets="Splash_Screen_04" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Splash_Screen_04"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select the type of Pipettor installed for both the Panther and the Fusion (if applicable)</a>.<br /><p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span><a targets="APPBLDC_01;APPBLDC_02" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="APPBLDC_01;APPBLDC_02"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />APP&#160;= Air Pipettor Pump, BLDC = Brushless DC Pipettor.</a><br /><img src="../Resources/Images/Pipettor/APP_172x245.png" style="width: 172;height: 245;display: none;" data-mc-target-name="APPBLDC_01" /> <img src="../Resources/Images/Pipettor/BLDC_244x246.png" style="width: 244;height: 246;display: none;" data-mc-target-name="APPBLDC_02" /><br /></p><p><img src="../Resources/Images/Firmware/IS_Splash_Screen_05.png" alt="" title="" style="display: none;" data-mc-target-name="Splash_Screen_04" /></p></li><li value="2"><a targets="Splash_Screen_05" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Splash_Screen_05"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select the RTFs installed. RTF1, RTF3, and RTF5 are used for HIV, HCV, and HBV. RTF2 is used for BV, CV/TV, and SARS/FLU Multiplex.</a><br /><img src="../Resources/Images/Firmware/IS_Splash_Screen_06.png" alt="" title="" style="display: none;" data-mc-target-name="Splash_Screen_05" /></li><li value="3"><a targets="Splash_Screen_06" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Splash_Screen_06"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select all applicable Panther Plus Upgrades</a>.<br /><img src="../Resources/Images/Firmware/IS_Splash_Screen_07.png" alt="" title="" style="display: none;" data-mc-target-name="Splash_Screen_06" /></li></ol></li><li value="3">Developer Options (Fusion only)</li><p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>This section will default to unchecked, but the options will automatically be selected when Fusion is selected, or if Fusion and Continuous Access Waste and UF&#160;are selected earlier in the procedure.</p><ol style="list-style-type: lower-roman;"><li value="1">	When Fusion is selected, the required options will be automatically selected.  Verify the correct settings by checking Developer Options.</li><li value="2"><a targets="Splash_Screen_07" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Splash_Screen_07"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />For a standard Panther Fusion, verify MRSA&#160;Lysing HW and </a><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">TCR<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Target capture reagent—An assay-specific reagent added as part of specimen pipetting.</span></a><a targets="Splash_Screen_07" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_" data-mc-targets="Splash_Screen_07">&#160;Mixer 21 Positions are checked</a>.<br /><img src="../Resources/Images/Firmware/IS_Splash_Screen_08.png" style="display: none;" data-mc-target-name="Splash_Screen_07" /></li><li value="3"><p><a targets="Splash_Screen_08" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Splash_Screen_08"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />For Panther Fusion Plus, verify Rotary: </a><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">MTU<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Multi-tube unit—Container used to process tests in the instrument. An MTU contains five separate reaction tubes. The MTU is moved through the instrument by the linear distributor and includes five tiplets for pipettiing to be used in the mag wash station.</span></a><a targets="Splash_Screen_08" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_" data-mc-targets="Splash_Screen_08"> Parking Slots is  checked</a>.<br /><img src="../Resources/Images/Firmware/IS_Splash_Screen_09.png" style="display: none;" data-mc-target-name="Splash_Screen_08" /></p></li></ol></ol></li>
+                                            <li value="4"><a targets="Splash_Screen_Start_01" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Splash_Screen_Start_01"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />When all settings are set, select Start.</a>
+                                                <br />
+                                                <p>
+                                                    <img src="../Resources/Images/Firmware/IS_Splash_Screen_03.png" alt="" title="" style="display: none;" data-mc-target-name="Splash_Screen_Start_01" />
+                                                </p>
+                                            </li>
+                                            <li value="5"><a targets="Firmware_Install_12" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firmware_Install_12"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />From the new screen click the Select XML&#160;File button.</a>
+                                                <p style="display: none;" data-mc-target-name="Firmware_Install_12">
+                                                    <img src="../Resources/Images/Firmware/Click Select XML File_650x509.png" style="width: 650;height: 509;" />
+                                                </p>
+                                            </li>
+                                            <li style="background-color: #ffffff;" value="6"><a targets="both files" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="both files"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />If a Panther Fusion, from the Pop Up Window, ensure both xml files are visible.<br />If both xml files are not visible, STOP and EXIT. <br />Launch instrument setup again and re-configure the Splash Screen correctly.</a>
+                                                <p>
+                                                    <img src="../Resources/Images/Firmware/Panther_Fusion_XML_461x370.png" style="width: 461;height: 370;display: none;" data-mc-target-name="both files" />
+                                                </p>
+                                                <br />
+                                            </li>
+                                            <li value="7"><a targets="P-ONLY" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="P-ONLY"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />For Panther ONLY&#160;Systems select IS_Config_Panther and proceed to Step 9.
+</a>
+                                                <p>
+                                                    <img src="../Resources/Images/Firmware/Select xml file and click open_464x448.png" style="width: 464;height: 448;display: none;" data-mc-target-name="P-ONLY" />
+                                                </p>
+                                            </li>
+                                            <li value="8">For PantherFusion Systems:<ol style="list-style-type: lower-alpha;"><li style="background-color: #ffffff;" value="1">First Select IS_Config_Panther </li><li style="background-color: #ffffff;" value="2">	Successful run Instrument Setup, by completing Step 8-10 below</li><li style="background-color: #ffffff;" value="3">Return to Step 4 and  Select IS_Config_Sidecar.xml.</li><li style="background-color: #ffffff;" value="4">Proceed to Step 9 and complete the rest of this procedure.
+</li></ol></li>
+                                            <li value="9"><a targets="Firmware_Install_18" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firmware_Install_18"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Click on Full Instrument Setup.</a>
+                                                <p style="display: none;" data-mc-target-name="Firmware_Install_18">
+                                                    <img src="../Resources/Images/Firmware/S5_409x492.png" style="width: 409;height: 492;" />
+                                                </p>
+                                            </li>
+                                            <li style="background-color: #ffffff;" value="10"><a targets="Firmware_Install_19" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firmware_Install_19"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />The Firmware Update will begin.</a>
+                                                <div style="display: none;" data-mc-target-name="Firmware_Install_19">
+                                                    <p>
+                                                        <img src="../Resources/Images/Firmware/S6a_435x618.png" style="width: 435;height: 618;" />
+                                                    </p>
+                                                    <p>
+                                                        <img src="../Resources/Images/Firmware/S6b_441x628.png" style="width: 441;height: 628;" />
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li style="background-color: #ffffff;" value="11"><a targets="Firmware_Install_8b" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firmware_Install_8b"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />When installing new modules or PCBs the following message may appear. Select OK&#160;to continue.</a>
+                                                <p class="Indent" style="display: none;" data-mc-target-name="Firmware_Install_8b">
+                                                    <img src="../Resources/Images/Firmware/Firmware_09_408x232.png" style="width: 408;height: 232;" />
+                                                </p>
+                                            </li>
+                                            <li style="background-color: #ffffff;" value="12"><a targets="Firmware_Install_20" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firmware_Install_20"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Once finished, click <b>OK</b>, then Click <b>STOP</b> and <b>CLOSE</b>.</a>
+                                                <p style="background-color: #ffffff; display: none;" data-mc-target-name="Firmware_Install_20">
+                                                    <img src="../Resources/Images/Firmware/S7_465x723.png" style="width: 465;height: 723;" />
+                                                </p>
+                                            </li>
+                                            <li value="13">If downloading firmware on a ATLAS (ROKA/IEH) System, please follow TB-01307 and update all incubator parameters per the TB.</li>
+                                            <li value="14">Make sure to update X-Axis parameters if changed prior to downloading firmware, TB-02024.</li>
+                                            <li style="background-color: #ffffff;" value="15">For an installation, continue to <a href="../Install/Install_Panels.htm">Panels and Canopy Installation</a>.</li>
+                                        </ol>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../Resources/Images/Toolbar/New/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

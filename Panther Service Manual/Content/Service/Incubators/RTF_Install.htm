@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="Panther System|Panther Module Information|Mid Bay Modules|Incubators Module|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Real-Time Fluorometer (RTF) Installation</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/PantherServiceManualStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/Tools_Table.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript" src="../../../Skins/Default/Scripts/Topic Toolbar.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-device-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Startup/01_Startup.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherServiceManual@hologic.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1><a name="kanchor306"></a>Real-Time Fluorometer (RTF) Installation</h1>
+                                        <h2>Purpose</h2>
+                                        <p>This procedure provides instructions to install Real-Time Fluorometers (RTFs) on Amplification Incubators. RTFs allow systems to run real-time assays such as BV, CV/TV, HSV, HIV-1, HBV, and HCV.</p>
+                                        <h2>Parts and Materials Required</h2>
+                                        <ul>
+                                            <li><a href="../../Safety/PPE.htm">Proper PPE</a>
+                                            </li>
+                                            <li><a href="../../Tools/FSE_Tools.htm">FSE&#160;Tool Kit</a>
+                                            </li>
+                                            <li>(12) AMP INC Foam Plastic Rivet</li>
+                                            <li>(8) M3x6 SHC screws (included with each Fluorometer Assembly)</li>
+                                            <li>(1) Panther Fluorometer Assembly, 677 <b>(Required for BV, CV/TV <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">Assay<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Procedures required to prepare and perform a specific test. In the context of this document, assay refers exclusively to a Hologic test, such as Aptima Combo or Ultrio.</span></a>)</b></li>
+                                            <li>Panther Fluorometer Installation Kit</li>
+                                            <ul style="list-style-type: circle;">
+                                                <li>(1) Panther Fluorometer Assembly, FAM</li>
+                                                <li>(1) Panther Fluorometer Assembly, HEX</li>
+                                                <li>(1) Panther Fluorometer Assembly, ROX</li>
+                                                <li>(1) Cable, Panther Fluorometer</li>
+                                            </ul>
+                                            <li>&#160;(1) RTF Alignment Tool</li>
+                                        </ul>
+                                        <table>
+                                            <col style="width: 38px;" />
+                                            <col style="width: 40px;" />
+                                            <col style="width: 587px;" />
+                                            <tbody>
+                                                <tr>
+                                                    <td>&#160;</td>
+                                                    <td style="background-color: #ffffff;">
+                                                        <img src="../../Resources/Images/note04.gif" />
+                                                    </td>
+                                                    <td class="Note"><b>Note—</b>The RTFs can be ordered as kit or individually.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h2>Time Required</h2>
+                                        <ul>
+                                            <li>60 minutes including Alignment Procedure</li>
+                                        </ul>
+                                        <h2>Procedure </h2>
+                                        <h3><a targets="RTF&#160;Hardware Installation" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="RTF&#160;Hardware Installation"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Part A: RTF&#160;Hardware Installation</a>
+                                        </h3>
+                                        <table>
+                                            <col style="width: 40px;" />
+                                            <col style="width: 587px;" />
+                                            <tbody>
+                                                <tr>
+                                                    <td style="background-color: #ffffff;">
+                                                        <img src="../../Resources/Images/Icons/Warning_38x33.png" style="width: 38;height: 33;" />
+                                                    </td>
+                                                    <td class="Warning">WARNING—The AMP incubator contains amplicon and is a post AMP (dirty) module. Ensure safe lab practices are observed during this procedure and always wear PPE. Change gloves often, bleach tools after interaction with the Amp Incubator and always bleach tools after every service.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table>
+                                            <col style="width: 40px;">
+                                            </col>
+                                            <col style="width: 587px;">
+                                            </col>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="background-color: #ffffff;">
+                                                        <img src="../../Resources/Images/Icons/Warning_38x33.png" style="width: 38;height: 33;" />
+                                                    </td>
+                                                    <td class="Warning">WARNING—MTUs may be present in module. <a href="../Unld_MTU/Unloading_MTUs_List.htm"><br />Remove all MTUs</a> to avoid contamination.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <ol style="display: none;" data-mc-target-name="RTF&#160;Hardware Installation">
+                                            <li value="1">Power on the Panther System and PC.</li>
+                                            <li value="2">Start Panther Main and allow the system to initialize.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note—</b>If initialization fails and MTUs are not cleared by the system, refer to <a href="../Unld_MTU/Unloading_MTUs_List.htm" class="MCXref xref">Unloading Undeactivated MTUs from the Panther</a></td></tr></tbody></table></li>
+                                            <li value="3">Check to make sure all MTUs are cleared from the system.</li>
+                                            <li value="4">Shutdown Panther Main, and power down the Panther System and PC.</li>
+                                            <li value="5">Prepare the work surface:<ul><li>Clean a flat and stable laboratory work surface with 2.5%-3.5% sodium hypochlorite solution.</li><li>Wait at least 1 minute and then clean the surface with DI&#160;water. Do not allow the sodium hypochlorite solution to dry on the work surface.</li></ul></li>
+                                            <li value="6">Open the Mid-Bay Drawer</li>
+                                            <li value="7"><a href="../../Replace/Incubator/Inc_Module_Replace.htm">Remove the Amplification Incubator</a>.</li>
+                                            <li value="8"><a targets="rtf_01" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_01"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Place the Incubator module upside down on clean bench pads. The three RTF labels shown here on the Incubator represent the installation location of the three individual RTFs.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>The <b>HEX RTF</b> location is closest to the PCB and the <b>FAM RTF</b> location is closest to the door.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p>
+                                                    <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-01.PNG" class="Large_img" style="display: none;" data-mc-target-name="rtf_01" />
+                                                </p>
+                                            </li>
+                                            <li value="9"><a targets="rtf_02" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_02"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remove the three or four foam inserts from the locations indicated in Step 8. For each location, visually verify there are two dowel pins, and the pins and mating surface are clean and clear of debris.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>Save all four foam inserts onsite in case they are needed for future use. Also, refer to <a href="Inc_Amp_Foam.htm" class="MCXref xref">Securing Amplification Incubator Foam Inserts</a> and verify the remaining foam inserts are secured with plastic rivets.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p>
+                                                    <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-02.PNG" class="Large_img" style="display: none;" data-mc-target-name="rtf_02" />
+                                                </p>
+                                            </li>
+                                            <li value="10">Remove each RTF from its packaging and <a targets="rtf_03" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_03"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />verify the DIP Switch settings</a> on each RTF matches the settings in the table.<p><img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-03.PNG" class="Large_img" style="display: none;" data-mc-target-name="rtf_03" /></p></li>
+                                            <li value="11"><a targets="rtf_14;rtf_04" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_14;rtf_04"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Match the Serial number of each RTF to its packaging, and document the serial number in the Service Notes.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>The table below is useful for RTF identification using the OTMI number:</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table class="TableStyle_Tools_Table" style="mc-table-style: url('../../Resources/TableStyles/Tools_Table.css');margin-left: 0;margin-right: auto;display: none;" cellspacing="0" data-mc-target-name="rtf_14">
+                                                    <col style="width: 77px;" />
+                                                    <col style="width: 118px;" />
+                                                    <col style="width: 171px;" />
+                                                    <col style="width: 106px;" />
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="TableStyle_Tools_Table_Head_0_0_RowSep_ColEnd" style="text-align: center;" colspan="4">&#160; RTF Identification</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="TableStyle_Tools_Table_Body_0_0_RowSep_ColSep" style="text-align: center;">FAM</td>
+                                                            <td class="TableStyle_Tools_Table_Body_0_0_RowSep_ColSep" style="text-align: center;">(RTF1)</td>
+                                                            <td class="TableStyle_Tools_Table_Body_0_0_RowSep_ColSep" style="text-align: center;">OTMI-xxxx-BL_x</td>
+                                                            <td class="TableStyle_Tools_Table_Body_0_0_RowSep_ColEnd" style="text-align: center;">(blue)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_Tools_Table_Body_1_0_RowSep_ColSep" style="text-align: center;">677</td>
+                                                            <td class="TableStyle_Tools_Table_Body_1_0_RowSep_ColSep" style="text-align: center;">(RTF2)</td>
+                                                            <td class="TableStyle_Tools_Table_Body_1_0_RowSep_ColSep" style="text-align: center;">OTMI-xxxx-RD_x</td>
+                                                            <td class="TableStyle_Tools_Table_Body_1_0_RowSep_ColEnd" style="text-align: center;">(red)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_Tools_Table_Body_0_0_RowSep_ColSep" style="text-align: center;">HEX</td>
+                                                            <td class="TableStyle_Tools_Table_Body_0_0_RowSep_ColSep" style="text-align: center;">(RTF3)</td>
+                                                            <td class="TableStyle_Tools_Table_Body_0_0_RowSep_ColSep" style="text-align: center;">OTMI-xxxx-GN_x</td>
+                                                            <td class="TableStyle_Tools_Table_Body_0_0_RowSep_ColEnd" style="text-align: center;">(green)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="TableStyle_Tools_Table_Body_1_0_RowEnd_ColSep" style="text-align: center;">ROX</td>
+                                                            <td class="TableStyle_Tools_Table_Body_1_0_RowEnd_ColSep" style="text-align: center;">(RTF5)</td>
+                                                            <td class="TableStyle_Tools_Table_Body_1_0_RowEnd_ColSep" style="text-align: center;">OTMI-xxxx-<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text" style="text-align: center;">AM<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Analytical Module</span></a>_x</td>
+                                                            <td class="TableStyle_Tools_Table_Body_1_0_RowEnd_ColEnd" style="text-align: center;">(amber)</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p>
+                                                    <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-04.PNG" class="Large_img" style="display: none;" data-mc-target-name="rtf_04" />
+                                                </p>
+                                            </li>
+                                            <li value="12"><a targets="rtf_05" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_05"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Label each RTF with a Sharpie on the metal side as shown, with the specific RTF name, installer’s initials, and date.</a>
+                                                <p>
+                                                    <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-05.PNG" class="Large_img" style="display: none;" data-mc-target-name="rtf_05" />
+                                                </p>
+                                            </li>
+                                            <li value="13"><a targets="rtf_32" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_32"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Check the lenses of all RTFs for any debris or dust. If dirt or dust is found, clean the lens with a lens cloth only.</a>
+                                                <br />
+                                                <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-24.PNG" style="display: none;" data-mc-target-name="rtf_32" />
+                                            </li>
+                                            <li value="14">Verify the dowel pins are clean and there is no debris on the mating surface. </li>
+                                            <li value="15"><a targets="rtf_07;rtf_06" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_07;rtf_06"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Secure each individual RTF to the incubator using two M3x6 screws as shown.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td style="background-color: #afeeee; padding: 0.75em;">
+                                                                <p><b>Note—</b>The RTFs should require minimal effort to seat and should sit flush on the mounting surface. </p>
+                                                                <p>Forcing the RTFs into position can damage the PCB. RTFs that are not seated flush may have inaccurate channel readings.</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p>&#160;</p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-07.PNG" class="Large_img" style="display: none;" data-mc-target-name="rtf_07" />
+                                                </p>
+                                            </li>
+                                            <li value="16"><a targets="rtf_08" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_08"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Verify the RTFs are installed in the correct location as shown.</a>
+                                                <p>
+                                                    <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-08.PNG" class="Large_img" style="display: none;" data-mc-target-name="rtf_08" />
+                                                </p>
+                                            </li>
+                                            <li value="17"><a targets="rtf_09" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_09"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Connect the RTF’s using the RTF cable.</a>
+                                                <p>
+                                                    <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-09.PNG" style="display: none;" data-mc-target-name="rtf_09" />
+                                                </p>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>If the orientation is not correct on the cable, and the FSE forces the connector, the solder on the board can break and turn the RTF dead on arrival.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </li>
+                                            <li value="18"><a targets="rtf_10" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_10"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />First connect the RTF cable to the Incubator PCB.</a>
+                                                <p class="Indent" style="display: none;" data-mc-target-name="rtf_10">
+                                                    <img src="../../Resources/Images/RTFs/RTF-installation-10.png" />
+                                                </p>
+                                            </li>
+                                            <li value="19"><a targets="rtf_11" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_11"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Connect the HEX RTF next with the first available connector.</a>
+                                                <p class="Indent" style="display: none;" data-mc-target-name="rtf_11">
+                                                    <img src="../../Resources/Images/RTFs/RTF-installation-11.png" />
+                                                </p>
+                                            </li>
+                                            <li value="20">Connect the <b>677 RTF</b> to the next available connector <b>(Required for BV, CV/TV Assay)</b>.<ol style="list-style-type: lower-alpha;"><li value="1">If <b>NOT</b>&#160;installing the <b>677 RTF</b>, skip one connector.</li></ol></li>
+                                            <li value="21">Connect the <b>FAM&#160;RTF</b> to the next available connector.</li>
+                                            <li value="22">Skip one connector.</li>
+                                            <li value="23">Connect the <b>ROX RTF</b> to the next available connector.</li>
+                                            <li value="24"><a targets="rtf_12" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_12"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Route the cables as shown below.</a>
+                                                <p class="Indent">
+                                                    <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-12.PNG" class="Large_img" style="display: none;" data-mc-target-name="rtf_12" />
+                                                </p>
+                                            </li>
+                                            <li value="25">Carefully turn the incubator over right side up.</li>
+                                            <li value="26"><a targets="rtf_13" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_13"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Open the Incubator door, inspect and ensure each magnet inside the AMP Incubator is flush with the magnet holder as shown. Adjust the magnets if necessary by re-positioning the magnet with a gloved finger, no tools required.</a>
+                                                <p>
+                                                    <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-13.PNG" class="Large_img" style="display: none;" data-mc-target-name="rtf_13" />
+                                                </p>
+                                            </li>
+                                            <li value="27"><a href="../../Replace/Incubator/Inc_Module_Replace.htm">Re-install the Amplification Incubator</a>.</li>
+                                            <li value="28">The RTF hardware installation is complete.</li>
+                                        </ol>
+                                        <h3><a targets="RTF Software Configuration" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="RTF Software Configuration"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Part B: RTF Software Configuration</a>
+                                        </h3>
+                                        <ol style="display: none;" data-mc-target-name="RTF Software Configuration">
+                                            <li value="1">Power up the Panther System and PC, and login to the FSE Shield.</li>
+                                            <li value="2">Start Service Software.</li>
+                                            <li value="3">On the <b>Incubator tab</b>, click on <b>Parameter tab</b>.</li>
+                                            <li value="4">Select <b>Amp Incubator ID 0x22</b> in the Device dropdown menu.</li>
+                                            <li value="5">Change the Authorization Code field to “1”</li>
+                                            <li value="6"><a targets="rtf_15" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_15"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Click on the Set button.</a>
+                                                <p style="display: none;" data-mc-target-name="rtf_15">
+                                                    <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-14a.png" class="Large_img" />
+                                                </p>
+                                            </li>
+                                            <li value="7">Click on <b>RTF</b>.</li>
+                                            <li value="8">Under <b>RTF Cfg</b>, check the boxes next to <b>1</b>, <b>3</b>, and <b>5</b>.<ol style="list-style-type: lower-alpha;"><li value="1">Check the box next to <b>2</b> if installing <b>677 RTF</b> <b>(Required for BV, CV/TV Assay)</b>.</li></ol></li>
+                                            <li value="9"><a targets="rtf_16" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_16"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Click the Set button.</a>
+                                                <p style="display: none;" data-mc-target-name="rtf_16">
+                                                    <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-15a.png" class="Large_img" />
+                                                </p>
+                                            </li>
+                                            <li value="10">	A Service Software window will display “This operation needs authorization to write teach parameter.”</li>
+                                            <li value="11">Click <b>OK</b>.</li>
+                                            <li style="font-weight: normal;" value="12">Another Service Software window will then display “Write all Parameters to NVM?”</li>
+                                            <li style="font-weight: normal;" value="13">Click <b>OK</b>.</li>
+                                            <li value="14">Click on <b>Parameter</b> and verify <b>Amp Incubator ID 0x22</b> in the Device dropdown menu is still selected.</li>
+                                            <li value="15">Enter <b>154</b> in the Parameter field. </li>
+                                            <li value="16">Click the <b>Read</b> button.</li>
+                                            <li value="17"><a targets="rtf_17" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_17"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Verify the New Value is “21”.</a>
+                                                <p style="display: none;" data-mc-target-name="rtf_17">
+                                                    <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-16a.png" />
+                                                </p>
+                                                <ol style="list-style-type: lower-alpha;">
+                                                    <li value="1"><a targets="rtf_18" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_18"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />If 677 RTF (required for BV, CV/TV Assay) is installed the new value will be “23”.</a>
+                                                        <p style="display: none;" data-mc-target-name="rtf_18">
+                                                            <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-16b.PNG" class="Large_img" />
+                                                        </p>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                            <li value="18">Close Panther Service Software.</li>
+                                            <li value="19">Power cycle the Panther System.</li>
+                                            <li value="20">Start Service Software.</li>
+                                            <li value="21">Click on the <b>Incubator tab</b>. </li>
+                                            <li value="22">Select the <b>AMP incubator</b> from the dropdown box, as shown below.</li>
+                                            <li value="23"><a targets="rtf_19" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_19"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Click Initialize.</a>
+                                                <p style="display: none;" data-mc-target-name="rtf_19">
+                                                    <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-17a.png" class="Large_img" />
+                                                </p>
+                                            </li>
+                                            <li value="24">Go to the <b>Parameter tab</b>.</li>
+                                            <li value="25">Select <b>Amp Incubator ID 0x22</b> in the <b>Device</b> dropdown menu.</li>
+                                            <li value="26">Input “<b>154</b>” into the <b>Parameter</b> field.</li>
+                                            <li style="font-weight: normal;" value="27"><a targets="rtf_21;rtf_20" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_21;rtf_20"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Click on the Read button and ensure the parameter value is still “21”.</a>
+                                                <ol style="list-style-type: lower-alpha; display: none;" data-mc-target-name="rtf_21">
+                                                    <li style="font-weight: normal;" value="1">This value will be “<b>23</b>” if <b>677 RTF</b> is installed <b>(Required for BV, CV/TV Assay)</b>.</li>
+                                                </ol>
+                                                <p style="display: none;" data-mc-target-name="rtf_20">
+                                                    <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-17b.PNG" class="Large_img" />
+                                                </p>
+                                            </li>
+                                            <li style="font-weight: normal;" value="28"><a targets="rtf_23;rtf_22" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_23;rtf_22"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Click on the RTF tab and ensure that the 1, 3, and 5 are still checked in the RTF Cfg. section.</a>
+                                                <ol style="list-style-type: lower-alpha; display: none;" data-mc-target-name="rtf_23">
+                                                    <li style="font-weight: normal;" value="1">Make sure the box next to <b>2</b> is checked if <b>677 RTF</b> is installed <b>(Required for BV, CV/TV Assay)</b>.</li>
+                                                </ol>
+                                                <p style="display: none;" data-mc-target-name="rtf_22">
+                                                    <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-18a.png" />
+                                                </p>
+                                            </li>
+                                            <li style="font-weight: normal;" value="29">Verify nominal channel values for each RTF.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note—</b>The Amp Incubator temperature should be stabilized, and RTFs warmed up to get accurate channel values. This usually takes <b>20-30 minutes after initialization.</b>
+(Temp. should <b>be 42.4 – 43.0°C</b>)
+</td></tr></tbody></table><ol style="list-style-type: lower-alpha;"><li style="font-weight: normal;" value="1"><a targets="rtf_24" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_24"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select the "1" in the Single RTF No. drop-down. Click on the Start button under Measure, no Move. Verify the values in the Result field are in range.</a><p style="font-weight: normal; display: none;" data-mc-target-name="rtf_24"><img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-19a.png" /></p></li><li style="font-weight: normal;" value="2"><b>Required For BV, CV/TV Assay:</b> Select the "<b>2</b>" in the <b>Single RTF No.</b> drop-down. Click on the <b>Start</b> button under <b>Measure, no Move</b>. Verify the values in the <b>Result</b> field are in range.</li><li style="font-weight: normal;" value="3">Select the "<b>3</b>" in the <b>Single RTF No.</b> drop-down. Click on the <b>Start</b> button under <b>Measure, no Move</b>. Verify the values in the <b>Result</b> field are in range.</li><li style="font-weight: normal;" value="4"><a targets="rtf_25" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_25"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select the "5" in the Single RTF No. drop-down. Click on the Start button under Measure, no Move. Verify the values in the Result field are in range.</a><p style="font-weight: normal; display: none;" data-mc-target-name="rtf_25"><img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-18b.PNG" class="Large_img" /></p><table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note—</b>If any RTF reports values out of range, <b>the RTF must be replaced</b>. Document and label the RTF for return. </td></tr></tbody></table></li></ol></li>
+                                            <li value="30">Exit Panther Service Software.</li>
+                                            <li value="31">Run Panther <a href="../Firmware_Install.htm">Instrument Firmware Setup</a>.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note—</b>This will load firmware onto the RTFs.</td></tr></tbody></table></li>
+                                            <li value="32">Start Panther Service Software.</li>
+                                            <li value="33">Initialize the Distributor and AMP Incubator.</li>
+                                            <li value="34">Click on the <b>Distributor</b> tab.</li>
+                                            <li value="35">Click on <b>Parameter</b>.</li>
+                                            <li value="36">Set the <b>Authorization Code</b> to “<b>1</b>”.</li>
+                                            <li value="37"><a targets="rtf_27;rtf_26" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_27;rtf_26"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Re-Teach the Linear Distributor to the AMP incubator.</a>
+                                                <ol style="list-style-type: lower-alpha; display: none;" data-mc-target-name="rtf_26">
+                                                    <li value="1">Click on <b>Teach</b>.</li>
+                                                    <li value="2">Select “<b>Sledge</b>” from the <b>Select Drive</b> drop-down.</li>
+                                                    <li value="3">Select “<b>AMP Incubator</b>” from the <b>Select Position</b> drop-down.</li>
+                                                    <li value="4">Click once (to highlight) the <b>Execute Position Autoteach</b> option in the Options for selected Drive and Device menu.</li>
+                                                    <li value="5">Click on the <b>Execute</b> button.</li>
+                                                    <li value="6">Click on the <b>Yes</b> button after process is complete, to save parameters to NVM.</li>
+                                                </ol>
+                                                <p style="display: none;" data-mc-target-name="rtf_27">
+                                                    <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-21.PNG" class="Large_img" />
+                                                </p>
+                                            </li>
+                                            <li value="38">Click on the <b>Incubator</b> tab.</li>
+                                            <li value="39">Select the <b>Main</b> tab.</li>
+                                            <li value="40">Click on the <b>Sensor</b> tab.</li>
+                                            <li value="41">Select <b>Amp Incubator ID 0x22</b> in the <b>Select Device</b> section.</li>
+                                            <li value="42"><a targets="rtf_29;rtf_28" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_29;rtf_28"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Click on the Read button.</a>
+                                                <table style="display: none;" data-mc-target-name="rtf_28">
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>Incubator temperature reaches nominal range within 20 minutes (42.4 – 43.0 °C).</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="rtf_29">
+                                                    <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-23.PNG" class="Large_img" />
+                                                </p>
+                                                <p><b style="font-style: italic;">Step 43 is only for RTF installation on a NEW incubator. <br />Slot Alignment is NOT necessary if upgrading an existing incubator. <br />If upgrading an existing incubator, skip Step 43 and proceed to Step 44.</b>
+                                                </p>
+                                            </li>
+                                            <li value="43">Complete the <a href="Inc_Slot_Ver.htm">Incubator Slot Alignment procedure</a>.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note—</b>This&#160;needs to be done before the distributor is taught to the incubator.</td></tr></tbody></table></li>
+                                            <li value="44">Complete a <a href="../../Install/OQ/Sys_OQ.htm">one cycle System Level Operational Qualification (OQ)</a> procedure for the AMP incubator only.</li>
+                                            <li value="45">Close Panther Service Software.</li>
+                                            <li value="46">Run the <b><a href="RTF_Alignment.htm" style="font-weight: normal;">Panther RTF Aligner Program</a></b>.</li>
+                                            <li value="47">The RTF software configuration is complete.</li>
+                                        </ol>
+                                        <h2><a targets="Verification" style="font-size: 14pt;" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Verification"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Verification</a>
+                                        </h2>
+                                        <ol style="display: none;" data-mc-target-name="Verification">
+                                            <li value="1">Open the PANTHER Main Software and verify that the instrument starts with no errors.</li>
+                                            <li value="2">Click on the <b>Help</b> button.</li>
+                                            <li value="3">Click on the <b>About</b> button.</li>
+                                            <li value="4">Check the <b>Module Information</b> option.</li>
+                                            <li value="5"><a targets="rtf_31;rtf_30" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="rtf_31;rtf_30"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Verify there are three RTF modules listed as Rtf1, Rtf3, and Rtf5.</a>
+                                                <ol style="list-style-type: lower-alpha;">
+                                                    <li value="1"><b>Rtf2</b> will be listed if <b>677 RTF</b> is installed <b>(Required for BV, CV/TV Assay)</b>.</li>
+                                                </ol>
+                                                <table style="display: none;" data-mc-target-name="rtf_30">
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>These modules should have the firmware version shown in the box below. </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="rtf_31">
+                                                    <img src="../../Resources/Images/Incubator/RTF-installation/RTF-installation-22.PNG" class="Large_img" />
+                                                </p>
+                                            </li>
+                                            <li value="6">Perform a real-time assay <a href="../../Install/PQ/PQ_Dx.htm">Performance Qualification (PQ)</a>.</li>
+                                        </ol>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../Resources/Images/Toolbar/New/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

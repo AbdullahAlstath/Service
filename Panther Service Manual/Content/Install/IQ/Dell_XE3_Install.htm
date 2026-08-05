@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="Panther System|Panther Module Information|PC Workstation|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Dell OptiPlex XE3 Installation</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/PantherServiceManualStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript" src="../../../Skins/Default/Scripts/Topic Toolbar.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-device-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Startup/01_Startup.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherServiceManual@hologic.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1><a name="kanchor52"></a><a name="kanchor53"></a>Dell OptiPlex XE3 Installation</h1>
+                                        <h2>Prerequisites</h2>
+                                        <p>If installing an XE3 on a Panther with an LCD monitor, a USB&#160;2.0 2-Port Passive Hub [CBL-02158] <b>MUST</b>&#160;be installed to enable LCD touch-screen functionality.</p>
+                                        <ul>
+                                            <li>The Dell XE3 requires a Windows 10 Image or higher.</li>
+                                            <li>LCD Monitors were installed on Panthers 1404 and lower.</li>
+                                            <li>LED Monitors are installed on Panthers 1405 and higher.</li>
+                                            <li>LED&#160;Monitors do not require the USB 2.0 2-Port Passive Hub.</li>
+                                            <li>OptiPlex XE3 + LCD&#160;Monitor &gt; <b>NEEDS the 2-Port Passive HUB [CBL-02158]</b></li>
+                                        </ul>
+                                        <h2>Parts and Materials Required</h2>
+                                        <ul>
+                                            <li><a href="../../Safety/Fusion/PPEFusion.htm">Proper PPE</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>Panther Tool Kit</li>
+                                            <li><a href="../../Service/PC_Workstation/PC_Panther_Image_USB.htm">Create a Panther Image on a USB</a>
+                                            </li>
+                                            <li><a targets="Dell_XE3_Install_01" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell_XE3_Install_01"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Dell OptiPlex XE3</a>
+                                                <p style="display: none;" data-mc-target-name="Dell_XE3_Install_01">
+                                                    <img src="../../Resources/Images/Dell_XE3_Install/Dell_XE3_Install_01_243x319.png" style="width: 243;height: 319;" />
+                                                </p>
+                                            </li>
+                                            <li><a targets="Dell_XE3_Install_02" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell_XE3_Install_02"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />USB&#160;2.0 2-Port Passive Hub [CBL-02158]</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—Only for systems 1404 and lower if monitor is LCD</b>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="Dell_XE3_Install_02">
+                                                    <img src="../../Resources/Images/Dell_XE3_Install/Dell_XE3_Install_02_333x217.png" style="width: 333;height: 217;" />
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <h2>Time Required</h2>
+                                        <ul>
+                                            <li>45 Minutes</li>
+                                        </ul>
+                                        <h2>Procedure</h2>
+                                        <h3><a targets="PartA_HW_Install" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PartA_HW_Install"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Part A: Hardware Installation</a>
+                                        </h3>
+                                        <ol style="display: none;" data-mc-target-name="PartA_HW_Install">
+                                            <li value="1">Perform a <a href="../../Service/PC_Workstation/PC_Database_Backup.htm">Database Backup</a>, if an existing database needs to be transferred to the new XE3.</li>
+                                            <li value="2"><a href="../../Service/Power/Power_Down.htm">Power down the Panther System.</a>
+                                            </li>
+                                            <li value="3">Power down the PC.</li>
+                                            <li value="4">Disconnect all cables from the old PC.</li>
+                                            <li value="5">Remove the old PC&#160;from the Panther PC&#160;Bay.</li>
+                                            <li value="6">Place the XE3 into the Panther PC&#160;Bay.</li>
+                                            <li value="7"><a targets="XE3 connections" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="XE3 connections"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Connect the various cables to the XE3 PC.</a>
+                                                <br />
+                                                <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>Disregard label on CPU and use connections indicated in the image below.</p>
+                                                <p style="display: none;" data-mc-target-name="XE3 connections">
+                                                    <img src="../../Resources/Images/Dell_XE3_Install/Dell_XE3_Install_03_455x604.png" style="width: 455;height: 604;" />
+                                                </p>
+                                            </li>
+                                            <li value="8"><a targets="PCCables" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCCables"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Verify any computer cables will not interfere with the Drawer lock.</a>
+                                                <p style="display: none;" data-mc-target-name="PCCables">
+                                                    <img src="../../Resources/Images/PLUS/WOTF/Liquid_WOTF/PC Cables.PNG" />
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <h3><a targets="Install Panther Image" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Install Panther Image"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Part B - Install Panther Image</a>
+                                        </h3>
+                                        <ol style="display: none;" data-mc-target-name="Install Panther Image">
+                                            <li value="1"><a href="../../Service/PC_Workstation/PC_Panther_Image_USB.htm">Create a Panther Image on a USB&#160;</a>
+                                            </li>
+                                            <li value="2"><a href="Image_v6.htm">Install the Panther Image for Dell XE3</a>
+                                            </li>
+                                            <li value="3">Make sure to affix the Win10 License sticker (Certificate of Authentication) onto the Panther PC (if not already present)</li>
+                                        </ol>
+                                        <h3><a targets="PartB_BIOS_Config" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PartB_BIOS_Config"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Part C:&#160;BIOS Configuration Procedure</a>
+                                        </h3>
+                                        <ol style="display: none;" data-mc-target-name="PartB_BIOS_Config">
+                                            <li value="1">Restart the Panther PC.</li>
+                                            <li value="2">Immediately press the F12 key when the boot process begins to access the Boot Menu.</li>
+                                            <li value="3"><a targets="Boot_Mode" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Boot_Mode"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enable <b>UEFI&#160;Boot mode, Secure Boot OFF</b>.</a>
+                                                <ol style="list-style-type: lower-alpha; display: none;" data-mc-target-name="Boot_Mode">
+                                                    <li value="1">Use the arrow keys to select <b>*Change Boot Mode Settings</b>.</li>
+                                                    <li value="2">Press <b>Enter</b>.</li>
+                                                    <li value="3">Highlight <b>UEFI Boot Mode, Secure Boot Off</b>.</li>
+                                                    <li value="4">Press <b>Enter</b>.</li>
+                                                    <li value="5">Select <b>Yes</b> when asked <b>DO&#160;YOU&#160;WISH&#160;TO&#160;PROCEED?</b></li>
+                                                    <li value="6">Press <b>Enter</b>.</li>
+                                                    <li value="7">Select <b>Yes</b> for <b>Final Confirmation</b>.</li>
+                                                    <li value="8">Press <b>Enter</b>.</li>
+                                                    <li value="9">Restart the PC.</li>
+                                                </ol>
+                                            </li>
+                                            <li value="4"><a targets="Dell_XE3_Install_20" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell_XE3_Install_20"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Use the arrow keys to select <b>BIOS Setup</b>.</a>
+                                                <p style="display: none;" data-mc-target-name="Dell_XE3_Install_20">
+                                                    <img src="../../Resources/Images/Dell_XE3_Install/Dell_XE3_Install_20.png" />
+                                                </p>
+                                            </li>
+                                            <li value="5">Press Enter.</li>
+                                            <li value="6">The BIOS&#160;Configuration window will now appear.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><p><a targets="Unlock_BIOS" style="font-weight: bold;" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Unlock_BIOS"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Note—If the BIOS&#160;Menu is locked:</a></p><ol style="list-style-type: lower-alpha; display: none;" data-mc-target-name="Unlock_BIOS"><li value="1">Click the <b>Unlock Button</b> (at the bottom of the screen)</li><li value="2">Enter "<b>gpservice</b>" in the input field and click <b>Enter</b>.</li><li value="3">If "gpservice" is <b>NOT</b>&#160;accepted as a password, you will have to reset the BIOS password.</li></ol></td></tr></tbody></table></li>
+                                            <li value="7">Expand the <b>POST&#160;Behavior</b> section.</li>
+                                            <li value="8">Select <b>Numlock LED</b>.</li>
+                                            <li value="9"><a targets="Dell_XE3_Install_23" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell_XE3_Install_23"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Un-check <b>Enable Numlock LED</b>.</a>
+                                                <p style="display: none;" data-mc-target-name="Dell_XE3_Install_23">
+                                                    <img src="../../Resources/Images/Dell_XE3_Install/Dell_XE3_Install_23_410x289.png" style="width: 410;height: 289;" />
+                                                </p>
+                                            </li>
+                                            <li value="10">Expand the Security section and select <b>Admin Password</b>.</li>
+                                            <li value="11">Type <b>gpservice</b> as the password in both the <b>New Password and Confirm Password</b> fields.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/Icons/Warning_38x33.png" style="width: 38;height: 33;" /></td><td class="Warning">Warning—MAKE&#160;SURE&#160;THAT&#160;NUMLOCK&#160;IS&#160;TURNED&#160;OFF.</td></tr></tbody></table></li>
+                                            <li value="12">Click <b>OK</b>.</li>
+                                            <li value="13"><a targets="Dell_XE3_Install_24" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell_XE3_Install_24"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Click <b>Exit</b>.</a>
+                                                <p style="display: none;" data-mc-target-name="Dell_XE3_Install_24">
+                                                    <img src="../../Resources/Images/Dell_XE3_Install/Dell_XE3_Install_24.png" />
+                                                </p>
+                                            </li>
+                                            <li value="14">The PC&#160;will reboot into Windows.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note—Windows may need to be Activated.</b></td></tr></tbody></table></li>
+                                            <li value="15">On initial boot up, USB drivers will auto install. </li>
+                                            <li value="16">Set the PC&#160;clock.</li>
+                                            <li value="17">Reboot the PC&#160;once the USB&#160;drives are installed.</li>
+                                        </ol>
+                                        <h3><a targets="PartC_TouchScreen_Function" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PartC_TouchScreen_Function"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Part D: Enable Touch Screen Functionality on LCD Monitors - for Panthers Serial #01404 and lower (with LCD&#160;Monitors)&#160;</a>
+                                        </h3>
+                                        <ol style="display: none;" data-mc-target-name="PartC_TouchScreen_Function">
+                                            <li value="1">Shutdown and Restart the PC</li>
+                                            <li value="2"><a targets="Dell_XE3_Install_25" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell_XE3_Install_25"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Once the PC&#160;has booted in to Windows <b>right-click on the Start menu</b> and select <b>Computer Management</b>.</a>
+                                                <p style="display: none;" data-mc-target-name="Dell_XE3_Install_25">
+                                                    <img src="../../Resources/Images/Dell_XE3_Install/Dell_XE3_Install_25.png" />
+                                                </p>
+                                            </li>
+                                            <li value="3"><a targets="Dell_XE3_Install_26" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell_XE3_Install_26"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Click on <b>Device Manager</b> in the Computer Management screen.</a>
+                                                <p style="display: none;" data-mc-target-name="Dell_XE3_Install_26">
+                                                    <img src="../../Resources/Images/Dell_XE3_Install/Dell_XE3_Install_26.png" />
+                                                </p>
+                                            </li>
+                                            <li value="4"><a targets="Dell_XE3_Install_27" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell_XE3_Install_27"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Expand the <b>Universal Serial Bus controllers</b> section.</a>
+                                                <p style="display: none;" data-mc-target-name="Dell_XE3_Install_27">
+                                                    <img src="../../Resources/Images/Dell_XE3_Install/Dell_XE3_Install_27.png" />
+                                                </p>
+                                            </li>
+                                            <li value="5">To identify which USB cable is connected to the monitor, unplug all the USB&#160;cables then plug them back in one at a time.</li>
+                                            <li value="6">The USB&#160;cable connected to the Monitor will display as <b>Unknown Device</b>.</li>
+                                            <li value="7"><a targets="Dell_XE3_Install_28" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell_XE3_Install_28"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />You will briefly see a USB&#160;Device Not Recognized message displayed.</a>
+                                                <p style="display: none;" data-mc-target-name="Dell_XE3_Install_28">
+                                                    <img src="../../Resources/Images/Dell_XE3_Install/Dell_XE3_Install_28.png" />
+                                                </p>
+                                            </li>
+                                            <li value="8">With the Monitor USB&#160;cable identified, shutdown the PC.</li>
+                                            <li value="9">Unplug the Monitor USB&#160;cable.</li>
+                                            <li value="10">Use a piece of tape to clearly label the Monitor Cable for future reference.</li>
+                                            <li value="11">Then connect the monitor cable to one of the ports in the 2-Port Passive Hub [CBL-02158].</li>
+                                            <li value="12">Connect the 2-Port Passive Hub to the port labeled Monitor/Touchscreen&#160;in <b>Part A:&#160;Step 7</b>.</li>
+                                            <li value="13">Re-connect all other USB&#160;cables as per <b>Part A:&#160;Step 7</b>.</li>
+                                            <li value="14">Power on the Panther PC&#160;and verify that the monitor touch screen is functioning.</li>
+                                        </ol>
+                                        <h3><a targets="PartE_Adjust_Monitor" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PartE_Adjust_Monitor"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Part E: Adjust Monitor Brightness, as necessary for LED Monitors (Panther SN &lt;02307)</a>
+                                        </h3>
+                                        <div style="display: none;" data-mc-target-name="PartE_Adjust_Monitor">
+                                            <ol>
+                                                <li value="1"><span class="bold">Monitor Contrast/Brightness with XE3 Upgrade:</span> Panther Systems with LED monitors (Panther SN &lt;02307) may exhibit a bright screen when the PC is upgraded to XE3 (Win10).<ol style="list-style-type: lower-alpha;"><li value="1"><span class="bold">Workaround:</span> Log in to the GPService account.<ol style="list-style-type: lower-roman;"><li value="1">&#160;&#160;<a targets="Dell_XE3_Install_29" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell_XE3_Install_29"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Right-click in the middle of the desktop and select <span class="bold">Intel Graphics Settings</span>:</a><br /><img src="../../Resources/Images/Dell_XE3_Install/Dell_XE3_Install_29.PNG" style="display: none;" data-mc-target-name="Dell_XE3_Install_29" /></li><li value="2"><a targets="Dell_XE3_Install_30" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell_XE3_Install_30"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <span class="bold">Display</span>.</a><br /><img src="../../Resources/Images/Dell_XE3_Install/Dell_XE3_Install_30.PNG" style="display: none;" data-mc-target-name="Dell_XE3_Install_30" /></li><li value="3"><a targets="Dell_XE3_Install_31" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell_XE3_Install_31"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <span class="bold">Color Settings</span> and adjust brightness to <span class="bold">-50</span> and select <span class="bold">Apply</span>.&#160;</a><br /><img src="../../Resources/Images/Dell_XE3_Install/Dell_XE3_Install_31.PNG" style="display: none;" data-mc-target-name="Dell_XE3_Install_31" /></li><li value="4"><a targets="Dell_XE3_Install_32" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell_XE3_Install_32"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <span class="bold">Yes</span> to apply changes and close  the window.&#160;</a><br /><img src="../../Resources/Images/Dell_XE3_Install/Dell_XE3_Install_32.PNG" style="display: none;" data-mc-target-name="Dell_XE3_Install_32" /><ol style="list-style-type: lower-alpha;"><p>&#160;</p></ol></li></ol></li></ol></li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../Resources/Images/Toolbar/New/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

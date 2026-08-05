@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="Panther System|Panther Module Information|Mid Bay Modules|Distributor Module|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Using the Input Queue Autoteach Tool</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/PantherServiceManualStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript" src="../../../Skins/Default/Scripts/Topic Toolbar.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-device-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Startup/01_Startup.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherServiceManual@hologic.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1><a name="kanchor639"></a>Using the Input Queue Autoteach Tool</h1>
+                                        <h2>Requirements</h2>
+                                        <p>This procedure applies to all Systems that run System Software v6.2 or greater.</p>
+                                        <h2>Parts and Materials Required</h2>
+                                        <ul>
+                                            <li><a href="../../Safety/Fusion/PPEFusion.htm">Proper PPE</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><a targets="903868" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="903868"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Input Queue Rail Alignment Tool [903868]</a>
+                                                <p style="display: none;" data-mc-target-name="903868">
+                                                    <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/903868_186x325.png" style="width: 186;height: 325;" />
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li><a targets="TLS-06359" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="TLS-06359"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Input Queue Teach Tool [TLS-06359]</a>
+                                                <p style="display: none;" data-mc-target-name="TLS-06359">
+                                                    <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/TLS-06359_302x325.png" style="width: 302;height: 325;" />
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <h2>Time Required</h2>
+                                        <ul>
+                                            <li>30 Minutes for <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">IQ<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Input queue—Module used to load MTUs onto the Panther instrument.
+Installation qualification—Set of procedures to verify the proper installation of a Panther system.</span></a> Teach Tool procedure</li>
+                                            <li>20 Minutes for Sys OQ x2</li>
+                                            <li>Total: 50 Minutes</li>
+                                        </ul>
+                                        <h2>Procedure</h2>
+                                        <h3><a targets="Part_A" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Part_A"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Part A: Prepare the System</a>
+                                        </h3>
+                                        <ol style="display: none;" data-mc-target-name="Part_A">
+                                            <li value="1">Power on the Panther System and PC.</li>
+                                            <li value="2">Initialize the Distributor.</li>
+                                            <li value="3">Initialize the Input Queue.</li>
+                                            <li value="4">Remove the Luminometer Injector.</li>
+                                            <li value="5">Open the Service Drawer.</li>
+                                            <li value="6"><a targets="LD_IQ_Auto_Tool_01" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_01"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />From the <b>Distributor tab</b>, click on the <b>Move tab</b> and select <b>Unlock Drawer</b>.</a>
+                                                <p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_01">
+                                                    <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_01.png" />
+                                                </p>
+                                            </li>
+                                            <li value="7">Pull open the Input Queue and remove all <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">MTU<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Multi-tube unit—Container used to process tests in the instrument. An MTU contains five separate reaction tubes. The MTU is moved through the instrument by the linear distributor and includes five tiplets for pipettiing to be used in the mag wash station.</span></a>'s from the rails and the MTU&#160;in the hand-off channel. <b>DO&#160;NOT&#160;discard the MTUs</b> - these will be used when running the OQ.</li>
+                                            <li value="8">Close the Input Queue.</li>
+                                        </ol>
+                                        <h3><a targets="Part_B" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Part_B"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Part B: Perform LD&#160;Theta Position Teaching</a>
+                                        </h3>
+                                        <div style="display: none;" data-mc-target-name="Part_B">
+                                            <p><b>When completing the Distributor Alignment and Teaching Procedure:</b>
+                                            </p>
+                                            <ol>
+                                                <li value="1"><b>ALWAYS</b> Calculate and set other Positions in the Theta Position Teaching. This ensures the theta offset is applied to all modules.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note—</b>The <b>Calculate and Set other positions</b> button has been removed in Service SW v4.0.7.0. The <b>Overwrite NVM</b> now also serves as the "calculate and set other positions".</td></tr></tbody></table></li>
+                                                <li value="2">To calculate and set Theta positions, follow the instructions below:<ol style="list-style-type: lower-alpha;"><li value="1">Initialize the Linear Distributor.</li><li value="2">On the Distributor tab, select <b>Parameter</b>. Set the Authorization Code to 1.</li><li value="3">On the Distributor tab, select <b>Teach</b>.</li><li value="4">Select <b>Input Queue</b> from the Select Position list.</li><li value="5">Move the Linear Distributor to the Input Queue location by selecting the <b>Move Theta &amp; Z &amp; X to selected Position (!! Fast move&#160;!!)</b> option.</li><li value="6">Click <b>Execute</b>.</li><li value="7">Ensure the Distributor Head is parallel to the Luminometer. Refer to <a href="LD_Align.htm#Theta">Theta Position Teaching for Service SW v4.0.7.0 and above.</a></li><li value="8">Select <b>Theta</b> under Select Drive.</li><li value="9">Then click <b>Get All</b> under <b>Save Current Axis Position/Get Current Pos</b>.</li><li value="10">Then click <b>Save All</b>.</li><li value="11">When complete, select <b>Overwrite NVM</b> and then <b>Execute</b>.</li></ol></li>
+                                            </ol>
+                                        </div>
+                                        <h3><a targets="Part_C" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Part_C"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Part C:&#160;Placing the IQ&#160;Teach Tool and Verification of MTU&#160;Path Clearance</a>
+                                        </h3>
+                                        <ol style="display: none;" data-mc-target-name="Part_C">
+                                            <li value="1"><a targets="LD_IQ_Auto_Tool_01a" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_01a"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />From the <b>Distributor tab</b>, click on the <b>Move tab</b> and select <b>Unlock Drawer</b>.</a>
+                                                <p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_01a">
+                                                    <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_01.png" />
+                                                </p>
+                                            </li>
+                                            <li value="2"><a targets="LD_IQ_Auto_Tool_02" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_02"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />From the <b>Distributor Single Movement to</b> list, select <b>Chiller 1</b>.</a>
+                                                <p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_02">
+                                                    <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_02.png" />
+                                                </p>
+                                            </li>
+                                            <li value="3"><a targets="LD_IQ_Auto_Tool_03" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_03"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Slide the <b>IQ&#160;Teach Tool [TLS-06359]</b> into the Input Queue hand-off channel until it stops.</a>
+                                                <p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_03">
+                                                    <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_03_527x350.png" style="width: 527;height: 350;" />
+                                                </p>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note">
+                                                                <p><b>Note—</b><a targets="LD_IQ_Auto_Tool_04" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_04"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />When sliding the IQ Teach Tool into the hand-off channel, the tool should slide in easily, with no gap between the right-side face of the tool and the sheet metal bracket to the right.</a>
+                                                                </p>
+                                                                <p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_04">
+                                                                    <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_04.png" />
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </li>
+                                            <li value="4"><a targets="LD_IQ_Auto_Tool_12" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_12"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Verify that both rails touch the surface of the IQ&#160;Teach Tool. The images below show the surfaces on the Teach Tool that are used to verify rail placement.</a>
+                                                <ol style="list-style-type: lower-alpha;">
+                                                    <li value="1">Surface 1 should be in flush contact with the innermost IQ&#160;Rail.</li>
+                                                    <li value="2">Both IQ&#160;Rails should be touching Surface 2.</li>
+                                                </ol>
+                                                <p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_12">
+                                                    <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_12_540x375.png" style="width: 540;height: 375;" />
+                                                </p>
+                                            </li>
+                                            <li value="5"><a targets="LD_IQ_Auto_Tool_13" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_13"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />The image below shows the IQ&#160;Teach Tool touching both IQ&#160;Rails.</a>
+                                                <p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_13">
+                                                    <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_13.png" />
+                                                </p>
+                                            </li>
+                                            <li value="6">If the front face of the IQ&#160;Teach Tool is:<ol style="list-style-type: lower-alpha;"><li value="1"><b>NOT</b>&#160;flush or within the acceptable range of ±0.5 mm of the Input Queue head face. <p><b>AND/OR</b></p></li><li value="2">The back edge of the rails do not contact the surfaces of the Input Queue Teach Tool (Surface 2):<ol style="list-style-type: lower-roman;"><li value="1">Adjust the rail closest to the Linear Distributor so that the front face of the tool is flush with the appropriate Input Queue head surface.</li><li value="2">Adjust the other rail using the Input Queue Rail Alignment Tool [903868]. If needed refer to <a href="../Input_Queue/IQ_Rail_Align.htm" class="MCXref xref">Input Queue MTU Rail Alignment Procedure</a>.</li><li value="3">Adjust both rails so that the edge of each rail touches the IQ&#160;Teach Tool Surface 2 as shown in the pictures above.</li></ol></li></ol></li>
+                                            <li value="7">If the Input Queue's sheet metal bracket is too close to the back of the Input Queue and does not allow the Teach Tool to be inserted, or if a gap is seen between the bracket and the right-side of the tool follow the instructions below.<ol style="list-style-type: lower-alpha;"><li value="1"><a targets="LD_IQ_Auto_Tool_05" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_05"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Loosen the two screws securing the bracket.</a><p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_05"><img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_05_409x350.png" style="width: 409;height: 350;" /></p></li><li value="2">Adjust the bracket so that it is pressed against the side of the tool and tighten the two screws that secure the bracket in place.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note—</b>Some brackets may need to be manually bent to achieve a 90° bend.</td></tr></tbody></table></li></ol></li>
+                                            <li value="8"><a targets="LD_IQ_Auto_Tool_06" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_06"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Verify that the appropriate face of the IQ&#160;Teach Tool is within 0.5mm of the front face of the Input Queue head. The location used on the tool to verify this alignment depends on which of the two versions of the Input Queue (machined or cast)&#160;is installed in the instrument.</a>
+                                                <p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_06">
+                                                    <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_06_529x350.png" style="width: 529;height: 350;" />
+                                                </p>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>Notice that the machined head is lighter in color and has a smoother appearance than the cast head. Also, the back side of the machined Input Queue head has 2 screws.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <ol style="list-style-type: lower-alpha;">
+                                                    <li value="1"><b>For the MACHINED Input Queue</b>
+                                                        <ol style="list-style-type: lower-roman;">
+                                                            <li value="1"><a targets="LD_IQ_Auto_Tool_07-8" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_07-8"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />The bottom face of the tool (marked "MACHINED")&#160;should be flush (within ± 0.5mm) across the front with the Input Queue head.</a>
+                                                                <div class="NewRowClass1" style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_07-8">
+                                                                    <p>
+                                                                        <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_07_258x375.png" style="width: 258;height: 375;" /> <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_08_427x375.png" style="width: 427;height: 375;" /></p>
+                                                                </div>
+                                                            </li>
+                                                            <li value="2"><a targets="LD_IQ_Auto_Tool_09" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_09"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />The Machined Input Queue head may not be parallel to the sheet metal above the IQ&#160;rails. IF it is parallel, the Input Queue Teach Tool may not slide into the MTU&#160;hand-off position.</a> This can be corrected by completing the <a href="../Input_Queue/IQ_Screw_Inspect.htm" class="MCXref xref">Input Queue Screw Fastening and Inspection Procedure</a><p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_09"><img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_09.png" /></p></li>
+                                                        </ol>
+                                                    </li>
+                                                </ol>
+                                                <p><b>OR</b>
+                                                </p>
+                                                <ol style="list-style-type: lower-alpha;">
+                                                    <li value="1"><b>For the CAST Input Queue</b>
+                                                        <ol style="list-style-type: lower-roman;">
+                                                            <li value="1"><a targets="LD_IQ_Auto_Tool_10-11" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_10-11"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />The top face of the tool (before the clip and marked "CAST") must be flush (within ± 0.5mm) across the front with the Input Queue head.</a>
+                                                                <div class="NewRowClass1" style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_10-11">
+                                                                    <p><a href="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_11.png"><img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_10_318x375.png" style="width: 318;height: 375;" /><img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_11_283x375.png" style="width: 283;height: 375;" /></a>
+                                                                    </p>
+                                                                </div>
+                                                            </li>
+                                                        </ol>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                        <h3><a targets="Part_E" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Part_E"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Part D: Input Queue Alignment to the Linear Distributor</a>
+                                        </h3>
+                                        <ol style="display: none;" data-mc-target-name="Part_E">
+                                            <li value="1">From the <b>Distributor</b> tab, click the <b>Teach</b> tab.</li>
+                                            <li value="2">In the <b>Select Drive</b> section, select <b>Sledge</b>.</li>
+                                            <li value="3">In the <b>Select Position</b> section, select <b>Input Queue</b> from the menu.</li>
+                                            <li value="4">In the <b>Options for selected Device and Drive section</b>, select <b>Move Theta &amp; Z &amp; X to selected Position (!! Fast Move !!)</b>.</li>
+                                            <li value="5"><a targets="LD_IQ_Auto_Tool_14" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_14"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Click <b>Execute</b>. This will move the Linear Distributor head to the Input Queue.</a>
+                                                <p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_14">
+                                                    <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_14_702x400.png" style="width: 702;height: 400;" />
+                                                </p>
+                                            </li>
+                                            <li value="6"><a targets="LD_IQ_Auto_Tool_15" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_15"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />In the <b>Move Axis to Position / Get Stored Teach Position</b> section, enter <b>1130</b> in the <b>Back / Forw.</b> field. </a>
+                                                <p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_15">
+                                                    <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_15_711x400.png" style="width: 711;height: 400;" />
+                                                </p>
+                                            </li>
+                                            <li value="7">Once the position values have been entered, click the <b>Move</b> button next to the position entered.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note—DO NOT&#160;click the "All" button.</b> Use the individual <b>Move</b> button.</td></tr></tbody></table></li>
+                                            <li value="8"><a targets="LD_IQ_Auto_Tool_16" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_16"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />The Linear Distributor hook will extend to the Input Queue Teach Tool tab.</a>
+                                                <p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_16">
+                                                    <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_16.png" />
+                                                </p>
+                                            </li>
+                                            <li value="9"><a targets="LD_IQ_Auto_Tool_17" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_17"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />In the <b>Incremental Positioning</b> section, set the <b>Move Step</b> value to <b>5</b>.</a>
+                                                <p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_17">
+                                                    <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_17_441x375.png" style="width: 441;height: 375;" />
+                                                </p>
+                                            </li>
+                                            <li value="10"><a targets="LD_IQ_Auto_Tool_18" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_18"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />In the <b>Incremental Positioning</b> section, click the arrow in the top-right corner (pointing diagonally up and to the right) to move the hook towards the tool tab.</a>
+                                                <p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_18">
+                                                    <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_18_223x250.png" style="width: 223;height: 250;" />
+                                                </p>
+                                            </li>
+                                            <li value="11">Change the movement increment <b>(Move Step)</b> from <b>5</b> to <b>1</b> as the hook approaches the tab.</li>
+                                            <li value="12">Continue to click the arrow until the hook is 1mm from the tool face.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><p><b>Note—DO&#160;NOT&#160;SAVE</b>&#160;settings at this step.</p><ul><li>These values <b>DO&#160;NOT&#160;get saved</b>.</li><li>This is <b>ONLY</b>&#160;used to help with the alignment of the Linear Distributor to the Input Queue Head MTU&#160;handoff position in the Y-axis.</li></ul></td></tr></tbody></table></li>
+                                            <li value="13">Check the alignment of the hook to the teach tab on the Teach Tool.<ul><li>If the hook is <b>centered</b> over the teach tab <b>skip to Step 17</b>.</li><li>If the hook is <b>NOT&#160;centered</b> over the teach tab, continue to <b>Step 14</b>.</li></ul></li>
+                                            <li value="14">Using the M4 hex tool, loosen the two visible mounting screws that secure the Input Queue to the Service Drawer in the front and back of the Input Queue.</li>
+                                            <li value="15">Pull open the Input Queue drawer until the third mounting screw is exposed, loosen the third mounting screw, and close the Input Queue.</li>
+                                            <li value="16"><a targets="LD_IQ_Auto_Tool_19-20" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_19-20"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Viewing the Input Queue from the top of the module, align the Input Queue Teach Tool tab such that the width is aligned with the width of the Linear Distributor hook (this is achieved by shifting the Input Queue towards the front or back of the service drawer).</a>
+                                                <div class="NewRowClass1" style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_19-20">
+                                                    <p>
+                                                        <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_19_277x350.png" style="width: 277;height: 350;" /> <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_20_327x350.png" style="width: 327;height: 350;" /></p>
+                                                </div>
+                                            </li>
+                                            <li value="17">Once the tab and hook are aligned, tighten down the Input Queue mounting screws to secure the Input Queue in its aligned position (tighten the front and back mounting screws first, then pull open the Input Queue drawer to expose and tighten the last mounting screw).</li>
+                                        </ol>
+                                        <h3><a targets="Part_F" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Part_F"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Part E: IQ&#160;Position Autoteach</a>
+                                        </h3>
+                                        <div style="display: none;" data-mc-target-name="Part_F">
+                                            <ol>
+                                                <li value="1">From the <b>Distributor</b> tab, click the <b>Parameter</b> tab.</li>
+                                                <li value="2"><a targets="LD_IQ_Auto_Tool_21" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_21"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Change the <b>Authorization Code</b> to <b>"1"</b> and click <b>Set</b>.</a>
+                                                    <p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_21">
+                                                        <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_21_346x375.png" style="width: 346;height: 375;" />
+                                                    </p>
+                                                </li>
+                                                <li value="3">Click on the <b>Teach</b> tab.</li>
+                                                <li value="4"><a targets="LD_IQ_Auto_Tool_22" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_22"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select the <b>Input Queue</b> in the <b>Select Position</b> section.</a>
+                                                    <p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_22">
+                                                        <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_22_309x375.png" style="width: 309;height: 375;" />
+                                                    </p>
+                                                </li>
+                                                <li value="5"><a targets="LD_IQ_Auto_Tool_23" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_23"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />In the <b>Options for selected Device and Drive</b> section, select <b>Execute</b> Position Autoteach and click <b>Execute</b>.</a>
+                                                    <p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_23">
+                                                        <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_23_619x375.png" style="width: 619;height: 375;" />
+                                                    </p>
+                                                </li>
+                                                <li value="6">Follow and respond to the on-screen prompts as directed.</li>
+                                                <li value="7">A Service Software dialog box will appear, <b>"Input Queue Autoteach has been successful, please remove Teach Tool"</b>. Click <b>OK</b>.<br /><table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><p><b>Note—DO&#160;NOT</b> remove the Input Queue Autoteach Tool.</p></td></tr></tbody></table></li>
+                                                <li value="8">When the Execute Position Autoteach sequence completes, a <b>"Write all Parameters to NVM?"</b> dialog box will appear. Click <b>Yes</b>.</li>
+                                                <li value="9">After moving the Distributor, remove the Input Queue Teach Tool.</li>
+                                            </ol>
+                                        </div>
+                                        <h3><a targets="Part_G" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Part_G"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Part F: Autoteach Including Input Queue</a>
+                                        </h3>
+                                        <div style="display: none;" data-mc-target-name="Part_G">
+                                            <table>
+                                                <col style="width: 40px;" />
+                                                <col style="width: 587px;" />
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="background-color: #ffffff;">
+                                                            <img src="../../Resources/Images/note04.gif" />
+                                                        </td>
+                                                        <td class="Note">
+                                                            <p><b>Note—</b>
+                                                            </p>
+                                                            <ul>
+                                                                <li>Always clean teach pins, the hook, and grounding tab with alcohol before performing any autoteach procedure.</li>
+                                                                <li>For reference see <a href="LD_Align.htm" class="MCXref xref">Distributor Alignment and Teaching Procedure</a></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <ol>
+                                                <li value="1">Ensure that the IQ Teach Tool has been accurately placed in the handoff position, per Section D.</li>
+                                                <li value="2">Close and latch the service drawer.</li>
+                                                <li value="3">Place the injector back into the Luminometer.</li>
+                                                <li value="4">In the <b>Options for selected Device and Drive</b> section, select <b>Execute Full Autoteach including Input Queue</b> and click <b>Execute</b>.</li>
+                                                <li value="5">Follow and respond to the on-screen prompts as directed.</li>
+                                                <li value="6">Remove the injector from the Luminometer.</li>
+                                                <li value="7">Unlock and Open the service drawer.</li>
+                                                <li value="8">From the <b>Distributor tab</b>, click on the <b>Move tab</b>.</li>
+                                                <li value="9">In the <b>Distributor Single Movement to</b> section, select <b>Chiller 1</b>. The Linear Distributor should move to the Chiller 1 position.</li>
+                                                <li value="10">Remove the Input Queue Teach Tool from the Input Queue hand-off position.</li>
+                                            </ol>
+                                        </div>
+                                        <h2><a targets="Verification" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Verification"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Verification</a>
+                                        </h2>
+                                        <div style="display: none;" data-mc-target-name="Verification">
+                                            <p><b>Perform a System OQ:</b>
+                                            </p>
+                                            <ol>
+                                                <li value="1">Close the service drawer and latch it into place.</li>
+                                                <li value="2">Place the Luminometer Injector back into the Luminometer.</li>
+                                                <li value="3">Click on <b>P-System tab</b> &gt; <b>Main 1 tab</b>. This tab should be selected by Default.</li>
+                                                <li value="4">Check the checkboxes for <b>Report, Initialize, Clear MTU’s, Vacuum P., All Modules</b>.</li>
+                                                <li value="5">In the <b>Cycles</b> section, enter <b>2</b>.</li>
+                                                <li value="6"><a targets="LD_IQ_Auto_Tool_24" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LD_IQ_Auto_Tool_24"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Click <b>System OQ Test</b>.</a>
+                                                    <p style="display: none;" data-mc-target-name="LD_IQ_Auto_Tool_24">
+                                                        <img src="../../Resources/Images/Linear_Distrib/LD_IQ_Auto_Tool/LD_IQ_Auto_Tool_24_563x375.png" style="width: 563;height: 375;" />
+                                                    </p>
+                                                </li>
+                                                <li value="7">A dialog box will appear for <b>“Report Setup”</b>. Fill in the appropriate information and click <b>OK</b>.</li>
+                                                <li value="8">A Service Software dialog box will appear, <b>“Initialize and activate Vacuum Pump?”</b>. Click <b>Yes</b>.</li>
+                                                <li value="9">After Clear MTU's process is complete a Service Software dialog box will appear, <b>“Please load MTU’s.”</b> Open the Input Queue drawer and load a <b>minimum of 2 MTUs</b> on the rails. Click <b>OK</b>.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note—</b>This will take several minutes, do NOT&#160;walk away form the system.</td></tr></tbody></table></li>
+                                                <li value="10">A window appears with a pass or fail result. Click <b>OK</b>.</li>
+                                                <li value="11">The report is generated and appears in a window. Save the report.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../Resources/Images/Toolbar/New/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

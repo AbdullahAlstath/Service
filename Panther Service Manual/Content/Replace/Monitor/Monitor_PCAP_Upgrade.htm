@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="Panther System|Panther Module Information|Upper Bay Modules|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>PCAP Monitor Upgrade</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/PantherServiceManualStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript" src="../../../Skins/Default/Scripts/Topic Toolbar.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-device-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Startup/01_Startup.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherServiceManual@hologic.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1><a name="kanchor460"></a>PCAP Monitor Upgrade</h1>
+                                        <h2>Purpose</h2>
+                                        <p>This procedure provides instructions on how to upgrade an LED&#160;Panther Monitor to a 19" PCAP&#160;Monitor.</p>
+                                        <h2>What is Affected</h2>
+                                        <p>A new 19" PCAP&#160;(Projected Capacitive Touch) monitor upgrade is available for installation on Panther Systems, Serial # 02306 and below.</p>
+                                        <p>PCAP&#160;Monitors were cut in on Serial # 02307 and above.</p>
+                                        <h2>Parts and Materials Required</h2>
+                                        <ul>
+                                            <li>Panther Tool Kit</li>
+                                            <li>PCAP&#160;Monitor Upgrade Kit</li>
+                                            <ul style="list-style-type: circle;">
+                                                <li>PCAP&#160;Monitor</li>
+                                                <li>Monitor Arm</li>
+                                                <li>VGA Cable</li>
+                                                <li>Monitor Power Cable</li>
+                                                <li>USB&#160;Monitor Cable</li>
+                                                <li>USB&#160;Hub Power Cable</li>
+                                                <li>Canopy Frame Bracket and Bracket Cover</li>
+                                                <li>USB Plate</li>
+                                                <li>USB&#160;Hub</li>
+                                                <li>(4) M4x8 Hex Screws (for the monitor)</li>
+                                                <li>(2) M6x20 Hex Screws (for the Monitor Arm)</li>
+                                                <li>(2) Cable Clips (to secure cables)</li>
+                                                <li>Cable Spiral Wrap (20cm and 8cm) for cable dressing</li>
+                                            </ul>
+                                            <li><a href="../../Safety/PPE.htm">Proper PPE</a>
+                                            </li>
+                                        </ul>
+                                        <table>
+                                            <col style="width: 38px;" />
+                                            <col style="width: 40px;" />
+                                            <col style="width: 587px;" />
+                                            <tbody>
+                                                <tr>
+                                                    <td>&#160;</td>
+                                                    <td style="background-color: #ffffff;">
+                                                        <img src="../../Resources/Images/note04.gif" />
+                                                    </td>
+                                                    <td class="Note"><b>Note—</b>The 4 new cables that are included in this upgrade kit are longer than the existing cables. These longer cables will allow the PC to be pulled out of the PC&#160;Bay for maintenance.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h2>Time Required</h2>
+                                        <ul>
+                                            <li>3 Hours</li>
+                                        </ul>
+                                        <h2>Procedure</h2>
+                                        <ol>
+                                            <li value="1">Put on proper PPE.</li>
+                                            <li value="2">Shutdown the Panther System.</li>
+                                            <li value="3">Turn off the system main power switch. (Leave the PC&#160;on)</li>
+                                            <li value="4">Open and remove the Left Side Door to access the PC.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note— If the system is a Fusion</b>&#160;Refer to <i><a href="../../Service/Fusion/Chassis/UnfuseFuseProcedures.htm">Unfuse and Fuse Fusion Procedure to separate the Fusion</a>.</i></td></tr></tbody></table></li>
+                                            <li value="5">Verify the new monitor works before continuing with this procedure.</li>
+                                            <ol style="list-style-type: lower-alpha;">
+                                                <li value="1">Unpack the new PCAP Monitor and the new monitor cables.</li>
+                                                <li value="2">Disconnect the existing VGA, USB, and power cables from the back of the PC.</li>
+                                                <li value="3">Connect the new VGA and power cables to the PC and the PCAP&#160;Monitor.</li>
+                                                <li value="4">Verify the PCAP Monitor is functional.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note—</b>If the PCAP&#160;Monitor does not work, reconnect the old monitor and order another PCAP&#160;Monitor.</td></tr></tbody></table></li>
+                                                <li value="5">Disconnect the new cables from the PC and PCAP&#160;Monitor.</li>
+                                                <li value="6">Shutdown the PC.</li>
+                                            </ol>
+                                            <li value="6"><a targets="PCAP_01" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_01"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remove the Top Canopy by unscrewing the 8 screws on top of the canopy with a 2.5mm hex key.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_01">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_01.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="7">Remove the Front Canopy Doors.</li>
+                                            <ol style="list-style-type: lower-alpha;">
+                                                <li value="1"><a targets="PCAP_02" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_02"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Open both doors.</a>
+                                                    <p style="display: none;" data-mc-target-name="PCAP_02">
+                                                        <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_02.PNG" />
+                                                    </p>
+                                                </li>
+                                                <li value="2"><a targets="PCAP_03" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_03"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remove the door springs.</a>
+                                                    <p style="display: none;" data-mc-target-name="PCAP_03">
+                                                        <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_03.PNG" />
+                                                    </p>
+                                                </li>
+                                                <li value="3"><a targets="PCAP_04" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_04"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remove the 2 screws on the inside of the frame and set the doors aside.</a>
+                                                    <p style="display: none;" data-mc-target-name="PCAP_04">
+                                                        <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_04.PNG" />
+                                                    </p>
+                                                </li>
+                                            </ol>
+                                            <li value="8">Open the <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">TCR<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Target capture reagent—An assay-specific reagent added as part of specimen pipetting.</span></a> Door and remove the 4, 2.5mm hex screws that hold the door on its hinges.</li>
+                                            <li value="9"><a targets="PCAP_05" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_05"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Tilt and slide the TCR&#160;Door away from the Panther System to remove it from the door pin (the pin may look different than pictured below).</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_05">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_05.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="10">Swing open (or remove) the Right-Side Door.</li>
+                                            <li value="11"><a targets="PCAP_06" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_06"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remove the hand-held scanner bracket by removing the two 2.5mm hex screws on the inside of the USB&#160;Hub.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_06">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_06.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="12"><a targets="PCAP_07" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_07"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remove the four 3mm hex screws on the back of the monitor bracket.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>Support the monitor while unscrewing the four screws. These four screws secure the monitor to the arm.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_07">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_07.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="13"><a targets="PCAP_08" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_08"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remove the monitor from the monitor bracket by disconnecting the three cables from the back of the monitor.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>It helps to free all the cables from the cable clips underneath the monitor arm.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_08">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_08.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="14"><a targets="PCAP_09" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_09"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remove the four inner screws that secure the monitor gimbal to the arm with a 2.5mm hex key.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_09">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_09.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="15">Slowly pull the bracket away from the arm, allowing the 3 cables to pass through the center hole.</li>
+                                            <li value="16"><a targets="PCAP_10" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_10"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Unclip the cables from any plastic clips underneath the monitor arm and let the three cables hang from the base of the USB&#160;Hub.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>Save the plastic cable clips and screws from the old monitor arm for cable dressing the new cables.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_10">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_10.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="17">Take off the cap cover at the base of the monitor arm.</li>
+                                            <li value="18"><a targets="PCAP_11" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_11"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Unscrew the 4mm hex screw.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_11">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_11.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="19"><a targets="PCAP_12" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_12"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Lift the monitor arm up and off the stanchion.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_12">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_12.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="20"><a targets="PCAP_13" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_13"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Pull off the USB&#160;Hub Cover and let it hang loosely on the arm bracket. (The USB&#160;Hub Cover is a "press-fit" cover, no screws.)</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/Icons/Warning_38x33.png" style="width: 38;height: 33;" />
+                                                            </td>
+                                                            <td class="Caution">Caution— DO&#160;NOT&#160;put any stress on the USB&#160;and power cable that connect to the USB&#160;Cover.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_13">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_13.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="21"><a targets="PCAP_14" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_14"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Disconnect the USB&#160;and power cable that connect the USB&#160;Hub.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_14">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_14.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="22"><a targets="PCAP_15" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_15"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remove the five screws on the inside of the system to slide out and remove the old monitor arm gimbal.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_15">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_15.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="23">Pull the old monitor cables back through the USB&#160;Hub and Plate to the inside of the system.</li>
+                                            <li value="24"><a targets="PCAP_16" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_16"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Unclip the cables along the frame above the TCR&#160;Carousel all the way back to the corner, the cables will hang down out of the way by the top corner of the Pumps Module.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_16">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_16.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="25">Pull back the old USB&#160;Power cable as it will be replaced with a new cable.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note—</b>Pay attention to the exact route of the existing cables. Follow this route when routing new cables.</td></tr></tbody></table></li>
+                                            <li value="26">Remove the USB Hub.</li>
+                                            <li value="27"><a targets="PCAP_17" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_17"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remove the old USB&#160;Plate (two 2.5mm hex screws and two 3mm hex screws)&#160;and discard.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—SAVE&#160;THE&#160;SCREWS,</b> these&#160;will be reused to install the new USB&#160;Plate.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_17">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_17.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="28"><a targets="PCAP_18" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_18"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remove the two 3mm screws holding the right canopy bracket cover to the bracket. Access the screws from the inside of the bracket.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_18">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_18.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="29"><a targets="PCAP_19" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_19"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remove the 2.5mm hex screw that holds the canopy door sensor to the bracket.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—SAVE&#160;THE&#160;SCREW</b>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_19">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_19.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="30"><a targets="PCAP_20" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_20"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remove the LED&#160;PCB by removing the two 2.5mm screws that hold it to the frame.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>There are two small standoff bushings behind the LED&#160;that will fall out when the two screws are loosened. <b>DO&#160;NOT&#160;let them fall into the system.</b></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_20">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_20.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="31">Disconnect the LED&#160;PCB and set aside (leave the canopy door sensor connected).</li>
+                                            <li value="32"><a targets="PCAP_21" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_21"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remove the old bracket. There are five screws that hold the bracket to the frame. </a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—SAVE&#160;THE&#160;SCREWS</b> these screws will be used to install the new bracket.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_21">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_21_664x531.png" class="Large_img" style="width: 664;height: 531;" />
+                                                </p>
+                                            </li>
+                                            <li value="33">Gently lift the bracket upwards to clear the set screws on the lower left of the bracket after the screws are removed.</li>
+                                            <li value="34"><a targets="PCAP_Monitor_58" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_Monitor_58"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Swap the canopy shock guide pin to the new bracket.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_Monitor_58">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_58_341x314.png" style="width: 341;height: 314;" />
+                                                </p>
+                                            </li>
+                                            <li value="35"><a targets="PCAP_22" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_22"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Install the new bracket. Use the same five screws from the old bracket.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_22">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_22.PNG" class="Large_img" />
+                                                </p>
+                                            </li>
+                                            <li value="36">Reconnect the LED&#160;PCB. Ensure the canopy door sensor cable is also securely connected.</li>
+                                            <li value="37"><a targets="PCAP_23" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_23"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Install the LED&#160;PCB with the two 2.5mm screws and bushings.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>The two small standoff bushings are used behind the LED&#160;PCB. Don't let them fall into the system.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_23">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_20.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="38"><a targets="PCAP_24" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_24"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Reinstall the canopy door sensor using the 2.5mm screw.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_24">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_23.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="39"><a targets="PCAP_25" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_25"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Install the new monitor arm to the new bracket with two M6x20 socket head screw caps (5mm hex key).</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>Ensure&#160;the plastic green arrow (on the inside of the plate)&#160;is pointing up. Remove the plastic arrow after install.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>If&#160;the plastic arrow is missing, there is a large spring that goes on the INSIDE&#160;of the arm.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_25">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_24.PNG" class="Large_img" />
+                                                </p>
+                                            </li>
+                                            <li value="40"><a targets="PCAP_26" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_26"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Install the new bracket cover over the outside (right side) of the new bracket using two 3mm screws.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_26">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_25.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="41"><a targets="PCAP_27" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_27"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Install the monitor to the monitor arm using eight M4x8 hex screws (3mm hex driver). Hold the monitor in place and get two screws started and tightened, then you can safely install the rest.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_27">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_26.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="42">The PCAP&#160;Monitor and Arm are now installed. The next steps will explain how to route the cables from the PC&#160;to the new PCAP&#160;monitor.</li>
+                                            <li value="43"><a targets="PCAP_28" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_28"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Disconnect the Luminometer injector on top of the luminometer, located under the Pumps Module.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_28">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_27.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="44">Slide out the Mid-Bay Drawer all the way out.</li>
+                                            <li value="45"><a targets="PCAP_29" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_29"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />If the Output Queue (OQ) aspirator tubes are affixed to the lower left side of the Pumps Module, unclip to allow slack in the tubes.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_29">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_28.PNG" />
+                                                </p>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>Aspirator&#160;tubes may have different routing, just ensure tubes are clear of the pump.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </li>
+                                            <li value="46"><a targets="PCAP_30" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_30"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Unscrew the two screws (2.5mm hex key)&#160;holding each white plastic splitter (Oil &amp; Wash) on the left side of the Pumps Module to allow slack in the pump tubes.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_30">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_29.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="47"><a targets="PCAP_31" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_31"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Disconnect the CAN cable from the upper right front of the Pumps Module.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_31">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_30.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="48"><a targets="PCAP_32" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_32"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remove the hex slot screw underneath the Pump Module (3mm hex key), and loosen the two on top (3mm hex key) just enough to slide the Module up and off the posts.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_32">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_31.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="49"><a targets="PCAP_33" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_33"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Push the Mid-Bay Drawer back in until it is about 4-6 inches from the back. Slide the Pumps Module up an inch to clear the slots (1), then move it forward (2) and gently set it on the luminometer.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_33">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_32.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="50"><a targets="PCAP_34" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_34"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Cut the four old cables in the back corner above the pump, and discard the loose ends.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_34">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_33.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="51"><a targets="PCAP_35" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_35"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Pull the Waste Drawer and UFD Drawer all the way out. Remove the plastic cover off cableway across the back to expose the cables.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_35">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_34.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="52"><a targets="PCAP_36" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_36"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Pull the other sections of old cable down and out of the vertical channel next to the Pumps Module and behind the UFD&#160;Drawer.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_36">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_35.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="53"><a targets="PCAP_37" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_37"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remove the old cables from the cableway across the back, disconnect the cable from the back of the PC&#160;and discard.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>Open&#160;existing cable clips as necessary and note the exact cable route that the old cables follow, especially in the back corners. Use the same route later when installing the new cables.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_37">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_36.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="54"><a targets="PCAP_38" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_38"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Install the new USB&#160;Plate (reuse screws from the old Plate).</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_38">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_37.PNG" class="Large_img" />
+                                                </p>
+                                            </li>
+                                            <li value="55"><a targets="PCAP_39" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_39"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Route the three new monitor cables from the inside of the frame, out through the hole in the USB&#160;Plate.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/Icons/Warning_38x33.png" style="width: 38;height: 33;" />
+                                                            </td>
+                                                            <td class="Caution">Caution—Ensure the correct end of each cable is routed through the hole for connection to the monitor. (The PC&#160;end of the VGA&#160;and power cables have a black component (ferrite bead) on the end of the cable. Do not route this end through the USB&#160;Plate.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>Leave approximately 35'' of each of the cables outside the mounting plate.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_39">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_38.PNG" class="Large_img" />
+                                                </p>
+                                            </li>
+                                            <li value="56"><a targets="PCAP_40" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_40"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Plug in all three new cables to the monitor and route the cables through the channels on the monitor arm. Run the VGA&#160;cable through the bottom channel, and the other two cables through the top channel. Snap the channel covers back into place.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/Icons/Warning_38x33.png" style="width: 38;height: 33;" />
+                                                            </td>
+                                                            <td class="Caution">Caution—When routing the cables through the cable channels in the arm, keep slack in the cables to minimum but do not put too much stress on the cables at any point. The monitor arm must be able to swing all the way from one side to the other without any strain on the cables.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_40">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_39.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="57"><a targets="PCAP_41" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_41"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Attach cable clips on the back of the bracket and on the USB&#160;Plate shown below.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_41">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_40.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="58">Inside the chassis, route the new USB&#160;Power Cable as the old cable was run.</li>
+                                            <li value="59"><a targets="PCAP_42" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_42"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Connect the two USB&#160;cables into the new USB&#160;Hub and reinstall on the USB&#160;Plate.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>Ensure the side door can still open and close. Re-adjust the cable routing through the cable clips as necessary.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_42">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_41.PNG" class="Large_img" />
+                                                </p>
+                                            </li>
+                                            <li value="60"><a targets="PCAP_43" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_43"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Dress the cables under the monitor using the short cable wrap. Ensure there is not too much tension on the cables through the full movement of the arm.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_43">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_42.PNG" class="Large_img" />
+                                                </p>
+                                            </li>
+                                            <li value="61">Dress the cables down and through the USB&#160;Plate using the long cable wrap.</li>
+                                            <li value="62"><a targets="PCAP_44" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_44"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Take off the cable clamps to wrap the cables together, the re-install the clamps around the dressed cables.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_44">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_43.PNG" class="Large_img" />
+                                                </p>
+                                            </li>
+                                            <li value="63"><a targets="PCAP_45" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_45"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Snap on the new monitor arm plastic covers that hide the screws.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_45">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_44.PNG" class="Large_img" />
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <h3>Cable Routing</h3>
+                                        <p><a targets="PCAP_46" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_46"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />The illustration below shows the cable routing path for the new cables from the monitor to the PC. The new cables should follow the exact same path through the system as the old cables.</a>
+                                        </p>
+                                        <p style="display: none;" data-mc-target-name="PCAP_46">
+                                            <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_45.PNG" />
+                                        </p>
+                                        <table>
+                                            <col style="width: 40px;" />
+                                            <col style="width: 587px;" />
+                                            <tbody>
+                                                <tr>
+                                                    <td style="background-color: #ffffff;">
+                                                        <img src="../../Resources/Images/Icons/Warning_38x33.png" style="width: 38;height: 33;" />
+                                                    </td>
+                                                    <td class="Caution">Caution—The cable routing path shown above must be followed. The energized VGA cable may induce unwanted electromagnetic interference in PCB's or other electronics. The existing cable path is the only validated, approved, and EMI&#160;tested path.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <ol>
+                                            <li value="1"><a targets="PCAP_47" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_47"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Route the new cables from behind the USB&#160;Plate back to the corner above the Pumps Module. Follow the upper edge of the frame above the TCR&#160;Carousel, and reuse the existing clips to secure the monitor cables. Route the new USB&#160;Power cable in the same manner as the old one.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_47">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_46.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="2"><a targets="PCAP_48" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_48"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Route the new cables behind the Pumps Module and into the channel in the frame. Follow the same path as the old cables.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_48">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_47.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="3"><a targets="PCAP_49" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_49"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Route the new cables down the channel and into the Lower Bay. The cables should come out of the channel in the frame behind the UFD Drawer, below the Pumps Module.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_49">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_48.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="4"><a targets="PCAP_50" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_50"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Pass all the ends of the new cables over the Computer Bay. Gather the new and existing cables and place them into the beginning of the cableway behind the UFD&#160;Drawer as shown below.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/Icons/Warning_38x33.png" style="width: 38;height: 33;" />
+                                                            </td>
+                                                            <td class="Caution">Caution—When you route the cables in the back corner, ensure none of the cables or insulated water hoses will be pinched or in the way when the Mid-Bay Drawer is closed. Slowly close the drawer and visually verify the drawer can close and lock.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_50">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_49.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="5"><a targets="PCAP_51" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_51"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Run the new cables across the back to the Computer Bay and tuck all the cables into the cableway.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_51">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_50.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="6"><a targets="PCAP_52" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_52"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />At the back of the Computer Bay, route the new cables coming out of the cableway in the same way as the other existing cables. They should run behind the power supply plug. Unclip and re-clip existing clips as needed.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/Icons/Warning_38x33.png" style="width: 38;height: 33;" />
+                                                            </td>
+                                                            <td class="Caution">Caution—When you route the new and existing cables out of the cableway, ensure none of the cables will be pinched or in the way when the Mid-Bay Drawer is closed. Slowly close the drawer and verify the drawer can close and lock.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_52">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_51.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="7">Connect the new cables to the PC, turn it on and verify the monitor is working.</li>
+                                            <li value="8">Finalize the cable routing across the back of the Lower Bay (ensure all cables are in place and connected, all clips are re-attached)&#160;and re-install the plastic cover over the cableway.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note—</b>Check the new and existing cables in the cableway again behind the UFD and in the PC&#160;Bay. Ensure none of the cables or insulated water hoses will be pinched or in the way when the Mid-Bay Drawer is closed. Slowly close the drawer and verify the drawer can close and lock.</td></tr></tbody></table></li>
+                                            <li value="9"><a targets="PCAP_53" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_53"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Carefully lift and set the Pumps Module back onto the two set screws and tighten with a 3mm hex key.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>Ensure the Pump Module CAN&#160;cable is still run through the metal channel in the frame, or up and over the top of the Pumps Module from the rear corner so it doesn't get pinched or damaged when the Pumps Module is re-installed.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_53">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_52.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="10">Re-install the third screw underneath the module. Slide out the Mid-Bay Drawer for easier access to the screw location.</li>
+                                            <li value="11"><a targets="PCAP_54" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_54"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Re-attach the two Pump Tube Splitters on the left side of the Pumps Module with the (2.5mm) screws removed previously. Re-secure the OQ aspirator tubes in the clips (if present)..</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_54">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_53.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="12"><a targets="PCAP_55" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_55"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Plug the CAN&#160;cable back into the Pumps Module.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_55">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_54.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="13">Re-connect the Luminometer Injector on top of the Luminometer, under the Pumps Module.</li>
+                                            <li value="14"><a targets="PCAP_56" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_56"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Close and lock the Mid-Bay Drawer.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>Use&#160;caution when closing the Mid-Bay Drawer, and ensure that none of the cables or insulated water hoses will be pinched or in the way when the drawer is closed.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_56">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_55.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="15"><a targets="PCAP_57" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_57"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Reattach the hand-held scanner bracket (2 screws, 2.5mm hex key).</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_57">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_56.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="16"><a targets="PCAP_58" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_58"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Re-install the TCR&#160;Door using the four 2.5mm hex screws that hold the door on its hinges. Tilt and slide the TCR door upwards to re-engage the pin.</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_58">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_05.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="17"><a targets="PCAP_59" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_59"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Re-install the Front Canopy Doors using two screws on the inside of the frame, and reattach the door springs.</a>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>Use the Shock Compression Tool from the Panther Tool Kit to install the springs.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p style="display: none;" data-mc-target-name="PCAP_59">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_57.PNG" class="Large_img" />
+                                                </p>
+                                            </li>
+                                            <li value="18"><a targets="PCAP_60" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PCAP_60"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Re-install the Top Canopy using the eight screws on top of the canopy (2.5mm hex key).</a>
+                                                <p style="display: none;" data-mc-target-name="PCAP_60">
+                                                    <img src="../../Resources/Images/Monitor/PCAP Install/PCAP_Monitor_01.PNG" class="Large_img" />
+                                                </p>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—If the system is a Fusion,</b> refer <a href="../../Service/Fusion/Chassis/UnfuseFuseProcedures.htm" style="font-style: italic;">Unfuse and Fuse Fusion Procedure to separate the Fusion.</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </li>
+                                            <li value="19">Power on the system and start the PC.</li>
+                                        </ol>
+                                        <h2>Monitor Configuration</h2>
+                                        <ol>
+                                            <li value="1">Change the monitor screen resolution to 1280 x 1024 (if it doesn't change automatically).<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note—</b>If&#160;the Panther Image is 5.8.2 or above, Steps 2-22 are <b>NOT</b>&#160;required.</td></tr></tbody></table></li>
+                                            <li value="2">Login to the FSE&#160;Shield.</li>
+                                            <li value="3">Click the <b>Command Prompt</b> button.</li>
+                                            <li value="4">Type in <b>services.msc</b>.</li>
+                                            <li value="5">Press <b>Enter</b>.</li>
+                                            <li value="6">Right click the "Tablet PC&#160;Input Service" from the list of Services.</li>
+                                            <li value="7">Select <b>Properties</b>.</li>
+                                            <li value="8">From the "Tablet PC Input Service Properties" window, use the "Startup Type" dropdown menu to set the Startup Type to <b>Automatic</b>.</li>
+                                            <li value="9">Select the <b>Apply</b> button.</li>
+                                            <li value="10">Select <b>OK</b>.</li>
+                                            <li value="11"><b>Restart the PC</b>.</li>
+                                            <li value="12">Login to the FSE&#160;Shield.</li>
+                                            <li value="13">Click the <b>Command Prompt</b> button.</li>
+                                            <li value="14">Type in <b>control</b>.</li>
+                                            <li value="15">Press <b>Enter</b>.</li>
+                                            <li value="16">Select "Programs and Features" from the Control Panel window.</li>
+                                            <li value="17">Select "Turn Windows features on or off".</li>
+                                            <li value="18">When the Features list populates, scroll down to "Tablet PC&#160;Optional Components" and check the box to enable this feature. (If already checked, DO&#160;NOT&#160;uncheck. Leave the feature checked and proceed.)</li>
+                                            <li value="19">Select OK.</li>
+                                            <li value="20">Wait for the "Tablet PC&#160;Optional Components" feature to be configured. (This process can take up to 10 minutes if previously unchecked.)</li>
+                                            <li value="21"><b>Restart the PC</b>.</li>
+                                            <li value="22">Login to the FSE&#160;Shield.</li>
+                                            <li value="23">Click the <b>Command Prompt</b> button.</li>
+                                            <li value="24">Type <b>tabletPC.cpl</b>.</li>
+                                            <li value="25">Press <b>Enter</b>.</li>
+                                            <li value="26">From the "Pen and Input Devices" window, select the <b>Touch</b> tab.</li>
+                                            <li value="27">Uncheck the "Show the pointer when I'm interacting with items on the screen"&#160;checkbox.</li>
+                                            <li value="28">Select <b>OK</b>.</li>
+                                            <li value="29"><b>Restart the PC</b>.</li>
+                                        </ol>
+                                        <h2>Verification / Service Call Completion</h2>
+                                        <ol>
+                                            <li value="1">After reboot, verify the display and touchscreen functionality works correctly.</li>
+                                        </ol>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../Resources/Images/Toolbar/New/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

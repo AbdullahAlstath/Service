@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="Panther System|Panther Module Information|Lower Bay Modules|Vacuum System Module|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Vacuum System Troubleshooting Guide</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/PantherServiceManualStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript" src="../../../Skins/Default/Scripts/Topic Toolbar.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-device-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Startup/01_Startup.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherServiceManual@hologic.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1><a name="kanchor542"></a>Vacuum System Troubleshooting Guide</h1>
+                                        <h2>What is Affected</h2>
+                                        <p>Low vacuum failures on PANTHER have been one of the higher frequency failures in the field.  Upon investigation, more than 30% of the low vacuum failures’ root causes were reported to be clogged/wet vacuum filters.  The findings indicate that vacuum filter replacements are performed more often than necessary as clogged/wet vacuum filters are not the most common root cause for low vacuum failures and that many of the vacuum filter replacements are temporary fixes since the true root causes were not properly addressed.</p>
+                                        <h2>Common Root Causes for Low Vacuum Failures</h2>
+                                        <ul>
+                                            <li>Cracked Bottle</li>
+                                            <li>Clogged Vacuum Transducer Port</li>
+                                            <li>Bad vacuum transducer PCB</li>
+                                            <li>Broken/Missing Male Quick-Disconnect Fittings' O-rings</li>
+                                            <li>Vacuum Pump Failures - Including waste bottle male/female Quick-Disconnect fittings, manifold fittings, and vacuum pump fittings.</li>
+                                            <li>Loose Fittings - Including waste bottle male/female Quick-Disconnect fittings and manifold fittings, and vacuum pump fittings.</li>
+                                            <li>Clogged/Wet Vacuum Filters</li>
+                                        </ul>
+                                        <h2>Parts and Materials Required</h2>
+                                        <ul>
+                                            <li><a href="../../Safety/Fusion/PPEFusion.htm">Proper PPE</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>DOW CORNING HIGH VACUUM GREASE</li>
+                                            <li>TOOL, VACUUM SYSTEM TEST<ul><li><a targets="Vac_TSG_01" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Vac_TSG_01"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Vacuum Manifold Connection</a></li></ul><p style="display: none;" data-mc-target-name="Vac_TSG_01"><img src="../../Resources/Images/Vacuum/Vac_TSG/Vac_TSG_01.PNG" /></p></li>
+                                            <li><a targets="Vac_TSG_02" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Vac_TSG_02"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Waste Bottle Connection</a>
+                                                <p style="display: none;" data-mc-target-name="Vac_TSG_02">
+                                                    <img src="../../Resources/Images/Vacuum/Vac_TSG/Vac_TSG_02.PNG" />
+                                                </p>
+                                            </li>
+                                            <li><a targets="Vac_TSG_03" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Vac_TSG_03"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Vacuum Filter and Configuration 2 Vacuum Pump Housing Connection</a>
+                                                <p style="display: none;" data-mc-target-name="Vac_TSG_03">
+                                                    <img src="../../Resources/Images/Vacuum/Vac_TSG/Vac_TSG_03.PNG" />
+                                                </p>
+                                            </li>
+                                            <li><a targets="Vac_TSG_04" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Vac_TSG_04"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Configuration 1 Vacuum Pump Connection</a>
+                                                <p style="display: none;" data-mc-target-name="Vac_TSG_04">
+                                                    <img src="../../Resources/Images/Vacuum/Vac_TSG/4Vac_TSG_03.PNG" />
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <h2>Time Required</h2>
+                                        <ul>
+                                            <li>30 Minutes</li>
+                                        </ul>
+                                        <h2>Procedure</h2>
+                                        <table>
+                                            <col style="width: 40px;" />
+                                            <col style="width: 587px;" />
+                                            <tbody>
+                                                <tr>
+                                                    <td style="background-color: #ffffff;">
+                                                        <img src="../../Resources/Images/note04.gif" />
+                                                    </td>
+                                                    <td class="Note"><b>Note—</b>Note&#160;this guide provides troubleshooting for Configuration 1 and Configuration 2 A/B vacuum modules.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table>
+                                            <col style="width: 40px;" />
+                                            <col style="width: 587px;" />
+                                            <tbody>
+                                                <tr>
+                                                    <td style="background-color: #ffffff;">
+                                                        <img src="../../Resources/Images/Icons/Warning_38x33.png" style="width: 38;height: 33;" />
+                                                    </td>
+                                                    <td class="Caution">COMPLETE THE ENTIRE GUIDE BEFORE CONCLUDING YOUR INVESTIGATION SINCE LOW VACUUM ISSUES ARE USUALLY AN ACCUMULATION OF MULTIPLE FAILURES ACROSS THE VACUUM SYSTEM.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h3>Section 1: Initial Full System Inspection</h3>
+                                        <ol>
+                                            <li value="1">Using service software, check and record vacuum pressure to determine the magnitude of the issue.  (Take multiple readings and use the average to get a more accurate reading.) system target vacuum pressure level is 7 in.Hg (236 mBar) at system idle state and any reading below 6.5in.Hg (220 mbars) means the vacuum system is not functioning as expected.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note—In rare cases of a system failure due to high vacuum pressure warning, please check for clogged aspirators.</b>&#160;</td></tr></tbody></table></li>
+                                            <li value="2">Visually check the vacuum pressure transducer line and make sure there is no buildup forming in the line, if unsure then perform a vacuum manifold pressure sensor cleaning (See Appendix A for a step –by-step procedure).</li>
+                                            <li value="3">Inspect and tighten all vacuum manifold fittings including the vacuum pressure transducer fitting.</li>
+                                            <li value="4"><a targets="Vac_TSG_05" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Vac_TSG_05"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Continue by inspecting the waste line from the manifold to the waste bottle for kinks, length issues, or loose fittings.  See image below as an example.</a>
+                                                <p style="display: none;" data-mc-target-name="Vac_TSG_05">
+                                                    <img src="../../Resources/Images/Vacuum/Vac_TSG/Vac_TSG_05.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="5">Inspect the vacuum line from the waste bottle to the coalescence bottle for kinks and adjust as needed.</li>
+                                            <li value="6"><a targets="Vac_TSG_08;Vac_TSG_07;Vac_TSG_06" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Vac_TSG_08;Vac_TSG_07;Vac_TSG_06"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Visually inspect the male Quick-Disconnect fittings that connect the waste bottle to the vacuum system for cracks and make sure that the fittings’ O-rings are in place, lubricated, and in good condition.  If the fittings are cracked, even minor hairline cracks, replace the fittings.  See images below as examples.</a>
+                                                <p style="display: none;" data-mc-target-name="Vac_TSG_06">
+                                                    <img src="../../Resources/Images/Vacuum/Vac_TSG/Vac_TSG_06.PNG" />
+                                                </p>
+                                                <p style="display: none;" data-mc-target-name="Vac_TSG_07">
+                                                    <img src="../../Resources/Images/Vacuum/Vac_TSG/Vac_TSG_07.PNG" />
+                                                </p>
+                                                <p style="display: none;" data-mc-target-name="Vac_TSG_08">
+                                                    <img src="../../Resources/Images/Vacuum/Vac_TSG/Vac_TSG_08.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="7"><a targets="Vac_TSG_09" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Vac_TSG_09"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Check the waste bottle fittings and bottle cap. If found loose, then tighten as needed.  Also, check and make sure when you tighten the cap onto the bottle that the bottom of the cap does not bottom-out on the adjacent surface of the bottle.</a>
+                                                <p style="display: none;" data-mc-target-name="Vac_TSG_09">
+                                                    <img src="../../Resources/Images/Vacuum/Vac_TSG/Vac_TSG_09.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="8">Check and ensure the soft vacuum filter tubing connectors between the vacuum filter and the coalescence bottle and the vacuum filter and the vacuum pump lines are connected properly.</li>
+                                            <li value="9">Next inspect the vacuum pump lines for kinks and inspect the vacuum pump fittings.  Listen to the vacuum pump for any abnormal noises and check for proper wire routing. </li>
+                                            <li value="10">Upon completion of this section, using service software, check and record the vacuum pressure and continue to the next section.  (Take multiple readings and use the average to get a more accurate reading)<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note—REGARDLESS OF WHAT THE VACUUM PRESSURE READING IS, YOU MUST COMPLETE SECTION 2 OF THIS PROCEDURE.</b></td></tr></tbody></table></li>
+                                        </ol>
+                                        <h3>Section 2: Sectional Troubleshooting of the Vacuum System</h3>
+                                        <p>
+                                            <img src="../../Resources/Images/Vacuum/Vac_TSG/Vac_TSG_10.PNG" />
+                                        </p>
+                                        <table>
+                                            <col style="width: 40px;" />
+                                            <col style="width: 587px;" />
+                                            <tbody>
+                                                <tr>
+                                                    <td style="background-color: #ffffff;">
+                                                        <img src="../../Resources/Images/note04.gif" />
+                                                    </td>
+                                                    <td class="Note"><b>Note—Use the image above as a reference for the following four steps.</b>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p>
+                                            <img src="../../Resources/Images/Vacuum/Vac_TSG/Vac_TSG_11.PNG" />
+                                        </p>
+                                        <ol>
+                                            <li value="1"><b>Vacuum Manifold</b>: Unscrew the middle aspirator fitting from the vacuum manifold and connect the vacuum test tool in its place as shown in the image above.  Take a vacuum reading using service software and compare it with the vacuum test tool reading. <a targets="Vac_TSG_17" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Vac_TSG_17"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />(Refer to the table below for proper analysis.)</a><p style="text-align: left; display: none;" data-mc-target-name="Vac_TSG_17"><img src="../../Resources/Images/Vacuum/Vac_TSG/Vac_TSG_12.PNG" /></p></li>
+                                            <li value="2">Waste Bottle: While the vacuum is running, open the waste drawer and listen for air leak noise around the waste bottle and especially by the waste bottle Quick-Disconnect fittings.  If no issues are found, then remove the waste bottle and connect the appropriate vacuum test tool from the vacuum test tool kit to the male Quick-Disconnect fittings in the waste drawer to bypass the waste bottle, as shown in the image below. Take a vacuum reading with service software and compare it with the pressure reading at the vacuum test tool.  <a targets="Vac_TSG_11;Vac_TSG_10" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Vac_TSG_11;Vac_TSG_10"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />(Refer to the table below for proper analysis.)</a><p style="display: none;" data-mc-target-name="Vac_TSG_10"><img src="../../Resources/Images/Vacuum/Vac_TSG/Vac_TSG_13.PNG" /></p><p style="display: none;" data-mc-target-name="Vac_TSG_11"><img src="../../Resources/Images/Vacuum/Vac_TSG/Vac_TSG_14.PNG" /></p></li>
+                                            <li value="3"><a targets="Vac_TSG_13;Vac_TSG_12" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Vac_TSG_13;Vac_TSG_12"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Vacuum Filter:&#160;Connect the appropriate vacuum test tool to the inlet of the vacuum filter, as shown in the image below.  Take a vacuum reading using service software and compare with the vacuum pressure reading on the vacuum test tool.  (Refer to the table below for proper analysis.)</a>
+                                                <p style="display: none;" data-mc-target-name="Vac_TSG_12">
+                                                    <img src="../../Resources/Images/Vacuum/Vac_TSG/Vac_TSG_15.PNG" />
+                                                </p>
+                                                <p style="display: none;" data-mc-target-name="Vac_TSG_13">
+                                                    <img src="../../Resources/Images/Vacuum/Vac_TSG/Vac_TSG_16.PNG" />
+                                                </p>
+                                                <p>Before proceeding to the next step, bypass the vacuum filter using the vacuum test tool and if the vacuum pressure increases by more than 20mbars using service software, then change the vacuum filter and continue to step 4.  (If it is determined that the vacuum filter is clogged, then unscrew the coalescence bottle drainage plug from the side of the drawer, if fluid drains out of the bottle then remove it from the drawer and clean.)</p>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>Dark vacuum filter membrane does not necessarily mean that the filter is clogged.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </li>
+                                            <li value="4"><b>Vacuum Pump</b>: There are two configurations for the vacuum pump:<ol style="list-style-type: lower-alpha;"><li value="1"><a targets="Vac_TSG_14" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Vac_TSG_14"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />With the vacuum housing.</a><p style="display: none;" data-mc-target-name="Vac_TSG_14"><img src="../../Resources/Images/Vacuum/Vac_TSG/Vac_TSG_17.PNG" /></p></li><li value="2"><a targets="Vac_TSG_15" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Vac_TSG_15"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Without the vacuum housing.</a><p style="display: none;" data-mc-target-name="Vac_TSG_15"><img src="../../Resources/Images/Vacuum/Vac_TSG/Vac_TSG_18.PNG" /></p></li></ol><p>Refer to images above and attach the appropriate tool as shown for each configuration.  Take a vacuum reading using service software and compare with the vacuum pressure reading on the vacuum test tool.  <a targets="Vac_TSG_16" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Vac_TSG_16"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />(Refer to the table below for proper analysis.)</a></p><p style="display: none;" data-mc-target-name="Vac_TSG_16"><img src="../../Resources/Images/Vacuum/Vac_TSG/Vac_TSG_19.PNG" /></p></li>
+                                            <li value="5">Upon resolving the low vacuum issue, return the system to its original configuration and run a MagWash OQ.</li>
+                                        </ol>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../Resources/Images/Toolbar/New/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="Panther System|Panther Module Information|External Component Modules|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Enabling Syslog for Cisco AS 5505 and 5506</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/PantherServiceManualStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript" src="../../../Skins/Default/Scripts/Topic Toolbar.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-device-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Startup/01_Startup.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherServiceManual@hologic.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1><a name="kanchor877"></a>Enabling Syslog for Cisco AS 5505 and 5506</h1>
+                                        <h2>Parts and Materials Required</h2>
+                                        <ul>
+                                            <li>FSE Laptop</li>
+                                            <li>Serial-to-USB adapter</li>
+                                            <li>Serial Console cable</li>
+                                        </ul>
+                                        <h2>Time Required</h2>
+                                        <ul>
+                                            <li>15 minutes</li>
+                                        </ul>
+                                        <h2>Procedure</h2>
+                                        <ol>
+                                            <li value="1">Obtain from the customer's IS/IT Administrator their Syslog server IP&#160;and protocol/listening port. You will need this information to enable Syslog on the firewall.</li>
+                                            <li value="2">Ensure that the firewall is powered on by checking the <b>Power</b>, <b>Status</b>, and <b>Active</b> lights (located on the front of the firewall) are solid green.</li>
+                                            <li value="3">Connect the Serial-to-USB&#160;adapter to a USB port on your FSE laptop.</li>
+                                            <li value="4">Connect the serial end of the light blue console cable to the Serial-to-USB&#160;adapter.</li>
+                                            <li value="5"><a targets="Firewall Console Port" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall Console Port"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Connect the other end of the console cable to the firewall console port.</a>
+                                                <p style="display: none;" data-mc-target-name="Firewall Console Port">
+                                                    <img src="../../Resources/Images/Firewall/Firewall_Enable_Syslog/Enable_Syslog-01.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="6">Run HyperTerminal, located in <i>Start&gt;Programs&gt;Accessories&gt;Communications</i>.</li>
+                                            <li value="7"><a targets="Connection Description Window" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Connection Description Window"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />At the <b>Connection Description</b> window, give the connection an arbitrary name and select an icon. The actual name of the connection and the icon selection does not affect the outcome of this procedure.</a>
+                                                <p style="display: none;" data-mc-target-name="Connection Description Window">
+                                                    <img src="../../Resources/Images/Firewall/Firewall_Enable_Syslog/Enable_Syslog-02.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="8"><a targets="Connect to Window" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Connect to Window"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />At the <b>Connect to</b> window, select the correct COM port being used by the Serial-to-USB adapter.</a>
+                                                <p style="display: none;" data-mc-target-name="Connect to Window">
+                                                    <img src="../../Resources/Images/Firewall/Firewall_Enable_Syslog/Enable_Syslog-03.PNG" />
+                                                </p>
+                                            </li>
+                                            <ol style="list-style-type: lower-alpha;">
+                                                <li value="1"><a targets="Device Manager- COM &amp; Port" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Device Manager- COM &amp; Port"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />If this is unknown, open <b>Windows Explorer</b>. Right-click on <b>My Computer</b> and click on <b>Manage</b>. Click on <b>Device Manager</b> in the left-hand pane (see following image).</a>
+                                                    <p style="display: none;" data-mc-target-name="Device Manager- COM &amp; Port">
+                                                        <img src="../../Resources/Images/Firewall/Firewall_Enable_Syslog/Enable_Syslog-04.PNG" />
+                                                    </p>
+                                                </li>
+                                                <li value="2">Expand the <b>Ports (COM and LPT)</b>&#160;section. Find the Serial-to-USB adapter and note the COM&#160;port assigned to it. The COM&#160;port is found in parentheses.</li>
+                                                <li value="3">Once the correct COM&#160;port has been selected in the <b>Connect to</b> window, Click <b>OK</b>.</li>
+                                            </ol>
+                                            <li value="9"><a targets="COMX Properties Window" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="COMX Properties Window"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />At the <b>COM<i>X</i> Properties</b> (<b style="font-style: italic;">X</b> is the port number chosen above) window, change the <b>Bits per second</b> to <b>9600</b> and click <b>OK</b>.</a>
+                                                <p style="display: none;" data-mc-target-name="COMX Properties Window">
+                                                    <img src="../../Resources/Images/Firewall/Firewall_Enable_Syslog/Enable_Syslog-05.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="10"><a targets="HyperTerminal Main" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="HyperTerminal Main"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Now you will be looking at the main HyperTerminal window (following image).</a>
+                                                <p style="display: none;" data-mc-target-name="HyperTerminal Main">
+                                                    <img src="../../Resources/Images/Firewall/Firewall_Enable_Syslog/Enable_Syslog-06.PNG" />
+                                                </p>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note— Before reprogramming any firewall, it is extremely important to download the current firewall configuration for backup purposes.</b> This will ensure that no information is lost and having the backup information will be vital in troubleshooting in case the reprogramming is not successful. Steps 11 to 19 are instructions to perform the backup.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </li>
+                                            <li value="11">Open the <b>Transfer</b> drop-down menu (at the red circle in the image above) and click <b>Capture Text</b>. The Capture Text feature will capture all text seen in the window into a text file.</li>
+                                            <li value="12">Choose a directory to save the text file to and choose a name for the file, such as:<p><i>XXXXX mm-dd-yy firewall config backup</i> (where <i>XXXXX</i> is the Serial# of the Panther System)</p></li>
+                                            <li value="13"><a targets="ciscoasa prompt" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="ciscoasa prompt"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Once back at the main window, press the <b>Enter</b> key. The prompt message (<b style="font-style: italic;">ciscoasa&gt;</b>) will appear.</a>
+                                                <p style="display: none;" data-mc-target-name="ciscoasa prompt">
+                                                    <img src="../../Resources/Images/Firewall/Firewall_Enable_Syslog/Enable_Syslog-07.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="14">Type <b>enable</b> and press <b>Enter</b>. A password prompt will appear.</li>
+                                            <li value="15">The password is the same password used to log-in to the gpservice account on service software. Enter the password and press <b>Enter</b>.</li>
+                                            <li value="16"><a targets="ciscoasa# prompt" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="ciscoasa# prompt"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />A prompt message (<b style="font-style: italic;">ciscoasa#</b>) will now appear.</a>
+                                                <p style="display: none;" data-mc-target-name="ciscoasa# prompt">
+                                                    <img src="../../Resources/Images/Firewall/Firewall_Enable_Syslog/Enable_Syslog-08.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="17">Type <b>terminal pager 0</b> and press <b>Enter</b>. This allows the configuration to continuously scroll as opposed to having to manually hit Enter as each short section appears.</li>
+                                            <li value="18"><a targets="show conf" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="show conf"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Type <b>show conf</b> and press <b>Enter</b>.</a>
+                                                <p style="display: none;" data-mc-target-name="show conf">
+                                                    <img src="../../Resources/Images/Firewall/Firewall_Enable_Syslog/Enable_Syslog-09_242x132.png" style="width: 242;height: 132;" />
+                                                </p>
+                                                <p>The configuration will begin scrolling down the screen. It is finished when the <b style="font-style: italic;">ciscoasa#</b> prompt reappears.</p>
+                                            </li>
+                                            <li value="19"><a targets="ciscoasa(config)# prompt" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="ciscoasa(config)# prompt"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />After the <b>ciscoasa#</b> prompt type <b>config t</b> and press <b>Enter</b>. The prompt changes to <b style="font-style: italic;">ciscoasa(config)#</b>.</a>
+                                                <p style="display: none;" data-mc-target-name="ciscoasa(config)# prompt">
+                                                    <img src="../../Resources/Images/Firewall/Firewall_Enable_Syslog/Enable_Syslog-10.PNG" />
+                                                </p>
+                                            </li>
+                                            <li value="20">Now run the following four commands, pressing <b>Enter</b> after each one:<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><p><b>Note—</b> </p><ul><li>Section a. (below) shows the formatting of the commands.</li><li>Section b. provides an example with representative values.</li><li>The system may display messages after you press Enter. These are typically advisory only and should not prevent you from entering the remaining commands.</li></ul></td></tr></tbody></table><ol style="list-style-type: lower-alpha;"><li value="1"><a targets="Command Format" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Command Format"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />In the second command below, replace the text shown in bold  with the customer's Syslog server IP and protocol/listening port.</a><p style="display: none;" data-mc-target-name="Command Format"><img src="../../Resources/Images/Firewall/Firewall_Enable_Syslog/Enable_Syslog-11.PNG" /></p></li><li value="2"><a targets="Commands Example" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Commands Example"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />The following is an <b>example</b> using "10.10.10.1" as the Syslog server IP and "TCP/6012" as the Protocol/Port:</a><p style="display: none;" data-mc-target-name="Commands Example"><img src="../../Resources/Images/Firewall/Firewall_Enable_Syslog/Enable_Syslog-12.PNG" /></p></li></ol></li>
+                                            <li value="21">Type <b>exit</b> and press <b>Enter</b>. You will now be taken back to the <b style="font-style: italic;">ciscoasa&gt;</b> prompt.</li>
+                                            <li value="22">Type <b>exit</b> and press <b>Enter</b> once more. You will still be at the <b style="font-style: italic;">ciscoasa&gt;</b> prompt.</li>
+                                            <li value="23"><a targets="Disconnect button" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Disconnect button"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Click the <b>Disconnect</b> button.</a>
+                                                <p style="display: none;" data-mc-target-name="Disconnect button">
+                                                    <img src="../../Resources/Images/Firewall/Firewall_Enable_Syslog/Enable_Syslog-13_473x319.png" style="width: 473;height: 319;" />
+                                                </p>
+                                            </li>
+                                            <li value="24">Close the window and choose <b>not to save</b> the connection.</li>
+                                            <li value="25">Disconnect the power from the firewall, wait one minute, then reconnect the power. This is to ensure no connection issues when reprogramming the firewall.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note—</b> It is recommended to leave the FSE laptop connected to the firewall until after successful verification.</td></tr></tbody></table></li>
+                                        </ol>
+                                        <h2>Verification</h2>
+                                        <ol>
+                                            <li value="1">Verify with the customer that logs from the Cisco firewall are being received at their Syslog server.</li>
+                                            <li value="2">Close HyperTerminal and disconnect the FSE laptop from the firewall.</li>
+                                        </ol>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../Resources/Images/Toolbar/New/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

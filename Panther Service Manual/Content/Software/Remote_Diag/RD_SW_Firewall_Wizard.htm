@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="Panther System|Panther System Installation|Installation Qualification (IQ)|Software Installation|Remote Diagnostics Installation" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Panther System Firewall Configuration Wizard</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/PantherServiceManualStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript" src="../../../Skins/Default/Scripts/Topic Toolbar.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-device-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Startup/01_Startup.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherServiceManual@hologic.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1><a name="kanchor953"></a>Firewall Wizard v5xxxx</h1>
+                                        <h2>Scope</h2>
+                                        <p>This section provides instructions for installing the PRO360° Remote Diagnostics Remote Diagnostics hardware and software.</p>
+                                        <h2>Parts and Materials Required</h2>
+                                        <ul>
+                                            <li>Completed <b>AW-19118 Panther / Panther Scalable Solutions and Panther Fusion Site Assessment</b></li>
+                                            <li><a targets="Firewall_kit" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_kit"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Firewall Kit</a>
+                                                <table style="margin-left: 0; margin-right: auto; display: none;" data-mc-target-name="Firewall_kit">
+                                                    <col style="width: 39px;" />
+                                                    <col style="width: 300px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>&#160;</td>
+                                                            <td>
+                                                                <p>
+                                                                    <img src="../../Resources/Images/Firewall/FW_Kit_300x200.png" style="width: 300;height: 200;" />
+                                                                </p>
+                                                                <ul style="list-style-type: circle;">
+                                                                    <li>Cisco Firewall ASA 5505 (1)</li>
+                                                                    <li>Ac/DC Power Supply Adapter (1)</li>
+                                                                    <li>110V UPS Power Cable (1)</li>
+                                                                    <li>Network Ethernet Cables (2)</li>
+                                                                    <li>Serial Cable (1)</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </li>
+                                            <li><a targets="PDU_Cable" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PDU_Cable"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Firewall Power Supply-to-UPS or PDU Cable (depends on the UPS in use: 110V vs 220V)</a>
+                                                <p style="display: none;" data-mc-target-name="PDU_Cable">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz/FW_Wiz_03_300x174.png" style="width: 300;height: 174;" />
+                                                </p>
+                                            </li>
+                                            <li>Firewall Wizard Software CD</li>
+                                            <li><a targets="UPS_Cable" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="UPS_Cable"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />For Panther System 220V UPS or PDU, 220V UPS Cable</a>
+                                                <p style="display: none;" data-mc-target-name="UPS_Cable">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz/FW_Wiz_04_300x380.png" style="width: 300;height: 380;" />
+                                                </p>
+                                            </li>
+                                            <li><a targets="USBtoSerial" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="USBtoSerial"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />USB-to-Serial Adapter Cable (for use on FSE/ISE Service Laptops with USB Ports instead of Serial Ports)</a>
+                                                <p style="display: none;" data-mc-target-name="USBtoSerial">
+                                                    <img src="../../Resources/Images/Software/RDx/USB_to_Serial_300x193.jpg" style="width: 300;height: 193;" />
+                                                </p>
+                                            </li>
+                                            <li>FSE/ISE Service Laptop running Microsoft Windows XP or 7 Operating System</li>
+                                            <li>Network Ethernet Cables</li>
+                                        </ul>
+                                        <h2>Time Required</h2>
+                                        <ul>
+                                            <li>30 minutes (as long as the Panther System Site Assessment Form contains complete and accurate networking information)</li>
+                                        </ul>
+                                        <h2>Procedure</h2>
+                                        <h3><a targets="FWP_01" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FWP_01"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />I. Installing the Firewall Wizard Software</a>
+                                        </h3>
+                                        <blockquote style="display: none;" data-mc-target-name="FWP_01">
+                                            <p>This section describes how to install the Firewall Wizard Software. If it is already installed on the Service Laptop, skip to the next section, II. Configuring the Firewall.</p>
+                                            <ol>
+                                                <li value="1">Close all applications running on the Service Laptop.</li>
+                                                <li value="2">Insert the Firewall Wizard Installation CD.</li>
+                                                <li value="3">If the Installation Program does not start automatically, navigate to the CD and double click the folder named <b>Wizard <i>X.X.X.X</i></b>, then double-click the <b>FirewallWizard</b> file.</li>
+                                                <li value="4">Accept all default suggestions by clicking <b>Next</b> on each screen and install the software.</li>
+                                                <li value="5">When the installation is complete, verify that the desktop contains an icon labeled <b>FirewallWizard <i>X.X.X.X</i></b>, where <i>X.X.X.X</i> is the current software version number.</li>
+                                                <li value="6">Double-click the Wizard icon and verify that the software starts and displays the <i>Welcome to the Gen-Probe Firewall Configuration Wizard</i> page.</li>
+                                            </ol>
+                                        </blockquote>
+                                        <h3><a targets="FWP_02" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FWP_02"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />II. Configuring the Firewall</a>
+                                        </h3>
+                                        <blockquote style="display: none;" data-mc-target-name="FWP_02">
+                                            <p>This section describes how to custom configure the Firewall using network information supplied in the Network Configuration section of the Panther System Site Assessment Form.</p>
+                                            <h4><a targets="FWSP_01" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FWSP_01"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />A. Connecting the Firewall to the Laptop</a>
+                                            </h4>
+                                            <blockquote style="display: none;" data-mc-target-name="FWSP_01">
+                                                <ol>
+                                                    <li value="1">Turn on the laptop and wait for the Operating System (XP or 7) to start.</li>
+                                                    <li value="2">Remove all cables from the Firewall.</li>
+                                                    <li value="3"><a targets="FW_05" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_05"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Plug the Firewall </a><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">AC<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Alternating current</span></a><a targets="FW_05" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_" data-mc-targets="FW_05">/CD Power Supply Adapter into the Firewall jack marked Power.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_05">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz/FW_Wiz_05.png" />
+                                                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="4">Plug the appropriate Firewall Power UPS Cable into the AC/DC Adapter.</li>
+                                                    <li value="5"><a targets="FW_06" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_06"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Plug the Firewall Serial Cable RJ45 connector into the Firewall jack marked Console.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_06">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz/FW_Wiz_06.PNG" />
+                                                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="6"><a targets="FW_07" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_07"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />If equipped, plug the Firewall Serial Cable into the Service Laptop's RS-232/DB-9 Serial Port and skip to step 9.</a>
+                                                    </li>
+                                                </ol>
+                                                <p xml:space="preserve" class="Indent_image" style="display: none;" data-mc-target-name="FW_07">           <img src="../../Resources/Images/Firewall/FW_Wiz/FW_Wiz_07.png" />           </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="7"><a targets="FW_08" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_08"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />If the Service laptop does not have an RS-232/DB-9 connector, plug the Firewall Serial Cable (DB-9 connector) into the mating DB-9 connector of the USB-to-Serial Adapter Cable.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_08">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz/FW_Wiz_08.png" />
+                                                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="8">Plug the USB connector into the Service Laptop.</li>
+                                                    <li value="9">If the Microsoft Windows XP or 7 Operating system begins to install a driver, wait until the process finishes. Microsoft may try to install a driver for the USB device. If this occurs, see installation instructions in SOP 19-02-03 Installation of USB-to-Serial Converter Multi1USV RS232 XP PC.</li>
+                                                </ol>
+                                            </blockquote>
+                                            <h4><a targets="FWSP_02" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FWSP_02"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />B. Starting the Wizard Software</a>
+                                            </h4>
+                                            <blockquote style="display: none;" data-mc-target-name="FWSP_02">
+                                                <ol>
+                                                    <li value="1"><a targets="FW_09" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_09"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />On the Service Laptop desktop, double-click the <b>Firewall Wizard</b> icon.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_09">
+                                                    <img src="../../Resources/Images/Firewall/FW_Icon.png" />
+                                                </p>
+                                                <p class="Indent">The <i>Welcome</i> page appears.</p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">Ensure that the green Status light on the Firewall is on and steady for at least 60 seconds.</li>
+                                                    <li value="3"><a targets="FW_10" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_10"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Click <b>Next</b> on the <i>Welcome to the Gen-Probe Firewall Configuration Wizard</i> page to begin the data input process.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_10">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz/FW_Wiz_01.png" />
+                                                </p>
+                                            </blockquote>
+                                            <h4><a targets="FWSP_03" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FWSP_03"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />C. Selecting the Input Mode</a>
+                                            </h4>
+                                            <blockquote style="display: none;" data-mc-target-name="FWSP_03">
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td style="background-color: #afeeee;">
+                                                                <p><b>Note—</b>An existing configuration file can be loaded into the Wizard and can be used in the following situations:</p>
+                                                                <ul>
+                                                                    <li>When completing a previous configuration attempt.</li>
+                                                                    <li>When re-configuring the Firewall.</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h5>Starting with a New Configuration File</h5>
+                                                <ol>
+                                                    <li value="1"><a targets="FW_11" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_11"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />To create and start with a new configuration file, select <b>No</b> on the <i>Select how you want to enter information</i> page and click <b>Next</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_11">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz/FW_Wiz_02.png" />
+                                                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">Continue to D. Selecting an Output Location.</li>
+                                                </ol>
+                                                <h5>Loading a Previously Saved Configuration File</h5>
+                                                <ol>
+                                                    <li value="1"><a targets="FW_12" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_12"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />To load a previously saved configuration file, select <b>Yes</b> on the <i>Select how you want to enter information</i> page and click <b>Next</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p xml:space="preserve" class="Indent_image" style="display: none;" data-mc-target-name="FW_12">
+                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_03.png" />
+                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2"><a targets="FW_13" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_13"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Using the <i>Open</i> dialog box, navigate to the location of the previously saved configuration.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_13">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_04.png" />
+                                                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="3">Select the configuration file and click <b>Open</b>.</li>
+                                                </ol>
+                                                <p class="Indent">A <i>File Load</i> dialog appears.</p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="4"><a targets="FW_14" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_14"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Click <b>OK</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_14">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_05.png" />
+                                                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="5">Continue to <i>D. Selecting an Output Location</i>.</li>
+                                                </ol>
+                                            </blockquote>
+                                            <h4><a targets="FWSP_04" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FWSP_04"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />D. Saving Configuration Files</a>
+                                            </h4>
+                                            <blockquote style="display: none;" data-mc-target-name="FWSP_04">
+                                                <p>Configuration files can be stored to the default directory displayed on the Output Location page or to a new location.</p>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>Configuration file descriptions are listed in Appendix A—Saved Configuration.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h5>If Saving a Configuration File to the Default Directory</h5>
+                                                <ol>
+                                                    <li value="1"><a targets="FW_15" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_15"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Confirm that <b>C:\Program Files\Gen-Probe\Firewall\Data</b> displays in the text field and click <b>Next</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_15">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_06.png" />
+                                                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">Continue to E. Configuring the FSE Laptop Serial Port.</li>
+                                                </ol>
+                                                <h5>If Saving a Configuration File to a Location Other than the Default Directory</h5>
+                                                <ol>
+                                                    <li value="1"><a targets="FW_16" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_16"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />On the <i>Select the folder to be used for saving output files</i> page, click <b>Change</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_16">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_07.png" />
+                                                </p>
+                                                <p class="Indent">A <i>Browse for Folder</i> dialog appears.</p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">Navigate to the desired location for the configuration file.</li>
+                                                    <li value="3"><a targets="FW_17" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_17"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Click <b>OK</b> to confirm the new location or click <b>Cancel</b> to keep the default file location.</a>
+                                                    </li>
+                                                </ol>
+                                                <p xml:space="preserve" class="Indent_image" style="display: none;" data-mc-target-name="FW_17">
+                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_08.png" />
+                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="4">Click <b>Next</b>.</li>
+                                                    <li value="5">Continue to <i>E. Configuring the FSE Laptop Serial Port</i>.</li>
+                                                </ol>
+                                            </blockquote>
+                                            <h4><a targets="FWSP_05" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FWSP_05"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />E. Setting the FSE Laptop Serial Port Configuration for Communicating with the Firewall</a>
+                                            </h4>
+                                            <p>When the Service Laptop is connected to the Firewall, the Wizard Serial Port page will verify and test the connection automatically.</p>
+                                            <blockquote style="display: none;" data-mc-target-name="FWSP_05">
+                                                <ol>
+                                                    <li value="1"><a targets="FW_18" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_18"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />On the <i>Serial Port</i> page, the Wizard automatically displays the correct connected serial port. If another serial port is required, select the new serial port from the <b>Port</b> drop-down menu.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_18">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_09.png" />
+                                                </p>
+                                                <p class="Indent"><i>Testing Connection to COMx</i> displays while the Wizard tests the connection.</p>
+                                                <p class="Indent"><i>Connect OK, IOS=x, ASDM=x</i> displays when the test is complete.</p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">If there are no issues, click <b>Next</b> to continue to <i>F. Setting Site and Instrument Information</i>.</li>
+                                                    <li value="3">If <i>No connected ports</i> displays, check to be sure the cables are connected.</li>
+                                                    <li value="4"><a targets="FW_19" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_19"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Click <b>Test</b> to test the connection.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_19">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_10.png" />
+                                                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="5">When the connection is confirmed, continue to <i>F. Setting Site and Instrument Information</i>.</li>
+                                                </ol>
+                                            </blockquote>
+                                            <h4><a targets="FWSP_06" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FWSP_06"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />F. Setting Site and Instrument Information</a>
+                                            </h4>
+                                            <blockquote style="display: none;" data-mc-target-name="FWSP_06">
+                                                <p>This section provides the configuration output files with the default filenames for ease of retrieval. This section also allows the FSE/ISE to select which Instrument type with which the Firewall will be used. This information can be found in the Panther System Site Assessment Form.</p>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>Entries into the Site Info page text boxes are limited to 35 alpha/numeric characters and spaces.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <ol>
+                                                    <li value="1">On the Site Info page, enter the following information:</li>
+                                                </ol>
+                                                <blockquote>
+                                                    <ul>
+                                                        <li>
+                                                            <p class="Indent">Site Name</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="Indent">FSE/ISE full name</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="Indent"><a targets="FW_20" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_20"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Firewall Serial Number (the serial number is located on the back of the firewall component)</a>
+                                                            </p>
+                                                            <p class="Indent_image" style="display: none;" data-mc-target-name="FW_20">
+                                                                <img src="../../Resources/Images/Firewall/FW_Wiz/FW_Wiz_20.png" />
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                </blockquote>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2"><a targets="FW_21" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_21"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <b>Panther</b> for the <i>Gen-Probe Instrument Model</i> and click <b>Next</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_21">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_11.png" />
+                                                </p>
+                                            </blockquote>
+                                            <h4><a targets="FWSP_07" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FWSP_07"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />G. Configuring the Firewall for Instrument Environment (Customer Site vs. Gen-Probe Internal)</a>
+                                            </h4>
+                                            <blockquote style="display: none;" data-mc-target-name="FWSP_07">
+                                                <p>The Wizard can configure the Firewall to communicate with a Customer Site or with an internal Gen-Probe Development Environment.</p>
+                                                <table>
+                                                    <col style="width: 40px;" />
+                                                    <col style="width: 587px;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>Customer Site is the default setting for FSE installs.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h5>If the Firewall will be used at a Customer Site</h5>
+                                                <ol>
+                                                    <li value="1"><a targets="FW_22" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_22"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />On the <i>Specify where the Firewall is physically Located</i> page, select <b>Yes</b> and click <b>Next</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_22">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_12.png" />
+                                                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">Continue to <i>H. Entering IP Address Settings</i>.</li>
+                                                </ol>
+                                                <h5>If the Firewall will be used at Gen-Probe</h5>
+                                                <ol>
+                                                    <li value="1"><a targets="FW_23" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_23"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />On the <i>Specify where the Firewall is physically Located</i> page, select <b>No, this is a special firewall inside Gen-Probe</b> and click <b>Next</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_23">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_13.png" />
+                                                </p>
+                                                <p class="Indent"><a targets="FW_24" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_24"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />A <i>Select Environments for Firewall Located inside Gen-Probe</i> page appears.</a>
+                                                </p>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_24">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_14.png" />
+                                                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">Select at least one of the following server environments:</li>
+                                                </ol>
+                                                <blockquote>
+                                                    <ul>
+                                                        <li><b>RDxM Production</b>
+                                                        </li>
+                                                        <li><b>RDxM QAS / V and V</b>
+                                                        </li>
+                                                        <li><b>RDxM Development</b>
+                                                        </li>
+                                                        <li><b>Axeda Enterprise</b>
+                                                        </li>
+                                                        <li><b>Axeda Sandbox</b>
+                                                        </li>
+                                                    </ul>
+                                                </blockquote>
+                                                <ol data-mc-continue="true">
+                                                    <li value="3">Click <b>Next</b>.</li>
+                                                </ol>
+                                            </blockquote>
+                                            <h4><a targets="FWSP_08" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FWSP_08"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />H. Entering IP Address Settings</a>
+                                            </h4>
+                                            <blockquote style="display: none;" data-mc-target-name="FWSP_08">
+                                                <p>The Wizard can configure the Firewall to allow a customer's network to assign a temporary IP address (DHCP) or to assign a permanent IP address (Static IP Address). This information is contained in the Panther System Site Assessment Form.</p>
+                                                <h5>For DHCP Addressing</h5>
+                                                <ol>
+                                                    <li value="1"><a targets="FW_25" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_25"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />On the <i>Select Dynamic or Static Outside Firewall IP Address</i> page, select <b>DHCP</b> and click <b>Next</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_25">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_15.png" />
+                                                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2"><a targets="FW_26" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_26"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />On the <i>Select how to specify the DHCP Range</i>, select either <b>Use IP Address Range</b> or <b>Use Gateway</b>, according to the information on the Panther System Site Assessment Form, and click <b>Next</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p xml:space="preserve" class="Indent_image" style="display: none;" data-mc-target-name="FW_26">
+                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_16.png" />
+                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="3"><a targets="FW_27" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_27"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />If the customer site uses a DHCP&#160;IP Address Range, on the <i>Outside Firewall DHCP IP Address Range</i> page, enter the starting and ending IP Addresses and click <b>Next</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_27">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_17.png" />
+                                                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="4"><a targets="FW_28" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_28"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />If the customer site uses a DHCP Gateway, enter the Gateway Address and click <b>Next</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p xml:space="preserve" class="Indent_image" style="display: none;" data-mc-target-name="FW_28">
+                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_18.png" />
+                </p>
+                                                <h5>For Static IP Addressing</h5>
+                                                <ol>
+                                                    <li value="1"><a targets="FW_29" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_29"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />On the <i>Select Dynamic or Static Outside Firewall IP Address</i> page, select <b>Static IP Address</b> and click <b>Next</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_29">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_19.png" />
+                                                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2"><a targets="FW_30" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_30"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />On the <i>Network Configuration for the Static outside Firewall</i> page, enter the Firewall, Netmask, and Gateway IP Addresses from the Panther System Site Assessment Form and click <b>Next</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_30">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_20.png" />
+                                                </p>
+                                            </blockquote>
+                                            <h4><a targets="FWSP_09" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FWSP_09"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />I. Entering DNS Settings</a>
+                                            </h4>
+                                            <blockquote style="display: none;" data-mc-target-name="FWSP_09">
+                                                <p>DNS must be configured on the Firewall, because the <i>PRO360° NTR Global</i> and the <i>PRO360° RSL</i> applications use domain names (i.e., RDxM.Gen-Probe.com) to access Gen-Probe servers. DNS&#160;allows this software to resolve these domain names to IP Addresses (i.e., RDxM.Gen-Probe.com resolves to 70.164.126.19).</p>
+                                                <p>The <b>Preferred DNS IP</b> and <b>Alternate DNS IP</b> will be pre-populated. Both DNS&#160;IP Address entries are required. The default values can be deleted and replaced with customer-selected values, if preferred. This information can be found in the Panther System Site Assessment form.</p>
+                                                <p>The Wizard requires two DNS IP non-duplicate addresses to be entered for configuring the Firewall. Any combination of default addresses and customer-selected values can be used to configure the Firewall.</p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="1"><a targets="FW_32" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_32"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />On the <i>Enter the Domain Name Server (DNS) Addresses to be Used</i> page, enter and confirm both DNS addresses.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_32">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_21.png" />
+                                                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">To reset to the default values, click <b>Defaults</b>.</li>
+                                                    <li value="3">Click <b>Next</b>.</li>
+                                                </ol>
+                                            </blockquote>
+                                            <h4><a targets="FWSP_10" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FWSP_10"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />J. Connecting to a TCP/IP LIS</a>
+                                            </h4>
+                                            <blockquote style="display: none;" data-mc-target-name="FWSP_10">
+                                                <ol>
+                                                    <li value="1"><a targets="FW_33" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_33"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />For customers requesting Panther instrument communication to their LIS using a TCP/IP interface, select <b>Yes</b> and click <b>Next</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p xml:space="preserve" class="Indent_image" style="display: none;" data-mc-target-name="FW_33">
+                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_22.png" />
+                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2"><a targets="LIS_Config" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LIS_Config"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enter the LIS Server IP address and TCP Port, and click <b>Next</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent" style="display: none;" data-mc-target-name="LIS_Config">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_23.png" />
+                                                </p>
+                                            </blockquote>
+                                            <h4><a targets="Network_Printer" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Network_Printer"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />K. Specifying a Network Printer</a>
+                                            </h4>
+                                            <blockquote style="display: none;" data-mc-target-name="Network_Printer">
+                                                <ol>
+                                                    <li value="1"><a targets="Select_Printer" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Select_Printer"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />For customers requesting networked printing services using the printers approved for the Panther System, select Yes and click <b>Next</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent" style="display: none;" data-mc-target-name="Select_Printer">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_24.png" />
+                                                </p>
+                                            </blockquote>
+                                            <h4><a targets="FWSP_11" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FWSP_11"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />L. Firewall Acceptance and Configuration</a>
+                                            </h4>
+                                            <blockquote style="display: none;" data-mc-target-name="FWSP_11">
+                                                <p>After all parameters have been entered into the Wizard, a <i>Please Review Your Input</i> page displays all entries.</p>
+                                                <ol>
+                                                    <li value="1">Verify that each entry on the page matches the information in the Network Configuration section of the <i>Panther System Site Assessment Form</i>.</li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2"><a targets="FW_35" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_35"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />When satisfied that all information is correct, click <b>Save</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_35">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_25.png" />
+                                                </p>
+                                                <p class="Indent"><a targets="FW_37" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_37"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />A <i>File Save</i> dialog box appears.</a>
+                                                </p>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_37">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_26.png" />
+                                                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="3">Click <b>OK</b>.</li>
+                                                    <li value="4">Confirm that the Service Laptop is properly connected to the Firewall.</li>
+                                                    <li value="5"><a targets="FW_36" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_36"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />On the <i>Please Review Your Input</i> page, click <b>Configure</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_36">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_27.png" />
+                                                </p>
+                                                <p class="Indent"><a targets="FW_38" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_38"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />A <i>Configuring Firewall</i> page appears, with a progress bar at the bottom of the page that indicates the percentage of completion.</a>
+                                                </p>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_38">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_28.png" />
+                                                </p>
+                                                <table>
+                                                    <col style="width: 40px;font-weight: bold;" />
+                                                    <col style="width: 587px;font-weight: bold;" />
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color: #ffffff;">
+                                                                <img src="../../Resources/Images/note04.gif" style="font-weight: bold;" />
+                                                            </td>
+                                                            <td class="Note"><b>Note—</b>Do not run any other applications (such as email or Internet Explorer) while the configuration is in progress.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p class="Indent"><a targets="FW_40" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_40"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />A <i>Configuration Completed</i> pop-up screen appears when all inputs have been accepted and the Firewall has been configured.</a>
+                                                </p>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_40">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_29.png" />
+                                                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="6">Read the <i>Configuration Completed</i> pup-up screen and click <b>OK</b>.</li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="7"><a targets="FW_39" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_39"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />On the <i>Configuration Successful</i> page, click <b>Exit</b>.</a>
+                                                    </li>
+                                                </ol>
+                                                <p class="Indent_image" style="display: none;" data-mc-target-name="FW_39">
+                                                    <img src="../../Resources/Images/Firewall/FW_Wiz_SW/FW_Wiz_SW_30.png" />
+                                                </p>
+                                            </blockquote>
+                                        </blockquote>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../Resources/Images/Toolbar/New/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="Panther System|Panther Procedures|Service Procedures|Upgrading Software at Current Panther Instrument Locations|Laboratory Information System (LIS)" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>LIS Serial Installation</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/PantherServiceManualStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/Trouble.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript" src="../../../Skins/Default/Scripts/Topic Toolbar.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-device-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Startup/01_Startup.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherServiceManual@hologic.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 name="_Ref230743435"><a name="kanchor755"></a>LIS Serial Installation</h1>
+                                        <h2>Purpose</h2>
+                                        <p>This procedure provides instructions for installing the LIS network interface from the Panther System to a customer's LIS (Laboratory Information System).</p>
+                                        <h2>Parts and Materials Required</h2>
+                                        <ul>
+                                            <li>RS232 cable (for RS232 installation)</li>
+                                        </ul>
+                                        <h2>Time Required</h2>
+                                        <ul>
+                                            <li>30 minutes</li>
+                                        </ul>
+                                        <h2>References</h2>
+                                        <ul>
+                                            <li><i>Panther System LIS Host Interface Guide</i>
+                                            </li>
+                                            <li><i>Panther System Operator's Manual</i>
+                                            </li>
+                                        </ul>
+                                        <h2><a targets="Pre" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Pre"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Pre-Installation Planning</a>
+                                        </h2>
+                                        <blockquote style="display: none;" data-mc-target-name="Pre">
+                                            <h3>Customer Planning</h3>
+                                            <ol>
+                                                <li value="1">Customer consults with LIS vendor to verify readiness of vendor application to send/receive and process the Panther System assay results.</li>
+                                                <li value="2">The customer needs to provide an RS232 LIS connection. This can be in one of the following forms</li>
+                                                <ul>
+                                                    <li><a targets="Opt_1" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Opt_1"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />RS232 Direct</a>
+                                                        <p class="Indent_image" style="display: none;" data-mc-target-name="Opt_1">
+                                                            <img src="../../Resources/Images/Install/Opt/Opt_2.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" />
+                                                        </p>
+                                                    </li>
+                                                    <li><a targets="Opt_2" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Opt_2"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />RS232 Converter</a>
+                                                        <p class="Indent_image" style="display: none;" data-mc-target-name="Opt_2">
+                                                            <img src="../../Resources/Images/Install/Opt/Opt_3.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" />
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </ol>
+                                            <h3>Configuration Options</h3>
+                                            <p>Prior to performing the configuration, determine the following options from the customer or use the defaults:</p>
+                                            <ul>
+                                                <li>Does the customer use uni-directional LIS (only <i>sends</i> results to the LIS system and does not <i>receive</i> orders for tests from the LIS system)? If so, check <b>Enable Unidirectional Mode</b>.</li>
+                                                <li>Does the customer want the system to automatically generate test order queries to the LIS? If so, check <b>Enable Test Order Query</b>.</li>
+                                                <li>Does the customer want to send results automatically? If so, check <b>Automatic Result Sending</b>.</li>
+                                                <li>Does the customer require result verification? If so, ensure <b>Enable Result Verification</b> is checked in <b>Admin &gt; System Configuration &gt; Results Management</b>.</li>
+                                                <li>Does the customer only want to verify certain result types? If so, complete the following steps:</li>
+                                                <ol style="list-style-type: lower-alpha;">
+                                                    <li value="1">Check <b>Enable Automatic Result Holding</b>.</li>
+                                                    <li value="2">Click <b>Edit Result Types</b>.</li>
+                                                    <li value="3">Select the assay name and click <b>Result Types</b>.</li>
+                                                    <li value="4">Click <b>Add</b> and select the result types the customer would like to hold.</li>
+                                                </ol>
+                                                <li>Does the customer want result error flags to be compressed so that multiple flags are sent on one result comment record? If so, check <b>Enable Result Flag Sending In a Compressed Format</b>.</li>
+                                                <li>Does the customer want outgoing query messages to be compressed so that multiple sample IDs are sent on one query record? If so, check <b>Enable Test Order Query in a Compressed Format</b>.</li>
+                                                <li>Does the customer want to activate LIS logging? If so, turn on both LIS logging options (LIS logging is turned off by default).</li>
+                                                <li>For RS232 Serial connections, determine if the LIS server uses custom or default values for <b>Baud Rate</b>, <b>Data Bits</b>, <b>Stop Bits</b>, and <b>Parity</b>.</li>
+                                                <li>Does the customer want to query the Panther System for results? If so, check <b>Enable Host Query Responding</b>.</li>
+                                                <li>Does the customer want results for calibrators or controls? If so, check <b>Enable Calibration Result Sending</b> or <b>Enable Control Result Sending</b>.</li>
+                                            </ul>
+                                        </blockquote>
+                                        <h2><a targets="Install" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Install"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Installing the RS232 Serial Connection</a>
+                                        </h2>
+                                        <blockquote style="display: none;" data-mc-target-name="Install">
+                                            <table>
+                                                <col style="width: 40px;" />
+                                                <col style="width: 587px;" />
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="background-color: #ffffff;">
+                                                            <img src="../../Resources/Images/note04.gif" />
+                                                        </td>
+                                                        <td class="Note">It is not necessary to power down the Panther System or CPU.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <ol>
+                                                <li value="1"><a targets="LIS_01" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LIS_01"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />At the back of the PC, connect the RS232 cable to <b>COM Port 1</b> or <b>Com Port 2</b></a>.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/Icons/Warning_38x33.png" style="width: 38;height: 33;" /></td><td><p style="font-weight: bold;font-style: normal;background-color: #ffff99;">Do not use COM Port 3—that port is used to connect the system to the CPU.</p></td></tr></tbody></table><p class="Indent_image" style="display: none;" data-mc-target-name="LIS_01"><img src="../../Resources/Images/Install/LIS_IN/LIS_IN_01.PNG" /></p></li>
+                                                <li value="2">Connect the other end of the RS232 cable to the matching Com Port on the customer LIS system.</li>
+                                                <li value="3">Gather the following settings to configure the RS232 LIS Connection:<table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/Trouble.css');border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" class="TableStyle-Trouble" cellspacing="0"><col style="width: 88px;" class="Column-Column1" /><col style="width: 181px;" class="Column-Column1" /><col style="width: 287px;" class="Column-Column1" /><col style="width: 200px;" class="Column-Column1" /><thead><tr class="Head-Header1"><th class="HeadD-Column1-Header1" colspan="4">Serial Settings</th></tr></thead><tbody><tr class="Body-Body1"><td class="BodyE-Column1-Body1" style="text-align: center;vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">16</td><td class="BodyE-Column1-Body1" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;font-weight: bold;"><p><b>COM&#160;Port</b></p></td><td class="BodyE-Column1-Body1" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><p><b>COM1 or COM2</b></p></td><td class="BodyD-Column1-Body1" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><p>This field specifies the serial port used for host transmissions.</p></td></tr><tr class="Body-Body2"><td class="BodyE-Column1-Body2" style="text-align: center;vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">17</td><td class="BodyE-Column1-Body2" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;font-weight: bold;"><p><span style="font-weight: bold;">Baud Rate</span></p></td><td class="BodyE-Column1-Body2" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><p>Select Baud Rate 19200, 9600, 4800, 2400, or 1200. Default is 9600.</p></td><td class="BodyD-Column1-Body2" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><p>Specifies the Baud Rate used for transmissions between the Panther System and the host.</p></td></tr><tr class="Body-Body1"><td class="BodyE-Column1-Body1" style="text-align: center;vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">18</td><td class="BodyE-Column1-Body1" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;font-weight: bold;"><p><b>Data Bits</b></p></td><td class="BodyE-Column1-Body1" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><p>7 or 8. Default is 8.</p></td><td class="BodyD-Column1-Body1" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><p>Overwrites the ASTM1381 requirements.</p></td></tr><tr class="Body-Body2"><td class="BodyE-Column1-Body2" style="text-align: center;vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">19</td><td class="BodyE-Column1-Body2" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;font-weight: bold;"><p><span style="font-weight: bold;">Stop Bits</span></p></td><td class="BodyE-Column1-Body2" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><p>0 or 1. Default is 1.</p></td><td class="BodyD-Column1-Body2" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><p>Overwrites the ASTM1381 requirements.</p></td></tr><tr class="Body-Body1"><td class="BodyB-Column1-Body1" style="text-align: center;vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">20</td><td class="BodyB-Column1-Body1" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;font-weight: bold;"><p><b>Parity</b></p></td><td class="BodyB-Column1-Body1" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><p>Even, Odd, or None. Default is None.</p></td><td class="BodyA-Column1-Body1" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><p>Overwrites the ASTM1381 requirements.</p></td></tr></tbody></table></li>
+                                                <li value="4"><a href="../../Service/Power/Power_On.htm">Turn on the Panther system</a>.</li>
+                                                <li value="5">Launch the Panther System main assay software and log in as an <b>Admin</b> or <b>Super Operator</b> User.</li>
+                                                <li value="6"><a targets="LIS_02" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LIS_02"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <b>Admin</b></a>.<p class="Indent_image" style="display: none;" data-mc-target-name="LIS_02"><img src="../../Resources/Images/Install/LIS_IN/LIS_IN_02.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" /></p></li>
+                                                <li value="7"><a targets="LIS_03" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LIS_03"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <b>LIS Configuration</b></a>.<p class="Indent_image" style="display: none;" data-mc-target-name="LIS_03"><img src="../../Resources/Images/Install/LIS_IN/LIS_IN_03.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" /></p></li>
+                                                <li value="8"><a targets="LIS_04" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LIS_04"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />For Serial Configurations, select <b>Serial</b> for the <b>Interface Layer</b> and check the <b>Enable LIS connection</b></a>.<p class="Indent_image" style="display: none;" data-mc-target-name="LIS_04"><img src="../../Resources/Images/Install/LIS_IN/LIS_IN_04.png" /></p></li>
+                                                <li value="9"><a targets="LIS_05" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LIS_05"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <b>Enable Automatic Test Order Query</b> and <b>Enable Automatic Result Sending</b>, based upon customer preferences</a>.<p class="Indent_image" style="display: none;" data-mc-target-name="LIS_05"><img src="../../Resources/Images/Install/LIS_IN/LIS_IN_05.png" /></p></li>
+                                                <li value="10"><a targets="LIS_06" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LIS_06"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Check the proper <b>Baud Rate</b> and <b>Data Bits</b> values and enter the proper setting in the <b>Com Port</b> field</a>.<p class="Indent" style="display: none;" data-mc-target-name="LIS_06"><img src="../../Resources/Images/Install/LIS_IN/LIS_IN_06a.PNG" /></p></li>
+                                                <li value="11">Select <b>SAVE</b>.</li>
+                                                <li value="12">Check the <i>Messages</i> screen to confirm that no LIS&#160;Error Messages are displayed.<p>If the customer requires <i>Result Verification</i>, complete the following steps. Otherwise, proceed to <a href="#Serial">Serial Connection  LIS Operational Qualification (OQ)</a>.</p></li>
+                                                <li value="13"><a targets="LIS_03a" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LIS_03a"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select the <b>System Configuration</b> button</a>.<p class="Indent_image" style="display: none;" data-mc-target-name="LIS_03a"><img src="../../Resources/Images/Install/LIS_IN/LIS_IN_03a.PNG" style="border-left-style: solid;border-left-width: 1;border-left-color: #000000;border-right-style: solid;border-right-width: 1;border-right-color: #000000;border-top-style: solid;border-top-width: 1;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1;border-bottom-color: #000000;" /></p></li>
+                                                <li value="14"><a targets="LIS_03b" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LIS_03b"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select the <b>Results Management</b> drop-down menu</a>.<p class="Indent_image" style="display: none;" data-mc-target-name="LIS_03b"><img src="../../Resources/Images/Install/LIS_IN/LIS_IN_03b.PNG" style="border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" /></p></li>
+                                                <li value="15"><a targets="LIS_03c" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LIS_03c"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />If the customer requests Result Verification, click the <b>Enable Result Verification</b> selection</a>.<p xml:space="preserve" class="Indent_image" style="display: none;" data-mc-target-name="LIS_03c">
+                <img src="../../Resources/Images/Install/LIS_IN/LIS_IN_03c.PNG" style="border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                </img>
+</p></li>
+                                            </ol>
+                                        </blockquote>
+                                        <h2><a name="Serial"></a><a targets="OQ" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="OQ"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Serial LIS Operational Qualification (OQ)</a>
+                                        </h2>
+                                        <blockquote style="display: none;" data-mc-target-name="OQ">
+                                            <h2>Panther System LIS&#160;Operational Qualification (OQ) Procedure</h2>
+                                            <ol>
+                                                <li value="1">In the Panther System software, navigate to <b>Admin</b>&gt; <b>LIS Configuration</b>.</li>
+                                                <li value="2">Select <b>Enable ASTM 1381 Logging</b> and <b>Enable ASTM 1394 Logging</b>, and click <b>Save</b>.</li>
+                                                <li value="3">If the Panther System is running SW Ver. 5.0 or higher, complete the following steps:</li>
+                                                <ol style="list-style-type: lower-alpha;">
+                                                    <li value="1">Navigate to <b>Tasks &gt; Perform Maintenance &gt; LIS Messages</b>.</li>
+                                                    <li value="2">Click the <b>Fetch from LIS</b> button.<p>The top left of the screen should display LIS Messages—ASTM 1381. If LIS Messages—ASTM 1394 displays, click the <b>Toggle</b> button.</p></li>
+                                                    <li value="3">Verify that an <b>ACK</b> is received from the LIS server.</li>
+                                                    <li value="4">After the verification is complete, disable ASTM 1381 and ASTN 1394 logging.</li>
+                                                </ol>
+                                                <li value="4">If the Panther System is running SW version lower than 5.0, complete the following steps:</li>
+                                                <ol style="list-style-type: lower-alpha;">
+                                                    <li value="1">Navigate to Tasks &gt; Perform Maintenance &gt; Service, and ope the Dashboard.<p><a targets="OQ_1" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="OQ_1"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />The <i>Panther Dashboard</i> software screen appears.</a></p><p class="Indent_image" style="display: none;" data-mc-target-name="OQ_1"><img src="../../Resources/Images/PQ/Dash_AC/Dash_AC1.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" /></p></li>
+                                                    <li value="2"><a targets="OQ_2" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="OQ_2"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select the <b>LIS Monitor</b> tab.</a>
+                                                        <p class="Indent_image" style="display: none;" data-mc-target-name="OQ_2">
+                                                            <img src="../../Resources/Images/Install/LIS_OQ/LIS_OQ_2.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" />
+                                                        </p>
+                                                    </li>
+                                                    <li value="3"><a targets="OQ_4" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="OQ_4"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <b>Load Logs</b>.</a>
+                                                        <p class="Indent_image" style="display: none;" data-mc-target-name="OQ_4">
+                                                            <img src="../../Resources/Images/Install/LIS_OQ/LIS_OQ_4.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" />
+                                                        </p>
+                                                    </li>
+                                                    <li value="4"><a targets="OQ_3" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="OQ_3"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <b>File Monitor On</b> (the button will highlight green).</a>
+                                                        <p class="Indent_image" style="display: none;" data-mc-target-name="OQ_3">
+                                                            <img src="../../Resources/Images/Install/LIS_OQ/LIS_OQDash_03.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" />
+                                                        </p>
+                                                    </li>
+                                                    <li value="5"><a targets="OQ_5" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="OQ_5"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Log activity appears at the bottom of the screen.</a>
+                                                        <p class="Indent_image" style="display: none;" data-mc-target-name="OQ_5">
+                                                            <img src="../../Resources/Images/Install/LIS_OQ/LIS_OQ_5.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" />
+                                                        </p>
+                                                    </li>
+                                                    <li value="6">Verify that an <b>&lt;ACK&gt;</b> was received from the LIS server.</li>
+                                                    <li value="7">Close the Panther Dashboard software.</li>
+                                                    <li value="8">Disable ASTM 1381 and ASTM 1394 logging.</li>
+                                                </ol>
+                                            </ol>
+                                        </blockquote>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../Resources/Images/Toolbar/New/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

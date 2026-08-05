@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-toc-path="Panther LINK|[%=System.LinkedTitle%]|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Programming the Firewall</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Resources/Stylesheets/PantherServiceManualStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript" src="../../../../Skins/Default/Scripts/Topic Toolbar.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-device-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../Startup/01_Startup.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherServiceManual@hologic.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1><a name="kanchor290"></a>Programming the Firewall</h1>
+                                        <h2>This procedure applies to the Cisco ASA 5505 and Cisco ASA&#160;5506 Firewalls.</h2>
+                                        <table>
+                                            <col style="width: 40px;" />
+                                            <col style="width: 587px;" />
+                                            <tbody>
+                                                <tr>
+                                                    <td style="background-color: #ffffff;">
+                                                        <img src="../../../Resources/Images/Icons/Warning_38x33.png" style="width: 38;height: 33;" />
+                                                    </td>
+                                                    <td class="Caution">Caution—If you are setting up a System with LINK, a 5506 is required.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>
+                                            <br />Screen shots below are for reference <b>ONLY</b>. Your screens may differ.<br /><br />All information entered into the Firewall Wizard will come from the Panther Site Assessment.<br /><br />Only steps that require further action are described. <br />If selecting no and no further input is needed, it is not described.</p>
+                                        <table>
+                                            <col style="width: 40px;" />
+                                            <col style="width: 587px;" />
+                                            <tbody>
+                                                <tr>
+                                                    <td style="background-color: #ffffff;">
+                                                        <img src="../../../Resources/Images/Icons/Warning_38x33.png" style="width: 38;height: 33;" />
+                                                    </td>
+                                                    <td class="Warning">
+                                                        <p>Warning—<a href="3_Firewall_Connect_Laptop.htm">PART&#160;B - Connecting the Cisco ASA 5505/5506 to FSE Laptop</a></p>
+                                                        <p>MUST BE COMPLETED BEFORE CONTINUING</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <ol>
+                                            <li value="1"><a targets="Firewall_Setup_Install_Sw_07" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_Setup_Install_Sw_07"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /> Open the Firewall Wizard.</a>
+                                                <p style="display: none;" data-mc-target-name="Firewall_Setup_Install_Sw_07">
+                                                    <img src="../../../Resources/Images/Firewall/Firewall_Setup_Install_Sw/Firewall_Setup_Install_Sw_07.png" />
+                                                </p>
+                                            </li>
+                                            <li value="2"><a targets="Firewall_Config_v5.5.30.3_01" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_Config_v5.5.30.3_01"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /> Confirm Steps 1-4 have been completed and select <b>Next &gt;</b>.</a>
+                                                <p style="display: none;" data-mc-target-name="Firewall_Config_v5.5.30.3_01">
+                                                    <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/1_Welcome Page v6.1.0.4_620x580.png" style="width: 620;height: 580;" />
+                                                </p>
+                                            </li>
+                                            <li value="3"><a targets="2_Action Query" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="2_Action Query"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select the action you would like to perform.</a>
+                                                <div style="display: none;" data-mc-target-name="2_Action Query">
+                                                    <p style="display: none;" data-mc-target-name="2_Action Query">
+                                                        <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/2_Action Query_459x465.png" style="width: 459;height: 465;" />
+                                                    </p>
+                                                    <ol style="list-style-type: lower-alpha;">
+                                                        <li value="1">Configure Firewall.</li>
+                                                        <li value="2">Configure Firewall but start with a saved configuration file.</li>
+                                                        <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span><span class="bold">You can only use a saved configuration that was saved with firewall wizard 6.0.1.4</span>
+                                                        </p>
+                                                        <li value="3">Save the current Firewall configuration.<ol style="list-style-type: lower-roman;"><li value="1"><a targets="Firewall_01" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_01"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select an Output Directory location. Select <span class="bold">Next</span>.</a><br /><img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/Firewall_Config_01.PNG" style="display: none;" data-mc-target-name="Firewall_01" /></li><li value="2"><a targets="Firewall_02" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_02"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />At the <span class="italic">Serial Port Connected to Firewall</span> screen, let the test run. After the test finishes, select <span class="bold">Next</span>.</a><br /><img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/Firewall_Config_02.PNG" style="display: none;" data-mc-target-name="Firewall_02" /></li><li value="3"><a targets="Firewall_03" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_03"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />When finished, select <span class="bold">Exit</span>.</a><br /><img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/Firewall_Config_03.PNG" style="display: none;" data-mc-target-name="Firewall_03" /></li><li value="4">Select <span class="bold">Exit</span>.</li><li value="5">Navigate to the output directory location you specified earlier. </li><p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>This is where you can find the output.txt file saved from performing this action.</p><p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>This will save an output.txt file. Information found in this file must be extracted for reuse.</p></ol></li>
+                                                        <li value="4">Install new Firewall OS (5506 only).<p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>The Install new Firewall OS will be used to install updates that are needed to fix vulnerabilities in the Cisco Operating System. <br />This will allow the firewall to install Cisco Operating System updates and provide protection against newly discovered vulnerabilities.</p></li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                            <li value="4"><a targets="Select Output Directory Location " href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Select Output Directory Location "><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select Output Directory Location.</a>
+                                                <ol style="list-style-type: lower-alpha;" data-mc-target-name="Select Output Directory Location ">
+                                                    <li value="1"><a targets="8_Default_Output_Loc" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="8_Default_Output_Loc"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <b>Next</b>, if the default location is acceptable</a>
+                                                        <p style="display: none;" data-mc-target-name="8_Default_Output_Loc">
+                                                            <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/8_Default_Output_Loc.PNG" />
+                                                        </p>
+                                                    </li>
+                                                    <li value="2"><a targets="9_Select_Output_Loc" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="9_Select_Output_Loc"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />To choose a different location, select <b>Change</b>.</a>
+                                                        <p style="display: none;" data-mc-target-name="9_Select_Output_Loc">
+                                                            <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/9_Select_Output_Loc.PNG" />
+                                                        </p>
+                                                        <ol>
+                                                            <ol style="list-style-type: lower-roman;">
+                                                                <li value="1"><a targets="10_Output_MakeNewFolder" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="10_Output_MakeNewFolder"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <b>Make New Folder</b>.</a>
+                                                                    <p style="display: none;" data-mc-target-name="10_Output_MakeNewFolder">
+                                                                        <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/10_Output_MakeNewFolder.PNG" />
+                                                                    </p>
+                                                                </li>
+                                                                <li value="2"><a targets="11_NametheFolder" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="11_NametheFolder"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enter the folder name and select <span class="bold">OK</span>.</a>
+                                                                    <p style="display: none;" data-mc-target-name="11_NametheFolder">
+                                                                        <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/11_NametheFolder.PNG" />
+                                                                    </p>
+                                                                </li>
+                                                                <li value="3"><a targets="12_OutputFolderName" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="12_OutputFolderName"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <span class="bold">Next.</span>.</a>
+                                                                    <p style="display: none;" data-mc-target-name="12_OutputFolderName">
+                                                                        <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/12_OutputFolderName.PNG" />
+                                                                    </p>
+                                                                </li>
+                                                            </ol>
+                                                        </ol>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                            <li value="5"><a targets="Verification of Firewall SW connection to your laptop" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Verification of Firewall SW connection to your laptop"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Verify Firewall SW connection  to your laptop.</a>
+                                                <div style="display: none;" data-mc-target-name="Verification of Firewall SW connection to your laptop">
+                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span><span class="bold">Automatic Connection Verification</span>
+                                                        <br />When advancing from the Output Directory Location page to the Serial Port Connected to Firewall Page an automatic connection search will begin.</p>
+                                                    <ol style="list-style-type: lower-alpha;">
+                                                        <li value="1"><a targets="13_ConnectingtoFirewall" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="13_ConnectingtoFirewall"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />A text box will indicate <span class="italic">Connecting to Firewall</span>.</a>
+                                                            <p style="display: none;" data-mc-target-name="13_ConnectingtoFirewall">
+                                                                <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/13_ConnectingtoFirewall_638x626.png" style="width: 638;height: 626;" />
+                                                            </p>
+                                                        </li>
+                                                        <li value="2"><a targets="14_ConnectedtoFirewall" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="14_ConnectedtoFirewall"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />If successful, the following screen below will appear:</a>
+                                                            <div style="display: none;" data-mc-target-name="14_ConnectedtoFirewall">
+                                                                <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>IOS = Version, <br />ASDM = Version and MAC address of the firewall will be displayed.</p>
+                                                                <p>
+                                                                    <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/14_ConnectedtoFirewall.PNG" />
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li value="3"> <a targets="Testing the Serial Port Connection" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Testing the Serial Port Connection"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />If not successful, follow the Testing the Serial Port Connection steps below:</a><div style="display: none;" data-mc-target-name="Testing the Serial Port Connection"><p>Testing the Serial Port Connection</p><ol style="list-style-type: lower-roman;"><li value="1">Check that all connections are correct: Power, USB, and Serial.</li><li value="2">If connected correctly, select the Port drop-down menu.</li><li value="3">The Port drop-down menu will display all open ports and found.</li><li value="4">Select the COM&#160;Port that the Firewall is connected to.</li><li value="5">Click <b>Test</b>.</li><li value="6">The text box will indicate <b>Testing Connection to COMX</b> where X is the COM port number selected.</li><li value="7">The test will automatically connect to the Firewall and if successfully connected, the textbox will display:<br /><b>Connection OK. IOS = Version. ASDM = Version. MAC = address</b></li><li value="8">Click <b>Next</b> when the connection is established.</li></ol></div></li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                            <li value="6"><a targets="Site_Info" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Site_Info"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enter the Site Information.</a>
+                                                <div style="display: none;" data-mc-target-name="Site_Info">
+                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>By filling in the Site Information page, the wizard will program and  record  where the firewall is installed and who installed it. <br />This information is programed directly onto the firewall and listed in an <i style="font-weight: bold;">instructions.txt</i> file as an output of programing the firewall.</p>
+                                                    <p>Complete the following fields.</p>
+                                                    <ol style="list-style-type: lower-alpha;">
+                                                        <li value="1">Site Name</li>
+                                                        <li value="2">Your  Full Name</li>
+                                                        <li value="3">Firewall Serial # (located on the bottom of the firewall)</li>
+                                                        <li value="4">Select the <b>PANTHER</b> radio button in the <span class="italic">Hologic Instrument Model</span> box</li>
+                                                        <li value="5">Enter the number of instruments requiring connection to the Firewall.<p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span> A maximum of <span class="bold">16</span> systems can connect to the Firewall.</p></li>
+                                                        <li value="6"><a targets="Firewall_04" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_04"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <span class="bold">Next</span>.</a>
+                                                            <p>
+                                                                <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/15_SiteInfo.PNG" style="display: none;" data-mc-target-name="Firewall_04" />
+                                                            </p>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                            <li value="7"><a targets="Cisco_Syslog_Setup" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Cisco_Syslog_Setup"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Complete Cisco Syslog Setup.</a>
+                                                <div style="display: none;" data-mc-target-name="Cisco_Syslog_Setup">
+                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>
+                                                        <br />Cisco network devices  use Syslog to send system messages and debug output to a local logging process inside the device. <br /><br />Cisco Syslog is a standard for logging messages. <br />Syslog allows the customer's IT/IS to monitor what the firewall is doing. </p>
+                                                    <ol style="list-style-type: lower-alpha;">
+                                                        <li value="1">Select <span class="bold">Yes</span> if the customer requests Syslog to be enabled.</li>
+                                                        <li value="2">Enter the appropriate IP&#160;Address and Port.</li>
+                                                        <li value="3"><a targets="Firewall_05" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_05"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <span class="bold">Next</span>.</a>
+                                                            <p>
+                                                                <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/16_CiscoSyslog.PNG" style="display: none;" data-mc-target-name="Firewall_05" />
+                                                            </p>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                            <li value="8"><a targets="WinUpdateServer" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="WinUpdateServer"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enable Windows Update Server.</a>
+                                                <div style="display: none;" data-mc-target-name="WinUpdateServer">
+                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>The Windows Update Server will be used to send Windows Updates that are needed to fix vulnerabilities in the Windows Operating System. <br />This will allow connected Panther Systems to install Operating System updates and provide protection against newly discovered vulnerabilities. </p>
+                                                    <ol style="list-style-type: lower-alpha;">
+                                                        <li value="1"><a targets="Firewall_06" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_06"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <span class="bold">Yes</span> if the customer requests Windows Update Server to be enabled then select <span class="bold">Next</span>.</a>
+                                                            <p>
+                                                                <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/17_WinUpdateServer.PNG" style="display: none;" data-mc-target-name="Firewall_06" />
+                                                            </p>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                            <li value="9"><a targets="Read_Only" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Read_Only"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Create a Read-only User Account.</a>
+                                                <div style="display: none;" data-mc-target-name="Read_Only">
+                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>
+                                                        <br />The Read-Only User Account allows a customer to read the Firewall's configuration but does not allow them to modify settings. <br /><br />The Read-Only User Account allows the customer's IT to access the Firewall with Read Only privileges and view the configuration.<br /><br />The User Name will always default to "readonly" and may not be changed. Passwords must contain 4 to 32 characters.</p>
+                                                    <ol style="list-style-type: lower-alpha;">
+                                                        <li value="1"> <a targets="Firewall_07" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_07"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <span class="bold">Yes</span> if the customer requests a Read-only User Account  then select <span class="bold">Next</span>.</a><p><img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/18_ReadOnly_1.PNG" style="display: none;" data-mc-target-name="Firewall_07" /></p></li>
+                                                        <li value="2"><a targets="Firewall_08" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_08"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enter the password provided by the customer in both the <span class="italic">Password</span> and <span class="italic">Confirm Password</span> fields  then select <span class="bold">Next</span>.</a>
+                                                            <p>
+                                                                <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/19_ReadOnly_2.PNG" style="display: none;" data-mc-target-name="Firewall_08" />
+                                                            </p>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                            <li value="10"><a targets="VPN_Setup" style="font-weight: bold;" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="VPN_Setup"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />VPN&#160;Setup (Only applicable on the 5506)</a>
+                                                <div style="display: none;" data-mc-target-name="VPN_Setup">
+                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>
+                                                        <br />VPN connections are only necessary at customer sites when Panthers are physically separated and cannot be physically connected to a single switch.<br /><br />If the customer’s Ethernet infrastructure allows separated Panthers to be connected to a single switch, VPN is not needed.<br /><br />The maximum number of VPN connections is 10.<br /><br />Each physical location will require a Firewall installed.<br />If setting up a VPN, the external IP addresses of <b>each</b> Firewall <b>MUST</b> have a static IP address provided by the customer.</p>
+                                                    <ol style="list-style-type: lower-alpha;">
+                                                        <li value="1"> Select <b>Yes</b> if the customer has Panthers at different physical locations that are to be connected.</li>
+                                                        <li value="2"><a targets="Firewall_09" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_09"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Specify the total number of locations (Firewalls)  and select <span class="bold">Next</span>.</a>
+                                                            <p>
+                                                                <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/20_VPN_1.PNG" style="display: none;" data-mc-target-name="Firewall_09" />
+                                                            </p>
+                                                        </li>
+                                                        <li value="3"><a targets="Firewall_10" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_10"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enter the External IP Address, External IP&#160;Mask, and External Gateway IP&#160;for each location  and select Next.</a>
+                                                            <p class="caution" data-mc-autonum="&lt;b&gt;Caution—&lt;/b&gt;"><span class="autonumber"><span><b>Caution—</b></span></span>Make sure to  select <b>Current Firewall</b> for the Firewall you are programming.</p>
+                                                            <p>
+                                                                <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/20_VPN_2.PNG" style="display: none;" data-mc-target-name="Firewall_10" />
+                                                            </p>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                            <li value="11"><a targets="External Interface IP&#160;Address" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="External Interface IP&#160;Address"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Obtain an External Interface IP&#160;Address.</a>
+                                                <div style="display: none;" data-mc-target-name="External Interface IP&#160;Address">
+                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>The Firewall must obtain an IP address from the customer network. <br /><br />Three ways of obtaining an IP address are:<br />1. <span class="bold">Dynamic Address - DHCP</span>:<br /><br /><span class="bold">DHCP Gateway</span> - A DHCP Server will administer an IP address to the firewall.<br /><span class="bold">DHCP Range</span> - A DHCP Server will administer an IP address to the firewall within a specified range of addresses.<br /><br />2. <span class="bold">Static IP</span> - A Static IP address will be administered by the customer for the firewall to use as its IP address.</p>
+                                                    <ol style="list-style-type: lower-alpha;">
+                                                        <li value="1"><a targets="Dynamic Address - DHCP" style="font-weight: bold;" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dynamic Address - DHCP"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Dynamic Address - DHCP</a>
+                                                            <br />
+                                                            <ol style="display: none;" data-mc-target-name="Dynamic Address - DHCP">
+                                                                <li value="1"><a targets="Select DHCP" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Select DHCP"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />For DHCP&#160;Gateway or DHCP&#160;Range, select the <span class="bold">DHCP</span>&#160;radio button  then select <b>Next</b>.</a>
+                                                                    <p style="display: none;" data-mc-target-name="Select DHCP">
+                                                                        <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/21_DHCP.PNG" />
+                                                                    </p>
+                                                                </li>
+                                                                <li value="2"><b><a targets="DHCP_Gateway" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="DHCP_Gateway"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Dynamic IP&#160;Address - DHCP&#160;Gateway</a></b> <br /> A DHCP Server will administer an IP address to the firewall.<div style="display: none;" data-mc-target-name="DHCP_Gateway"><p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>In some cases, a customer site may require a reservation within their DHCP server. If a customer requires a MAC address or physical address, the MAC address of the firewall is in the <b style="font-style: italic;">Serial Port Connected to Firewall</b> page. </p><ol style="list-style-type: lower-alpha;"><li value="1"><a targets="Firewall_11" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_11"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <span class="bold">Use Gateway</span> if the customer requests DHCP Gateway  and select <span class="bold">Next</span>.</a><p><img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/22_DHCP_Gateway_1.PNG" style="display: none;" data-mc-target-name="Firewall_11" /></p></li><li value="2"><a targets="Firewall_12" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_12"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enter the <span class="italic">Gateway IP Address</span> and select <span class="bold">Next</span>.</a><p><img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/23_DHCP_Gateway_2.PNG" style="display: none;" data-mc-target-name="Firewall_12" /></p></li></ol></div></li>
+                                                                <li value="3"><a targets="Dynamic IP" style="font-weight: bold;" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dynamic IP"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Dynamic IP&#160;Address — DHCP Range</a> <br />A DHCP Server will administer an IP address to the firewall within a specified range of addresses.<div style="display: none;" data-mc-target-name="Dynamic IP"><ol style="list-style-type: lower-alpha;"><li value="1"><a targets="Firewall_13" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_13"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select Use IP Address Range if the customer requests DHCP Range  and select Next.</a><p> <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/24_DHCP_Range_1.PNG" style="display: none;" data-mc-target-name="Firewall_13" /></p></li><li value="2"><a targets="Firewall_14" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_14"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enter the starting and ending IP addresses  and select <span class="bold">Next</span></a>.<p><img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/25_DHCP_Range_2.PNG" style="display: none;" data-mc-target-name="Firewall_14" /></p></li></ol></div></li>
+                                                            </ol>
+                                                        </li>
+                                                        <li value="2"><a targets="Static IP" style="font-weight: bold;" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Static IP"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Static IP&#160;Address (Permanent IP&#160;address)</a>
+                                                            <br />A Static IP address will be administered by the customer for the firewall to use as its IP address.<ol style="display: none;" data-mc-target-name="Static IP"><li value="1"><a targets="Firewall_15" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_15"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <span class="italic">Static IP Address</span> if the customer requests Static IP and select <span class="bold">Next</span>.</a><p><img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/26_Stactic_1.PNG" style="display: none;" data-mc-target-name="Firewall_15" /></p></li><li value="2"><a targets="Firewall_16" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_16"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enter the <span class="italic">Firewall IP Address</span>, <span class="italic">Firewall IP Subnet Mask</span>, and <span class="italic">Default Gateway</span>  then select <span class="bold">Next</span>.</a><p><img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/27_Stactic_2.PNG" style="display: none;" data-mc-target-name="Firewall_16" /></p></li></ol></li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                            <li value="12"><a targets="FW_DNS" style="font-weight: bold;" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="FW_DNS"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Domain Name Server (DNS) Settings</a>
+                                                <div style="display: none;" data-mc-target-name="FW_DNS">
+                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>
+                                                        <br />A Domain Name Server is used to resolve a hostname such as connect.hologicsecurecare.com to an IP address.<br /><br />Open DNS&#160;(208.67.222.220) and Google DNS (8.8.8.8) are pre-populated by default.</p>
+                                                    <ol style="list-style-type: lower-alpha;">
+                                                        <li value="1">Verify the following check mark box is selected for:<p><img src="../../../Resources/Images/Firewall/Firewall_Config_v6.0.0.1/Firewall_Config_v6.0.0.1_20.png" /><br /></p></li>
+                                                    </ol>
+                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>This should only be unchecked if connecting to the Hologic Network (internal).</p>
+                                                    <ol style="list-style-type: lower-alpha;" data-mc-continue="true">
+                                                        <li value="2">Populate a new Preferred DNS in the text box if provided.</li>
+                                                        <li value="3">Populate a new Alternate DNS in the text box if provided.</li>
+                                                        <li value="4"><a targets="Firewall_17" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_17"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <span class="bold">Next</span>.</a>
+                                                            <p>
+                                                                <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/28_DNS.PNG" style="display: none;" data-mc-target-name="Firewall_17" />
+                                                            </p>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                            <li value="13"><a targets="Printer" style="font-weight: bold;" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Printer"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Network Printer</a>
+                                                <div style="display: none;" data-mc-target-name="Printer">
+                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>
+                                                        <br />There are two possibilities for networking the printer. <br /><br /><b>Option 1</b> is to network through the customer network.<br />An IP Address for the printer will be required from the customer.<br /><br /><b>Option 2</b> is to network within the Hologic network. <br />If Option 2 is needed, select NO when asked if the network printer will be used outside the firewall. <br /><br />If the customer does not want  the network printer on the customer’s network, there is the option for the printer to be connected to the switch. <br /><br />Configure the IP address of the network printer to be 172.23.1.99, <br />subnet 255.255.255.0 and Gateway of 172.23.1.1</p>
+                                                    <ol style="list-style-type: lower-alpha;">
+                                                        <li value="1"><a targets="Firewall_18" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_18"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <span class="bold">Yes</span> if the customer requests a Network Printer.</a>
+                                                            <p>
+                                                                <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/29_NetworkPrinter_1.PNG" style="display: none;" data-mc-target-name="Firewall_18" />
+                                                            </p>
+                                                        </li>
+                                                        <li value="2"><a targets="Firewall_19" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_19"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enter the <span class="italic">IP&#160;Address</span> of the Network Printer  then select <span class="bold">Next</span></a>.<p><img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/30_NetworkPrinter_2.PNG" style="display: none;" data-mc-target-name="Firewall_19" /></p></li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                            <li value="14"><a targets="Dashboard_Setup" style="font-weight: bold;" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dashboard_Setup"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Panther Link Dashboard Setup</a>
+                                                <div style="display: none;" data-mc-target-name="Dashboard_Setup">
+                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>
+                                                        <br />Panther Link allows multiple Panthers to share a common database.<br /><br />If setting up a Dashboard Server, a Cisco ASA 5506 <b>MUST</b> be used.<br /><br />The Dashboard Server requires a static IP address on the customer’s network which will use NAT to connect to an internal Panther network IP address.
+<br /><br />During this setup, the external (customer network) NAT IP address will need to be mapped. <br /><br />The <b style="font-style: italic;">instructions.txt</b> file will hold the necessary IP address and ports that will be used during configuration of the Dashboard server.</p>
+                                                    <ol style="list-style-type: lower-alpha;">
+                                                        <li value="1"><a targets="Firewall_20a" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_20a"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <span class="bold">Yes</span> if the customer requests to be connected with Link Dashboard  then select <span class="bold">Next</span>.</a>
+                                                            <p>
+                                                                <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/31_Link_1.PNG" style="display: none;" data-mc-target-name="Firewall_20a" />
+                                                            </p>
+                                                            <ol style="list-style-type: lower-roman;">
+                                                                <li value="1">Select <b>Yes</b> if the Dashboard Server will be connected to the Firewall currently being configured.</li>
+                                                                <li value="2">Enter the <span class="italic">Dashboard Server IP</span>.</li>
+                                                                <li value="3"><a targets="Firewall_20b" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_20b"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <span class="bold">Yes</span> if the Dashboard Server will need to access Panthers connected to other Firewalls  then select <span class="bold">Next</span>.</a>
+                                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>Only necessary for VPN setups.</p>
+                                                                    <p>
+                                                                        <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/32_Link_2.PNG" style="display: none;" data-mc-target-name="Firewall_20b" />
+                                                                    </p>
+                                                                </li>
+                                                            </ol>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                            <li value="15"><b><a targets="Track" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Track"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Track System</a></b>
+                                                <div style="display: none;" data-mc-target-name="Track">
+                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>
+                                                        <br />With the addition of Track Systems, new network connections are required. <br /><br />The Panther has integrated with two different track systems, IDS and Inpeco. 
+
+</p>
+                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>
+                                                        <br />The Panther Trax solution requires network connections with WMS using an IDS track.
+<br /><br />IDS&#160;does not require any additional input.</p>
+                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>
+                                                        <br />The Panther Track Ready System has the compatibility to be integrated and connected to a pre-existing Inpeco Track System. To connect to the Inpeco System, the customer technical support admin or the Inpeco Track System service organization will supply an External NAT IP Address as well as a dedicated port for each Panther that is to be connected to the track system. </p>
+                                                    <ol style="list-style-type: lower-alpha;">
+                                                        <li value="1"><a targets="Firewall_21" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_21"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <span class="bold">IDS - WMS</span> if an IDS track will be connected to the firewall and select <span class="bold">Next</span>.</a>
+                                                            <p>
+                                                                <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/33_Trax_1.PNG" style="display: none;" data-mc-target-name="Firewall_21" />
+                                                            </p>
+                                                        </li>
+                                                        <li value="2"><a targets="Firewall_22" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_22"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <span class="bold">Inpeco</span>, if an Inpeco track will be connected to the firewall then select <span class="bold">Next</span>.</a>
+                                                            <p>
+                                                                <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/34_Trax_Inpeco_1.PNG" style="display: none;" data-mc-target-name="Firewall_22" />
+                                                            </p>
+                                                            <ol>
+                                                                <li value="1">Enter the <span class="italic">External NAT IP Address</span> for the Inpeco system.</li>
+                                                                <li value="2"><a targets="Firewall_23" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_23"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enter the Interface Module Port for each Panther, then select the right arrow to add to the defined Interface Port List until all ports are mapped  and click Next.</a>
+                                                                    <p>
+                                                                        <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/35_Trax_Inpeco_2.PNG" style="display: none;" data-mc-target-name="Firewall_23" />
+                                                                    </p>
+                                                                </li>
+                                                            </ol>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                            <li value="16"><a targets="Grifols_Middleware" style="font-weight: bold;" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Grifols_Middleware"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Grifols Middleware</a>
+                                                <div style="display: none;" data-mc-target-name="Grifols_Middleware">
+                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>Not for Hologic Track systems. </p>
+                                                    <ol style="list-style-type: lower-alpha;">
+                                                        <li value="1"><a targets="Firewall_24" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_24"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <span class="bold">Yes</span> if the customer is using Grifols Middleware then select </a><b>Next</b>.<br /><p><img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/36_Grifols_1.PNG" style="display: none;" data-mc-target-name="Firewall_24" /></p><ol><li value="1"><a targets="Firewall_25" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_25"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enter the <span class="italic">Grifols IP&#160;Address</span> and add the appropriate number of ports (1 per system),  then select <span class="bold">Next</span>.</a><p><img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/37_Grifols_2.PNG" style="display: none;" data-mc-target-name="Firewall_25" /></p></li></ol></li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                            <li value="17"><a targets="Remote_Diagnostics" style="font-weight: bold;" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Remote_Diagnostics"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Remote Diagnostics</a>
+                                                <div style="display: none;" data-mc-target-name="Remote_Diagnostics">
+                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>
+                                                        <br />TeamViewer and Grifols Remote Desktop Protocol (RDP) are only used by Grifols.<br /><br />RDXM and SecureLink do not require any additional input. <br />SecureLink will only work with System SW v7.2 and above.<br /><br />You cannot connect multiple systems on a single firewall if they use SecureLink (System SW v7.2 and above) and RDXM/Pro360 (System SW v7.1 and below).  <br /><br />All systems with System SW v7.2 and above (SecureLink) can be connected on 1 Firewall.<br /><br />All systems with System SW v7.1.5.4 and below (RDXM/Pro360) can be connected on 1 Firewall.</p>
+                                                    <ol style="list-style-type: lower-alpha;">
+                                                        <li value="1"><a targets="Firewall_26" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_26"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select the <span class="italic">Remote Diagnostics</span> method to be used at the customer site  then select <span class="bold">Next</span>.</a>
+                                                            <p>
+                                                                <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/38_RemoteDx_1.PNG" style="display: none;" data-mc-target-name="Firewall_26" />
+                                                                <br />
+                                                            </p>
+                                                            <ol style="list-style-type: lower-roman;">
+                                                                <li value="1">HSCN (N3) Remote Desktop Protocol<p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>This is for UK NHS Network ONLY.</p><ol><li value="1">Select the <span class="bold">HSCN (N3) Remote Desktop Protocol</span> radio button. </li><li value="2"><a targets="Firewall_27" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_27"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enter the <span class="italic">HSCN IP Address</span>  then select <span class="bold">Next</span>.</a><p><img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/39_RemoteDx_N3_1.PNG" style="display: none;" data-mc-target-name="Firewall_27" /></p></li><li value="3"><a targets="Firewall_28" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_28"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enter the <span class="italic">External NAT&#160;IP&#160;Address</span>   then select <span class="bold">Next</span>.</a><p><img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/40_RemoteDx_2.PNG" style="display: none;" data-mc-target-name="Firewall_28" /></p></li></ol></li>
+                                                            </ol>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                            <li value="18"><a targets="LIS" style="font-weight: bold;" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LIS"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Laboratory Information System (LIS)</a>
+                                                <div style="display: none;" data-mc-target-name="LIS">
+                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>If LIS uses a serial connection, select <span class="bold">No</span>.</p>
+                                                    <ol style="list-style-type: lower-alpha;">
+                                                        <li value="1"><a targets="LIS_Yes" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LIS_Yes"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select  <span class="bold">Yes</span> if LIS&#160;will be used then select <b>Next</b>.</a>
+                                                            <p style="display: none;" data-mc-target-name="LIS_Yes">
+                                                                <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/41_LIS_1_574x565.png" style="width: 574;height: 565;" />
+                                                            </p>
+                                                        </li>
+                                                        <li value="2"><a targets="LIS_connections" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LIS_connections"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select the LIS connections needed then select <b>Next</b>.</a>
+                                                            <div style="display: none;" data-mc-target-name="LIS_connections">
+                                                                <ol style="list-style-type: lower-roman;">
+                                                                    <li value="1"><span class="bold">LIS is Networked</span> – For TCP/IP connections</li>
+                                                                    <li value="2"><span class="bold">LIS uses Remote File Share</span>
+                                                                    </li>
+                                                                    <li value="3">For Pooling:<p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span>Pooling will be configured with the use of a mapped network drive.</p><ol><li value="1">TCP/IP LIS Connection: Check BOTH boxes</li><li value="2">Serial LIS Connection: Check <span class="italic">LIS uses Remote File Share</span></li></ol></li>
+                                                                </ol>
+                                                                <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/42_LIS_2.PNG" />
+                                                            </div>
+                                                        </li>
+                                                        <li value="3"><a targets="LIS_RFS_1" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LIS_RFS_1"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />LIS Uses Remote File Share</a>
+                                                            <br />
+                                                            <ol style="display: none;" data-mc-target-name="LIS_RFS_1">
+                                                                <ol style="list-style-type: lower-roman;">
+                                                                    <li value="1"><a targets="LIS_RFS_2" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LIS_RFS_2"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enter the <span class="italic">IP address</span>, or addresses, for the mapped network drive then select <span class="bold">Next</span>.</a>
+                                                                        <div style="display: none;" data-mc-target-name="LIS_RFS_2">
+                                                                            <p>
+                                                                                <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/43_LIS_3.PNG" />
+                                                                            </p>
+                                                                            <ol>
+                                                                                <li value="1"><a targets="Firewall_29;Firewall_29b" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_29;Firewall_29b"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enter the <span class="italic">LIS IP Address</span> and the port for each system then select <span class="bold">Next</span>.</a>
+                                                                                    <p>
+                                                                                        <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/44_LIS_4_680x623.png" style="width: 680;height: 623;display: none;" data-mc-target-name="Firewall_29" />
+                                                                                    </p>
+                                                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span><span class="italic">WMS to LIS Port</span> will only appear if <b>IDS - WMS</b> was selected for <b>Track System</b>.</p>
+                                                                                    <p>
+                                                                                        <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/45_LIS_5.PNG" style="display: none;" data-mc-target-name="Firewall_29b" />
+                                                                                    </p>
+                                                                                </li>
+                                                                            </ol>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li value="2"><a targets="LIS_TestServer" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="LIS_TestServer"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />To configure a Test LIS Server, enter the Networked <span class="italic">LIS IP Address</span> and <span class="italic">LIS&#160;Port</span> Mapping information. Select the check box then <b>Next</b>.</a>
+                                                                        <div style="display: none;" data-mc-target-name="LIS_TestServer">
+                                                                            <p>
+                                                                                <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/44_LIS_4.PNG" />
+                                                                            </p>
+                                                                            <ol style="list-style-type: lower-alpha;">
+                                                                                <li value="1">
+                                                                                    <p><a targets="Firewall_30;Firewall_30b" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_30;Firewall_30b"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Enter the <span class="italic">Test LIS IP Address</span> and <span class="italic">Test LIS Port</span> for each system and select <span class="bold">Next</span>.</a>
+                                                                                    </p>
+                                                                                    <p>
+                                                                                        <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/46_LIS_6.PNG" style="display: none;" data-mc-target-name="Firewall_30" />
+                                                                                    </p>
+                                                                                    <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span><span class="italic">WMS to LIS Test Port</span> will only appear if <b>IDS - WMS</b> was selected for <b>Track System</b>.</p>
+                                                                                    <p>
+                                                                                        <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/47_LIS_7.PNG" style="display: none;" data-mc-target-name="Firewall_30b" />
+                                                                                    </p>
+                                                                                </li>
+                                                                            </ol>
+                                                                        </div>
+                                                                    </li>
+                                                                </ol>
+                                                            </ol>
+                                                        </li>
+                                                    </ol>
+                                                </div>
+                                            </li>
+                                            <li value="19"><a targets="Review" style="font-weight: bold;" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Review"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Review Your Input</a>
+                                                <ol style="list-style-type: lower-alpha; display: none;" data-mc-target-name="Review">
+                                                    <li value="1"><a targets="Firewall_31" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_31"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Review your input then select Configure.</a>
+                                                        <br />
+                                                        <p style="display: none;" data-mc-target-name="Firewall_31">
+                                                            <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/48_Review_1.PNG" />
+                                                            <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/49_Review_2_753x686.png" style="width: 753;height: 686;" />
+                                                        </p>
+                                                        <p class="note" data-mc-autonum="&lt;b&gt;Note: &lt;/b&gt;"><span class="autonumber"><span><b>Note: </b></span></span><span class="bold">DO NOT</span> click the <span class="bold">Abort</span> button unless it is necessary to cancel the configuration.</p>
+                                                    </li>
+                                                    <li value="2"><a targets="Firewall_32" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_32"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Once the configuration is complete, verify the settings are correct and select <span class="bold">OK</span>.</a>
+                                                        <p>
+                                                            <img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/51_Review_4.PNG" style="display: none;" data-mc-target-name="Firewall_32" />
+                                                        </p>
+                                                    </li>
+                                                    <li value="3"> <a targets="Firewall_33" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Firewall_33"><img class="MCToggler_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Upload the four configuration files shown below to the SR in Oracle or Panther Asset page in H1.</a><p><img src="../../../Resources/Images/Firewall/Firewall_Config_v6.1.0.4/52_Review_5.PNG" style="display: none;" data-mc-target-name="Firewall_33" /></p></li>
+                                                </ol>
+                                            </li>
+                                            <li value="20">Proceed to <a href="5_Firewall_Panther_IP.htm" class="MCXref xref">Setting a Panther IP Address on the Panther Workstation</a></li>
+                                        </ol>
+                                        <p>&#160;</p>
+                                        <p>&#160;</p>
+                                        <p>&#160;</p>
+                                        <p>&#160;</p>
+                                        <p>&#160;</p>
+                                        <p>&#160;</p>
+                                        <p>&#160;</p>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../../Resources/Images/Toolbar/New/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

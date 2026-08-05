@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="Panther System|Panther Module Information|Upper Bay Modules|Pipettor Module|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Pipettor / Z-Motor Meshing Adjustment</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/PantherServiceManualStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript" src="../../../Skins/Default/Scripts/Topic Toolbar.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-device-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Startup/01_Startup.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherServiceManual@hologic.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1><a name="kanchor362"></a>Pipettor / Z-Motor Meshing Adjustment</h1>
+                                        <table>
+                                            <col style="width: 40px;" />
+                                            <col style="width: 587px;" />
+                                            <tbody>
+                                                <tr>
+                                                    <td style="background-color: #ffffff;">
+                                                        <img src="../../Resources/Images/note04.gif" />
+                                                    </td>
+                                                    <td class="Note"><b>IMPORTANT</b>—Proper meshing is critical to pipettor operation. <br />Incorrect meshing can lead to dropped consumables and failed aspiration.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h2>Purpose</h2>
+                                        <p><a targets="Z-motor_shim_01" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Z-motor_shim_01"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />To provide instructions on how to use the Pipettor Z-Motor Mesh Shim Tool to check for proper meshing between the Pipettor Z-Motor and the Pipettor.</a>
+                                        </p>
+                                        <p class="Indent_image" style="display: none;" data-mc-target-name="Z-motor_shim_01">
+                                            <img src="../../Resources/Images/Pipettor/Mesh/Mesh_01.png" />
+                                            <br />Do not tilt the Pipettor arm while adjusting the meshing. <br />The <span style="background-color: #ffff99;">yellow</span> dotted line shows the correct orientation of the Pipettor. <br />The <span style="background-color: #f08080; font-weight: bold;">red</span> line shows incorrect mounting of the Pipettor arm. <br />The white dashed line shows the approximate center line between the Pipettor bearing surfaces.</p>
+                                        <h2>What is Affected</h2>
+                                        <p>A new Pipettor Z-Motor Mesh Shim Tool, ensures proper meshing of the pipettor Z-motor and the pipettor.</p>
+                                        <p>Previously, the service manual directed the use of a sheet of standard printer paper to check meshing. <br />The new Mesh Shim Tool is more reliable and easier to use.</p>
+                                        <p>This procedure applies to ALL pipettors on the Panther and Panther Fusion Systems.</p>
+                                        <table style="margin-left: 0;margin-right: auto;width: 600px;">
+                                            <col style="width: 38px;" />
+                                            <col style="width: 198px;" />
+                                            <col style="width: 243px;" />
+                                            <tbody>
+                                                <tr>
+                                                    <td>&#160;</td>
+                                                    <td style="font-weight: bold;"><span style="font-weight: normal;"><a targets="Mesh_2" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Mesh_2"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><b>Incorrect Meshing</b><br />Too much space between Z-motor and Pipettor</a></span>
+                                                    </td>
+                                                    <td style="font-weight: bold;">
+                                                        <p style="font-weight: normal;"><a targets="Mesh_3" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Mesh_3"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><b>Incorrect Meshing</b><br />Too tightly spaced between Z-motor and Pipettor</a>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&#160;</td>
+                                                    <td>
+                                                        <p style="display: none;" data-mc-target-name="Mesh_2">
+                                                            <img src="../../Resources/Images/Pipettor/Mesh/Meshing_2_253x286.png" style="width: 253;height: 286;" />
+                                                        </p>
+                                                    </td>
+                                                    <td>
+                                                        <p style="display: none;" data-mc-target-name="Mesh_3">
+                                                            <img src="../../Resources/Images/Pipettor/Mesh/Meshing_03_253x286.png" style="width: 253;height: 286;" />
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <ul>
+                                            <li><a targets="Mesh_4" style="font-weight: bold;" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Mesh_4"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Correct meshing</a>
+                                            </li>
+                                        </ul>
+                                        <p class="Indent_image" style="display: none;" data-mc-target-name="Mesh_4">
+                                            <img src="../../Resources/Images/Image/image018.jpg" />
+                                        </p>
+                                        <h2>Parts and Materials Required</h2>
+                                        <ul>
+                                            <li><a href="../../Safety/PPE.htm">Proper PPE</a>
+                                            </li>
+                                            <li>Panther Tool Kit </li>
+                                            <li>Pipettor Z-Motor Mesh Tool<p><img src="../../Resources/Images/Pipettor/pip-Z-shim/pip-Z-shim_1.png" /></p></li>
+                                        </ul>
+                                        <h2>Time Required</h2>
+                                        <ul>
+                                            <li>1 Hour</li>
+                                        </ul>
+                                        <h2>Procedure</h2>
+                                        <table>
+                                            <col style="width: 40px;" />
+                                            <col style="width: 587px;" />
+                                            <tbody>
+                                                <tr>
+                                                    <td style="background-color: #ffffff;">
+                                                        <img src="../../Resources/Images/note04.gif" />
+                                                    </td>
+                                                    <td class="Note"><b>Note—</b>Some images shown are of a system without the canopy or skins. Most systems will have the canopy and skins installed; the procedures will remain the same.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background-color: #ffffff;">
+                                                        <img src="../../Resources/Images/note04.gif" />
+                                                    </td>
+                                                    <td class="Note"><b>Note—</b>The Panther Sample Pipettor is shown throughout this procedure. The procedure is the same for the Reagent Pipettor and both Panther Fusion Pipettors</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <ol start="1">
+                                            <li value="1">Put on proper PPE.</li>
+                                            <li value="2">Shutdown the Panther System and PC.</li>
+                                            <li value="3"><a targets="Z-motor_shim_02" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Z-motor_shim_02"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Loosen (do not remove) the Z-Motor mounting screws to allow movement of the motor.</a>
+                                                <p style="display: none;" data-mc-target-name="Z-motor_shim_02">
+                                                    <img src="../../Resources/Images/Pipettor/pip-Z-shim/pip-Z-shim_2.png" />
+                                                </p>
+                                            </li>
+                                            <li value="4"><a targets="Z-motor_shim_03" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Z-motor_shim_03"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Slide the Mesh Shim Tool in between the pipettor and slide bearing as shown. </a>
+                                                <ul>
+                                                    <li>Extend the tool approximately 5&#160;mm past the top and bottom slide bearing.</li>
+                                                </ul>
+                                                <p style="display: none;" data-mc-target-name="Z-motor_shim_03">
+                                                    <img src="../../Resources/Images/Pipettor/pip-Z-shim/pip-Z-shim_3.png" />
+                                                </p>
+                                            </li>
+                                            <li value="5"><a targets="Z-motor_shim_04" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Z-motor_shim_04"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Pressing LIGHTLY on the Z-Motor to mesh the teeth on the motor gear with the teeth on the pipettor arm, tighten the 3&#160;motor screws. </a>
+                                                <ul>
+                                                    <li>The Shim Tool ensures proper meshing of the Z-Motor (not too tight or too loose).</li>
+                                                </ul>
+                                                <p style="display: none;" data-mc-target-name="Z-motor_shim_04">
+                                                    <img src="../../Resources/Images/Pipettor/pip-Z-shim/pip-Z-shim_4.png" />
+                                                </p>
+                                            </li>
+                                            <li value="6"><a targets="Z-motor_shim_05" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Z-motor_shim_05"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Manually move the pipettor down or up until the Shim Tool slides free.</a>
+                                                <p style="display: none;" data-mc-target-name="Z-motor_shim_05">
+                                                    <img src="../../Resources/Images/Pipettor/pip-Z-shim/pip-Z-shim_6.png" />
+                                                </p>
+                                            </li>
+                                            <li value="7">Proceed to Verification.</li>
+                                        </ol>
+                                        <h2>Verification</h2>
+                                        <ol>
+                                            <li value="1"><a href="../Power/Power_On.htm">Power on the Panther System.</a>
+                                            </li>
+                                            <li value="2"><b>For Panther</b>, <a href="../PIP_Align/PIP_Alignment.htm">teach all positions</a> using <b>Teacher SW v5.14 or higher</b>.</li>
+                                            <ul>
+                                                <li>Install Teacher SW v5.14 using TB-01304, Release of Teacher Software v5.14.</li>
+                                            </ul>
+                                            <li value="3"><b>For Panther Fusion</b>, <a href="../PIP_Align/PIP_Alignment.htm">teach all positions that apply to the adjusted pipettor.</a></li>
+                                            <li value="4">Complete a <a href="Pipettor-LLD-Test.htm" class="h1 MCXref xref xrefh1">Pipettor cLLD &amp; bLLD Test Procedure</a> on the adjusted pipettor (Left, Right, Fusion).</li>
+                                            <li value="5">If a pipettor was replaced, perform a <a href="../../Install/OQ/PIP_Pressure_Test.htm" class="h1 MCXref xref xrefh1">Pipettor Pressure Integrity Test</a>. (No <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">PQ<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Performance Qualification</span></a> is required.)</li>
+                                            <li value="6">Release the system and monitor the customer's next run for any issues.</li>
+                                            <li value="7">Add the completion of this procedure to the Service Record.</li>
+                                            <li value="8">Attach the cLLD Test and the PI test (if performed) to the Service Record.</li>
+                                            <li value="9">Verification is complete.</li>
+                                        </ol>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../Resources/Images/Toolbar/New/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

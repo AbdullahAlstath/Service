@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="Panther System|Panther System Installation|Installation Qualification (IQ)|Software Installation" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>BIOS Configuration Procedure</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/PantherServiceManualStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript" src="../../../Skins/Default/Scripts/Topic Toolbar.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-device-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Startup/01_Startup.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherServiceManual@hologic.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 name="_Ref230743435"><a name="kanchor5"></a>BIOS Configuration Procedure</h1>
+                                        <h2>Parts and Materials Required</h2>
+                                        <h2>Time Required</h2>
+                                        <ul>
+                                            <li>10 minutes</li>
+                                        </ul>
+                                        <h2>Procedure</h2>
+                                        <h3><a targets="Dell OptiPlex XE" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell OptiPlex XE"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />On a Dell OptiPlex XE for Image v3.0.11 (Win Vista)</a> </h3>
+                                        <ol style="display: none;" data-mc-target-name="Dell OptiPlex XE">
+                                            <li value="1">Shut down and reboot the Panther System PC.</li>
+                                            <li value="2">Press <b>F12</b>.</li>
+                                            <li value="3">Scroll down to <b>BIOS Setup</b>.</li>
+                                            <li value="4">Press <b>Enter</b>.</li>
+                                            <li value="5">Scroll down to <b>Boot Sequence</b>.</li>
+                                            <li value="6">Press <b>Enter</b>.<p class="Indent">The <i>Boot Device Menu</i> screen appears.</p><table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td style="background-color: #afeeee;" class="Note"><b>Note — </b>If the <i>Boot Device Menu</i> is locked, complete the following steps to unlock it:
+				<ol><li value="1">Tab to highlight the <b>Unlock</b> button.</li><li value="2">Press <b>Enter</b>.</li><li value="3">Enter <b>gpservice</b> in the input field.</li><li value="4">Press <b>Enter</b>.</li></ol></td></tr></tbody></table></li>
+                                            <li value="7">Using the <b>Tab</b> key, navigate to the right screen and clear the following checkbox options by pressing the <b>Enter</b> key:<ul><li>Onboard or USB floppy drive</li><li>Onboard or USB controller USB CD-ROM</li><li>Onboard network controller</li><li>Onboard USB device</li></ul></li>
+                                            <li value="8">Tab to <b>Apply</b> and press <b>Enter</b>.</li>
+                                            <li value="9">Scroll down to <b>Security</b>.</li>
+                                            <li value="10">Press <b>Enter</b>.</li>
+                                            <li value="11">Scroll down to <b>administrator password</b>.</li>
+                                            <li value="12">Tab over to the <i>New Password</i> field.</li>
+                                            <li value="13">Press the <b>Num Lock</b> key and the <b>Caps Lock</b> key to turn them off.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note — </b>Ensure LEDs on the keyboard over <b>Num Lock</b> and <b>Caps Lock</b> are off.</td></tr></tbody></table></li>
+                                            <li value="14">Enter <b>gpservice</b> in the <i>New Password</i> and <i>Confirm New Password</i> fields.</li>
+                                            <li value="15">Tab over to  <b>OK</b> and press <b>Enter</b>.</li>
+                                            <li value="16">Scroll down to <b>Post Behavior</b>.</li>
+                                            <li value="17">Press <b>Enter</b>.</li>
+                                            <li value="18">Scroll down to <b>Numlock LED</b>.</li>
+                                            <li value="19">Tab over to uncheck <b>Enable Numlock LED</b>.</li>
+                                            <li value="20">Tab to <b>Apply</b>.</li>
+                                            <li value="21">Press <b>Enter</b>.</li>
+                                            <li value="22">Tab to <b>Exit</b> and press <b>Enter</b>.<p class="Indent">The PC reboots.</p></li>
+                                            <li value="23">When prompted in the upper right corner of the Dell OptiPlex XE screen, press <b>F12</b> to enter into BIOS.</li>
+                                            <li value="24">Confirm the Administration Password control access.<p class="Indent">The <i>Boot Device Menu</i> screen appears.</p></li>
+                                            <li value="25">Scroll down to <i>System Setup</i> and press <b>Enter</b>.</li>
+                                            <li value="26">Tab to highlight the <b>Unlock</b> button.</li>
+                                            <li value="27">Press <b>Enter</b>.</li>
+                                            <li value="28">Enter <b>gpservice</b> in the input field.</li>
+                                            <li value="29">Tab to <b>OK</b> and press <b>Enter</b>.</li>
+                                            <li value="30">Tab to <b>Exit</b> and press <b>Enter</b>.</li>
+                                            <li value="31">Shut down and reboot the PC and system.</li>
+                                            <li value="32">Continue to <a href="../../Service/PC_Workstation/PC_Reset_Comp_Clock.htm">Resetting the <a href="../../Service/PC_Workstation/PC_Reset_Comp_Clock.htm">PC&#160;Clock and Date</a></a>.</li>
+                                        </ol>
+                                        <h3><a targets="Dell OptiPlex XE2" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell OptiPlex XE2"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />On a Dell OptiPlex XE2 for Image v3.0.11 (Win Vista) and Image v5.7.1 / v5.8.3 (Win 7)</a>
+                                        </h3>
+                                        <ol style="display: none;" data-mc-target-name="Dell OptiPlex XE2">
+                                            <li value="1">Restart the Panther System PC.</li>
+                                            <li value="2"> Press the <b>F12</b> key when the boot process begins.</li>
+                                            <li value="3"><a targets="XE2_BIOS_1" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="XE2_BIOS_1"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />On the Boot Screen, use the arrow keys to select <b>BIOS&#160;Setup</b>.</a> <p class="image"><img src="../../Resources/Images/PC_Workstation/BIOS-Config/BIOS-Config-1_500x376.png" style="width: 500;height: 376;display: none;" data-mc-target-name="XE2_BIOS_1" /></p></li>
+                                            <li value="4">Press <b>Enter</b> and the Dell OptiPlex XE2 BIOS Configuration window appears.<table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note — If the BIOS&#160;Menu is locked:</b><ol style="list-style-type: lower-alpha;"><li value="1">Click the <b>Unlock Button</b> (at the bottom of the screen).</li><li value="2">Enter <b>"gpservice"</b> in the input field and click Enter.</li></ol><p><b>If "gpservice" is accepted, proceed to Step 5.</b></p><p>If "gpservice" is <b>NOT</b>&#160;accepted as a password, you will have to reset the BIOS&#160;password. <a href="../../Service/PC_Workstation/PC_Unlock_Bios_XE2.htm">Refer to Resetting the BIOS&#160;password on an XE2</a></p></td></tr></tbody></table></li>
+                                            <li value="5"> Select <b>Boot Sequence</b>in the <i>General</i> section on the left of the BIOS&#160;Configuration window.</li>
+                                            <li value="6">Only the hard drive, <a targets="XE2_BIOS_2" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="XE2_BIOS_2"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />shown in the following figure</a> as <b>ST500DM002-1BD142</b>, should be checked. <table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>Note — </b>The name of the hard drive will vary from system to system. Uncheck (clear) all other options under <i>Boot Sequence</i>.</td></tr></tbody></table><p class="image"><img src="../../Resources/Images/PC_Workstation/BIOS-Config/BIOS-Config-2.PNG" style="height: auto;display: none;" data-mc-target-name="XE2_BIOS_2" /></p></li>
+                                            <li value="7">Expand the <i>POST Behavior</i> section in the left-hand pane.</li>
+                                            <li value="8"><a targets="XE2_BIOS_3" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="XE2_BIOS_3"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select Numlock LED. Uncheck the Enable Numlock LED option in the right pane</a>.<p class="image"><img src="../../Resources/Images/PC_Workstation/BIOS-Config/BIOS-Config-3.PNG" style="height: auto;display: none;" data-mc-target-name="XE2_BIOS_3" /></p></li>
+                                            <li value="9">Expand the <i>Security</i> section in the left-hand pane.</li>
+                                            <li value="10">Select <b>Admin Password</b>. </li>
+                                            <li value="11">Enter <b>gpservice</b> as the password in both the <b>New password</b> and <b>Confirm password</b> fields in the right pane.<br /><table><col style="width: 40px;" /><col style="width: 587px;" /><tbody><tr><td style="background-color: #ffffff;"><img src="../../Resources/Images/note04.gif" /></td><td class="Note"><b>NOTE — ENSURE THAT NUM LOCK IS TURNED OFF when entering the new password.</b></td></tr></tbody></table></li>
+                                            <li value="12">Click <b>OK</b>.</li>
+                                            <li value="13">Click <b>Exit</b> <a targets="XE2_BIOS_4" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="XE2_BIOS_4"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />to reboot the Panther System PC</a>.<p class="image"><img src="../../Resources/Images/PC_Workstation/BIOS-Config/BIOS-Config-5.PNG" style="height: auto;display: none;" data-mc-target-name="XE2_BIOS_4" /></p></li>
+                                            <li value="14">On initial boot up USB drivers will auto-install. </li>
+                                            <li value="15">After USB&#160;drive installation, reboot the PC.</li>
+                                            <li value="16">Continue to <a href="../../Service/PC_Workstation/PC_Reset_Comp_Clock.htm">Resetting the <a href="../../Service/PC_Workstation/PC_Reset_Comp_Clock.htm">PC&#160;Clock and Date</a></a>.</li>
+                                        </ol>
+                                        <h3><a targets="Dell OptiPlex XE3" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell OptiPlex XE3"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />On a Dell OptiPlex XE2 OR a Dell OptiPlex XE3 for Image v6.0.13 (Win 10)</a>
+                                        </h3>
+                                        <ol style="display: none;" data-mc-target-name="Dell OptiPlex XE3">
+                                            <li value="1">Restart the Panther System PC.</li>
+                                            <li value="2">Press the <b>F12</b> key when the boot process begins.</li>
+                                            <li value="3">Set the Boot Mode to: <b>UEFI; Secure Boot: OFF</b>.</li>
+                                            <li value="4">Confirm the current Boot Mode Setting.<br />(In the example below the Boot Mode is set to: UEFI; Secure Boot: ON, listed in yellow)<ol style="list-style-type: lower-alpha;"><li value="1">If the UEFI; Secure Boot is ON, proceed to Step 5</li><li value="2">If UEFI; Secure Boot is OFF, this procedure is complete.</li></ol></li>
+                                            <li value="5"><a targets="Dell_XE3_Install_13" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell_XE3_Install_13"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Use the arrow keys to highlight <b>Change Boot Mode Settings</b>.</a>
+                                                <p style="display: none;" data-mc-target-name="Dell_XE3_Install_13">
+                                                    <img src="../../Resources/Images/Dell_XE3_Install/Dell_XE3_Install_13.png" />
+                                                </p>
+                                            </li>
+                                            <li value="6">Press Enter.</li>
+                                            <li value="7"><a targets="Dell_XE3_Install_14" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell_XE3_Install_14"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />When offered "CHANGE&#160;BOOT&#160;MODE TO:" select <b>UEFI&#160;Boot Mode, Secure Boot OFF</b>.</a>
+                                                <p style="display: none;" data-mc-target-name="Dell_XE3_Install_14">
+                                                    <img src="../../Resources/Images/Dell_XE3_Install/Dell_XE3_Install_14_480x295.png" style="width: 480;height: 295;" />
+                                                </p>
+                                            </li>
+                                            <li value="8">Press Enter.</li>
+                                            <li value="9"><a targets="Dell_XE3_Install_15" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell_XE3_Install_15"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <b>Yes</b> when asked <b>DO&#160;YOU&#160;WISH&#160;TO&#160;PROCEED?</b></a>
+                                                <p style="display: none;" data-mc-target-name="Dell_XE3_Install_15">
+                                                    <img src="../../Resources/Images/Dell_XE3_Install/Dell_XE3_Install_15_462x274.png" style="width: 462;height: 274;" />
+                                                </p>
+                                            </li>
+                                            <li value="10">Press Enter.</li>
+                                            <li value="11"><a targets="Dell_XE3_Install_16" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Dell_XE3_Install_16"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Select <b>Apply the Changes</b> for <b>Final Confirmation</b>.</a>
+                                                <p style="display: none;" data-mc-target-name="Dell_XE3_Install_16">
+                                                    <img src="../../Resources/Images/Dell_XE3_Install/Dell_XE3_Install_16.png" />
+                                                </p>
+                                            </li>
+                                            <li value="12">Press Enter.</li>
+                                            <li value="13">Restart the PC.</li>
+                                        </ol>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../Resources/Images/Toolbar/New/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
