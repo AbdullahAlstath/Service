@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Troubleshooting with Service Software</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/PantherTSGStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+        <script src="../../Skins/Default/Scripts/Topic Toolbar for Test.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-dropdown" style="display:none;" id="#centralSmallScreen"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../Startup/TS_Startup_1.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                    <div class="central-dropdown" style="display:none;" id="#centralTop"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="central-dropdown" style="display:none;"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar_for_Test mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <img alt="Print" src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <img alt="Expand all" src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherTSG@hologic.onmicrosoft.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="H1_Blue">Troubleshooting with Service Software</h1>
+                                        <p>This topic describes commands, data, and options available in Panther's Service Software.</p>
+                                        <ul>
+                                            <li value="1">
+                                                <p>When using Service Software Tool, Universal fluid usage is <em>not </em>tracked.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Recommendations:</p>
+                                                <p>Use a different set of Universal Fluids when priming and/or dispensing during Service Software Tool usage. Load original Universal Fluids when returning Panther Instrument to customer.</p>
+                                                <p><em>or</em>
+                                                </p>
+                                                <p>Use customer’s current loaded Universal Fluids when priming and/or dispensing during Service Software Tool usage BUT load a new set of Universal Fluids when returning Panther instrument to customer.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Service software – firmware version and sensors should be able to be read without initializing the module.</p>
+                                            </li>
+                                        </ul>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a style="font-style: normal; font-weight: bold; color: #000000;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />TABLE OF&#160;CONTENTS</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <ul>
+                                                    <li value="1">
+                                                        <p><a href="#Hologic" class="MCXref xref">Service Software FSE Shield Login</a>
+                                                        </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p><a href="#Panther" class="MCXref xref">Panther Service Software</a>
+                                                        </p>
+                                                        <ul style="list-style-type: circle;">
+                                                            <li value="1">
+                                                                <p><a href="#1." class="MCXref xref">1. Distributor – Main Tab – Initialize</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p><a href="#1.2" class="MCXref xref">1. Distributor – Main Tab – Sensor</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p><a href="#1.3" class="MCXref xref">Linear Distributor – Move Tab</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p><a href="#Create" class="MCXref xref">Create Distributor Repetition Movement Script</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p><a href="#Paramete" class="MCXref xref">Parameter Tab – General</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p><a href="#1.%20Distr" class="MCXref xref">1.	Distributor – Teach Tab  (1)</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p><a href="#1.4" class="MCXref xref">1. Distributor – Teach Tab  (2)</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p><a href="#2." class="MCXref xref">2. Front and Loading Units – Main Tab – Initialize</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="9">
+                                                                <p><a href="#2.2" class="MCXref xref">2. Front and Loading Units – Main Tab – Input</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="10">
+                                                                <p><a href="#2.3" class="MCXref xref">2. Front and Loading Units – Main Tab – Output</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="11">
+                                                                <p><a href="#2.4" class="MCXref xref">2. Front and Loading Units – Main Tab – Bay Sensors and Tip Drawer</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="12">
+                                                                <p><a href="#2.5" class="MCXref xref">2. Front and Loading Units – Main Tab – Front - Cover and Sensors</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="13">
+                                                                <p><a href="#2.6" class="MCXref xref">2. Front and Loading Units – Sample Scan Tab</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="14">
+                                                                <p><a href="#2.7" class="MCXref xref">2. Front and Loading Units – Sample Scan Tab; Scan Configuration Dropdown</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="15">
+                                                                <p><a href="#2.8" class="MCXref xref">2. Front and Loading Units – TCR Loading Tab</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="16">
+                                                                <p><a href="#3." class="MCXref xref">3. Incubator – Main Tab – Initialize</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="17">
+                                                                <p><a href="#3.2" class="MCXref xref">3. Incubator – Main Tab – Move</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="18">
+                                                                <p><a href="#3.3" class="MCXref xref">3. Incubator – Main Tab – Sensor</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="19">
+                                                                <p><a href="#3.4" class="MCXref xref">3. Incubator – Teach Tab</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="20">
+                                                                <p><a href="#4." class="MCXref xref">4. LiVaCo – Main Tab – Initialize</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="21">
+                                                                <p><a href="#4.2" class="MCXref xref">4. LiVaCo – Main Tab – Vacuum and Waste Drawer</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="22">
+                                                                <p><a href="#4.3" class="MCXref xref">4. LiVaCo – Universal Drawer</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="23">
+                                                                <p><a href="#5." class="MCXref xref">5. Load Stations – Main Tab – Initialize</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="24">
+                                                                <p><a href="#5.2" class="MCXref xref">5. Load Stations – Main Tab – Sample Mix Station</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="25">
+                                                                <p><a href="#5.3" class="MCXref xref">5. Load Stations – Main Tab – Amp Load Station</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="26">
+                                                                <p><a href="#5.4" class="MCXref xref">5. Load Stations – Main Tab – HPA Load Station</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="27">
+                                                                <p><a href="#5.5" class="MCXref xref">5. Load Stations – Main Tab – Chiller</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="28">
+                                                                <p><a href="#6." class="MCXref xref">6. Luminometer – Main Tab – Initialize</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="29">
+                                                                <p><a href="#6.2" class="MCXref xref">6. Luminometer – Main Tab – Measure</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="30">
+                                                                <p><a href="#6.3" class="MCXref xref">6. Luminometer – Main Tab – Sequence</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="31">
+                                                                <p><a href="#6.4" class="MCXref xref">6. Luminometer – Main Tab – Sensor</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="32">
+                                                                <p><a href="#6.5" class="MCXref xref">6. Luminometer – Teach Tab</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="33">
+                                                                <p><a href="#7." class="MCXref xref">7. Magnetic Washer – Main Tab – Initialize</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="34">
+                                                                <p><a href="#7.2" class="MCXref xref">7. Magnetic Washer – Main Tab – Move</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="35">
+                                                                <p><a href="#7.3" class="MCXref xref">7. Magnetic Washer – Main Tab – Sensor</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="36">
+                                                                <p><a href="#7.4" class="MCXref xref">7. Magnetic Washer – Main Tab – LLD</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="37">
+                                                                <p><a href="#7.5" class="MCXref xref">7. Magnetic Washer – Main Tab – Sequence</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="38">
+                                                                <p><a href="#8." class="MCXref xref">8. Pipettor – Main Tab – Initialize</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="39">
+                                                                <p><a href="#8.2" class="MCXref xref">8. Pipettor – Main Tab – Sensors</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="40">
+                                                                <p><a href="#8.4" class="MCXref xref">8. Pipettor – Move Tab</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="41">
+                                                                <p><a href="#8.5" class="MCXref xref">8. Pipettor – LLD Left Arm</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="42">
+                                                                <p><a href="#8.6" class="MCXref xref">8. Pipettor – LLD Right Arm</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="43">
+                                                                <p><a href="#9." class="MCXref xref">9. System – Main 1  or P-System – Main</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="44">
+                                                                <p><a href="#9.2" class="MCXref xref">9. System – Main 2 or P-System – Pipettor and Magwash</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="45">
+                                                                <p><a href="#IC-MTU" class="MCXref xref">IC-MTU Expansion – Main – Sensor</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="46">
+                                                                <p><a href="#IC-MTU2" class="MCXref xref">IC-MTU Expansion – Main – LED</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="47">
+                                                                <p><a href="#IC-Waste" class="MCXref xref">IC-Waste on the Fly – Main – Solid Waste on the Fly</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="48">
+                                                                <p><a href="#IC-Waste2" class="MCXref xref">IC-Waste on the Fly – Main – Liquid Waste on the Fly</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="49">
+                                                                <p><a href="#IC-Waste3" class="MCXref xref">IC-Waste on the Fly – Main – Vacuum and Drawer</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="50">
+                                                                <p><a href="#IC-Waste4" class="MCXref xref">IC-Waste on the Fly – Main – Pump to Drain</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="51">
+                                                                <p><a href="#TR-Shutt" class="MCXref xref">TR-Shuttle – Main – Sensor</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="52">
+                                                                <p><a href="#TR-Shutt2" class="MCXref xref">TR-Shuttle – Main – Move</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="53">
+                                                                <p><a href="#TR-Shutt3" class="MCXref xref">TR-Shuttle – Main – Puck</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="54">
+                                                                <p><a href="#TR-Shutt4" class="MCXref xref">TR-Shuttle – Barcode Scanner</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="55">
+                                                                <p><a href="#TR-Shutt5" class="MCXref xref">TR-Shuttle – Teach</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="56">
+                                                                <p><a href="#RotaryDi" class="MCXref xref">RotaryDistributor – Main – Handoff</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="57">
+                                                                <p><a href="#RotaryDi2" class="MCXref xref">RotaryDistributor – Main – Sensors</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="58">
+                                                                <p><a href="#RotaryDi3" class="MCXref xref">RotaryDistributor – Move</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="59">
+                                                                <p><a href="#RotaryDi4" class="MCXref xref">RotaryDistributor – Teach</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="60">
+                                                                <p><a href="#RotaryDi5" class="MCXref xref">RotaryDistributor – Adapt StartPositions</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="61">
+                                                                <p><a href="#F-Front&amp;" class="MCXref xref">F-Front&amp;Loading</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="62">
+                                                                <p><a href="#Drawer" class="MCXref xref">Drawer Interlocks</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="63">
+                                                                <p><a href="#F-Pipett" class="MCXref xref">F-Pipettors</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="64">
+                                                                <p><a href="#Centrifu" class="MCXref xref">Centrifuge</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="65">
+                                                                <p><a href="#Cartridg" class="MCXref xref">Cartridge Carousel</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="66">
+                                                                <p><a href="#Thermocy" class="MCXref xref">Thermocycler</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="67">
+                                                                <p><a href="#Panther2" class="MCXref xref">Panther Main Background</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="68">
+                                                                <p><a href="#Conduct" class="MCXref xref">Conduct Main Background Scan</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="69">
+                                                                <p><a href="#Panther3" class="MCXref xref">Peek Lid</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="70">
+                                                                <p><a href="#Scan" class="MCXref xref">Scan Barcode</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="71">
+                                                                <p><a href="#Conduct2" class="MCXref xref">Conduct Peek Lid Scan</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="72">
+                                                                <p><a href="#F-SC" class="MCXref xref">F-SC Only</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="73">
+                                                                <p><a href="#F-System" class="MCXref xref">F-System</a>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <h2><a name="Hologic"></a>Service Software FSE Shield Login</h2>
+                                        <p>After the PC has booted up, the PANTHER Main Shield appears. Touch the screen, or press any key to stop the instrument from starting operators’ mode.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Press Shift + F10.</p>
+                                                <p>The FSE Password Login dialog box appears.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Enter the following password:</p>
+                                                <p><strong>!G9x53rvic3y</strong>
+                                                </p>
+                                                <p>Where x = the last digit of the day, and y = the last digit of the month.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Click <strong>OK</strong>.</p>
+                                                <p>The PANTHER FSE Shield appears.</p>
+                                                <p>
+                                                    <img src="../Resources/Images/Software/SSW_Troubleshooting-1.png" />
+                                                </p>
+                                                <h5>Panther Shield</h5>
+                                                <p>
+                                                    <img src="../Resources/Images/Software/SSW_Troubleshooting-2.png" />
+                                                </p>
+                                                <h5>FSE Shield – Service Software Login</h5>
+                                                <p>
+                                                    <img src="../Resources/Images/Software/SSW_Troubleshooting-3.png" />
+                                                </p>
+                                                <h5>Panther Service Software – FSE Shield</h5>
+                                            </li>
+                                        </ol>
+                                        <p><strong>Login Level:</strong>  Defaults to <em>gpservice</em>. If instructed, select <em>super</em>.</p>
+                                        <p><strong>Login Name:</strong> Enter your name. Entry is used to populate any reports created during the current session.</p>
+                                        <p><strong>Password:</strong> <em>Must match login level</em>.</p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-4.png" />
+                                        </p>
+                                        <h5>Service Software GUI</h5>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-5.png" />
+                                        </p>
+                                        <h5>Trace View</h5>
+                                        <h2><a name="Panther"></a>Panther Service Software</h2>
+                                        <p>Each tab has a Main and a Parameter subtab. Some tabs also have Move, Sub-Module, Teach, and Error Memory subtabs:</p>
+                                        <p><strong>Main</strong> – Main control for that module:</p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-6.png" />
+                                        </p>
+                                        <p><strong>Move</strong> – Opens control screen for that module movements.</p>
+                                        <p><strong>Sub Module</strong> – Additional control screen for modules with multiple sub modules.</p>
+                                        <p><strong>Parameter</strong> – Will display individual module firmware version.</p>
+                                        <p><strong>Teach</strong> – Allows manual teaching of mid-bay modules.</p>
+                                        <p><strong>Error Memory</strong> – Not used unless specified in technical bulletins.</p>
+                                        <h3><a name="1."></a>1. Distributor – Main Tab – Initialize</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-7.png" />
+                                        </p>
+                                        <p>Each Main screen has a Common Control located in this area. There are three icons:</p>
+                                        <p><b>Initialize</b> – All modules that interact with the selected module tab, Complete System – All modules, Individual Modules – Entire module or sub-module.</p>
+                                        <p><b>Get Module Firmware</b> – will display individual module firmware version.</p>
+                                        <p><b>Get Module Status</b> – will display individual module status.</p>
+                                        <p><b style="font-size: 11pt;">NOTE:</b> If there are multiple modules, a select Device section will be to the right of the Common Control.</p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-8.png" />
+                                        </p>
+                                        <h3><a name="1.2"></a>1. Distributor – Main Tab – Sensor</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-9.png" />
+                                        </p>
+                                        <h4>Home &amp; MTU Sensor</h4>
+                                        <p><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <p><b>Teach Sensor</b>
+                                        </p>
+                                        <p><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <p><b>Power Supply</b>
+                                        </p>
+                                        <p><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <h3><a name="1.3"></a>Linear Distributor – Move Tab</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-10.png" />
+                                        </p>
+                                        <ol style="list-style-type: lower-alpha;">
+                                            <li value="1">
+                                                <p><b>Distributor Single Movement to</b> – Single click will move the Linear Distributor to that location. Double clicking will make the Linear Distributor load or unload an MTU.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p><b>Next MTU Action</b> – Displays LD MTU presence state to determine what the distributor will do with the single movement command (Pick/ Place).  Pick: indicates empty LD.  Place: indicates MTU present.  Unknown: LD is not initialized.  Next MTU action changes depending on current state.  If MTU is present in LD, it will place.  If no MTU is in LD, it will pick.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p><b>Luminometer</b> – [Open] [Close] Opens or Closes the Luminometer door.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p><b>Input Queue</b> – [Unlock Drawer] Unlocks MTU drawer. [Push MTU] Advances MTU pusher.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p><b>Output Queue</b> – Dispose MTU - Aspirate and dispose of all MTUs in the Output Queue. (vacuum pump needs to be turned on for the aspiration to work).</p>
+                                            </li>
+                                            <li value="6">
+                                                <p><b>Distributor Repetition Movement</b> - Available Positions – All the positions the distributor can move to.</p>
+                                            </li>
+                                            <li value="7">
+                                                <p><b>Movement List</b> – Lists positions in the order that the distributor will move to. Action indicates – shows if position will be performed once or twice (this column will be blank, x or xx).</p>
+                                            </li>
+                                            <li value="8">
+                                                <p><b>Add Pos.</b> – [&gt;&gt;] moves highlighted selection from available positions to the movement list.</p>
+                                            </li>
+                                            <li value="9">
+                                                <p><b>Action</b>
+                                                </p>
+                                                <p>[None] Will perform only x/z/theta action.  No hook movement, e.g., no picking or placing. </p>
+                                                <p>[Once X] – Will perform the Next MTU Action once per cycle.Twice XX – Will perform the Next MTU Action twice. </p>
+                                                <p>  [Twice XX] – Will perform two Next MTU Actions.  For example, if action is set to “XX” and there MTU is present in LD, next MTU Action indicating ‘place’ upon execute, the LD will place MTU in position, then pick MTU back in LD.</p>
+                                            </li>
+                                            <li value="10">
+                                                <p><b>Item</b> – [Up][Down] Moves the Delete – Removes selected position from the list.highlighted position in movement list up or down [Delete] removes selected position from the list.</p>
+                                            </li>
+                                            <li value="11">
+                                                <p><b>MTU Barcode</b> – Checkbox enables scanning MTU barcode.</p>
+                                            </li>
+                                            <li value="12">
+                                                <p><b>Execute</b> – Starts the cycle and will move the distributor to all of the selected positions in the movement list repetitively until stopped or cancelled. <b>Clear List</b> clears all positions from the Movement List.</p>
+                                            </li>
+                                        </ol>
+                                        <h3><a name="Create"></a>Create Distributor Repetition Movement Script</h3>
+                                        <p>A common issue is LD hook step loss error at sample mix, setup repetitive move between sample dispense slot and sample mix station</p>
+                                        <p><b>Distributor</b> – Move Tab Repetitive movements, example.</p>
+                                        <p>Adding positions to movement list.</p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-11.png" />
+                                        </p>
+                                        <p>Adding Actions</p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-12.png" />
+                                        </p>
+                                        <p>Delete one position, highlight item from Movement list and click <strong>Delete</strong>.</p>
+                                        <p>Add more positions.</p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-13_299x371.png" style="width: 299;height: 371;" /> <img src="../Resources/Images/Software/SSW_Troubleshooting-14.png" /></p>
+                                        <p>Delete one position.</p>
+                                        <p>Clear List</p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-15.png" />
+                                        </p>
+                                        <h3><a name="Paramete"></a>Parameter Tab – General</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-16.png" />
+                                        </p>
+                                        <p style="font-size: 11pt;"><b>NOTES:</b>
+                                        </p>
+                                        <p style="font-weight: normal;"><em>The parameter tab is only used to set the authorization code for teaching.</em>
+                                        </p>
+                                        <p style="font-style: normal;"><em>The parameter tab will be similar for each module.</em>
+                                        </p>
+                                        <p><b>Device</b> – Selects device you want to teach.</p>
+                                        <p><b>Authorization Code</b> – code that allows you to save teach parameters.</p>
+                                        <p><b>Set</b> – sets the code to allow you to save teach parameters (will always be 1)</p>
+                                        <p><b>Cancel</b> – Cancels</p>
+                                        <p><b>Save</b> – Saves a copy of the parameters for the selected device.</p>
+                                        <p><b>Save</b> – Saves a copy of the parameters for the selected device.</p>
+                                        <h3><a name="1. Distr"></a>1.	Distributor – Teach Tab  (1)</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-17.png" />
+                                        </p>
+                                        <h4>Teach</h4>
+                                        <p><b>Select device</b> – Will always be distributor.</p>
+                                        <p><b>Select Drive</b> – Either sledge or Theta (theta is only taught at the Input Queue)</p>
+                                        <p><b>Select Position</b> – The position that you are teaching the distributor to</p>
+                                        <h4>Incremental Positioning</h4>
+                                        <p>Keyboard control – lets you use keyboard to control movements.</p>
+                                        <p>Move step – number of steps distributor will move in that direction.</p>
+                                        <p>Slider Step – controls the scale of the slider bar which controls the move 	step size.</p>
+                                        <p>Options for selected Device and Drive</p>
+                                        <p><b>Execute</b> – Performs selected option.</p>
+                                        <p>▲/▼- allows selection of option</p>
+                                        <h3><a name="1.4"></a>1. Distributor – Teach Tab  (2)</h3>
+                                        <p><b>Incremental Positioning</b>
+                                        </p>
+                                        <p><b>Save Current Axis Position</b> – Saves the positions shown in the blocks.</p>
+                                        <p><b>NOTE:</b> Save all will save all positions in the blocks, ensure the hook is in the extended position</p>
+                                        <p><b>Get Current Pos.</b> – Lists the current positions in the blocks.</p>
+                                        <p><b>Move Axis to Position</b> – Moves distributor to the positions shown in the blocks (move all is not active)</p>
+                                        <p><b>NOTE:</b> This is usually performed after a get stored positions</p>
+                                        <p><b>Get stored teach positions</b> – Retrieves the positions of the highlighted module selected.</p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-18.png" />
+                                        </p>
+                                        <h4><b>Adapt StartPositions:</b>
+                                        </h4>
+                                        <h4><b>Hyperlink to:</b>
+                                        </h4>
+                                        <ul>
+                                            <li value="1">
+                                                <p>Unable to Teach Linear Distributor to Chiller Ramp</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Hub &gt; Diagnostic Podcasts (service) &gt; Diagnostic Podcasts – The Quick Question &gt; Adapt Start</p>
+                                            </li>
+                                        </ul>
+                                        <h3><a name="2."></a>2. Front and Loading Units – Main Tab – Initialize</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-19.png" />
+                                        </p>
+                                        <h4>Reagent Shutter</h4>
+                                        <p style="text-indent: 0.5in;"><b>Open/Close</b> – Opens and closes the reagent bay cover.</p>
+                                        <h3><a name="2.2"></a>2. Front and Loading Units – Main Tab – Input</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-20.png" />
+                                        </p>
+                                        <h4>Input Queue</h4>
+                                        <blockquote>
+                                            <p><b>Init Scanner</b> – Initializes the MTU Barcode Scanner.</p>
+                                            <p><b>Read Version</b> – Reads barcode symbol.</p>
+                                            <p><b>Read Code</b> – Reads the MTU label.</p>
+                                        </blockquote>
+                                        <h4>Sensors &amp; Actors</h4>
+                                        <blockquote>
+                                            <p><b>Push MTU</b> – Moves pusher forward and secures MTU stack.</p>
+                                            <p><b>Unlock Drawer</b> – unlocks MTU drawer.</p>
+                                            <p><b>Read</b> – Displays status of all listed Sensors &amp; Actors.</p>
+                                        </blockquote>
+                                        <h3><a name="2.3"></a>2. Front and Loading Units – Main Tab – Output</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-21.png" />
+                                        </p>
+                                        <p><b>Miscellaneous</b>
+                                        </p>
+                                        <p><b>Push MTU to Stack</b> – Moves MTU to the stack (close to the Actuator Home Position)</p>
+                                        <blockquote>
+                                            <p><b>Prime &amp; Disp. MTU</b> – Primes and moves MTU to stack (You can select to display OLV trace)</p>
+                                            <p>Volume dispensed can be adjusted by the ¼ turn section.</p>
+                                            <p><b>Empty Stack</b> – Clears all MTU’s from OQ, aspirating each one.</p>
+                                            <p><b>Calibrate MTU Sen.</b> – Calibrates MTU present sensor (Note- MTU presence sensor is not used in SW versions 5.0 and later.)</p>
+                                            <p><b>Stack Count</b> – Displays how many MTU’s are in the OQ stack.</p>
+                                            <p><b>Calibrate OLV Sen.</b> – Calibrates OQ process control OLV sensor.</p>
+                                        </blockquote>
+                                        <p><b>Sensors</b>
+                                        </p>
+                                        <p style="text-indent: 0.5in;"><b>Read</b> – Displays status of all listed sensors.</p>
+                                        <p><b>Deactivation/Peri Pump</b>
+                                        </p>
+                                        <blockquote>
+                                            <p><b>Start/Stop</b> – Starts or stops the pump. (note- this will turn on even if there is no MTU present.  Make sure there is a vessel to catch the fluid).</p>
+                                            <p><b>Calibrate</b> – Calibrates the home sensor on the pump shaft.</p>
+                                            <p><b>Read LB</b> – (Light Barrier) displays status of home pin with relation to home 			sensor.</p>
+                                        </blockquote>
+                                        <h3><a name="2.4"></a>2. Front and Loading Units – Main Tab – Bay Sensors and Tip Drawer</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-22.png" />
+                                        </p>
+                                        <p><b>Read</b> – Displays status of all listed temperatures and the shutter.</p>
+                                        <p><b style="font-size: 11pt;">NOTE:</b> Reagent Shutter will always display open.</p>
+                                        <h4>Disposable Tip Rack</h4>
+                                        <blockquote>
+                                            <p><b>Left/Right</b>
+                                            </p>
+                                            <p><b>Lock/Unlock</b> – locks/ unlocks selected tip drawer.</p>
+                                            <p><b>Read</b> – Displays status of all the tip drawer (open/closed and locked/unlocked).</p>
+                                        </blockquote>
+                                        <h3><a name="2.5"></a>2. Front and Loading Units – Main Tab – Front - Cover and Sensors</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-23.png" />
+                                        </p>
+                                        <p><b>Sensors</b>
+                                        </p>
+                                        <p><b>Read</b> – displays status of all front cover sensors.</p>
+                                        <p><b>LEDs</b>
+                                        </p>
+                                        <blockquote>
+                                            <p><b>Rack</b>	– Select Rack to test LEDs.</p>
+                                            <p><b>Lane</b> – Select Lane to test LEDs.</p>
+                                            <p><b>On/Off</b> – Turns LEDs on or off for racks/lanes selected.</p>
+                                            <p><b>Test</b> – Tests all LEDs.</p>
+                                        </blockquote>
+                                        <p><b>TCR Door</b>
+                                        </p>
+                                        <p style="text-indent: 0.5in;"><b>Lock/Unlock</b> – Locks and unlocks TCR door.</p>
+                                        <p><b>Beeper</b>
+                                        </p>
+                                        <p style="text-indent: 0.5in;"><b>On</b> – turns beeper on for 5 seconds.</p>
+                                        <h3><a name="2.6"></a>2. Front and Loading Units – Sample Scan Tab</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-24.png" />
+                                        </p>
+                                        <p><b>Select Lane to Scan</b> – Select Lane, wait for Barcode Reader to activate and insert rack to scan.</p>
+                                        <p><b>Read Rack Sensors</b> – The screen will display which lanes have racks inserted.</p>
+                                        <p><b>Scan Report</b> – Shows rack insertions/removals and barcodes scanned.</p>
+                                        <p><b>Scan Configuration</b>
+                                        </p>
+                                        <blockquote>
+                                            <p><b>Read</b> – shows the current configuration of the barcode scanner.</p>
+                                            <p><b>Write</b> – allows writing of different configurations to the barcode scanner.</p>
+                                        </blockquote>
+                                        <h3><a name="2.7"></a>2. Front and Loading Units – Sample Scan Tab; Scan Configuration Dropdown</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-25.png" />
+                                        </p>
+                                        <h3>2. Front and Loading Units – Reagent Scan Tab</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-26.png" />
+                                        </p>
+                                        <p><b>Select Lane to Scan</b> – Select Lane, wait for Barcode Reader to activate and insert rack to scan.</p>
+                                        <p><b>Read Rack Sensors</b> - The screen will display which lanes have racks inserted.</p>
+                                        <p><b>Scan Report</b> – Shows rack insertions/removals and barcodes scanned.</p>
+                                        <p><b>Scan Configuration</b>
+                                        </p>
+                                        <blockquote>
+                                            <p><b>Read</b> - shows the current configuration of the barcode scanner.</p>
+                                            <p><b>Write</b> - allows writing of different configurations to the barcode scanner.</p>
+                                        </blockquote>
+                                        <h3>2. Front and Loading Units – Reagent Scan Tab; Scan Configuration Dropdown</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-27.png" />
+                                        </p>
+                                        <h3><a name="2.8"></a>2. Front and Loading Units – TCR Loading Tab</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-28.png" />
+                                        </p>
+                                        <p><b>Barcodes</b>
+                                        </p>
+                                        <p style="font-weight: normal;"><b>1 - 8 </b>–  Reads barcode on bottle of that selected position.</p>
+                                        <p><b>Scanner</b>
+                                        </p>
+                                        <blockquote>
+                                            <p><b>Init Scanne</b>r – Initializes TCR barcode scanner.</p>
+                                            <p><b>Read Version</b> – Reads the version of the TCR barcode scanner.</p>
+                                        </blockquote>
+                                        <p><b>Mixer</b>
+                                        </p>
+                                        <blockquote>
+                                            <p><b>Init</b> – Initializes mixer.</p>
+                                            <p><b>Start</b> – Starts mixer.</p>
+                                            <p><b>Stop</b> – Stops mixer.</p>
+                                        </blockquote>
+                                        <p><b>Door</b>
+                                        </p>
+                                        <p style="text-indent: 0.5in;"><b>Lock/Unlock</b> – Locks and unlocks the TCR door.</p>
+                                        <p><b>Move Bottle</b>
+                                        </p>
+                                        <blockquote>
+                                            <p><b>Bottle</b> – Select bottle to move.</p>
+                                            <p><b>Move to Loading Position</b> – Moves selected bottle to the loading position (facing the door).</p>
+                                            <p><b>Move to Pipetting Position</b> – Moves selected bottle to pipetting position.</p>
+                                        </blockquote>
+                                        <p><b>Sensors</b>
+                                        </p>
+                                        <p style="text-indent: 0.5in;"><b>Read</b> – displays information for all parameters listed.</p>
+                                        <p><b style="font-size: 11pt;">NOTE:</b> Rotation Frequency not working</p>
+                                        <h3><a name="3."></a>3. Incubator – Main Tab – Initialize</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-29.png" />
+                                        </p>
+                                        <h3><a name="3.2"></a>3. Incubator – Main Tab – Move</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-30.png" />
+                                        </p>
+                                        <p><b>Select Device</b> – Select which incubator you will be moving.</p>
+                                        <p><b>Moving carousel</b>
+                                        </p>
+                                        <p><b>Move MTU</b> – Select which carousel slot to be moved to Door.</p>
+                                        <p><b>Move</b> – Moves selected slot to MTU present sensor and then door position 			and displays if there is an MTU present.</p>
+                                        <p><b>Continuous</b>
+                                        </p>
+                                        <p><b>Start/Stop</b> – Moves carousel 1 slot at a time until stopped.</p>
+                                        <p><b>Random</b>
+                                        </p>
+                                        <p><b>Start</b> – Randomly moves carousel slots to door position.</p>
+                                        <p><b style="font-size: 11pt;">NOTE:</b> You must cancel this to stop.</p>
+                                        <p><b>AMP Fan</b>
+                                        </p>
+                                        <p><b>Fan ON/Fan OFF</b> – Turns exterior fan between AMP incubator and Input Queue on/off.</p>
+                                        <p><b style="font-size: 11pt;">NOTE:</b>
+                                        </p>
+                                        <p>Switches the two fans next to the service queue on the left side of the instrument on or off.</p>
+                                        <p>Fan connected to Amp incubator is in Incubators &gt; Main &gt; Move &gt; Amp Fan.</p>
+                                        <p>Right side system fan above cooling unit is Lower Bay &gt; Main &gt; Peltiers &gt; Additional Fan.</p>
+                                        <h3><a name="3.3"></a>3. Incubator – Main Tab – Sensor</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-31.png" />
+                                        </p>
+                                        <p><b>Sensors</b>
+                                        </p>
+                                        <p style="text-indent: 0.5in;"><b>Read</b> – displays status of all listed parameters</p>
+                                        <p><b>Power Supply</b>
+                                        </p>
+                                        <p style="text-indent: 0.5in;"><b>Read</b> – displays status of all listed parameters</p>
+                                        <p><b>Check MTU Presence of all Slots</b>
+                                        </p>
+                                        <p style="text-indent: 0.5in;"><b>Check</b> – Checks for MTU presence in all slots of the carousel and reports which slots have MTUs.</p>
+                                        <p><b>Calibrate MTU Sensor</b>
+                                        </p>
+                                        <p style="text-indent: 0.5in;"><b>Calibrate</b> – Calibrates the MTU presence sensor without an MTU in front of it.</p>
+                                        <h3><a name="3.4"></a>3. Incubator – Teach Tab</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-32.png" />
+                                        </p>
+                                        <p><b>Teach</b>
+                                        </p>
+                                        <blockquote>
+                                            <p><b>Select device</b> – Selects which incubator to teach.</p>
+                                            <p><b>Select Position</b> – The position that you are teaching.</p>
+                                        </blockquote>
+                                        <p><b>Incremental Positioning</b>
+                                        </p>
+                                        <blockquote>
+                                            <p><b>Keyboard control</b> – lets you use keyboard to control movements.</p>
+                                            <p><b>Move step</b> – amount of steps carousel will move in that direction.</p>
+                                            <p><b>Slider Step</b> – controls the scale of the slider bar which controls the move step size.</p>
+                                            <p><b>Save Current Axis Position</b> – Saves the position shown in the blocks.</p>
+                                            <p><b>Get Current Pos.</b> – Shows the current position in the blocks.</p>
+                                            <p><b>Move Axis to Position</b> – Moves carousel to the position shown in the blocks.</p>
+                                            <p><b>Get stored teach positions</b> – gets position of the highlighted module from Select Position.</p>
+                                        </blockquote>
+                                        <h3><a name="4."></a>4. LiVaCo – Main Tab – Initialize</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-33.png" />
+                                        </p>
+                                        <p><b>Cover Fan Ctrl</b>
+                                        </p>
+                                        <p><b>On / Off</b> – Switches the two fans next to the service queue on the left side of the instrument on or off.</p>
+                                        <p><b style="font-size: 11pt;">NOTE:</b> Fan connected to Amp incubator is in Incubators &gt; Main &gt; Move &gt; Amp Fan.</p>
+                                        <p>Right side system fan above cooling unit is Lower Bay &gt; Main &gt; Peltiers &gt; Additional Fan.</p>
+                                        <h3><a name="4."></a>4. LiVaCo – Main Tab – Peltiers</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-34.png" />
+                                        </p>
+                                        <p><b>Peltiers</b>
+                                        </p>
+                                        <p><b>Voltages</b>
+                                        </p>
+                                        <p style="text-indent: 0.5in;"><b>Read</b> – displays status of all listed parameters.</p>
+                                        <p><b>Cooling</b>
+                                        </p>
+                                        <p style="text-indent: 0.5in;"><b>On / Off</b> – Switches the cooling module and circulating pump on or off</p>
+                                        <p><b>Circulating Pump</b>
+                                        </p>
+                                        <p style="text-indent: 0.5in;"><b>On / Off</b> – Switches only the circulating pump on or off</p>
+                                        <p><b>Additional Fan</b>
+                                        </p>
+                                        <p style="text-indent: 0.5in;"><b>On / Off</b> – Switches the two fans above the cooling module on the right side of the instrument on or off</p>
+                                        <p><b style="font-size: 11pt;">NOTE:</b>
+                                        </p>
+                                        <p>Switches the two fans next to the service queue on the left side of the instrument on or off.</p>
+                                        <p>Fan connected to Amp incubator is in Incubators &gt; Main &gt; Move &gt; Amp Fan.</p>
+                                        <p>Right side system fan above cooling unit is Lower Bay &gt; Main &gt; Peltiers &gt; Additional Fan.</p>
+                                        <h3><a name="4.2"></a>4. LiVaCo – Main Tab – Vacuum and Waste Drawer</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-35.png" />
+                                        </p>
+                                        <p><b>Pump</b>
+                                        </p>
+                                        <p><b>Init.</b> – Initializes the vacuum pump.</p>
+                                        <p><b>Activate/Deactivate</b> – Switches the vacuum pump on or off.</p>
+                                        <p><b>Read</b> – displays status of all listed parameters.</p>
+                                        <p><b>Waste Drawer</b>
+                                        </p>
+                                        <p><b>Read</b> – displays status of all listed parameters.</p>
+                                        <p><b style="font-size: 11pt;">NOTE:</b> <span style="color: #ff0000;">“Liquid Waste Conn” is not active.</span></p>
+                                        <p><b>Calibrate Waste Bag</b> – Calibrates the waste bag sensor. <span style="color: #ff0000;">Make sure the waste bag is removed and drawer is closed before calibration.</span></p>
+                                        <p><b>Interlock</b>
+                                        </p>
+                                        <p>Displays the state of the interlock.</p>
+                                        <p><b>Drawer</b>
+                                        </p>
+                                        <p>Displays the state of the Waste Drawer.</p>
+                                        <p><b>Lock/Unlock</b> – Locks or Unlocks the Waste Drawer.</p>
+                                        <h3><a name="4.3"></a>4. LiVaCo – Universal Drawer</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-36.png" />
+                                        </p>
+                                        <h4>Universal Drawer</h4>
+                                        <h4>TAG Check</h4>
+                                        <p><b>Select Bottle</b> – Selects Universal Bottle RFID label to read.</p>
+                                        <p><b>Get Bottle Info</b> – Displays the listed conditions of the bottle selected.</p>
+                                        <p><b>Test TAG Display</b> – <span style="color: #ff0000;">Initialize Universal Fluid drawer before pressing the “Test TAG Display” button.</span> It tests the LEDs from the Universal Fluid Drawer LEDs for bottles presence (Flex Cable).</p>
+                                        <p><b>Valves</b>
+                                        </p>
+                                        <p><b>Switch to</b> – Changes the solenoid valve between bottles A and B.</p>
+                                        <p><b>Read</b> – Displays status of all Solenoid Valves.</p>
+                                        <h4>Sensors</h4>
+                                        <p><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <p><b style="font-size: 11pt;">NOTE:</b> Bleach sensor: Open = full / Closed = empty</p>
+                                        <p><b>Bleach State:</b> Not active.</p>
+                                        <h3><a name="5."></a>5. Load Stations – Main Tab – Initialize</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-37.png" />
+                                        </p>
+                                        <h3><a name="5.2"></a>5. Load Stations – Main Tab – Sample Mix Station</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-38.png" />
+                                        </p>
+                                        <h4>Sensors</h4>
+                                        <p><b>Read</b> – Displays status of the Supply Voltage.</p>
+                                        <h4>Mixer</h4>
+                                        <p><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <p><b>Load</b> – Loads a MTU.</p>
+                                        <p><b>Start/Stop</b> – Turns mixer on and off.</p>
+                                        <h3><a name="5.3"></a>5. Load Stations – Main Tab – Amp Load Station</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-39.png" />
+                                        </p>
+                                        <h4>Sensors</h4>
+                                        <p><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <h4>Mixer</h4>
+                                        <p><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <p><b>Load</b> – Loads a MTU.</p>
+                                        <p><b>Start/Stop</b> – Turns mixer on and off.</p>
+                                        <h3><a name="5.4"></a>5. Load Stations – Main Tab – HPA Load Station</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-40.png" />
+                                        </p>
+                                        <h4>Sensors</h4>
+                                        <p><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <h4>Mixer</h4>
+                                        <p><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <p><b>Load</b> – Loads a MTU.</p>
+                                        <p><b>Start/Stop</b> – Turns mixer on and off.</p>
+                                        <h3><a name="5.5"></a>5. Load Stations – Main Tab – Chiller</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-41.png" />
+                                        </p>
+                                        <p><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <p><b>Activate/Deactivate</b> – Activates or deactivates Chiller Ramp peltier.</p>
+                                        <h3><a name="6."></a>6. Luminometer – Main Tab – Initialize</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-42.png" />
+                                        </p>
+                                        <h4>Door Shutter Drive</h4>
+                                        <p><b>Door Open/Door Close</b> – opens closes Luminometer door.</p>
+                                        <p><b>Measure</b> – moves isolator to the measure/Up position.</p>
+                                        <h4>Move MTU Drive</h4>
+                                        <p><b>Unload</b> – removes the MTU from the Luminometer.</p>
+                                        <p><b>1, 2, 3, 4, 5</b> – Move the selected tube to measure position.</p>
+                                        <p><b>Emergency Unload</b> – Used if two MTUs are accidentally placed into the Luminometer.</p>
+                                        <h3><a name="6.2"></a>6. Luminometer – Main Tab – Measure</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-43.png" />
+                                        </p>
+                                        <h4>Measurement without Injection and Drive Movement</h4>
+                                        <p><b>Start</b> – Performs Dark count or RLU measurement. (Enter 2 seconds for Measurement time, this is standard read time for both reads.)</p>
+                                        <p><b>Get Flash Data from last Measure</b> – Graphs data from above.</p>
+                                        <h4>Get / Set Parameter</h4>
+                                        <p><b>Get</b> – Displays parameter selected.</p>
+                                        <p><b>Set</b> – Saves parameter selected.</p>
+                                        <h4>High Voltage Actual</h4>
+                                        <p><b>On/Off</b> – Turns on or off high voltage.</p>
+                                        <p><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <h3><a name="6.3"></a>6. Luminometer – Main Tab – Sequence</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-44.png" />
+                                        </p>
+                                        <h4>Measurement Sequence – Pump Typ: LCMP</h4>
+                                        <p><b>Execute</b> – Measures flash curves and OLV trace on each tube while dispensing amounts of AD1 and AD2 fluid volumes selected.</p>
+                                        <p><b>NOTE:</b> <span style="color: #ff0000;">Use syscheck to get actual flash curve.</span></p>
+                                        <p><b>Prime</b> – Primes an MTU with the parameters selected.</p>
+                                        <p><b>NOTE:</b> <span style="color: #ff0000;">Using more than 4 full strokes will overfill the MTU.</span></p>
+                                        <p><b>Tube Selection and Results</b> – Shows results of Execute command.</p>
+                                        <p><b>NOTE:</b> <span style="color: #ff0000;">You must manually insert, close lumo door and open lumo door, remove MTU.</span></p>
+                                        <h3><a name="6.4"></a>6. Luminometer – Main Tab – Sensor</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-45.png" />
+                                        </p>
+                                        <h4>Light Barriers and Voltages</h4>
+                                        <p><b>Read All</b> – Displays status of all listed parameters.</p>
+                                        <h4>OLV Sensor</h4>
+                                        <p><b>Calibrate and Test Channels 1 &amp; 2</b> – Calibrates selected OLV sensor.</p>
+                                        <p><b style="font-size: 11pt;">NOTE:</b> <span style="color: #ff0000;">This will dispense fluid.  You must manually position the MTU into position.</span></p>
+                                        <h4>LCMP Pump</h4>
+                                        <p><b>Calibrate LCMP Channels 1 &amp; 2</b> – Calibrates the selected Detect pump.</p>
+                                        <h3><a name="6.5"></a>6. Luminometer – Teach Tab</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-46.png" />
+                                        </p>
+                                        <h4>Teach</h4>
+                                        <p><b>Select device</b> – Will always be Luminometer.</p>
+                                        <p><b>Select Position</b> – Will always be First Tube.</p>
+                                        <h4>Incremental Positioning</h4>
+                                        <p><b>Keyboard contro</b>l – lets you use keyboard to control movements.</p>
+                                        <p><b>Move step</b> – amount of steps transport will move in that direction.</p>
+                                        <p><b>Slider Step</b> – controls the scale of the slider bar which controls the move 	step size.</p>
+                                        <p><b>Save Current Axis Position</b> – Saves the positions shown in the blocks.</p>
+                                        <p><b>Get Current Pos.</b> – Shows the current positions in the blocks.</p>
+                                        <p><b>Move Axis to Position</b> – Moves transport to the position shown in the blocks.</p>
+                                        <p><b>Get stored teach positions</b> – gets position of the first tube.</p>
+                                        <h3><a name="7."></a>7. Magnetic Washer – Main Tab – Initialize</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-47.png" />
+                                        </p>
+                                        <p><b>Select Device</b> – Select magwash to be tested.</p>
+                                        <h3><a name="7.2"></a>7. Magnetic Washer – Main Tab – Move</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-48.png" />
+                                        </p>
+                                        <h4>Basics</h4>
+                                        <p><b>Mixer Start</b> – Turns the mixer on.</p>
+                                        <p><b>Mixer Stop</b> – Turns the mixer off.</p>
+                                        <p><b>Mixer Home</b> – Moves the mixer to the home position.</p>
+                                        <p><b>MTU Dispense</b> – Moves MTU to the Dispense position (under injectors).</p>
+                                        <p><b>Magnet Work</b> – Moves magnet to the work position.</p>
+                                        <p><b>Magnet Home</b> – Moves magnet to the home position.</p>
+                                        <p><b>Aspirate Home</b> – Moves aspirators to the home position.</p>
+                                        <p><b>Pick Up</b> – Make sure MTU is present. Automatically the MTU is moved to the tip pick position, then the aspirators descend and pick the tiplets.</p>
+                                        <p><b>Eject</b> – Make sure MTU is NOT present. Automatically the aspirators descend to the eject tip position to strip the tiplets.</p>
+                                        <p><b>Aspirate</b> – Moves aspirators to aspirate fluid from MTU, then they move to the home position.</p>
+                                        <p><b>Move Aspirate to Volume Position</b> – Move aspirators to the height selected based on µL.</p>
+                                        <p><b style="font-size: 11pt;">NOTE:</b> Max value is 5000.</p>
+                                        <p><b>Without Tips</b> – height will be based on aspirator tubes only.</p>
+                                        <p><b>With Tips</b> – height will be based on aspirator tubes and tiplets picked.</p>
+                                        <h3><a name="7.3"></a>7. Magnetic Washer – Main Tab – Sensor</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-49.png" />
+                                        </p>
+                                        <p><b>Washer Light Barriers</b>
+                                        </p>
+                                        <p style="text-indent: 0.5in;"><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <p><b>Power Supply</b>
+                                        </p>
+                                        <blockquote>
+                                            <p><b>Read</b> - Displays status of all listed parameters.</p>
+                                            <p><b style="font-size: 11pt;">NOTE:</b> Wash Pump and Oil Pump voltage will always read 0.00V (this is a bug).</p>
+                                        </blockquote>
+                                        <p><b>Calibrate Pump</b>
+                                        </p>
+                                        <blockquote>
+                                            <p><b>Wash</b> – Calibrates the wash pump.</p>
+                                            <p><b>Oil</b> – Calibrates the oil pump.</p>
+                                        </blockquote>
+                                        <p><b>Raw Data</b>
+                                        </p>
+                                        <blockquote>
+                                            <p><b>Get</b> – retrieves pump calibration data. Creates a file under</p>
+                                            <p><em>C:Panther\ServiceSoftware\log\MagWashRawData</em>
+                                            </p>
+                                            <p>(Time stamp of when Wash Pump got calibrated.)</p>
+                                        </blockquote>
+                                        <h3><a name="7.4"></a>7. Magnetic Washer – Main Tab – LLD</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-50.png" />
+                                        </p>
+                                        <h4>Current Sensor Values</h4>
+                                        <p><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <h4>Operations</h4>
+                                        <p><b>LLD</b> – Performs LLD and displays fluid level in MTU tubes (will stop when first aspirator senses fluid). Tells how much fluid.</p>
+                                        <p><b>Verify Liq. Lv.</b> – Verifies LLD for pre-fluid, fluid and residual checks (need 1mL per tube to work properly and tiplets).</p>
+                                        <p><b>Residual Check</b> – Checks √ for residual fluid. If there is any residual, it’ll display 	how much volume.</p>
+                                        <p><b>Tip Pick</b> – Picks tiplets.</p>
+                                        <p><b>Tip Eject</b> – Ejects tiplets, and checks <span style="color: #006400;"><span style="color: #228b22;">√</span> </span>if tiplets are still on.</p>
+                                        <p><b>Tip Check</b> – Checks <span style="color: #228b22;">√</span> which aspirators sense a tiplet on.</p>
+                                        <h3><a name="7.5"></a>7. Magnetic Washer – Main Tab – Sequence</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-51.png" />
+                                        </p>
+                                        <h4><b>MTU Injection</b>
+                                        </h4>
+                                        <p><b>Aspirate/Dispense</b> – Select speed, volume, and drawback.</p>
+                                        <p><b>Medium</b> – Oil or Wash</p>
+                                        <p><b>Tube</b> – 1, 2, 3, 4, 5</p>
+                                        <p><b>Trace</b> – Select with or without pressure trace.</p>
+                                        <p><b>Execute</b> – Runs sequence using all of the selections.</p>
+                                        <p><span style="color: #ff0000;">Note – an MTU needs to be placed in the in the MW before selecting “Execute.”</span>
+                                        </p>
+                                        <h4><b>Prime</b>
+                                        </h4>
+                                        <p><b>Medium</b> – Oil or Wash.</p>
+                                        <p><b>Volume</b> – 2000µL or 4000µL</p>
+                                        <p><b>Tube</b> – 1, 2, 3, 4, 5</p>
+                                        <p><b>Prime</b> – Runs the prime using all of the selections.</p>
+                                        <p><span style="color: #ff0000;">Note – an MTU needs to be placed in the in the MW before selecting “Prime.”</span>
+                                        </p>
+                                        <h3><a name="8."></a>8. Pipettor – Main Tab – Initialize</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-52.png" />
+                                        </p>
+                                        <p><b>XY – Random Movement</b> – will randomly move the Pipettor(s) throughout the system, including with a z movement (if selected).  Note – the blue partition wall needs to be removed for this test.</p>
+                                        <h3><a name="8.2"></a>8. Pipettor – Main Tab – Sensors</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-53.png" />
+                                        </p>
+                                        <h4>Sensor Tab</h4>
+                                        <p>Left Arm / Right Arm</p>
+                                        <p><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <h3><a name="8.4"></a>8. Pipettor – Move Tab</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-54.png" />
+                                        </p>
+                                        <p><b>Important:</b> Remove blue divider before moving pipettors.  Routing obstacles may not be accurate.</p>
+                                        <h4><b>Left Arm/Right Arm</b>
+                                        </h4>
+                                        <p><b>Group Selection</b> – Selects the area where you want the arm to move.</p>
+                                        <p><b>Select Coordinate</b> – When a group selection is picked all the positions the arm can move to will show up in a matrix.</p>
+                                        <p><b style="font-size: 11pt;">NOTE:</b> You must double click in the matrix to move to that position</p>
+                                        <h4><b>Tip</b>
+                                        </h4>
+                                        <p><b>Pick</b> – Picks a tip from the selected location.</p>
+                                        <p><b>Eject</b> – Ejects the tip.</p>
+                                        <h4><b>LLD</b>
+                                        </h4>
+                                        <p><b>Bar</b>. – Performs barometric level sensing at position selected</p>
+                                        <p><b>Cap</b>. – Performs Capacitive level sensing at position selected.</p>
+                                        <h4><b>Z Move to</b>
+                                        </h4>
+                                        <p><b>Travel</b> – Moves to pipettor travel Z-height.</p>
+                                        <p><b>Start</b> – Moves to position that the pipettor is currently at</p>
+                                        <p><b>Max</b> – Moves to max Z-height of pipettor at current position.</p>
+                                        <h4><b>Move Sequence</b>
+                                        </h4>
+                                        <p>Creates a movement script.</p>
+                                        <p><b>Up</b> – selected move moves up in the sequence.</p>
+                                        <p><b>Delete</b> – Deletes selected move.</p>
+                                        <p><b>Down</b> – selected move moves down in the sequence.</p>
+                                        <p><b>Execute</b> – Executes move sequence.</p>
+                                        <p style="font-weight: bold;">Clear <span style="font-weight: normal;">– Clears all move sequences.</span></p>
+                                        <p><b style="font-size: 11pt;">NOTE:</b> You must cancel to stop movements.</p>
+                                        <h3><a name="8.5"></a>8. Pipettor – LLD Left Arm</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-55.png" />
+                                        </p>
+                                        <h4><b>List Control</b>
+                                        </h4>
+                                        <p><b>New</b> – Creates new script editing session.</p>
+                                        <p><b>Clear Result</b> – Clears data from the Coord. List and Results.</p>
+                                        <p><b>Load</b> – Loads previously loaded script.</p>
+                                        <p><b>Save</b> – Saves current script.</p>
+                                        <p><b>Report</b> – Generates report from current script.</p>
+                                        <p><b>Coord. List and Results</b> – Select where you want to perform LLD from (AMP/HPA/Reagent bay) and will tell you tips needed to perform test.</p>
+                                        <p><b>Up</b> – Selected step moves up in the sequence.</p>
+                                        <p><b>Delete</b> – Deletes selected step.</p>
+                                        <p><b>Down</b> – Selected step moves down in the sequence.</p>
+                                        <h4><b>LLD</b>
+                                        </h4>
+                                        <p><b>Execute</b> – Performs selected LLD function.</p>
+                                        <p><b>bar</b> – Performs barometric LLD on positions selected.</p>
+                                        <p><b>cap</b> – Performs capacitive LLD on positions selected.</p>
+                                        <p><b>Log</b> – Generates a log of the test and puts it in C:\Panther\Panther Service Software\Log\Session\gSLogs_YYYYMMDD.</p>
+                                        <p><b>Cycles</b> – Select the number of cycles to perform for LLD testing.</p>
+                                        <h3><a name="8.6"></a>8. Pipettor – LLD Right Arm</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-56.png" />
+                                        </p>
+                                        <h4><b>List Control</b>
+                                        </h4>
+                                        <p><b>New</b> – Creates new script editing session.</p>
+                                        <p><b>Clear Result</b> – Clears data from the Coord. List and Results</p>
+                                        <p><b>Load</b> – Loads previously loaded script.</p>
+                                        <p><b>Save</b> – Saves current script.</p>
+                                        <p><b>Report</b> – Generates report from current script.</p>
+                                        <p><b>Coord. List and Results</b> – Select where you want to perform LLD (Sample Load/TCR/ Sample Tube) and will tell you tips needed to perform test.</p>
+                                        <p><b>Up</b> – Selected step moves up in the sequence.</p>
+                                        <p><b>Delete</b> – Deletes selected step.</p>
+                                        <p><b>Down</b> – Selected step moves down in the sequence.</p>
+                                        <h4><b>LLD</b>
+                                        </h4>
+                                        <p><b>Execute</b> – Performs selected LLD function.</p>
+                                        <p><b>bar</b> – Performs barometric LLD on positions selected.</p>
+                                        <p><b>cap</b> – Performs capacitive LLD on positions selected.</p>
+                                        <p><b>Log</b> – Generates a log of the test and puts it in C:\Panther\Panther Service Software\Log\Session\gSLogs_YYYYMMDD.</p>
+                                        <p><b>Cycles</b> – Select the number of cycles to perform for LLD testing.</p>
+                                        <h3><a name="9."></a>9. System – Main 1  or P-System – Main</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-57.png" />
+                                        </p>
+                                        <p><b>Initialize System</b> – Initializes entire system.</p>
+                                        <p><b>Clear MTU’s</b> – Clears MTU’s from all positions.</p>
+                                        <p><b>System OQ Test</b> – Inserts MTU into modules selected.</p>
+                                        <p><b style="font-size: 11pt;">NOTE:</b> You must perform two cycles to test MW2</p>
+                                        <p><b>Pressure Integrity Test</b> – Perform pressure integrity test on selected pipettor.</p>
+                                        <p><b>Luminometer OQ Test</b> – Performs OQ test on Luminometer (primes AD1/2, calibrates OLV, verifies OLV).</p>
+                                        <h3><a name="9.2"></a>9. System – Main 2 or P-System – Pipettor and Magwash</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-58.png" />
+                                        </p>
+                                        <p><b>Mag Wash OQ Test</b> – performs OQ test on selected MW (Verifies tip pick, wash level sending, residual check, tip eject, and oil dispense.</p>
+                                        <h3><a name="IC-MTU"></a>IC-MTU Expansion – Main – Sensor</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-59.png" />
+                                        </p>
+                                        <p><b>Sensors</b>
+                                        </p>
+                                        <p>MTU Expansion Sensors</p>
+                                        <p><b>Read</b> – Displays status of all listed parameters</p>
+                                        <p>Presence Check</p>
+                                        <p><b>Check</b> – Checks for carriers in the locations and a checked box indicates carrier is present</p>
+                                        <p>Drawer</p>
+                                        <p><b>Lock/Unlock</b> – locks and unlocks drawer</p>
+                                        <p>Power Supply</p>
+                                        <p><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <h3><a name="IC-MTU2"></a>IC-MTU Expansion – Main – LED</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-60.png" />
+                                        </p>
+                                        <h4><b>LED</b>
+                                        </h4>
+                                        <p>LED Test</p>
+                                        <p><b>Green/Red</b> – Check LED to enable.</p>
+                                        <p><b>ON/OFF</b> – turns LED on and off.</p>
+                                        <p><b>Flash slow/Flash fast</b> – LED blinks at slow or fast interval.</p>
+                                        <p><b>Test</b> – cycles LED through all the states.</p>
+                                        <h3><a name="IC-Waste"></a>IC-Waste on the Fly – Main – Solid Waste on the Fly</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-61.png" />
+                                        </p>
+                                        <h4>Solid Waste on the Fly</h4>
+                                        <p>General</p>
+                                        <p>Tiplet Catcher</p>
+                                        <p>Carousel</p>
+                                        <p>Sensors</p>
+                                        <p><b>Read</b> - Displays status of all listed parameters.</p>
+                                        <p>Power Supply</p>
+                                        <h3><a name="IC-Waste2"></a>IC-Waste on the Fly – Main – Liquid Waste on the Fly</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-62.png" />
+                                        </p>
+                                        <h4><b>Liquid Waste on the Fly</b>
+                                        </h4>
+                                        <p>Removable Bottle</p>
+                                        <p><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <p>Static Bottle</p>
+                                        <p><b>Read</b> - Displays status of all listed parameters.</p>
+                                        <p>Transfer Pump</p>
+                                        <p><b>Init/ON/OFF</b> – Initializes pump/Turn pump on/Turn pump off.</p>
+                                        <p>Valve</p>
+                                        <p><b>Open/Close/Read</b> – Opens and closes valve beneath coupling block.  Reads valve state.</p>
+                                        <p>Flooding Sensors</p>
+                                        <p><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <p>Power Supply</p>
+                                        <p><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <h3><a name="IC-Waste3"></a>IC-Waste on the Fly – Main – Vacuum and Drawer</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-63.png" />
+                                        </p>
+                                        <h4>Vacuum and Drawer</h4>
+                                        <p>Pump</p>
+                                        <p><b>Init</b>. – Initializes the vacuum pump.</p>
+                                        <p><b>Activate/Deactivate</b> – Switches the vacuum pump on or off.</p>
+                                        <p><b>Read</b> – displays status of all listed parameters.</p>
+                                        <p>Interlock</p>
+                                        <p><b>Lock/Unlock</b> – Locks and unlocks waste drawer.  Lock will not engage if sensor indicates drawer is not closed.</p>
+                                        <p><b>Read</b> – displays status of all listed parameters.</p>
+                                        <p>Waste Bag</p>
+                                        <p><b>Read</b> – displays status of all listed parameters.</p>
+                                        <p><b>Calibrate Waste Bag</b> – Calibrates the waste bag sensor. <span style="color: #dc143c;"><span style="color: #ff0000;">Make sure the waste bag is removed and drawer is closed before calibration.</span></span></p>
+                                        <h3><a name="IC-Waste4"></a>IC-Waste on the Fly – Main – Pump to Drain</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-64.png" />
+                                        </p>
+                                        <h4><b>Pump to Drain</b>
+                                        </h4>
+                                        <p>General</p>
+                                        <p><b>Pump On/Pump Off</b> –  Turns pump on and off.</p>
+                                        <p>Flooding Sensor</p>
+                                        <p><b>Read</b> – Connection state indicates if sensor is connected to board. Sensor state indicates if sensor detects liquid.</p>
+                                        <h3><a name="TR-Shutt"></a>TR-Shuttle – Main – Sensor</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-65.png" />
+                                        </p>
+                                        <h4><b>SensorPump to Drain</b>
+                                        </h4>
+                                        <p>Track Ready Sensors and Power Supply</p>
+                                        <p><b>Read</b> – Displays status of all listed parameters.</p>
+                                        <h3><a name="TR-Shutt2"></a>TR-Shuttle – Main – Move</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-66.png" />
+                                        </p>
+                                        <p><b>Init general</b>, initializes track and puck drives.</p>
+                                        <p><b>Init Track (Drive Y)</b>, only initializes drive Y.</p>
+                                        <p>Move to Pick and Place/Move to Pipetting Position, moves to named location.</p>
+                                        <p><b>Get Track State</b>, reports if shuttle module communicates with track system.</p>
+                                        <p><b>Status Track</b>, checks if Shuttle communicates with Track System-PNP via <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">RS-232<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>The standard used in the instrument and LIS Serial ports; it defines the electrical characteristics and timing of signals, the meaning of signals, and the physical size and pin out of connectors.</span></a>.</p>
+                                        <h3><a name="TR-Shutt3"></a>TR-Shuttle – Main – Puck</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-67.png" />
+                                        </p>
+                                        <p><b>Init Puck Drive</b>,  initializes puck drive (shuttle carriage).</p>
+                                        <p><b>Calibrate</b>, adjusts LED intensity for tube check.</p>
+                                        <p><b>Rotate</b>, moves rotar drive (used to check if tube rotates for barcode read).</p>
+                                        <p><b>Home Puck Drive</b>, rotates puck drive to home.</p>
+                                        <p><b>Move to Lightpath</b>, moves puck to lightpath position and reads if tube is present, not present.</p>
+                                        <h3><a name="TR-Shutt4"></a>TR-Shuttle – Barcode Scanner</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-68.png" />
+                                        </p>
+                                        <p><strong>Init Shuttle + Scanner</strong>, initializes shuttle and scanner.</p>
+                                        <p><strong>Read Tube Present</strong>, checks if tube is present (if tube is present but not detected, puck may requiring cleaning or calibration).</p>
+                                        <p><strong>Read Barcode</strong>, requires tube with barcode present and symbology programmed.</p>
+                                        <p><strong>Read</strong> – Displays listed barcode symbologies and ranges.</p>
+                                        <p><strong>Write </strong>– saves barcodes symbologies and ranges.</p>
+                                        <h3><a name="TR-Shutt5"></a>TR-Shuttle – Teach</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-69.png" />
+                                        </p>
+                                        <h3><a name="RotaryDi"></a>RotaryDistributor – Main – Handoff</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-70.png" />
+                                        </p>
+                                        <p><strong>Init</strong>,  initializes Handoff station only</p>
+                                        <p>Linear Distributor</p>
+                                        <p>Rotary Distributor, moves Handoffs</p>
+                                        <h3><a name="RotaryDi2"></a>RotaryDistributor – Main – Sensors</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-71.png" />
+                                        </p>
+                                        <h3><a name="RotaryDi3"></a>RotaryDistributor – Move</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-72.png" />
+                                        </p>
+                                        <h3><a name="RotaryDi4"></a>RotaryDistributor – Teach</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-73.png" />
+                                        </p>
+                                        <h3><a name="RotaryDi5"></a>RotaryDistributor – Adapt StartPositions</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-74.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-75.png" />
+                                        </p>
+                                        <h3><a name="F-Front&amp;"></a>F-Front&amp;Loading</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-76.png" />
+                                        </p>
+                                        <h3><a name="Drawer"></a>Drawer Interlocks</h3>
+                                        <p><strong>Lock/Unlock</strong> – locks/ unlocks selected tip drawer.</p>
+                                        <p><strong>Read </strong>– Displays status of all the tip drawer (open/closed and locked/unlocked).</p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-77.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-78.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-79.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-80.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-81.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-82.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-83.png" />
+                                        </p>
+                                        <h3><a name="F-Pipett"></a>F-Pipettors</h3>
+                                        <p style="color: #4682b4;">[No image.]</p>
+                                        <h3><a name="Centrifu"></a>Centrifuge</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-84.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-85.png" />
+                                        </p>
+                                        <h3><a name="Cartridg"></a>Cartridge Carousel</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-86.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-87.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-88.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-89.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-90.png" />
+                                        </p>
+                                        <h3><a name="Thermocy"></a>Thermocycler</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-91.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-92.png" />
+                                        </p>
+                                        <h3><a name="Panther2"></a>Panther Main Background</h3>
+                                        <p style="color: #4682b4;">[No image.]</p>
+                                        <h3><a name="Conduct"></a>Conduct Main Background Scan</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-93.png" />
+                                        </p>
+                                        <h3><a name="Panther3"></a><a name="Peek"></a>Peek Lid</h3>
+                                        <p style="color: #4682b4;">[No image.]</p>
+                                        <h3><a name="Scan"></a>Scan Barcode</h3>
+                                        <p style="color: #4682b4;">[No image.]</p>
+                                        <h3><a name="Conduct2"></a>Conduct Peek Lid Scan</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-94.png" />
+                                        </p>
+                                        <h3><a name="F-SC"></a>F-SC Only</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-95.png" />
+                                        </p>
+                                        <h3><a name="F-System"></a>F-System</h3>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-96.png" />
+                                        </p>
+                                        <p>Fusion – Test</p>
+                                        <p>Initialize System</p>
+                                        <p>
+                                            <img src="../Resources/Images/Software/SSW_Troubleshooting-97.png" />
+                                        </p>
+                                        <h4><strong>Handoff Station Teach</strong>
+                                        </h4>
+                                        <p><b>Initialize LD/ROT System</b>, initializes Linear Distributor, Rotary distributor and Input Queue.</p>
+                                        <p><strong>Teach Handoff-Linear Distributor</strong>, teaches Linear Distributor to Handoff station.</p>
+                                        <p><b>Initialize</b>, when box is checked, will perform Initialize LD/ROT System when <strong>“Teach Handoff-Linear Distributor”</strong> is pressed.</p>
+                                        <p><strong>Verify LD Teaching</strong>, will perform three linear distributor to Handoff teaching cycles and display encoder values of each cycle when complete.</p>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../Resources/Images/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Magwash and PumpMonitor</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/PantherTSGStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="Resources/TableStyles/Rows.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/foundation.6.2.3_custom.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+        <script src="../Skins/Default/Scripts/Topic Toolbar for Test.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-dropdown" style="display:none;" id="#centralSmallScreen"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="Startup/TS_Startup_1.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                    <div class="central-dropdown" style="display:none;" id="#centralTop"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="central-dropdown" style="display:none;"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar_for_Test mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <img alt="Print" src="../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <img alt="Expand all" src="../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherTSG@hologic.onmicrosoft.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <img src="../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <img src="../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <img src="../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="H1_Blue">Magwash and PumpMonitor</h1>
+                                        <p>Magwash (tiplet and wash buffer) and PumpMonitor (oil) curves are used to assess processes associated with the magwash module. 
+</p>
+                                        <p>ProcessControlData_Magwash1 and ProcessControlData_Magwash2 files uses a capacitive circuit to monitor tiplet pick, tiplet check and tiplet eject, magwash fluid heights.
+</p>
+                                        <p>ProcessControlData_PumpMonitor uses a pressure transducer to measure the oil dispense in the magwash once cleaning step has completed.  It is important to note for Fusion assays, oil is not dispensed into the MTU after magwash cleaning.
+</p>
+                                        <h3>Curve folder view of magwash related curve files (tiplet sensing, wash buffer and oil)</h3>
+                                        <p>
+                                            <img src="Resources/Curves/MW_PumpMonitor_Curve-01_700x586.png" style="width: 700;height: 586;" />
+                                        </p>
+                                        <h3>MTU workflow inside Magwash </h3>
+                                        <p>Actual process cutoffs may vary by assay.  For example, RTF assays use less oil and for Fusion assays, oil is not introduced at Magwash.</p>
+                                        <p>
+                                            <img src="Resources/Curves/MW_PumpMonitor_Curve-02_700x321.png" style="width: 700;height: 321;" />
+                                        </p>
+                                        <p>
+                                            <img src="Resources/Curves/MW_PumpMonitor_Curve-03.png" />
+                                        </p>
+                                        <p>References for detailed explanation:</p>
+                                        <ul>
+                                            <li value="1">MDD Firmware MagWash</li>
+                                            <li value="2">MDD Firmware PumpMonitor</li>
+                                            <li value="3">MTU storyboard</li>
+                                        </ul>
+                                        <h3>Magwash commands</h3>
+                                        <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: false;mc-table-style: url('Resources/TableStyles/Rows.css');" class="TableStyle-Rows" cellspacing="0">
+                                            <col style="width: 250px;" class="TableStyle-Rows-Column-Column1" />
+                                            <col style="width: 450px;" class="TableStyle-Rows-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-Rows-Head-Header1">
+                                                    <th class="TableStyle-Rows-HeadE-Column1-Header1">Command (Decimal)</th>
+                                                    <th class="TableStyle-Rows-HeadD-Column1-Header1">Movement</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>34 -  PickTips</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1" style="text-align: left;">
+                                                        <p>Picks the tiplets and checks presence. After picking is done all drives are driven to init position.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>35 - EjectTips</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2" style="text-align: left;">
+                                                        <p>Eject the tiplets and checks presence. After eject is done all drives are driven to init position.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>45 -  VerifyLiquidLevelFIR</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1" style="text-align: left;">
+                                                        <p>(LLV) Liquid Level Verification – Verifies liquid is at the expected level using a FIR differentiator. After check probes are driven to home position and magnet is in work position.For each tube a flag is set it the liquid level is invalid.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>46 -  CheckResidualLiquid</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2" style="text-align: left;">
+                                                        <p>Check residual liquid command checks presence of liquid at the bottom of tube. After the check probes and magnet are driven to home position.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>47 -  CheckEmptyMTUFIR</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1" style="text-align: left;">
+                                                        <p>Empty Check - Prime sequence only, final check that all priming fluid has been aspirated from MTU</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body2">
+                                                        <p>51 - CheckTips</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyA-Column1-Body2" style="text-align: left;">
+                                                        <p>Tip Still On Check – after tiplet pick, before eject, checks if tiplet is present</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p>The first line of data is the header line, which explains the data within the column. Commonly used columns:</p>
+                                        <ul>
+                                            <li value="1">CurveID: is not a column present in raw data.  This value is assigned by curve trend software.</li>
+                                            <li value="2">Assay: as previously mentioned process parameters are tied to assay formulation.</li>
+                                            <li value="3">ProcessStep or CommandDescription: determines fluid type</li>
+                                            <li value="4">DateTime: UTC time</li>
+                                            <li value="5">TestOrderID: test order of sample</li>
+                                            <li value="6">SampleID: barcode of sample tube</li>
+                                            <li value="7">MTUNumber: MTU # since PantherMain was started</li>
+                                            <li value="8">MTUID: MTU barcode</li>
+                                            <li value="9">RFID: bottle A/B and rfid barcode value</li>
+                                            <li value="10">InstrFlag: RDV code</li>
+                                            <li value="11">Magwash_id:  0 = Magwash 1, 1 = Magwash 2</li>
+                                        </ul>
+                                        <ul>
+                                            <li value="1"><b>FIR max</b>: The maximum capacitive signal spike detected.</li>
+                                            <li value="2">FIR motor pos: The encoder position where the maximum capacitive signal spike occurred.</li>
+                                            <li value="3"><b>Threshold or Treshold</b>: The FIR maximum cutoff limit.</li>
+                                            <li value="4">Result0: Only informative if ErrorCode is not zero. This column indicates on which of the aspirators the error occurred.  Convert the number in this column from decimal to binary to indicate the problematic tube. For example, if Result0 is 11, it converts to 1011 in binary. This indicates errors on tubes 1, 2, and 4 of the MTU.</li>
+                                        </ul>
+                                        <p>Curve plots*  (*in sw7.x additional columns were added, so curve file will require reformatting to render correctly in curve trend.)</p>
+                                        <h3>Example of curve file and curve trend mismatch.  Commands field show wrong information</h3>
+                                        <p>
+                                            <img src="Resources/Curves/MW_PumpMonitor_Curve-04.png" />
+                                        </p>
+                                        <h3>Tiplet Detection (Cmd = 34, 35, and 51)</h3>
+                                        <ul>
+                                            <li value="1">The value in the <b><span style="background-color: #ffff00;">FIR</span> max</b> column is compared to the value in the Threshold column.<ul style="list-style-type: circle;"><li value="1">If <b><span style="background-color: #ffff00;">FIR</span> max &gt; Threshold</b>, no tiplets were detected on this aspirator.</li><li value="2">If <b><span style="background-color: #ffff00;">FIR</span> max &lt; Threshold</b>, tiplets were detected on this aspirator.</li></ul></li>
+                                            <li value="2">If tiplet sense (<b>MT1</b>) problems are occurring, note whether there are any trends from MTU to MTU.<ul style="list-style-type: circle;"><li value="1">For example, check to see if the same tube in each MTU has an abnormal value. Also, note if any <b><span style="background-color: #ffff00;">FIR</span> max</b> values are closer than <b>10</b> to the <b>Threshold</b> value</li></ul></li>
+                                        </ul>
+                                        <h3>PickTips (command 34), check tiplets are present after picking</h3>
+                                        <p>
+                                            <img src="Resources/Curves/MW_PumpMonitor_Curve-05.png" />
+                                        </p>
+                                        <h3>EjectTips (command 35), check tiplets are removed after eject</h3>
+                                        <p>
+                                            <img src="Resources/Curves/MW_PumpMonitor_Curve-06.png" />
+                                        </p>
+                                        <p>CheckTips (command 51), checks tiplets have not dropped off.  Checks tiplets are present after picking and prior to ejecting.</p>
+                                        <p>
+                                            <img src="Resources/Curves/MW_PumpMonitor_Curve-07.png" />
+                                        </p>
+                                        <h3>Microsoft Excel visualization of elevated FIR values causing false tiplet missing during CheckTips and PickTip commands  </h3>
+                                        <p>In this situation, the level sense board (loose aspirators or damage) and flex cable should be inspected and reseated at both ends.</p>
+                                        <p>
+                                            <img src="Resources/Curves/MW_PumpMonitor_Curve-08.png" />
+                                        </p>
+                                        <h3>Wash Dispense Verification (Cmd = 45)</h3>
+                                        <ul>
+                                            <li value="1">If the value in the <span style="background-color: #ffff00; font-weight: bold;">FIR</span> <b>max</b> column is greater than the <b>Threshold</b> value, the Magnetic Wash Station did not detect fluid in the MTU tube as it should during this part of the process).</li>
+                                            <li value="2">If <span style="background-color: #ffff00; font-weight: bold;">FIR</span> <b>max</b> &gt; <b>Threshold</b>, then the <b><span style="background-color: #ffff00;">FIR</span> motor position</b> column is related to how much volume was detected in the tube.<ul style="list-style-type: circle;"><li value="1">If <span style="background-color: #ffff00; font-weight: bold;">FIR</span> <b>motor position ≤ 8475</b>, then more than 1,200 µL of Wash solution was detected in the MTU tube.</li><li value="2">If <b style="background-color: #ffff00;">FIR</b> <b>motor position ≥ 9170</b>, then less than 800 µL of Wash solution was detected in the MTU tube.</li></ul></li>
+                                        </ul>
+                                        <ul>
+                                            <li value="1">If <b>ML2</b> or <b>ML3</b> flags are occurring, note whether the same trends are seen on Magnetic Wash Station 1 and Magnetic Wash Station 2. If similar patterns are seen on both stations, this indicates a problem with the shared Wash Pump, as opposed to problems with the Magnetic Wash Stations.</li>
+                                            <li value="2">Problems detected at this step are typically caused by one of the following conditions:<ul style="list-style-type: circle;"><li value="1">An under-dispensing Wash Pump (<b>ML3</b>)</li><li value="2">Clogs of the aspirator (<b>ML2</b>)</li><li value="3">Bubbles or foam caused by a bad wash injector (<b>ML2</b>)</li><li value="4">An empty or disconnected Wash bottle (<b>ML3</b>)</li><li value="5">Leaks in the Wash fluid line (<b>ML3</b>)</li><li value="6">Low vacuum pressure (<b>ML2</b>)</li></ul></li>
+                                        </ul>
+                                        <h3>VerifyLiquidLevelFIR (command 45).  Process control will general ML2 (too high)  and ML3 (too low).</h3>
+                                        <p>
+                                            <img src="Resources/Curves/MW_PumpMonitor_Curve-09.png" />
+                                        </p>
+                                        <h3>Residual Wash Check (Cmd = 46) and Empty Check (Cmd = 47)</h3>
+                                        <ul>
+                                            <li value="1">If the value in the <b><span style="background-color: #ffff00;">FIR</span> max</b> column is greater than the <b>Threshold</b> value, the Magnetic Wash Station detected fluid in the MTU tube. The majority of the time at this step, the Magnetic Wash Station will not detect any fluid (i.e., <b><span style="background-color: #ffff00;">FIR</span> max &lt; Threshold</b>). However, it is not unusual for the Magnetic Wash Station to detect the presence of some residual fluid (i.e., sometimes you will see <b><span style="background-color: #ffff00;">FIR</span> max &gt; Threshold</b>).</li>
+                                            <li value="2">If <b><span style="background-color: #ffff00;">FIR</span> max &gt; Threshold</b>, then the <b><span style="background-color: #ffff00;">FIR</span> motor position</b> column is related to how much volume was detected in the tube.<ul style="list-style-type: circle;"><li value="1">If <b><span style="background-color: #ffff00;">FIR</span> motor position ≤ 10716</b>, then more than 50 µL of Wash solution was detected in the MTU tube.</li></ul></li>
+                                            <li value="3">If <b><span style="background-color: #ffff00;">FIR</span> max &gt; Threshold</b>, then one should typically see associated <b><span style="background-color: #ffff00;">FIR</span> motor position</b> values &gt; <b>10840</b>.</li>
+                                            <li value="4">If residual wash (<b>ML5</b>) flags are occurring, note whether there are any trends from MTU to MTU. For example, check to see if the same tube in each MTU has an abnormal value.Also not if any <b><span style="background-color: #ffff00;">FIR</span> max</b> values are closer than 10 to the <b>Threshold</b> value.</li>
+                                            <li value="5">Problems detected at this step are typically caused by a clogged aspirator or low vacuum pressure. Remove and inspect aspirators and note what kind of substance (if any) is removed from the aspirator.</li>
+                                            <li value="6">Empty check failure will result in a failed prime.</li>
+                                        </ul>
+                                        <h3>Priming check (command 47) – Process control verifies fluid is properly removed by aspirator after each dispense during prime.  Priming fails if liquid is detected.</h3>
+                                        <p>
+                                            <img src="Resources/Curves/MW_PumpMonitor_Curve-10.png" />
+                                        </p>
+                                        <h3>MW FIR Motor Positions translated to ML2 or ML3 errors</h3>
+                                        <p>When threshold is valid, FIR motor position:</p>
+                                        <p>FIR Motor &lt;= 8475, Detected volume is greater than 1.2ml (ML2)</p>
+                                        <p>FIR Motor &gt;= 9170, Detected volume is less than 0.8ml (ML3)</p>
+                                        <p>Unknown dropouts that can cause LLS errors, tip pick errors, or other errors. If the issue persists:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Replace the Liquid Level Sense PCB.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>If that does not work, replace the module.</p>
+                                                <p>
+                                                    <img src="Resources/Curves/MW_PumpMonitor_Curve-11.png" />
+                                                </p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="Resources/Images/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

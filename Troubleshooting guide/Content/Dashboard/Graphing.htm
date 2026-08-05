@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-conditions="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Graphing</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/PantherTSGStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../Resources/TableStyles/Rows.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+        <script src="../../Skins/Default/Scripts/Topic Toolbar for Test.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-dropdown" style="display:none;" id="#centralSmallScreen"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../Startup/TS_Startup_1.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                    <div class="central-dropdown" style="display:none;" id="#centralTop"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="central-dropdown" style="display:none;"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar_for_Test mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <img alt="Print" src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <img alt="Expand all" src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherTSG@hologic.onmicrosoft.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="H1_Blue">Graphing</h1>
+                                        <p>The Graphing module provides the ability to view and analyze graphs based upon assay processing tests and command actions. This module can display information for up to 20,000 test orders. The following graphs are available:</p>
+                                        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Rows.css');" class="TableStyle-Rows" cellspacing="0">
+                                            <col style="width: 184px;" class="TableStyle-Rows-Column-Column1" />
+                                            <col style="width: 184px;" class="TableStyle-Rows-Column-Column1" />
+                                            <col style="width: 184px;" class="TableStyle-Rows-Column-Column1" />
+                                            <col style="width: 184px;" class="TableStyle-Rows-Column-Column1" />
+                                            <col style="width: 184px;" class="TableStyle-Rows-Column-Column1" />
+                                            <col style="width: 184px;" class="TableStyle-Rows-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-Rows-Head-Header1">
+                                                    <th class="TableStyle-Rows-HeadE-Column1-Header1">Graph Name</th>
+                                                    <th class="TableStyle-Rows-HeadE-Column1-Header1">&#160;</th>
+                                                    <th class="TableStyle-Rows-HeadE-Column1-Header1">&#160;</th>
+                                                    <th class="TableStyle-Rows-HeadE-Column1-Header1">&#160;</th>
+                                                    <th class="TableStyle-Rows-HeadE-Column1-Header1">&#160;</th>
+                                                    <th class="TableStyle-Rows-HeadD-Column1-Header1">&#160;</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Dispense</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>C-LLD</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Post Disp Cap LLD</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Luminometer</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Flash</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Pump Monitor</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body2">
+                                                        <p>Aspiration</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body2">
+                                                        <p>B-LLD</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body2">
+                                                        <p>Shearing Pressure</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body2">
+                                                        <p>Output Queue</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body2">
+                                                        <p>MagWash</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyA-Column1-Body2">
+                                                        <p>Fluorescence</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><ul><li style="font-weight: bold;text-decoration: underline;font-style: italic;" value="1"><a style="font-style: normal; text-decoration: none; color: #000000;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Graph – Functionality</a></li></ul></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><p><a style="color: #000000; text-decoration: none; font-style: italic;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Test Order Look Up</a></p></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>The Graphing module can plot MTU tube process control data from a local date/time range or a Worklist ID.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><p><a style="color: #000000; font-style: normal; text-decoration: none; font-weight: bold;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search By Date Range</a></p></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <ol>
+                                                            <li value="1">Click on the ‘<i>Search by Date Range</i>’ button and select the start and end dates and times.</li>
+                                                            <li value="2">Click on the ‘<i>Search</i>’ button to generate the test order list.</li>
+                                                        </ol>
+                                                        <p>The ‘<i>Reset Dates</i>’ button adjusts the ‘<i>Start Date</i>’ and ‘<i>End Date</i>’ to the past seven days, ending with the present date.</p>
+                                                        <p>The test order columns can be expanded by placing the cursor in between the columns, holding down the left-click button on the mouse, and dragging the bi-directional arrow in the desired direction.</p>
+                                                        <p>The test order columns can be moved and re-organized by placing the cursor on the column header, holding down the left-click button on the mouse, and dragging it into the desired location.</p>
+                                                        <p>
+                                                            <img src="../Resources/Images/Logs/Logs_Screen_18.PNG" data-mc-target-name="graph - 1" />
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><p><a style="color: #000000; font-weight: bold; text-decoration: none; font-style: normal;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search by Work List ID</a></p></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Click on the <a targets="graph - 2" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="graph - 2"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />‘Search By WorklistID’</a> button and enter the work list identification number in the ‘Work List ID’ text field.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Click on the ‘<i>Search</i>’ button to generate the test order list that is associated to this <i>WorklistID</i>.</p>
+                                                                <p>
+                                                                    <img src="../Resources/Images/Logs/Logs_Screen_19.PNG" style="display: none;" data-mc-target-name="graph - 2" />
+                                                                </p>
+                                                            </li>
+                                                        </ol>
+                                                        <p>The ‘Reset Dates’ button adjusts the ‘Start Date’ and ‘End Date’ to the past seven days, ending with the present date; it also clears the ‘Work List ID’ text field.</p>
+                                                        <p>The ‘Explode Current Graph’ button enlarges the most recent selected graph.</p>
+                                                        <p>The ‘Print Current Graph’ button prints the most recent selected graph.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><ul><li style="font-weight: bold;text-decoration: underline;font-style: italic;" value="1"><a style="font-style: normal; text-decoration: none; color: #000000;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Test Order Look up - Module Components</a></li></ul></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <ul style="text-decoration: underline;">
+                                                    <li value="1"><a targets="graph - 3" style="text-decoration: none;" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="graph - 3"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Column Headers</a>
+                                                    </li>
+                                                </ul>
+                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Rows.css');display: none;" class="TableStyle-Rows" cellspacing="0" data-mc-target-name="graph - 3">
+                                                    <col style="width: 192px;" class="TableStyle-Rows-Column-Column1" />
+                                                    <col class="TableStyle-Rows-Column-Column1" style="width: 540px;" />
+                                                    <thead>
+                                                        <tr class="TableStyle-Rows-Head-Header1">
+                                                            <th class="TableStyle-Rows-HeadE-Column1-Header1">Column</th>
+                                                            <th class="TableStyle-Rows-HeadD-Column1-Header1">Description</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-Rows-Body-Body1">
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>Graph</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                                <p>Selects an entire test order row.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Rows-Body-Body2">
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>Creation Time</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                                <p>Local time and date that the test order was created.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Rows-Body-Body1">
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>Test Order ID</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                                <p>Test order identification number.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Rows-Body-Body2">
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>Work List ID</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                                <p>Work list identification number.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Rows-Body-Body1">
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>Sample ID</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                                <p>Sample identification number.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Rows-Body-Body2">
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>MTU ID</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                                <p>Multi-Tube Unit identification number.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Rows-Body-Body1">
+                                                            <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                                <p>Position In MTU</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyA-Column1-Body1">
+                                                                <p>Multi-Tube Unit position number; 1 MTU = 5 disposable reaction tubes.</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><ul><li style="font-weight: bold;text-decoration: underline;font-style: italic;" value="1"><a style="font-style: normal; text-decoration: none; color: #000000;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Selections</a></li></ul></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p>The ‘Selections’ tab displays the test orders that have been selected to generate a graph(s).  It is located above the ‘Test Order Look Up’ screen, next to its ‘Search’ tab.</p>
+                                                <p>The <a targets="graph - 4" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="graph - 4"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />‘Clear’ button</a> removes the list of test orders that were selected on the ‘Test Order Look Up’ in the ‘Search’ tab.</p>
+                                                <p>
+                                                    <img src="../Resources/Images/Logs/Logs_Screen_20.PNG" style="display: none;" data-mc-target-name="graph - 4" />
+                                                </p>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><ul><li style="text-decoration: underline;color: #000000;" value="1"><a style="color: #000000; font-style: normal; text-decoration: none; font-weight: bold;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Test Order Column Headers</a></li></ul></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>To organize <a targets="graph - 5" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="graph - 5"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Test Order Look Up columns,</a> right-click the column head, then select the desired item in the pop-up menu.</p>
+                                                        <p>Refer to Test Order Look Up below:<br /></p>
+                                                        <p>
+                                                            <img src="../Resources/Images/Logs/Logs_Screen_21.PNG" style="display: none;" data-mc-target-name="graph - 5" />
+                                                        </p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>Columns can be sorted in ascending or descending order by right-clicking on the column header and selecting ‘<i>Sort Ascending</i>’ or ‘<i>Sort Descending</i>’.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>Column sorting can be reversed by right-clicking on the column header and selecting ‘<i>Clear Sorting</i>’.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Conditional Formatting can be done by right-clicking on the column header and selecting <a targets="graph - 6" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="graph - 6"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />‘Conditional Formatting</a>’.  This feature assists with the creation of rules for customized formatting.  The following can be controlled:  text alignment, row alignment, case sensitive, row color, and cell color.</p>
+                                                                <p>
+                                                                    <img src="../Resources/Images/Logs/Logs_Screen_22.PNG" style="display: none;" data-mc-target-name="graph - 6" />
+                                                                </p>
+                                                            </li>
+                                                        </ol>
+                                                        <ol data-mc-continue="true">
+                                                            <li value="4">
+                                                                <p>Columns can be grouped by an existing column by right-clicking on the column header and selecting ‘<i>Group by this column</i>’.  Grouping can be used to consolidate non-numeric data values into more general group values; these group values can be mapped into a new column within the data set.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Columns can be removed from the current view by right-clicking on the column header and selecting ‘<i>Column Chooser</i>’.  Drag a column header into the gray area in the ‘<i>Column Chooser</i>’ dialog box to remove the column.</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>Columns can be hidden from the Event Logs screen by right-clicking on the column header and selecting <a targets="graph - 7" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="graph - 7"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />‘Hide Column’</a>.  To unhide the column, right-click on any column header and select ‘<i>Column Chooser</i>’, then drag the hidden column header back out to the ‘<i>Test Order Look Up</i>’ screen.</p>
+                                                                <p>
+                                                                    <img src="../Resources/Images/Logs/Logs_Screen_23.PNG" style="display: none;" data-mc-target-name="graph - 7" />
+                                                                </p>
+                                                            </li>
+                                                        </ol>
+                                                        <ol data-mc-continue="true">
+                                                            <li value="7">Columns can be ‘<i>pinned</i>’ so that they remain at the ends of the screen (left or right side); this keeps the column headings visible as the data bar is scrolled up and down.  To pin the column, right-click on the column header and select ‘<i>Pin Column</i>’; to reverse this, right-click on the same column header and select ‘Unpin Column'.</li>
+                                                            <li value="8">Columns 8)	Columns do not automatically accommodate to fit the information they contain; however, by right-clicking and selecting ‘<i>Best Fit</i>’, the column automatically expands and contracts to fit the data enclosed.</li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><ul><li style="font-weight: bold;text-decoration: underline;font-style: italic;" value="1"><a style="font-style: normal; text-decoration: none; color: #000000;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Generating a Graph</a></li></ul></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>In the ‘<i>Graphing</i>’ module and on the <a targets="graph - 8" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="graph - 8"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />‘Test Order Look Up’</a> screen, select at least one test order by clicking on the test order ‘<i>Graph</i>’ column; this highlights the entire test order row.  Select as many test orders as needed.</p>
+                                                        <p>
+                                                            <img src="../Resources/Images/Logs/Logs_Screen_24.PNG" style="display: none;" data-mc-target-name="graph - 8" />
+                                                        </p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">
+                                                        <p>On the right side of the ‘<i>Graphing</i>’ screen, <a targets="graph - 9" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="graph - 9"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />select the desired graph by clicking on the graph’s tab</a>.</p>
+                                                        <p>
+                                                            <img src="../Resources/Images/Logs/Logs_Screen_25.PNG" style="display: none;" data-mc-target-name="graph - 9" />
+                                                        </p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="3">Go to the graph’s ‘<i>Command</i>’ drop-down menu and select the desired parameter.  Once the parameter is selected, the graph will automatically plot.</li>
+                                                </ol>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><ul style="font-weight: bold;text-decoration: underline;"><li style="font-weight: normal;" value="1"><a style="font-style: normal; color: #000000; text-decoration: none; font-weight: bold;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />How to Graph an Aspiration Pressure Curve</a></li></ul></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>In the ‘Graphing’ module and on the ‘Test Order Look Up’ screen, select a sample by clicking on the ‘Graph’ column; this highlights the sample’s order row.</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>On the right side of the ‘Graphing’ screen, select the ‘Aspiration’ tab.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>To plot a graph, select a ‘Command’ from the drop-down menu.</p>
+                                                            </li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../Resources/Images/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

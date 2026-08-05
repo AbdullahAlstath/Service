@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-conditions="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>PC 259 – Process Management</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/PantherTSGStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/Rows.css" rel="stylesheet" />
+        <script src="../Message/mapper.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+        <script src="../../../Skins/Default/Scripts/Topic Toolbar for Test.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-dropdown" style="display:none;" id="#centralSmallScreen"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Startup/TS_Startup_1.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                    <div class="central-dropdown" style="display:none;" id="#centralTop"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="central-dropdown" style="display:none;"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar_for_Test mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <img alt="Print" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <img alt="Expand all" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherTSG@hologic.onmicrosoft.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="H1_Blue">PC 259 – Process Management</h1>
+                                        <h4 class="Assay_Code">PC System Messages</h4>
+                                        <table class="TableStyle-Rows" style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/Rows.css');" cellspacing="0">
+                                            <col style="width: 158px;" class="TableStyle-Rows-Column-Column1" />
+                                            <col style="width: 476px;" class="TableStyle-Rows-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-Rows-Head-Header1">
+                                                    <th style="text-align: left;background-color: #2f5496;" class="TableStyle-Rows-HeadE-Column1-Header1">
+                                                        <p style="text-align: center;color: #ffffff;">Event ID</p>
+                                                    </th>
+                                                    <th class="TableStyle-Rows-HeadD-Column1-Header1" style="background-color: #2f5496;color: #ffffff;">Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00000</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Unknown message.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00001</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>System stopped due to a fatal error. System needs to be reset.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p><a href="259.000.00002.htm" class="a_pend">259.000.00002</a>
+                                                        </p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Assay processing was aborted due to a fatal error. System needs to be reset.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00003</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>MTU introduction paused to to {0}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00004</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>MTU introduction resumed.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00005</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Could not resume introducing MTUs due to {00}, though {1}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00006</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Could not manage {0} (ID = {1}) from {2}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00007</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Finished processing of MTU = {0}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00008</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Switched to processing mode {0} and state {1} as {2} is faulty.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00009</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Switched to processing mode {0} and state {1} as {2} is OK.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00010</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Did not change current processing mode {0} to {1} for {2}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00011</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Unexpected MTU barcode. Samples {3} were affected. MTU {0} has a different barcode: {1} instead of {2}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00012</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>MTU = {0} has barcode {1} (sample = {2}).</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00013</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Unable to read barcode of MTU {0}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00014</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>SID {0}, {1} assay invalid due to Magnetic Wash Station LLD failure in rack lane {2}, rack position {3}. Value = {4}, Index = {5}, MotorPos = {6}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00015</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Finished processing of MTU = {0}. All test orders completed.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00016</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Instrument initialized.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00017</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Setting parameter sets for {0} failed.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00018</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Assay processing has started.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00019</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>No introduction of new MTU in cycle %1.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00020</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>New tests to process.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00021</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>No tests to process.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00022</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Adequate Oil volume not available for a new MTU. Cannot process assay.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00023</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Adequate Wash volume not available for a new MTU. Cannot process assay.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00024</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>There is no Reagent Kit for assay = {0} and {1} tests}. Cannot process assay.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00025</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Could not reserve waste for a leading prime MTU. Cannot process.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00026</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>No processible sample = {0} for test order = {1}. Cannot process.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00027</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>No TCR Modifier for Kit = {0} and {1} tests. Cannot process.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00028</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>No {0} of Kit = {1} and {2} tests. Cannot process.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00029</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Last move before FluorescenceMeasurementStep did not place MTU = {0} to Incubator 3 (= Fluorometer). Unable to execute measurement command.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00030</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Necessary RTFs missing for fluorescence measurement ({0}. {1}).</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00031</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Cannot move MTU to device %1, as there is no empty position!</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00032</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Destination of the last move ({0}) differs from the source of current move ({1}).</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00033</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Could not plan MTU={0} for {1}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00034</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Adequate Auto Detect {0} volume not available for a new MTU. Cannot process assay.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00035</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>%1 is no %2 type, can't extract that from the SamplePreparationStep %.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00036</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Unhandled MTU process failure. Message text: {0}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00037</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Processing failure. Enabling Block {0}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p><a href="259.000.00038.htm" class="a_pend">259.000.00038</a>
+                                                        </p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Processing failure. Sending block {0}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00039</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Processing failure. COP internal timer.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00040</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Processing with DummyCOP. For using the real instrument, change configuration parameter.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00041</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>All temperatures in range. Resumed sample pipetting.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00042</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Instrument flag received.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00043</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>RDV Error {0} during aspiration of SID {2}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00044</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>RDV Error {0} during {1} dispensing for SID {2}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00045</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>{0} for {1} in lane {2}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00046</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>MTU barcode {0} has been used before.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00047</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Sample Pipettor dropped a tip inside a reagent bottle.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00048</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Sample Pipettor dropped a tip outside a reagent bottle.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00049</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>The Sample Bay temperature is out of range. Stopped sample pipetting.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00050</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>The Reagent Bay temperature is out of range. Stopped sample pipetting.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00051</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Sample Pipettor dropped a tip in rack lane {0} inside sample tube {1}. Please wait for message indicating that it is safe to open the right canopy door.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00052</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Sample Pipettor dropped a tip outside sample tube. Processing will continue.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00053</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Reagent Pipettor dropped a tip inside a reagent bottle.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00054</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Reagent Pipettor dropped a tip outside a reagent bottle.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00055</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Could not plan MTU = {0} for {1} because it is out of service.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00056</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>No Universal Fluids set for {0} tests. Cannot process assay.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00057</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Setting internal parameter sets failed.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00058</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>{0} aspiration LLD = {1} for SIDs {2}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00059</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>{0} pre-dispense LLD = {1} for SID {2}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00060</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>{0} post-dispense LLD = {1} for SID {2}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00061</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>SID {0}, {1} assay invalid due to Magnetic Wash residual LLD failure in rack lane {2}, rack position {3}. Value = {4}, Index = {5}, MotorPos = {6}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00062</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Process control check failed for %1.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00063</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>No deactivation fluid buffer or bleach available.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00064</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>At least one device is out of service, preventing the start of assay processing.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00065</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>All assay processing relevant devices are in service.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00066</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Sample pipetting paused due to Luminometer high background.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00067</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Assay processing has returned to full throughput.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00068</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Sample pipetting paused due to problems at both Magnetic Wash Stations.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00069</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>MTU = {0} runs controls with SID {1}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00070</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>MTU = {0} runs calibrators with SID {1}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00071</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Sample rack in lane {0} was removed while in use. Unpipetted samples associated with the currently pipetting MTU will be invalidated. Inspect rack retainer and sample tubes for droplets and replace sample caps as needed.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00072</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Reagent rack in lane {0} was removed while in use. All in-process samples associated with this kit will be invalidated.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00073</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Too soon after rack removal to load Sample Bay lane {0}. Please try again.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00074</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Too soon after rack removal to load Reagent Bay lane {0}. Please try again.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00075</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Canopy door opened. Please close.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00076</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Sample pipetting has stopped.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00077</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Assay processing will continue at a reduced throughput due to Magnetic Wash Station error.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00078</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Unknown.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00079</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Right canopy door can now be opened. Please refer to help for specific instructions for safely removing the tip.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00080</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Please ease close the sample canopy door and select Resume on the Sample Bay Rack screen.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00081</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Instrument could not pick an MTU out of the Input Queue.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00082</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Sample pipetting is still paused. Press Resume if pipetting may resume.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00083</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>A priming MTU has been introduced.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p><a href="../../PantherPlus/Modules/ContinuousAccessUFD/ContinuousAccess_OTFPriming.htm">259.000.00084</a>
+                                                        </p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Panther Fluids On-The-Fly priming cannot be executed.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00085</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>CRC failure in flashcurve for SID {0}, assay {1}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00086</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>The temperature of the Sample Bay has not returned to the acceptable range. Transitioning to error state.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00087</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>The temperature of the Reagent Bay has not returned to the acceptable range. Transitioning to error state.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00088</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Oil Process Control Check failed for SIDs {0}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00089</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Stopped introduction of new samples after {0} consecutive reagent volume check errors of the Sample Pipettor.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00090</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Stopped introduction of new samples after {0} consecutive reagent volume check errors of the Reagent Pipettor.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00091</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Stopped introduction of new samples after {0} consecutive reagent dispense check errors of the Sample Pipettor.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00092</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>The High Temperature Incubator temperature is out of range. Paused sample pipetting.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00093</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>The Transition Incubator temperature is out of range. Paused sample pipetting.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00094</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>The Amp Incubator temperature is out of range. Paused sample pipetting.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00095</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>The Heater Ramp temperature is out of range. Paused sample pipetting.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00096</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>The Chiller temperature is out of range. Paused sample pipetting.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00097</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>The instrument temperature is out of range. Paused sample pipetting.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00098</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Magnetic Wash Station tip strip failure for SID {0}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00099</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Unknown.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00100</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>The Sample Bay temperature is out of range.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.000.00101</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>The Reagent Bay temperature is out of range.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.000.00102</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Extended sample preparation of the current MTU as schedule exceeded due to pipetting delays.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2"> 259.000.00103</td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">Assay processing cannot start
+ due to a previous tip loss problem. Please correct the situation and press
+ the resume button.</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1"> 259.000.00104</td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">Sample
+ pipetting is still paused due to tip loss. Please correct the situation and
+ press the resume button.</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2"> 259.000.00105</td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">Switched to error state as
+ MagWash tip ejection could not be completed.</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1"> 259.000.00106</td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">Multiple
+ barcodes were found on the sample in the tube shuttle: {0}, Expected barcode:
+ {1}</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2"> 259.000.00107</td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">MTU handover towards Panther
+ could not be planned, it will fail and abort sidecar processing.</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1"> 259.000.00108</td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">Pierce
+ failed at {0}.</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2"> 259.000.00109</td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">Aspirator {2} on Magwash {0}
+ encountered a {1} problem.</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1"> 259.001.00109</td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">All
+ aspirators on Magwash {0} encountered a {1} problem.</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2"> 259.000.00110</td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">Due to the failure of both Mag
+ Washes, the system will move to the {0} state.</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1"> <a href="259.000.00111_SamplesinMTUInvalid.htm">259.000.00111</a></td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">Sample
+ IDs: {0} were not processed by Fusion sidecar as MTU had to be disposed due
+ to unavailable storage.</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2"> 259.000.00112</td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">Early result reporting for
+ MTU={0} successful</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1"> 259.000.00113</td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">Early
+ result reporting for MTU={0} failed</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2"> 259.000.00114</td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">Result reporting for MTU={0}
+ skipped</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1"> 259.000.00115</td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">Sample
+ pipetting paused due to no remaining tests in Fluid Kit {0} and Fluid Kit {1}
+ has not completed prime. Pipetting will resume when Kit {1} has successfully
+ completed prime.</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2"> 259.000.00116</td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">Priming of Fluid Kit {0} has
+ completed. Sample pipetting has been resumed.</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.001.00043</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>RDV Error {0} during {1} aspiration in lane {2}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.001.00045</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>{0} for {1} in quadrant {2}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.001.00085</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Unknown.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>259.002.00043</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>RDV Error {0} during {1} aspiration in quadrant {2}.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>259.002.00045</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>{0} for {1} in quadrant {2}. Remove the kit, correct errors, and load a valid kit.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;text-align: left;" class="TableStyle-Rows-BodyB-Column1-Body2">
+                                                        <p>259.003.00045</p>
+                                                    </td>
+                                                    <td style="vertical-align: top;padding-left: 4px;padding-right: 4px;padding-top: 4px;padding-bottom: 4px;" class="TableStyle-Rows-BodyA-Column1-Body2">
+                                                        <p>{0} for SID {1}.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../Resources/Images/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-conditions="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>RDFS</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/PantherTSGStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+        <script src="../../../Skins/Default/Scripts/Topic Toolbar for Test.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-dropdown" style="display:none;" id="#centralSmallScreen"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Startup/TS_Startup_1.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                    <div class="central-dropdown" style="display:none;" id="#centralTop"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="central-dropdown" style="display:none;"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar_for_Test mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <img alt="Print" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <img alt="Expand all" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherTSG@hologic.onmicrosoft.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="H1_Blue">RDFS</h1>
+                                        <p>Volume Verification failed for sample.</p>
+                                        <h3>Complaint Description</h3>
+                                        <p>Reagent Dispense Sample Failure —RDV indicated a failure during dispense of Sample. There is an RDV error type message associated with each dispense failure; either 2, 64, 128, or a sum of any of these (e.g. error type 192 means error type 64 and error type 128 both occurred).</p>
+                                        <blockquote>
+                                            <p>Error type 2— Maximum pressure threshold exceeded</p>
+                                            <p>Error type 64— Minimum mean pressure threshold not met</p>
+                                            <p>Error type 128— Minimum pressure down time threshold not met</p>
+                                        </blockquote>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a style="font-weight: bold; font-style: normal; color: #000000;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Table of Contents</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><a href="#Technica" class="MCXref xref">Technical Support</a>
+                                                </p>
+                                                <blockquote>
+                                                    <p><a href="#Question" class="MCXref xref">Questions to Ask Customer</a>
+                                                    </p>
+                                                    <p><a href="#Log" class="MCXref xref">Log Review</a>
+                                                    </p>
+                                                    <p><a href="#Example" class="MCXref xref">Example Curves</a>
+                                                    </p>
+                                                    <p><a href="#RDFS/VVF" class="MCXref xref">RDFS/VVFS Pierceable Cap Left on the Controls</a>
+                                                    </p>
+                                                </blockquote>
+                                                <p><a href="#Field" class="MCXref xref">Field Service</a>
+                                                </p>
+                                                <blockquote>
+                                                    <p><a href="#Precipit" class="MCXref xref">Precipitate in Sample</a>
+                                                    </p>
+                                                    <p><a href="#Foamy" class="MCXref xref">Foamy Reagent</a>
+                                                    </p>
+                                                    <p><a href="#Pipettor" class="MCXref xref">Pipettor Tips Damaged or Wrong Type</a>
+                                                    </p>
+                                                    <p><a href="#Pipettor2" class="MCXref xref">Pipettor Tips Lack Filter</a>
+                                                    </p>
+                                                    <p><a href="#Fluid" class="MCXref xref">Fluid Viscosity</a>
+                                                    </p>
+                                                    <p><a href="#No" class="MCXref xref">No Liquid Aspirated</a>
+                                                    </p>
+                                                    <p><a href="#Leaky" class="MCXref xref">Leaky Pipettor</a>
+                                                    </p>
+                                                    <p><a href="#VVFS" class="MCXref xref">VVFS Due to Cap Sealing Around Pipettor Tip</a>
+                                                    </p>
+                                                    <p><a href="#Sample" class="MCXref xref">Sample Aspiration Pressure Curves</a>
+                                                    </p>
+                                                    <p><a href="#Sample2" class="MCXref xref">Sample Dispense Pressure Curves</a>
+                                                    </p>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <h1 class="H1_Blue"><a name="Technica"></a>Technical Support</h1>
+                                        <h3><a name="Question"></a>Questions to Ask Customer</h3>
+                                        <ul>
+                                            <li value="1">RDFS on samples or controls? If on samples only: which sample type?</li>
+                                            <li value="2">Only in one particular assay or multiple assays?</li>
+                                            <li value="3">If in HPV run or on controls: check curves for a cap venting issue</li>
+                                            <li value="4">Which tips are on the instrument? (Validated or alternative, document Ref number + lot.)</li>
+                                            <li value="5">Request logs for review.</li>
+                                        </ul>
+                                        <h3><a name="Log"></a>Log Review</h3>
+                                        <ul>
+                                            <li value="1">1-2% is considered normal (likely viscous samples/precipitate in urine)</li>
+                                            <li value="2">Rare in HPV runs since Thinprep samples are usually not viscous</li>
+                                            <li value="3">If &gt;2% RDFS, or RDFS in HPV runs or on controls, check curves</li>
+                                            <li value="4">Check the following curves: cLLD TCR, Sample aspiration and dispense curves</li>
+                                            <li value="5">Sometimes invalids have both VVFS/RDFS. See more curves under VVFS.</li>
+                                        </ul>
+                                        <h3><a name="Example"></a>Example Curves</h3>
+                                        <ul>
+                                            <li value="1">RDFS due to <em>viscous sample</em>:<p><img src="../../Resources/Images/Flags/RDFS-01.png" /></p><p><img src="../../Resources/Images/Flags/RDFS-02.png" /></p></li>
+                                            <li value="2">
+                                                <p>RDFS due to <em>cap venting</em> can be caused by:</p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li value="1">
+                                                        <p>Sample rack clip broken – sample is moving up.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Sample not pushed all the way down in the rack.</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Cap foil delamination. Have customer check the shape of the piercing hole. It should be square or ‘D’ shaped, not perfectly round.</p>
+                                                        <p>
+                                                            <img src="../../Resources/Images/Flags/RDFS-08.png" />
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h3><a name="RDFS/VVF"></a>RDFS/VVFS Pierceable Cap Left on the Controls</h3>
+                                        <h4>Resolution</h4>
+                                        <p>For Covid uncapped workflows, the controls (which have pierceable caps) must be uncapped.  Customers at times will forget this, since the cap is pierceable.</p>
+                                        <p>If the RDFS occurred on a Covid control, ask the customer which workflow they are running.</p>
+                                        <h4>Example</h4>
+                                        <p style="font-family: 'Arial Narrow';">SarsCov2 WL 000877-20201209-23 Version: 3.1.11.5 (For Emergency Use Authorization) ML: 286020 Exp: 07/15/2021 TCR: 03254</p>
+                                        <p style="font-family: 'Arial Narrow';">SarsCov2 WL 000877-20201209-28 Version: 3.1.11.5 (For Emergency Use Authorization) ML: 286020 Exp: 07/15/2021 TCR: 03254</p>
+                                        <p>Both runs failed due to RDFS and VVFS on both positive and negative controls.</p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/RDFS-03a.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/RDFS-03.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/RDFS-05.png" />
+                                        </p>
+                                        <p>Confirmed cap is on using C-LLD and LLDValues:</p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/RDFS-06.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/RDFS-07.png" />
+                                        </p>
+                                        <h1 class="H1_Blue"><a name="Field"></a>Field Service</h1>
+                                        <h3><a name="Precipit"></a>Precipitate in Sample</h3>
+                                        <h4>Resolution</h4>
+                                        <p>Remove the mucous, then transfer to a new sample tube and retest the sample.</p>
+                                        <h4>Test</h4>
+                                        <p>Verify the sample does not have a mucous cap, or cotton pile in the tube.</p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/RDFS-09.png" />
+                                        </p>
+                                        <h3><a name="Foamy"></a>Foamy Reagent</h3>
+                                        <p>Typically error type 128.</p>
+                                        <h4>Resolution</h4>
+                                        <p>Pop the bubbles</p>
+                                        <p>Verify the customer's reagent preparation workflow.</p>
+                                        <h4>Test</h4>
+                                        <p>Use CurveTrend or the Dashboard tool to check the dispense curves.</p>
+                                        <h3><a name="Pipettor"></a>Pipettor Tips Damaged or Wrong Type</h3>
+                                        <p>Typically error type 2.</p>
+                                        <h4>Resolution</h4>
+                                        <p>Fix the hardware obstruction</p>
+                                        <p>Fix the hardware obstruction (reseat sample bay lid).</p>
+                                        <p>Use the correct tips (1mL Tecan capacitive with filter).</p>
+                                        <h4>Test</h4>
+                                        <p>Visually verify damage to Pipettor tips.</p>
+                                        <p>Determine where the obstruction occurs</p>
+                                        <p>Verify tips are not wrong type.</p>
+                                        <h3><a name="Pipettor2"></a>Pipettor Tips Lack Filter</h3>
+                                        <p>Intermittent but persistent error type 64.</p>
+                                        <h4>Resolution</h4>
+                                        <p>Use the correct tips (1mL Tecan capacitive with filter).</p>
+                                        <h4>Test</h4>
+                                        <p>Visually verify the pipettor tips have the white filter.</p>
+                                        <h3><a name="Fluid"></a>Fluid Viscosity</h3>
+                                        <h4>Resolution</h4>
+                                        <p>Check to see if the sample was properly stored.</p>
+                                        <p>Check to be sure the reagent type matches the assay.</p>
+                                        <p>Check to be sure the Customer properly reconstituted the reagent.</p>
+                                        <p>Check sample quality for mucoidal particles or particulate matter.</p>
+                                        <h4>Test</h4>
+                                        <p>Use CurveTrend or the Dashboard tool to check the aspiration and the dispense pressure curves.</p>
+                                        <p>Compare the dispense pressure against a good dispense curve (un-flagged dispense event).</p>
+                                        <p>Check the reagent for uniformity.</p>
+                                        <h3><a name="No"></a>No Liquid Aspirated</h3>
+                                        <h4>Resolution</h4>
+                                        <p>Replace the reagent with a new reagent kit (possibly below the volume requirements).</p>
+                                        <p>Re-teach the Pipettor.</p>
+                                        <p>Replace the Pipettor.</p>
+                                        <h4>Test</h4>
+                                        <p>Use CurveTrend or the Dashboard tool to check the cLLD, Aspiration and dispense curves.</p>
+                                        <p>Verify the LLD height.</p>
+                                        <h3><a name="Leaky"></a>Leaky Pipettor</h3>
+                                        <h4>Resolution</h4>
+                                        <p>Tighten the Pipettor Diti.</p>
+                                        <p>Replace the Pipettor.</p>
+                                        <h4>Test</h4>
+                                        <p>Check the Reagent Bay cover for drips.</p>
+                                        <p>Check the Load Station for drips.</p>
+                                        <p>Use CurveTrend or the Dashboard tool to check aspiration curves.</p>
+                                        <p>Check to see if the Pipettor DiTi is loose.</p>
+                                        <p>Perform a pressure integrity test using the Service Software.</p>
+                                        <h3><a name="VVFS"></a>VVFS Due to Cap Sealing Around Pipettor Tip</h3>
+                                        <p>If the Cap seals around the Pipettor Tip during aspiration, this will cause a pressure spike during aspiration, and the incorrect volume of sample will be aspirated.  This will lead to a short shot of sample being dispensed.  This can be caused by:</p>
+                                        <ul>
+                                            <li value="1">The customer not pushing the sample all the way down in the tube (most likely).</li>
+                                            <li value="2">Wet cotton pile (likely if multiple reps taken from the same tube).</li>
+                                            <li value="3">Poor caps (rare).  Note- this is not a frequent issue but captured here to raise awareness that it is possible.</li>
+                                        </ul>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/RDFS-10.png" />
+                                        </p>
+                                        <h4>Resolution</h4>
+                                        <p>Observe the Sample Aspiration and Dispense Curves.</p>
+                                        <p>Plot the aspiration curves, and find the curve with the elevated pressure trace.  Note the Test Order ID and Sample ID for that curve.</p>
+                                        <h3><a name="Sample"></a>Sample Aspiration Pressure Curves</h3>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/RDFS-11.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/RDFS-12.png" />
+                                        </p>
+                                        <h3><a name="Sample2"></a>Sample Dispense Pressure Curves</h3>
+                                        <p>Plot the dispense curves, and find the corresponding to the Test Order ID noted in the first step.</p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/RDFS-13.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/RDFS-14.png" />
+                                        </p>
+                                        <h4>Test</h4>
+                                        <p>Compare the dispense pressure against a good dispense curve (un-flagged dispense event).</p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/RDFS-15.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/RDFS-16.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/RDFS-17.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/RDFS-18.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/RDFS-19.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/RDFS-20.png" />
+                                        </p>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../Resources/Images/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

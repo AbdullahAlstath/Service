@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Service and System Software|Panther System Software Anomalies - Versions 5.3 to 7.2">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>SW Version 7.2</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/PantherTSGStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../Resources/TableStyles/Rows.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+        <script src="../../Skins/Default/Scripts/Topic Toolbar for Test.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-dropdown" style="display:none;" id="#centralSmallScreen"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../Startup/TS_Startup_1.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                    <div class="central-dropdown" style="display:none;" id="#centralTop"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="central-dropdown" style="display:none;"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar_for_Test mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <img alt="Print" src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <img alt="Expand all" src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherTSG@hologic.onmicrosoft.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="H1_Blue">SW Version 7.2</h1>
+                                        <table style="mc-table-style: url('../Resources/TableStyles/Rows.css');margin-left: 0;margin-right: auto;" class="TableStyle-Rows" cellspacing="0">
+                                            <col class="TableStyle-Rows-Column-Column1" style="width: 141px;" />
+                                            <col class="TableStyle-Rows-Column-Column1" />
+                                            <col class="TableStyle-Rows-Column-Column1" style="width: 600px;" />
+                                            <col class="TableStyle-Rows-Column-Column1" style="width: 352px;" />
+                                            <col class="TableStyle-Rows-Column-Column1" style="width: 290px;" />
+                                            <col class="TableStyle-Rows-Column-Column1" style="width: -446px;" />
+                                            <tbody>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="background-color: #2f5496;font-weight: normal;">
+                                                        <p style="font-weight: bold;"><span style="color: #ffffff;">MKS #</span>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="background-color: #2f5496;font-weight: bold;">
+                                                        <p><b style="color: #ffffff;">Category</b>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="background-color: #2f5496;font-weight: bold;">
+                                                        <p><b style="color: #ffffff;">Anomaly
+ Description</b>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="background-color: #2f5496;font-weight: normal;">
+                                                        <p><b style="color: #ffffff;">Workaround</b>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="background-color: #2f5496;font-weight: normal;">
+                                                        <p><b style="color: #ffffff;">Example
+ output log string</b>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1" style="background-color: #2f5496;font-weight: normal;">
+                                                        <p><b style="color: #ffffff;">Fix in SW</b>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>2348527</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Controls</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Kit
+ was removed and upon reloading, the controls are still valid. The potential
+ defect here is that the system did not invalidate the ctrl/cal status when
+ the kit was removed. I believe this is because the system was still in
+ powersave when the user opened the door to the reagent bay and potentially
+ when they removed the kit as well. </p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Take
+ instrument out of powersave mode before unloading reagents.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>2021-03-18  00:40:44,843  InstrumentInteraction[714]: Reagent
+ Bay Door Opened 00:40  
+  
+  2021-03-18  00:40:56,838  System exited from Power Save.
+ Incubator warm-up and Chiller cooldown  may take up to 33 minutes.  [257.000.00151]</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>2512990</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Dilution
+ factor</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Panther
+ will apply a "DIL" dilution comment to an undiluted result if a
+ diluted test order is ordered for the same SID while the original test order
+ is processing. </p>
+                                                        <p>Scenario
+ is:</p>
+                                                        <p>1)
+ Operator removes sample tube after initial test was in process</p>
+                                                        <p>2)
+ Diluted sample</p>
+                                                        <p>3)
+ Reloaded dilute sample</p>
+                                                        <p>4)
+ Created replicate of the initial test</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Operator
+ must name the diluted replicate with an SID different from the initial
+ undiluted replicate to avoid this problem.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>2051767</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Fusion-Thermocycler
+ clean</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Thermocycler
+ cleaning maintenance was started. As the maintenance clock was counting down,
+ no errors, but the robot arm never moved to get cleaning tips. When the
+ maintenance clock count down had run out, instrument did not transition to
+ complete, it was stuck there.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Reset
+ instrument and try thermocycler cleaning again</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>7.2.5</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>2295306</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Fusion-worklist</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>The
+ filename for the open access report is wrong.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>None.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>2523517</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>HPV</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>HPV
+ calibrator RLU are not showing and there are no flags. All samples in run are
+ invalid due to p flags. Also 1 replicate of the HPV pos cal is missing. SW
+ team is looking into this (10/21)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: left;"> 2193901</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: left;">
+                                                        <p>Linear Distributor</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">Message logs show: Destination of the last move (OutputQueue) differs from source of current move (IncubatorX)!</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">Customer can ignore. This issue is just a warning (ID <b>259.000.00032</b>). 
+Additional details: This appears to be an internal scheduling error related to either unexpected interruptions in processing (for example, due to opening the canopy during sample processing) or due to a failure to properly remove leading prime MTUs from the scheduling plan. This issue is not indicative of any issues with customer's system. All records indicated this anomaly is mostly benign, and does not impact processing or results. The issue has likely always existed but I can only find records of it in our system since v6.0.
+</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">&#160;</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>7.2.5</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>2424225</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">LIS<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Laboratory Information System.</span></a>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">GUI<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Graphical User Interface – allows users to interact with the software using images, graphical icons, and visual indicators rather than text commands.</span></a>
+ no longer launches after customer’s IT hooked serially connected LIS.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">FSE<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Field Service Engineer.</span></a>
+ can check available space on C drive. If exhausted, FSE can delete the logs
+ in the Software&gt;PC&gt;bin&gt;output&gt;lis&gt;log
+ folder on Panther. This is a temporary solution. Software team is still
+ looking into this.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>2476568</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>LIS</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Customer
+ reloaded a sample on their Panther which was previously invalidated by a PFS
+ flags, but test orders did not add from the LIS. Logs show that when the
+ sample was loaded on the instrument, all test orders from the LIS were marked
+ as In Process even though they were not running on any instruments in the
+ Panther Link Data Sharing Group.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Customer
+ can manually add test orders to samples.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>LisHelper.ImportTests
+ (tells you what test orders from the LIS are added to each sample and why
+ they are not added)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>2664872</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>LIS communication</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Messages show "Error while transmitting data to LIS."</p>
+                                                        <p><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">ASTM 1381<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>A Low-level protocol that is used to transfer Messages between Clinical Laboratory Instruments and Computer Systems.</span></a> logs show the Panther and LIS send an ENQ at almost the exact same time. LIS sends an ACK shortly after but Panther does not recognize it and sends an EOT 15 seconds later at the frame sending timeout, which causes the Error while transmitting data message.
+</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>No workaround at this time. SW is looking into the issue.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">&#160;</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>2651372</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>LIS results</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Panther is incorrectly sending results to the LIS that contain "&lt;96&gt;" in the comment field. Most LIS try to convert "&lt;96&gt;" into a symbol which causes the checksum to fail because Panther is counting them as individual characters.</p>
+                                                        <p>
+
+Seen so far with results for the LDT-SARS-CoV-2 (SARS PCR) and GBS assays. 
+</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>No workaround at this time in Panther. SW is looking into the issue.</p>
+                                                        <p>
+
+Instruct customers/LIS that they will need to have the LIS treat "&lt;96&gt;" as for individual characters and not convert to a symbol.</p>
+                                                        <p>Example: &lt;-  1C|5|I|^icrfu &lt;96&gt; IC is negative.|I&lt;CR&gt;B1&lt;CR&gt;&lt;LF&gt;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">ASTM<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>American Society for Testing and Materials (ASTM) is an international standards organization that develops and publishes voluntary technical standards.</span></a> 1381/1394 Logs:
+“&lt;-  1C|5|I|^icrfu &lt;96&gt; IC is negative.|I&lt;CR&gt;B1&lt;CR&gt;&lt;LF&gt;
+</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>2479894</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>LIS</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>When Enable Results Verification is set to required:
+ when verifying all results under Results Tab, some results will not cross
+ over nor be validated even when they are selected to be verified.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>2285407</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Password</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>A customer
+ reported that every time they logged into an instrument at their site, they
+ were prompted to reset their password. It was determined that this is related
+ to Panther Link, which shares operator account information with all
+ instruments in the same Data Sharing Group. </p>
+                                                        <p>This
+ is a defect that occurs when the expiration of a password is set to 0.
+ When the user sets this value to 0 the data is shared to other instruments
+ with a null value for the expiration. The receiving instruments see this null
+ value and because of the defect, set the expiration to the current time.
+ Requiring the user to go to each instrument and update the password. </p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>The
+ workaround is to ensure the expiration of a user’s password is never set to 0.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>7.2
+ Trax</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>2472203</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Plus
+ Fluids</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Customer
+ reported that both of the universal fluid kits (A&amp;B) were marked as In
+ Use long after one of the kits should have no longer been In Use. Customer is
+ not able to change either of the fluid kits during assay processing because
+ both are In Use.  </p>
+                                                        <p>This
+ is a rare issue that can only occur in a very specific timeframe when SW is
+ scheduling the disposal of a leading prime MTU at the same time waste unload
+ (during assay processing) is happening. In this situation it is possible that
+ the disposal of the lead prime MTU is skipped and this results in the empty
+ fluid kit remaining in the ‘in use’ state. Unfortunately when this occurs the
+ empty fluid kit is unable to be replaced. There is no workaround for this
+ once it occurs. The operator will have to wait until processing has completed
+ before that kit can be replaced. This issue can occur in both 7.1 and 7.2 SW.
+ The anomaly has been scheduled to be fixed in v7.4 software</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>No
+ workaround at this time.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>UFP.EvaluateInUseKitsLocation
+ (tells you which fluid kits are currently In Use)</p>
+                                                        <p>UFM.IsKitValid
+ (tells you the RTR and RTP for each bottle in a fluid kit)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>7.4</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>2279796</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Plus-waste</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Instrument
+ crashed due to unrecoverable error. Sometime before there is a message:
+ Implausible status of Panther Liquid Waste permanent bottle. It doesn’t
+ appear that there is a workaround for this issue. The issue is that during
+ AP, the bottle is emptied in a specific manner that causes test counts and
+ waste counts to no longer match and thus the implausible status.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>None</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>7.2 trax
+ release</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>2257770</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Screen
+ Frozen</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Software
+ freezes when starting PC reboot maintenance. This does not happen every time
+ in 7.2.1. This most often occurs when there are still MTUs in the OQ that
+ need disposal. If enough time has passed since priming or Assay Processing
+ has completed then this issue should not occur.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>The
+ customer should wait it out if their system hangs during a reboot. In most
+ cases the system will continue with the reboot after ~15 minutes. </p>
+                                                        <p>If
+ customer does not want to wait or if it's been &gt; 15 min you can try to use
+ the keyboard to shut down instrument from GUI.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>7.2.5</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>2287291/ 2321800</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>	Software exception</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Customer likely recently completed a PC reboot, and a message will read "Assay reagent racks are located in different lane positions after the maintenance reboot. Reagent kits need to be reloaded to confirm kit information". If the operator ignores this message and proceeds with loading different kits, SW exception errors may pop up and/or incorrect ML# can be assigned to a worklist if it is the same assay/same lane, but different LN.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>The workaround is to ensure customer does not load or unload reagents during a maintenance reboot, as instructed in the Ops Manual. To clear the error, customer can unload all racks and restart.</p>
+                                                        <p>
+If customer runs into this again:</p>
+                                                        <ol>
+                                                            <li value="1">Remind operator and site of proper process when “Allow Reagents to remain loaded during Maintenance Restart” is enabled.</li>
+                                                            <li value="2">Clear error, unload all racks and restart instrument.</li>
+                                                        </ol>
+                                                        <p>
+Another fix is upgrading to v7.2.5.
+</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">&#160;</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>7.2.5</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>2661732</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>	Software exception</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Fatal software exception error, shutdown from message screen available.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Reset the instrument. There are no known root causes so far.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">&#160;</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>2309507</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Software
+ exception</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Fatal
+ 269.000.00008 Software exception occurred</p>
+                                                        <p>Around the time of the first software exception, the
+ activity logs show:
+  04/30/2021 10:05:30 ranand Specimen override
+ removed for sample: 1061027099815022202456
+  04/30/2021 10:05:27 ranand Specimen override
+ set for sample: 1061027099815022202456</p>
+                                                        <p>What’s
+ happening is that the SW is not able to handle when an operator checks, and
+ then unchecks the ‘Process as Specimen” checkbox for a control via the Sample
+ Details screen.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Reboot
+ instrument.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>7.2.5</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>2295306</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Worklist
+ ID</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>The
+ worklist ID on the Result Worklist report does not match the name of the pdf
+ in the logs (export&gt; Test order Result). . This can affect both the
+ output into the Sendlogs package as well as the Results by Worklist Report
+ from the Reports menu.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Rename
+ the PDF file.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>7.2
+ trax release</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>2467984</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Worklist</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>A reagent
+ kit used on day one was removed but samples run the next day were on the original
+ WL from day one.</p>
+                                                        <ul>
+                                                            <li value="1"> The anomaly is related to the Allow
+ Reagents to Remain Loaded During Maintenance Restart feature and can only
+ happen on systems that have this feature enabled.</li>
+                                                            <li value="2"> Only TMA kits that were left
+ onboard through a maintenance restart could be impacted.</li>
+                                                            <li value="3"> Issue is not tied to the samples
+ themselves so any impacted samples can be safely retested.</li>
+                                                            <li value="4"> SW Dev was unable to identify a way
+ to prevent this from happening though fortunately this error has proven to be
+ rare.</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>This could be avoided by disabling the ‘allow
+ reagents to remain loaded’ configuration but this issue is so uncommon, and
+ the benefit to having this configuration enabled is so great, that it’s not
+ worth it. So my recommendation would be to continue to use the system as
+ intended. There is still a risk that this could happen but the chances so
+ remote that it’s not worth the cost to avoid.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>7.2.5</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body2">
+                                                        <p>2474578</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body2">
+                                                        <p>Worklist</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body2">
+                                                        <p>Return time is not
+ populating. SW team is still looking into this (8/30/21).</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyA-Column1-Body2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../Resources/Images/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

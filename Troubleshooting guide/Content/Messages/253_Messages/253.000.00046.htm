@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Pipettor Error (Pump error nonstr-type x)</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/PantherTSGStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/Blue on White.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+        <script src="../../../Skins/Default/Scripts/Topic Toolbar for Test.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-dropdown" style="display:none;" id="#centralSmallScreen"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Startup/TS_Startup_1.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                    <div class="central-dropdown" style="display:none;" id="#centralTop"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="central-dropdown" style="display:none;"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar_for_Test mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <img alt="Print" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <img alt="Expand all" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherTSG@hologic.onmicrosoft.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="H1_Blue">Pipettor Error (Pump error nonstr-type x)</h1>
+                                        <h3>Error Codes</h3>
+                                        <table style="caption-side: top;mc-caption-repeat: false;mc-table-style: url('../../Resources/TableStyles/Blue on White.css');margin-left: 0;margin-right: auto;width: 500px;" class="TableStyle-Blue_on_White" cellspacing="0">
+                                            <col style="width: 33%;" class="TableStyle-Blue_on_White-Column-Column1">
+                                            </col>
+                                            <col style="width: 33%;" class="TableStyle-Blue_on_White-Column-Column1">
+                                            </col>
+                                            <col style="width: 33%;" class="TableStyle-Blue_on_White-Column-Column1">
+                                            </col>
+                                            <thead>
+                                                <tr class="TableStyle-Blue_on_White-Head-Header1">
+                                                    <th class="TableStyle-Blue_on_White-HeadE-Column1-Header1">Dec</th>
+                                                    <th class="TableStyle-Blue_on_White-HeadE-Column1-Header1">Hex</th>
+                                                    <th class="TableStyle-Blue_on_White-HeadD-Column1-Header1">Arm</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Blue_on_White-Body-Body1">
+                                                    <td class="TableStyle-Blue_on_White-BodyE-Column1-Body1">253.000.00046</td>
+                                                    <td class="TableStyle-Blue_on_White-BodyE-Column1-Body1">0xFD.0x00.0x002E</td>
+                                                    <td class="TableStyle-Blue_on_White-BodyD-Column1-Body1">Reagent (Left)</td>
+                                                </tr>
+                                                <tr class="TableStyle-Blue_on_White-Body-Body1">
+                                                    <td class="TableStyle-Blue_on_White-BodyE-Column1-Body1">253.000.00047</td>
+                                                    <td class="TableStyle-Blue_on_White-BodyE-Column1-Body1">0xFD.0x00.0x002F</td>
+                                                    <td class="TableStyle-Blue_on_White-BodyD-Column1-Body1">Sample (Right)</td>
+                                                </tr>
+                                                <tr class="TableStyle-Blue_on_White-Body-Body1">
+                                                    <td class="TableStyle-Blue_on_White-BodyE-Column1-Body1">253.014.00046</td>
+                                                    <td class="TableStyle-Blue_on_White-BodyE-Column1-Body1">0xFD.0x0E.0x002E</td>
+                                                    <td class="TableStyle-Blue_on_White-BodyD-Column1-Body1">Reagent (Left)</td>
+                                                </tr>
+                                                <tr class="TableStyle-Blue_on_White-Body-Body1">
+                                                    <td class="TableStyle-Blue_on_White-BodyB-Column1-Body1">253.015.00047</td>
+                                                    <td class="TableStyle-Blue_on_White-BodyB-Column1-Body1">0xFD.0x0F.0x002F</td>
+                                                    <td class="TableStyle-Blue_on_White-BodyA-Column1-Body1">Sample (Right)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h3>Complaint Description</h3>
+                                        <p>Pipettor error (Pump error nonstr-type x)</p>
+                                        <p>Nonstr-type [non-str; non-string; nonstr; nonstring; non str; non string] error codes are standard APP or APE module level message codes.</p>
+                                        <p>These are reported in decimal values, refer to appropriate MDD or CDD for detailed messages. (APP: MDD FW APP 6319, APE or BLDC: CDD FW 6319 APE ZSPip EC.)</p>
+                                        <p>Reagent pipettor (Left arm), Pump error (nonstr-type)</p>
+                                        <p>Sample pipettor (Right arm), Pump error (nonstr-type)</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a style="font-style: normal; color: #000000; font-weight: bold;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />TABLE OF&#160;CONTENTS</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <ul>
+                                                    <li value="1">
+                                                        <p><a href="#Technica" class="MCXref xref">Technical Support</a>
+                                                        </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p><a href="#Field" class="MCXref xref">Field Service</a>
+                                                        </p>
+                                                        <ul style="list-style-type: circle;">
+                                                            <li value="1"><a href="#Flex" class="MCXref xref">Flex Cables Connections, PCBs</a>
+                                                            </li>
+                                                            <li value="2"><a href="#Wet" class="MCXref xref">Wet Pipettor Head</a>
+                                                            </li>
+                                                            <li value="3"><a href="#Bad" class="MCXref xref">Bad Pump, Piston or Lead Screw (Stiff Plunger)</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p><a href="#Specific" class="MCXref xref">Specific Examples</a>
+                                                        </p>
+                                                        <ul style="list-style-type: circle;">
+                                                            <li value="1"><a href="#Non-str" class="MCXref xref">Non-str type 10 errors</a>
+                                                            </li>
+                                                            <li value="2"><a href="#Non-str2" class="MCXref xref">Non-str type 33 errors</a>
+                                                            </li>
+                                                            <li value="3"><a href="#Non-str3" class="MCXref xref">Non-str type 36 errors</a>
+                                                            </li>
+                                                            <li value="4"><a href="#Non-str4" class="MCXref xref">Non-str type 3 errors (associated with CLT or PFS)</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <h1 class="H1_Blue"><a name="Technica"></a>Technical Support</h1>
+                                        <p>Auto Dispatch all nonstr-type x errors as a Severity 2.  Troubleshoot error as normal.  Inform customers <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">FSE<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Field Service Engineer.</span></a> will contact them to set up service.  Customer can continue to process samples if instrument restart is successful.</p>
+                                        <p>Troubleshooting:</p>
+                                        <ul>
+                                            <li value="1">Reset instrument.</li>
+                                            <li value="2">Perform MW cleaning to test sample pipettor.</li>
+                                            <li value="3">For Sample pipettor error (Pump error nonstr-type 3, associated with PFS or CLT): no service is needed. See below .</li>
+                                            <li value="4">For all other Sample pipettor error (Pump error nonstr-type x): always contact FSE as likely pipettor will need service. However, it is still possible the instrument will run without recurrences for a while so if FSE is not available, advise customer to run untested samples.</li>
+                                        </ul>
+                                        <ul>
+                                            <li value="1">Specific error codes related to software anomalies<ul style="list-style-type: circle;"><li value="1">Nonstr-type 3: should be fixed in 7.2.3 patch, look for overpressure or CLT flag prior to error.</li><li value="2">Nonstr-type 11: downstream anomaly due to 080.000.00066 MTU barcode scanner is not responding. While not a pipettor error, underlying error should be investigated: - MTU lot #, -MTU scanner/LD teach, -MTU scanner<p><img src="../../Resources/Images/Pipettor/Pip_Error_Pump_Sample_03_749x187.png" style="width: 749;height: 187;" /></p></li><li value="3">Nonstr-type 53: common error in prior to sw version 5.3.  Fixed with v5.3 instrument setup.</li></ul></li>
+                                            <li value="2">
+                                                <p>Aside from special cases above, this usually requires dispatch.</p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li value="1">1-9: z-flex cable replacement will usually resolve issue</li>
+                                                    <li value="2">10+: usually requires pipettor replacement.</li>
+                                                    <li value="3">FSEs should follow isolation procedures in Field Service section.</li>
+                                                </ul>
+                                            </li>
+                                            <li value="3">Check reagent bottles are not completely full (up to the bottle neck).</li>
+                                            <li value="4">Reset instrument, will perform simple self test on initialization.</li>
+                                            <li value="5">Prime does not test either pipettor.</li>
+                                            <li value="6"> MW cleaning only checks sample pipettor and does NOT test the reagent pipettor.</li>
+                                            <li value="7">Customer can keep running but there is a risk the issue will recur.</li>
+                                        </ul>
+                                        <p>Always notify FSE.</p>
+                                        <h1 class="H1_Blue"><a name="Field"></a>Field Service</h1>
+                                        <h3><a name="Flex"></a>Flex Cables Connections, PCBs</h3>
+                                        <ul>
+                                            <li value="1">Inspect for any loose connections, worn out or damaged flex cables, burnt components on any of the Pipettor PCBs.</li>
+                                            <li value="2">Re-connect loose connections, replace any bad flex cables or PCBs.</li>
+                                        </ul>
+                                        <h3><a name="Wet"></a>Wet Pipettor Head</h3>
+                                        <ol>
+                                            <li value="1">Make sure Reagent bottle is not completely full (up to the bottle neck).</li>
+                                            <li value="2">Remove DiTi and inspect for any fluid.</li>
+                                        </ol>
+                                        <ul>
+                                            <li value="1">Use different Reagent Kit.</li>
+                                            <li value="2">If able to see fluid inside the DiTi, most likely fluid got inside pipettor head, and pipettor needs replacement.</li>
+                                        </ul>
+                                        <h3><a name="Bad"></a>Bad Pump, Piston or Lead Screw (Stiff Plunger)</h3>
+                                        <p style="font-weight: normal;">Initialize Pipettor thirty times to exercise pump.</p>
+                                        <p style="text-align: left;"><b>or/and</b> Perform Pressure Integrity Test ten times to exercise pump.</p>
+                                        <p><b>or/and</b> Using Service Software, cycle pipettor using BLLD one hundred times to exercise pump.</p>
+                                        <ul>
+                                            <li value="1">
+                                                <p>If able to replicate error, replace pipettor.</p>
+                                                <p>or</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>If able to hear a squeak, or see stuttering from plunger, or pipettor fails during the testing, replace pipettor. Otherwise, return instrument to customer.</p>
+                                            </li>
+                                        </ul>
+                                        <h1 class="H1_Blue"><a name="Specific"></a>Specific Examples</h1>
+                                        <h3><a name="Non-str"></a>Non-str type 10 errors</h3>
+                                        <p>NonStr-type 10 is “Motor overload detected: Motor defect or blocked or not connected”.  Replace the Pipettor.</p>
+                                        <p>Panther 00970-sample pipette error OUR LADY OF THE LAKE REGIONAL MEDICAL CENTER SR 3477300: Using pipettor graphing to root cause nonstr-type 10</p>
+                                        <p><b>Background:</b>
+                                        </p>
+                                        <p>Customer encountered sample pipette error type 10, upon shutdown and restart the error recurred. FSE arrived on site and processed several samples unable to replicate issue directly as no error messages during sample pipetting. By graphing the pressure curves for the processed samples showed the underlying problem was still there.</p>
+                                        <p><b>What event caused Fatal error?</b>
+                                        </p>
+                                        <p>Using the health report to work backwards, the fatal error is caused by sample pipettor critical error. More specifically, pump error nonstr-type10. Health report also captured second occurrence after restart, which occurred on 09/02/2014 07:35:12.677 253.015.00047.</p>
+                                        <p>
+                                            <img src="../../Resources/Images/Pipettor/Pip_Error_Pump_Sample_05_583x537.png" style="width: 583;height: 537;" />
+                                        </p>
+                                        <p><b>What is a nonstr-10 error?</b>
+                                        </p>
+                                        <p>From the troubleshooting guide, white paper section for pipettors:</p>
+                                        <p>Nonstr-type 10 = Motor overload detected: motor defective, blocked, or not connected.</p>
+                                        <p><b>Characterizing problem using pressure graphs:</b>
+                                        </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Logs confirm error occurs during dispensing : <span style="font-family: 'Arial Narrow';">9/2/2014 12:35:13 PM (02 07:35:13) [E] (Critical , High ) [PipettorSystem] Sample Pipettor error (</span><b style="font-family: 'Arial Narrow';">Pump error nonstr-type 10</b><span style="font-family: 'Arial Narrow';">) ID=6238 </span><b style="font-family: 'Arial Narrow';">PipettorDispense 'Add Sample'</b><span style="font-family: 'Arial Narrow';"> (Sample) PlannedStart=12:32:20.857 worst event at 12:35:12.157, start=12:35:05.657 end=12:35:12.257 (MTU=1 BarcodeID=1338293471, samples=8014/1424406218 CompletionTime=2014-09-02T15:54:24, , cmd params: Sample (SP) Index=27 finalZ=4611, vol=1299, track=70, fluid=33031 ) [0xFD.0x0F.0x002F] [253.015.00047]</span></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Sometimes using aspiration or shearing curves is better for analysis because at slower pipetting velocity, less momentum is available to overcome problems that cause motor overload issues. In addition, the pipetting parameters for aspiration and shearing allow for maximum sampling rate.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Graph control tubes instead of actual samples, as the fluid properties are relatively constant as opposed to actual sample which can vary widely. a. Graphing from send logs: (More detailed directions can be found in Panther Troubleshooting Guide) i. Rename *.gpz as *.zip and unpackage.</p>
+                                                <p>I.	Open the send logs file and choose the “\Curves” folder.</p>
+                                                <p>II.	Folders are arranged by timestamp of when instrument was last restarted and primed. e.g. YYYY_MM_DD_HH-mm-ss</p>
+                                                <p>1.	AspirationPressureCurve_2014_09_02_07-17-51.curve</p>
+                                                <p>2.	ShearingPressure_2014_09_02_07-17-51.curve</p>
+                                            </li>
+                                        </ol>
+                                        <p><b>Pressure curves from send logs uploaded by customer:</b>
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Pipettor/Pip_Error_Pump_Sample_06.png" />
+                                        </p>
+                                        <p><em>Figure 1 – Dispense curve (1st control tube) shows resolving pressure issues can be difficult. (x-axis: time, y-axis: pressure)</em>
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Pipettor/Pip_Error_Pump_Sample_07.png" />
+                                        </p>
+                                        <p><em>Figure 2 - Shearing pressure (first control tube). Shearing is 3 cycles of aspiration/dispense used to help break mucoidal strands. Blue vertical show pressure spikes are periodic.</em>
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Pipettor/Pip_Error_Pump_Sample_08.png" />
+                                        </p>
+                                        <p><em>Figure 3 - Aspiration Curve: The Controls show an interference with the syringe. They are not mucoidal and a known value of fluid. The curves show a problem even on the Controls. It could be the syringe or the motor driving the syringe on the specimen pipettor.</em>
+                                        </p>
+                                        <p><b>Confirming the issue:</b>
+                                        </p>
+                                        <p>FSE arrived on site and performed a small run with no errors. Checking the pressure curves showed the underlying problem was still present (Figure 4). FSE replaced pipettor and graphed pressure curves from resulting PQ showing problem resolved as pressure spikes are now gone (Figure 5.) improvement.</p>
+                                        <p>
+                                            <img src="../../Resources/Images/Pipettor/Pip_Error_Pump_Sample_09.png" />
+                                        </p>
+                                        <p><em>Figure 4 – Shearing graph from error free run prior to pipettor replacement shows underlying issue still present.</em>
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Pipettor/Pip_Error_Pump_Sample_10.png" />
+                                        </p>
+                                        <p><em>Figure 5 – Shearing graph after replacement of sample pipettor shows smooth curves.</em>
+                                        </p>
+                                        <h3><a name="Non-str2"></a>Non-str type 33 errors</h3>
+                                        <p>Take a look at the aspiration/ dispense curves.  This example had a sticky plunger:</p>
+                                        <p>
+                                            <img src="../../Resources/Images/Pipettor/Pip_Error_Pump_Sample_11.png" />
+                                        </p>
+                                        <p>Amplification Aspiration <span style="font-family: 'Arial Narrow';">LLD=867 for SIDs 306423/132216613803 [CT/GC] , 306422/132291023803 [CT/GC] , 306426/132443231203 [CT/GC] , 306419/132216599603 [CT/GC] , 306428/132291020303 [CT/GC] .   [259.000.00058]</span></p>
+                                        <p>Reagent Pipettor error (Pump error nonstr-type 33) <span style="font-family: 'Arial Narrow';">                  ID=13681 EjectDiTi 'AmpReagentPipettingStep' (Amplification) PlannedStart=12:53:54.191: , start=12:54:20.691 end=12:54:23.591 (MTU=22 BarcodeID=2185465443, samples=306423/132216613803/Normal, 306422/132291023803/Normal, 306426/132443231203/Normal, 306419/132216599603/Normal, 306428/132291020303/Normal, , cmd params: Amplification (RP) [coo=2,fZ=0]   ). Event [0xFD.0x0E.0x002E] at 12:54:23.491 bytes:  FD 7E 03 0E 2E 01 21 00  [253.014.00046]</span></p>
+                                        <h3><a name="Non-str3"></a>Non-str type 36 errors</h3>
+                                        <p>Non-String Type 36 = Valve Test Failure -&gt; New Pipettor.</p>
+                                        <p>
+                                            <img src="../../Resources/Images/Pipettor/Pip_Error_Pump_Sample_12.png" />
+                                        </p>
+                                        <h3><a name="Non-str4"></a>Non-str type 3 errors (associated with CLT or PFS)</h3>
+                                        <p>If there is a CLT error followed by a Pipettor NonStr-3 error, this does not require an immediate dispatch, but can be fixed with a FW upgrade.</p>
+                                        <p>This was a big problem in the summer/ fall of 2021. And was fixed with new FW. See TB-01772.</p>
+                                        <blockquote>
+                                            <p>The problem is caused by improper error handling of an overpressure event - It happens on both types of pipettors and previous versions of software as well (5.3, 6.2, etc.). But, was most prevalent with APP pipettors and SW 7.2.1.</p>
+                                        </blockquote>
+                                        <p>Current mitigation is to have the FSE go in and upgrade the FW.  This is fixed in the latest version of 7.2.1 Software, and above (Pipettor FW version 01.0310APP or 01.0109.1 BLDC, or Higher).</p>
+                                        <p>Pretty sure all nonstr-type and rdv errors will generate a PFS or PFR</p>
+                                        <p>Aspiration = CLT</p>
+                                        <p style="font-family: 'Arial Narrow';">&lt;&gt;(Warning) 08:46:55.414: Sample Pipettor clot detected (Ev=C3) [00.0F.C3] bytes:  00 00 02 0F C3 01 00</p>
+                                        <p style="font-family: 'Arial Narrow';">&lt;&gt;(Critical) 08:46:56.314: Sample Pipettor error (Pump error nonstr-type 3) (Ev=2F) [FD.0F.2F] bytes:  FD DF 03 0F 2F 02 03 00</p>
+                                        <p style="font-family: 'Arial Narrow';">12/29/2020 08:46:56 (29 17:46:56)    [E] (Critical    , High  ) [PipettorSystem] Sample Pipettor error (Pump error nonstr-type 3)                     ID=27358 PipettorAspirate 'Add Sample' (Sample) PlannedStart=08:44:18.514 worst event at 08:46:56.314, start=08:46:36.014 end=08:46:56.814 (MTU=76 BarcodeID=2092241080, samples=[0] , [1] , [2] , [3] 6034/12290015601, [4] , , cmd params: Sample (SP) Index=237 finalZ=158, vol=381, track=64, fluid=32779  )   [0xFD.0x0F.0x002F]  [253.015.00047]</p>
+                                        <p>
+                                            <img src="../../Resources/Images/Pipettor/Pip_Error_Pump_Sample_01.png" />
+                                        </p>
+                                        <p>Dispense: usually don’t always see a pressure trace, but asp curve will look bad (like the graph above shows).</p>
+                                        <p>Overpressure (during dispense, if there is a pressure trace)</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-03-03 11:20:00,186|[ProcessEvent]|EventLogger|EventLogEntry|Info|Error|03/03/2021 17:20:00 (03 11:20:00)      [E] (Critical    , High  ) [PipettorSystem] Sample Pipettor error (Pump error nonstr-type 3)                     ID=46504 PipettorDispense 'Add Sample' (Sample) PlannedStart=17:19:47.855: , start=17:19:49.255 end=17:19:59.855 (MTU=125 BarcodeID=2079464482, samples=6282/A21458409001/Normal, , cmd params: Sample (SP) [coo=28,fZ=4607] , vol=396, track=70, fluid=33028  ). Event [0xFD.0x0F.0x002F] at 17:19:59.755 bytes:  FD DF 03 0F 2F 02 03 00  [253.015.00047]</p>
+                                        <p>
+                                            <img src="../../Resources/Images/Pipettor/Pip_Error_Pump_Sample_04_1014x456.png" style="width: 1014;height: 456;" />
+                                        </p>
+                                        <p>This is not a fully fatal error- MTUs that have passed through sample dispense with no errors will finish.</p>
+                                        <p>Another Example, 03765 Case 00818840 2021.03.03 Sample Pipettor non str type 3 error</p>
+                                        <p>It looks to me like a sample quality issue, the PFS samples are highlighted from 3/2 on left and and 3/3 on right:</p>
+                                        <p>
+                                            <img src="../../Resources/Images/Pipettor/Pip_Error_Pump_Sample_02_780x290.png" style="width: 780;height: 290;" />
+                                        </p>
+                                        <p>I would not recommend a replacement at this point. Other process steps appear normal for that arm.</p>
+                                        <p style="color: #000000;">There are three types of nonstr-type 3 errors we’ve seen.</p>
+                                        <ol>
+                                            <li style="color: #000000;" value="1">
+                                                <p>Older FW version  pre system sw 5.3 – overpressure after aspiration triggered when pulling traveling airgap.</p>
+                                            </li>
+                                            <li style="color: #000000;" value="2">
+                                                <p>Flex cable issue.</p>
+                                            </li>
+                                            <li style="color: #000000;" value="3">
+                                                <p>FW/SW related error handling of an overpressure event (aspirate/dispense). This error can be exacerbated by tips.</p>
+                                                <p style="color: #000000;">In this case - sample pipettor (pump move canceled due to overpressure detection)</p>
+                                                <p style="color: #000000;">If this occurs to a customer, they should allow assay processing to complete.  Then they can and restart the instrument and continue to run, but a FSE should be dispatched to upgrade the FW.</p>
+                                                <p style="color: #000000;">There does exist a vortexing protocol that can help mitigate this issue by breaking up the clots and reducing the maximum pressure during aspiration. It is recommended for the SARS-CoV-2 samples, but obviously we cannot force this to be implemented at every site.</p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../Resources/Images/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

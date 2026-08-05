@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-conditions="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>RDFA, RDFE, RDFP, RDFSL</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/PantherTSGStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+        <script src="../../../Skins/Default/Scripts/Topic Toolbar for Test.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-dropdown" style="display:none;" id="#centralSmallScreen"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Startup/TS_Startup_1.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                    <div class="central-dropdown" style="display:none;" id="#centralTop"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="central-dropdown" style="display:none;"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar_for_Test mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <img alt="Print" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <img alt="Expand all" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherTSG@hologic.onmicrosoft.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1>RDFA, RDFE, RDFP, RDFSL</h1>
+                                        <h4>Assay Processing Flags</h4>
+                                        <h2>Complaint Description:</h2>
+                                        <p>Topic covers troubleshooting procedures for these Assay Processing Flags:</p>
+                                        <ul>
+                                            <li value="1">RDFA = RDV Failure Amp</li>
+                                            <li value="2">RDFE = RDV Failure Enzyme</li>
+                                            <li value="3">RDFP = RDV Failure Probe</li>
+                                            <li value="4">RDFSL = RDV Failure Select</li>
+                                        </ul>
+                                        <p><b>RDV Failure Amplification</b> — RDV indicated a failure during the dispense of Reagent. There is an RDV error type message associated with each dispense failure; either 2, 64, 128, or a sum of any of these. For example, error type 192 means error type 64 and error type 128 both occurred.</p>
+                                        <ul>
+                                            <li value="1">Error Type 2: Maximum pressure threshold exceeded.</li>
+                                            <li value="2">Error Type 64: Minimum mean pressure threshold not met.</li>
+                                            <li value="3">Error Type 128: Minimum pressure down time threshold not met.</li>
+                                        </ul>
+                                        <h4>TABLE&#160;OF&#160;CONTENTS</h4>
+                                        <ul>
+                                            <li value="1">
+                                                <p><a href="#Technica" class="MCXref xref">Technical Support</a>
+                                                </p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li value="1"><a href="#Foam" class="MCXref xref">Foam reagent (typically error type 128)</a>
+                                                    </li>
+                                                    <li value="2"><a href="#Pipettor" class="MCXref xref">Pipettor tips damaged/wrong type (typically error type 2)</a>
+                                                    </li>
+                                                    <li value="3"><a href="#Pipettor2" class="MCXref xref">Pipettor tips lack filter (intermittent but persistent error type 64)</a>
+                                                    </li>
+                                                    <li value="4"><a href="#Fluid" class="MCXref xref">Fluid viscosity (can be any of above three error types)</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li value="2">
+                                                <p><a href="#Field" class="MCXref xref">Field Service</a>
+                                                </p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li value="1"><a href="#Precipit" class="MCXref xref">Precipitate in sample</a>
+                                                    </li>
+                                                    <li value="2"><a href="#Foam2" class="MCXref xref">Foam reagent</a>
+                                                    </li>
+                                                    <li value="3"><a href="#Pipettor3" class="MCXref xref">Pipettor tips damaged</a>
+                                                    </li>
+                                                    <li value="4"><a href="#Pipettor4" class="MCXref xref">Pipettor tips lack filter (intermittent but persistent error type 64)</a>
+                                                    </li>
+                                                    <li value="5"><a href="#Fluid2" class="MCXref xref">Fluid viscosity</a>
+                                                    </li>
+                                                    <li value="6"><a href="#Sticky" class="MCXref xref">Sticky Pipettor Plunger</a>
+                                                    </li>
+                                                    <li value="7"><a href="#No" class="MCXref xref">No liquid aspirated</a>
+                                                    </li>
+                                                    <li value="8"><a href="#Leaky" class="MCXref xref">Leaky Pipettor</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h1 class="H1_Blue"><a name="Technica"></a>Technical Support</h1>
+                                        <h3><a name="Foam"></a>Foam reagent (typically error type 128)</h3>
+                                        <h4>Resolution</h4>
+                                        <p class="Indent">Pop the bubble(s).</p>
+                                        <h4>Test</h4>
+                                        <p class="Indent">Visually check for bubbles in the bottle.</p>
+                                        <h3><a name="Pipettor"></a>Pipettor tips damaged/wrong type (typically error type 2)</h3>
+                                        <h4>Resolution</h4>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Fix the hardware obstruction (reseat reagent bay lid and reinitialize instrument).</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Use the correct tips (1mL Tecan or Biorear capacitive with filter).</p>
+                                                <p>RDFA and RDFP due to tips (these are examples using a known bad lot of tips):</p>
+                                                <p>(Notice the banding of the curve near Pmax.)</p>
+                                                <p>Example 1, RDFA:</p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Flags/RDFx-0.png" />
+                                                </p>
+                                                <p>Example 2 (RDFP):</p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Flags/RDFx-1_1067x594.png" style="width: 1067;height: 594;" />
+                                                </p>
+                                                <p>What the Dispense Pressure Curve should look like (very little banding):</p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Flags/RDFx-1a_673x588.png" style="width: 673;height: 588;" />
+                                                </p>
+                                                <p>Alternately, data can be sorted by PMAX in the Summary Plots tab:</p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Flags/RDFx-1b_679x708.png" style="width: 679;height: 708;" />
+                                                </p>
+                                                <p>Example 2 (RDFP):</p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Flags/RDFx-2_782x515.png" style="width: 782;height: 515;" />
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <h4>Test</h4>
+                                        <ol>
+                                            <li value="1">Visually verify damage to Pipettor tips.</li>
+                                            <li value="2">Determine where the obstruction occurs (typically reagent bay lid).</li>
+                                            <li value="3">Verify tips are not wrong type.</li>
+                                        </ol>
+                                        <h3><a name="Pipettor2"></a>Pipettor tips lack filter (intermittent but persistent error type 64)</h3>
+                                        <h4>Resolution</h4>
+                                        <p class="Indent">Use the correct tips (1mL Tecan capacitive with filter).</p>
+                                        <h4>Test</h4>
+                                        <p class="Indent">Visually verify the pipettor tips have the white filter.</p>
+                                        <h3><a name="Fluid"></a>Fluid viscosity (can be any of above three error types)</h3>
+                                        <h4>Resolution</h4>
+                                        <p class="Indent">Check if the reagent is “chunky” or contains particulate matter.</p>
+                                        <h4>Test</h4>
+                                        <p class="Indent">Compare the dispense pressure against a good dispense curve (un-flagged dispense event).</p>
+                                        <h1 class="H1_Blue"><a name="Field"></a>Field Service</h1>
+                                        <h3><a name="Precipit"></a>Precipitate in sample</h3>
+                                        <p style="font-weight: normal;"><em>TBD</em>
+                                        </p>
+                                        <h3><a name="Foam2"></a>Foam reagent</h3>
+                                        <h4>Resolution</h4>
+                                        <p class="Indent">Verify the customer's reagent preparation workflow.</p>
+                                        <h4>Test</h4>
+                                        <p class="Indent">Use the Dashboard tool to check the dispense curves.</p>
+                                        <h3><a name="Pipettor3"></a>Pipettor tips damaged</h3>
+                                        <h4>Resolution</h4>
+                                        <ol>
+                                            <li value="1">Re-teach the Pipettor.</li>
+                                            <li value="2">Fix the hardware obstruction.</li>
+                                        </ol>
+                                        <h4>Test</h4>
+                                        <ol>
+                                            <li value="1">Visually verify the damage to the Pipettor tips.</li>
+                                            <li value="2">Determine where the obstruction occurs.</li>
+                                        </ol>
+                                        <h3><a name="Pipettor4"></a>Pipettor tips lack filter (intermittent but persistent error type 64)</h3>
+                                        <h4>Resolution</h4>
+                                        <p class="Indent">Use the correct tips (1mL Tecan capacitive with filter).</p>
+                                        <h4>Test</h4>
+                                        <p class="Indent">Visually verify the pipettor tips have the white filter.</p>
+                                        <h3><a name="Fluid2"></a>Fluid viscosity</h3>
+                                        <h4>Resolution</h4>
+                                        <ol>
+                                            <li value="1">Check to see if the sample was properly stored.</li>
+                                            <li value="2">Check to be sure the reagent type matches the assay.</li>
+                                            <li value="3">Check to be sure the customer properly reconstituted the reagent.</li>
+                                        </ol>
+                                        <h4>Test</h4>
+                                        <ol>
+                                            <li value="1">Use the Dashboard tool or CurveTrend to check the aspiration and the dispense pressure curves.</li>
+                                            <li value="2">Compare the dispense pressure against a good dispense curve (un-flagged dispense event).</li>
+                                            <li value="3">Check the reagent for uniformity.</li>
+                                        </ol>
+                                        <h3><a name="Sticky"></a>Sticky Pipettor Plunger</h3>
+                                        <h4>Resolution</h4>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Check the curve files for “Sticky Plunger” Curve profiles.  Refer to the following examples.</p>
+                                                <p><b>Normal Aspiration:</b>
+                                                </p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Flags/RDFx-3.png" />
+                                                </p>
+                                                <p><b>Aspiration with a Sticky Plunger:</b>
+                                                </p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Flags/RDFx-4_564x466.png" style="width: 564;height: 466;" />
+                                                </p>
+                                                <p><b>Normal Dispense:</b>
+                                                </p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Flags/RDFx-5_579x502.png" style="width: 579;height: 502;" />
+                                                </p>
+                                                <p><b>Dispense with a Sticky Plunger</b> - variation in the pull back section of dispense curve:</p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Flags/RDFx-6_573x478.png" style="width: 573;height: 478;" />
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="2">
+                                                <p>Perform testing for a sticky plunger by performing a bLLD test in SSW.  Instructions to perform a bLLD test can be found in the Service Manual. Search for <em>bLLD</em>.</p>
+                                                <p><b>Sticky plunger in SSW bLLD trace:</b>
+                                                </p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Flags/RDFx-7_573x431.png" style="width: 573;height: 431;" />
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="3">If verified, replace the Pipettor.</li>
+                                        </ol>
+                                        <h4>Test</h4>
+                                        <p class="Indent">Follow the instructions in the Panther Service Manual for replacing the Pipettor.</p>
+                                        <h3><a name="No"></a>No liquid aspirated</h3>
+                                        <h4>Resolution</h4>
+                                        <ol>
+                                            <li value="1">Replace the reagent with a new reagent kit (possibly below the volume requirements).</li>
+                                            <li value="2">Re-teach the Pipettor.</li>
+                                            <li value="3">Replace the Pipettor.</li>
+                                        </ol>
+                                        <h4>Test</h4>
+                                        <ol>
+                                            <li value="1">Use the Dashboard tool to check the aspiration and the dispense curves.</li>
+                                            <li value="2">Verify the LLD height.</li>
+                                        </ol>
+                                        <h3><a name="Leaky"></a>Leaky Pipettor</h3>
+                                        <h4>Resolution</h4>
+                                        <ol>
+                                            <li value="1">Tighten the Pipettor Ditty.</li>
+                                            <li value="2">Replace the Pipettor.</li>
+                                        </ol>
+                                        <h4>Test</h4>
+                                        <ol>
+                                            <li value="1">Check the Reagent Bay cover for drips.</li>
+                                            <li value="2">Check the Load Station for drips.</li>
+                                            <li value="3">Use the Dashboard tool to check aspiration curves.</li>
+                                            <li value="4">Check to see if the Pipettor DiTi is loose.</li>
+                                            <li value="5">Perform a pressure integrity test using the Service Software.</li>
+                                        </ol>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../Resources/Images/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

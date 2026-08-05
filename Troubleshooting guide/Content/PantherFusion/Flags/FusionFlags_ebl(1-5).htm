@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>ebl(1-5)</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/PantherTSGStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/Rows.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+        <script src="../../../Skins/Default/Scripts/Topic Toolbar for Test.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-dropdown" style="display:none;" id="#centralSmallScreen"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Startup/TS_Startup_1.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                    <div class="central-dropdown" style="display:none;" id="#centralTop"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="central-dropdown" style="display:none;"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar_for_Test mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <img alt="Print" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <img alt="Expand all" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherTSG@hologic.onmicrosoft.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="H1_Blue">ebl(1-5)</h1>
+                                        <h4>Complaint Description:</h4>
+                                        <p>Thermocycler EBL: Estimated baseline too low.</p>
+                                        <h4>Symptom: </h4>
+                                        <p>EBL# errors during assay processing.</p>
+                                        <blockquote>
+                                            <p>ebl1 = FAM</p>
+                                            <p>ebl2 = HEX</p>
+                                            <p>ebl3 = ROX</p>
+                                            <p>ebl4 = Red647</p>
+                                            <p>ebl5 = Red677</p>
+                                        </blockquote>
+                                        <h4>Isolation: </h4>
+                                        <p>Identify sample id with ebl3 error.</p>
+                                        <p><b>Method 1</b>
+                                        </p>
+                                        <p>Using logs:</p>
+                                        <p>From logs regex search <em>ebl3</em>:</p>
+                                        <blockquote>
+                                            <p><span style="font-family: 'Arial Narrow';">2020-06-04 14:23:53,164|[SCTOM]|IAnalysis|DataReduction|Info|Normal|Adding ebl3 5011 to ResultID 68240</span>
+                                            </p>
+                                        </blockquote>
+                                        <p>Using Curve Trend:</p>
+                                        <p>Note Curve Trend TCBankPos is 0-4.</p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/Fusion_EBL1-6-1.png" />
+                                        </p>
+                                        <p><b>Method 2</b>
+                                        </p>
+                                        <p>Using logs:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>From logs regex search <em>ebl3.</em></p>
+                                                <p><span style="font-family: 'Arial Narrow';">2020-06-04 14:23:53,164|[SCTOM]|IAnalysis|DataReduction|Info|Normal|Adding ebl3 5011 to ResultID 68240</span>
+                                                </p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Identify <em>ResultID</em> value <em>ebl3</em> is assigned to.</p>
+                                                <p><span style="font-family: 'Arial Narrow';">2020-06-04 14:23:53,164|[SCTOM]|IAnalysis|DataReduction|Info|Normal|Adding ebl3 5011 to ResultID<b> 68240</b></span>
+                                                </p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Determine vial location (TargetIndex=<b>value</b>) in thermocycler, search Thermocycler.*#  (#=ResultID value)</p>
+                                                <p><span style="font-family: 'Arial Narrow';">a.	2020-06-04 13:27:17,851|[SCPMThread]|PipettorDataManager|MTUTracking|Info|Normal|Pip Tracking: Transfer (Centrifuge -&gt; ToThermocycler); 68240/Ctrl-11-060420-0002; start=20:27:11.982; end=20:27:17.782; TargetIndex=<b>1113</b></span>
+                                                </p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Lookup index location using table.  (Using TargetIndex value above indicates vial located in bank 2- well2 was tagged with ebl3 error.)</p>
+                                                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/Rows.css');" class="TableStyle-Rows" cellspacing="0">
+                                                    <col class="TableStyle-Rows-Column-Column1" style="width: 82px;" />
+                                                    <col class="TableStyle-Rows-Column-Column1" />
+                                                    <col class="TableStyle-Rows-Column-Column1" />
+                                                    <col class="TableStyle-Rows-Column-Column1" />
+                                                    <col class="TableStyle-Rows-Column-Column1" />
+                                                    <col class="TableStyle-Rows-Column-Column1" />
+                                                    <col class="TableStyle-Rows-Column-Column1" />
+                                                    <col class="TableStyle-Rows-Column-Column1" />
+                                                    <col class="TableStyle-Rows-Column-Column1" />
+                                                    <col class="TableStyle-Rows-Column-Column1" />
+                                                    <col class="TableStyle-Rows-Column-Column1" />
+                                                    <col class="TableStyle-Rows-Column-Column1" />
+                                                    <col class="TableStyle-Rows-Column-Column1" />
+                                                    <thead>
+                                                        <tr class="TableStyle-Rows-Head-Header1">
+                                                            <th class="TableStyle-Rows-HeadE-Column1-Header1">
+                                                                <p>&#160;</p>
+                                                            </th>
+                                                            <th class="TableStyle-Rows-HeadE-Column1-Header1">
+                                                                <p>Bank
+ 1</p>
+                                                            </th>
+                                                            <th class="TableStyle-Rows-HeadE-Column1-Header1">
+                                                                <p>Bank
+ 2</p>
+                                                            </th>
+                                                            <th class="TableStyle-Rows-HeadE-Column1-Header1">
+                                                                <p>Bank
+ 3</p>
+                                                            </th>
+                                                            <th class="TableStyle-Rows-HeadE-Column1-Header1">
+                                                                <p>Bank
+ 4</p>
+                                                            </th>
+                                                            <th class="TableStyle-Rows-HeadE-Column1-Header1">
+                                                                <p>Bank
+ 5</p>
+                                                            </th>
+                                                            <th class="TableStyle-Rows-HeadE-Column1-Header1">
+                                                                <p>Bank
+ 6</p>
+                                                            </th>
+                                                            <th class="TableStyle-Rows-HeadE-Column1-Header1">
+                                                                <p>Bank
+ 7</p>
+                                                            </th>
+                                                            <th class="TableStyle-Rows-HeadE-Column1-Header1">
+                                                                <p>Bank
+ 8</p>
+                                                            </th>
+                                                            <th class="TableStyle-Rows-HeadE-Column1-Header1">
+                                                                <p>Bank
+ 9</p>
+                                                            </th>
+                                                            <th class="TableStyle-Rows-HeadE-Column1-Header1">
+                                                                <p>Bank
+ 10</p>
+                                                            </th>
+                                                            <th class="TableStyle-Rows-HeadE-Column1-Header1">
+                                                                <p>Bank
+ 11</p>
+                                                            </th>
+                                                            <th class="TableStyle-Rows-HeadD-Column1-Header1">
+                                                                <p>Bank
+ 12</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-Rows-Body-Body1">
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1-
+ Back</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1107</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1112</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1117</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1122</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1127</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1132</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1137</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1142</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1147</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1152</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1157</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                                <p>1162</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Rows-Body-Body2">
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>2</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1108</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p><b>1113</b>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1118</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1123</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1128</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1133</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1138</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1143</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1148</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1153</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1158</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                                <p>1163</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Rows-Body-Body1">
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>3</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1109</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1114</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1119</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1124</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1129</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1134</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1139</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1144</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1149</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1154</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>1159</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                                <p>1164</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Rows-Body-Body2">
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>4</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1110</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1115</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1120</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1125</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1130</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1135</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1140</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1145</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1150</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1155</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>1160</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                                <p>1165</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Rows-Body-Body1">
+                                                            <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                                <p>5 -
+ Front</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                                <p>1111</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                                <p>1116</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                                <p>1121</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                                <p>1126</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                                <p>1131</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                                <p>1136</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                                <p>1141</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                                <p>1146</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                                <p>1151</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                                <p>1156</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                                <p>1161</p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyA-Column1-Body1">
+                                                                <p>1166</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </li>
+                                            <li value="5">
+                                                <p>Perform trending if multiple runs are experiencing ebl3.</p>
+                                                <ul>
+                                                    <li value="1">Same vial location?</li>
+                                                    <li value="2">Same kit?</li>
+                                                    <li value="3">Same LDT vial?</li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <p><b>Method 3</b>
+                                        </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>From logs grab @DI files with ebl3 errors.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Paste values into excel as text.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Sort flag column (sw7.1 = column AY) for contains ebl3 errors.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Can use filter again on bank-well column and specific wells should be clear (sw7.1 = column AI).</p>
+                                                <p>Alternative filter methods:</p>
+                                                <ul>
+                                                    <li value="1">Use pivot table.</li>
+                                                    <li value="2">Use excel function "Unique" to bank/well column.</li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <h4>Corrective Action:</h4>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Establish baseline before cleaning thermocycler by performing all 3 thermocycler scans in service software.</p>
+                                                <ol style="list-style-type: lower-alpha;">
+                                                    <li value="1">
+                                                        <p>Run PantherMain Background, Background and PEEK.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Save/record data.</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>PEEK scan decay will determine if TC replacement is necessary.</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>Note: Debris will typically:</p>
+                                                        <ul>
+                                                            <li value="1">No vial in well:  read higher because light reflects off debris.</li>
+                                                            <li value="2">Vial in well: read lower as debris blocks the amplified product.</li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                            <li value="2">
+                                                <p>Inspect using scope to take pictures and clean wells.  Thermal bank should be removed to properly clean fiber heads.  Often requires hard scrubbing with supplied optic cleaners.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Perform scans again to verify cleaning was effective (repeat as needed).</p>
+                                            </li>
+                                        </ol>
+                                        <p>In this case PEEK scan was more effective than Panther Background Main scan.</p>
+                                        <p>Residue around the edge of the fiber head.</p>
+                                        <p>TC bank needed to be removed to access the debris.</p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/Fusion_EBL1-6-2.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/Fusion_EBL1-6-3.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/Fusion_EBL1-6-4.png" />
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/Fusion_EBL1-6-5_345x351.png" style="width: 345;height: 351;" />
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/Fusion_EBL1-6-6_348x187.png" style="width: 348;height: 187;" />
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/Fusion_EBL1-6-7_350x225.png" style="width: 350;height: 225;" />
+                                        </p>
+                                        <p>
+                                            <img src="../../Resources/Images/Flags/Fusion_EBL1-6-8_349x247.png" style="width: 349;height: 247;" />
+                                        </p>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../Resources/Images/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

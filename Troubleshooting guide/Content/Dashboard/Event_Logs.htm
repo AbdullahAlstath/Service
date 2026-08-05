@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-conditions="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Event Logs Viewer</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/PantherTSGStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../Resources/TableStyles/Rows.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+        <script src="../../Skins/Default/Scripts/Topic Toolbar for Test.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-dropdown" style="display:none;" id="#centralSmallScreen"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../Startup/TS_Startup_1.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                    <div class="central-dropdown" style="display:none;" id="#centralTop"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="central-dropdown" style="display:none;"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar_for_Test mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <img alt="Print" src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <img alt="Expand all" src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherTSG@hologic.onmicrosoft.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="H1_Blue">Event Logs Viewer</h1>
+                                        <p style="text-align: justify;">The Dashboard Event Logs module provides the ability to view and analyze PANTHER System Log files.  The <a targets="Logs" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="Logs"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />overall PANTHER System Log files can be referred to as ‘PMains’ and are considered the super set while the ‘Event Logs’ and ‘Activity Logs’ are considered the sub sets.</a></p>
+                                        <p class="Indent" style="text-align: center; display: none;" data-mc-target-name="Logs">
+                                            <img src="../Resources/Images/Logs/Logs_398x390.png" style="width: 398;height: 390;" />
+                                        </p>
+                                        <p style="text-align: justify;">A PANTHER Log file is a recording of important user and application activity that occurs on the instrument.  Each entry in the PANTHER Log contains a date/time stamp.  This allows the information to be chronologically ordered to assist with problem troubleshooting.  If something should malfunction within the complex PANTHER system, there may be no other way of identifying the problem so that when the problem occurs it is easier to pinpoint and fix.</p>
+                                        <p style="text-align: justify;">The Event Logs module displays Event Log and Activity Log information which includes PANTHER instrument diagnostic messages as well as their severity levels.  Main Log entries that correspond to the same time frame as a selected Event Log entry can be viewed.  Once the Events and or Activity records are populated in the Event and/ or Activity grid, the user can select an Event or Activity record and generate a detailed log file search to get the PANTHER Log, or PMains, detailed information related to the selected entries.</p>
+                                        <p style="text-align: justify;"><i>Event Logs</i> and <i>Activity Logs</i> are displayed in the <u>upper</u> section of the screen while the <i>PANTHER Logs</i>, or <i>PMains</i>, are displayed at the <u>bottom</u> of the screen.</p>
+                                        <p style="text-align: justify;">To open a open a <i><a targets="PMains" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="PMains"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />PMains</a></i> file, click on the <i>“Record Creation Time”</i> column and the corresponding PMains file will display at the bottom of the screen.</p>
+                                        <p style="text-align: justify;">
+                                            <img src="../Resources/Images/Logs/Logs_Screen.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;display: none;" data-mc-target-name="PMains" />
+                                        </p>
+                                        <h3>Event Logs – Module Components</h3>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><ul><li value="1"><a style="font-style: normal; font-weight: bold; color: #000000;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Event Logs – Module Components</a></li></ul></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><p><a style="color: #000000; font-style: normal; text-decoration: none;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Column Headers</a></p></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Rows.css');" class="TableStyle-Rows" cellspacing="0">
+                                                            <col style="width: 172px;" class="TableStyle-Rows-Column-Column1" />
+                                                            <col class="TableStyle-Rows-Column-Column1" />
+                                                            <thead>
+                                                                <tr class="TableStyle-Rows-Head-Header1">
+                                                                    <th class="TableStyle-Rows-HeadE-Column1-Header1">Column</th>
+                                                                    <th class="TableStyle-Rows-HeadD-Column1-Header1">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                        <p>Record Creation Time</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                                        <p>The time the record was created.  It is displayed by local date, hour, minute, seconds and milliseconds.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                        <p>Description</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                                        <p>Describes the message details for Event Log(s) or Activity Log(s).</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                        <p>Event #</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                                        <p>Event number.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                        <p>Severity</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                                        <p>Lists the severity of a log, i.e. Message, Warning, Problem, Critical, or Fatal.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                        <p>Module</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                                        <p>PANTHER component name.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                                    <td class="TableStyle-Rows-BodyB-Column1-Body2">
+                                                                        <p>Source</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-Rows-BodyA-Column1-Body2">
+                                                                        <p>PANTHER source name.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><ul style="font-weight: bold;"><li value="1"><a style="font-style: normal; color: #000000; text-decoration: none;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Event Logs</a></li></ul></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Event Log messages can be viewed for each hardware module.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>A maximum of 500 Event Log records can be displayed.</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Event Log sorting, conditional formatting, and grouping can be done by <a targets="event log - 1" style="color: #000000;" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="event log - 1"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />right-clicking the column header</a><span style="color: #000000;">.</span></p>
+                                                        <p>
+                                                            <img src="../Resources/Images/Logs/Logs_Screen_1.PNG" style="display: none;" data-mc-target-name="event log - 1" />
+                                                        </p>
+                                                        <ol style="list-style-type: lower-alpha;">
+                                                            <li value="1">
+                                                                <p>To sort columns in ascending or descending order, right-click the column header, then select <i>Sort Ascending</i> or <i>Sort Descending.</i></p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>To undo the column sort, right-click the column header, then select <i>Clear Sorting</i>.</p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>Conditional Formatting can be done by right-clicking on the column header and selecting <i>‘Conditional Formatting’</i>.  This feature assists with the creation of rules for customized formatting.  The following can be controlled: <span style="color: #000000;"> </span><a targets="event log - 2" style="color: #000000;" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="event log - 2"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />text alignment, row alignment, case sensitive, row color, and cell color</a><span style="color: #000000;">.</span></p>
+                                                                <p>
+                                                                    <img src="../Resources/Images/Logs/Logs_Screen_2.PNG" style="display: none;" data-mc-target-name="event log - 2" />
+                                                                </p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Columns can be grouped by an existing column by right-clicking on the column header and selecting <i>‘Group by this column’</i>.  Grouping can be used to consolidate non-numeric data values into more general group values; these group values can be mapped into a new column within the data set.</p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>Columns can be removed from the current view by right-clicking on the column header and s<i>electing ‘</i><a targets="event - log - 3" style="font-style: italic;" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="event - log - 3"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Column Chooser</a><i>.’</i>  Drag a column header into the gray area in the <i>‘Column Chooser’</i> dialog box to remove the column.</p>
+                                                                <p>
+                                                                    <img src="../Resources/Images/Logs/Logs_Screen_3.PNG" style="display: none;" data-mc-target-name="event - log - 3" />
+                                                                </p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>Columns can be hidden from the Event Logs screen by right-clicking on the column header and selecting <i>‘Hide Column’</i>.  To unhide the column, right-click on any column header and select ‘Column Chooser,’ then drag the hidden column header back out to the <i>‘Event Logs’</i> screen.</p>
+                                                            </li>
+                                                            <li value="7">
+                                                                <p>Columns can be ‘pinned’ so that they remain at the ends of the screen (left or right side); this keeps the column headings visible as the data bar is scrolled up and down.  To pin the column, right-click on the column header and select <i>‘Pin Column’</i>; to reverse this, right-click on the same column header and select <i>‘Unpin Column’</i>.</p>
+                                                            </li>
+                                                            <li value="8">
+                                                                <p>Columns do not automatically accommodate to fit the information they contain.  However, by right-clicking and selecting <i>‘Best Fit’</i>, the column automatically expands and contracts to fit the data enclosed.</p>
+                                                            </li>
+                                                        </ol>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="4"><i>Events Logs</i> can also be grouped by holding the left-click mouse button down and dragging a column to the row named “<i><a targets="event - log - 4" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="event - log - 4"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Drag a column here to group by this column</a></i>".<p><img src="../Resources/Images/Logs/Logs_Screen_4.PNG" style="display: none;" data-mc-target-name="event - log - 4" /></p><p>The <i>Event Logs</i> are grouped by <a targets="event - log - 5" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="event - log - 5"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /> 'Module' and 'Severity</a>'.</p><p style="text-align: center;"><img src="../Resources/Images/Logs/Logs_Screen_5.PNG" style="display: none;" data-mc-target-name="event - log - 5" /></p></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><ul style="font-weight: bold;"><li value="1"><a style="color: #000000; font-style: normal; text-decoration: none;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Event Log Search</a></li></ul></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <ul style="list-style-type: circle;">
+                                                    <li value="1">
+                                                        <p>Search for <i>Event Logs</i> by selecting a date range and checking-off ‘<i>Severity</i>,’ <i>‘Log Type</i>,’ and ‘<i>Include Diagnostic Messages</i>’ as preferred.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Use the <a targets="event - log - 6" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="event - log - 6"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />'Description'</a> text box to type description notes.</p>
+                                                        <p>
+                                                            <img src="../Resources/Images/Logs/Logs_Screen_8.PNG" style="display: none;" data-mc-target-name="event - log - 6" />
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><ul style="font-weight: bold;text-decoration: none;"><li style="text-decoration: underline;font-style: italic;" value="1"><a style="font-style: normal; color: #000000; text-decoration: none;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Panther&#160;Log Search</a></li></ul></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p>To search Panther<i> </i>logs by date, select the desired date in the <em>Search Date</em> drop-down list in Panther Log Search. Then click <strong>Search</strong>.</p>
+                                                <p>
+                                                    <img src="../Resources/Images/Logs/Logs_Screen_9.PNG" />
+                                                </p>
+                                                <ul>
+                                                    <li value="1">
+                                                        <p>Click <strong>Clear </strong>to reset the search date to the present date.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Search results appear at the bottom of the <i>Event Logs</i> screen, in the following columns:</p>
+                                                    </li>
+                                                </ul>
+                                                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Rows.css');" class="TableStyle-Rows" cellspacing="0">
+                                                    <col style="width: 150px;" class="TableStyle-Rows-Column-Column1" />
+                                                    <col class="TableStyle-Rows-Column-Column1" />
+                                                    <thead>
+                                                        <tr class="TableStyle-Rows-Head-Header1">
+                                                            <th class="TableStyle-Rows-HeadE-Column1-Header1" style="background-color: #2f5496;">Column</th>
+                                                            <th class="TableStyle-Rows-HeadD-Column1-Header1" style="background-color: #2f5496;">Description</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-Rows-Body-Body1">
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>Date/Time </p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                                <p>Local date and time of the PMains Log.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Rows-Body-Body2">
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>Content </p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                                <p>Describes the instrument message details.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Rows-Body-Body1">
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>Category </p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                                <p>Classifies PMains information, e.g. Data Manager, PANTHER UI, RS232 Communication.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Rows-Body-Body2">
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>Error Level </p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                                <p>Describes the severity of the error.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Rows-Body-Body1">
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                                <p>Thread </p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                                <p>Thread number; it is PANTHER system generated.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Rows-Body-Body2">
+                                                            <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                                <p>Class Name </p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                                <p>Message class, e.g. Event Logs, Activity Logs.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Rows-Body-Body1">
+                                                            <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                                <p>Log File </p>
+                                                            </td>
+                                                            <td class="TableStyle-Rows-BodyA-Column1-Body1">
+                                                                <p>Displays the PANTHER Log or PMain log file this entry derives from.</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><ul style="font-weight: bold;text-decoration: none;"><li value="1"><a style="font-style: normal; color: #000000; text-decoration: none;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Bookmarks</a></li></ul></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><i>Bookmarks</i> can be set or reset on any of the detailed grid log entries to allow the user to return to the selected locations during the log file evaluations.  A current <i>Event Log</i> or <i>PANTHER</i> log entry can be marked in order to easily return to it by using the <a targets="event - log - 7" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="event - log - 7"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />‘Bookmarks’</a> tab.</p>
+                                                <p>
+                                                    <img src="../Resources/Images/Logs/Logs_Screen_10.PNG" style="display: none;" data-mc-target-name="event - log - 7" />
+                                                </p>
+                                                <ul>
+                                                    <li value="1">
+                                                        <p>Setting Bookmarks – from the ‘<i>Events Log</i>’ screen, select an <i>Event Log</i> or <i>PANTHER</i> Log by clicking on a desired log row, then right-click and select ‘<i>Set Bookmark</i>'.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Displaying the Bookmarks list – click the Bookmarks tab, then select ‘Event Log’ or ‘PANTHER Log’ to see the appropriate  list.</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Finding a Bookmark from the Logs list – from the Bookmarks tab, <a targets="event - log - 9" href="#" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="event - log - 9"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />select the desired log</a>, then click <strong>Find Bookmark</strong>.</p>
+                                                        <p>
+                                                            <img src="../Resources/Images/Logs/Logs_Screen_11.PNG" style="display: none;" data-mc-target-name="event - log - 9" />
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><ul style="font-weight: bold;text-decoration: none;"><li value="1"><a style="font-style: normal; color: #000000; text-decoration: none;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Event Log Breakdown</a></li></ul></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p>Locate <em>Event Log Breakdown</em> on the far right side of the Event Logs tab.  Logs are displayed by individual module, with the number of messages, warnings, problems, critical, fatal and unknown frequencies.</p>
+                                                <p>Refer to Event Log Breakdown below:</p>
+                                                <p>
+                                                    <img src="../Resources/Images/Logs/Logs_Screen_12.PNG" />
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../Resources/Images/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

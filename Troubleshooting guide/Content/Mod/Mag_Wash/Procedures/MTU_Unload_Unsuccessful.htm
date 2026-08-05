@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>MTU Unload Unsuccessful</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../../Resources/Stylesheets/PantherTSGStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../../Resources/TableStyles/Blue on White.css" rel="stylesheet" />
+        <script src="../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+        <script src="../../../../Skins/Default/Scripts/Topic Toolbar for Test.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-dropdown" style="display:none;" id="#centralSmallScreen"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../Startup/TS_Startup_1.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                    <div class="central-dropdown" style="display:none;" id="#centralTop"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="central-dropdown" style="display:none;"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar_for_Test mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <img alt="Print" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <img alt="Expand all" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherTSG@hologic.onmicrosoft.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="H1_Blue">MTU Unload Unsuccessful</h1>
+                                        <h4><b>Alternate search for MTU unload output:</b>
+                                        </h4>
+                                        <p><b>Boolean: </b>"MTUs: pos"</p>
+                                        <p><b>Regex: </b>MTUs\: pos</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,173|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 6 status 1:MTU_EMPTY module LD</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,174|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 7 status 2:MTU_OCCUPIED module IQ</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,174|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 8 status 1:MTU_EMPTY module AMP</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,175|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 9 status 1:MTU_EMPTY module HPA</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,175|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 10 status 0:MTU_UNKNOWN module Incubator1</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,175|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 11 status 0:MTU_UNKNOWN module Incubator2</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,175|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 12 status 0:MTU_UNKNOWN module Incubator3</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,176|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 13 status 1:MTU_EMPTY module MagWash1</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,176|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 14 status 1:MTU_EMPTY module MagWash2</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,176|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 15 status 0:MTU_UNKNOWN module HeaterRamp1</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,177|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 16 status 0:MTU_UNKNOWN module HeaterRamp2</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,177|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 17 status 0:MTU_UNKNOWN module HeaterRamp3</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,177|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 18 status 0:MTU_UNKNOWN module HeaterRamp4</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,178|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 19 status 1:MTU_EMPTY module SampleMixStation</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,178|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 20 status 1:MTU_EMPTY module Luminometer</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,178|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 21 status 1:MTU_EMPTY module OQ</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,179|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 22 status 1:MTU_EMPTY module ServiceQueue</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,179|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 23 status 1:MTU_EMPTY module MagParking1</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,179|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 24 status 1:MTU_EMPTY module MagParking2</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,180|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 25 status 1:MTU_EMPTY module Chiller1</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,180|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 26 status 1:MTU_EMPTY module Chiller2</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,180|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 27 status 1:MTU_EMPTY module Chiller3</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,181|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 28 status 1:MTU_EMPTY module Chiller4</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,181|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 29 status 1:MTU_EMPTY module Chiller5</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,181|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 30 status 1:MTU_EMPTY module Chiller6</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,182|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 32 status 1:MTU_EMPTY module SampleDispenseSlot</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,182|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 35 status 1:MTU_EMPTY module Incubator1 i: 1</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,182|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 36 status 1:MTU_EMPTY module Incubator1 i: 2</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,183|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 37 status 1:MTU_EMPTY module Incubator1 i: 3</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,183|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 38 status 1:MTU_EMPTY module Incubator1 i: 4</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,183|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 39 status 1:MTU_EMPTY module Incubator1 i: 5</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,183|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 40 status 1:MTU_EMPTY module Incubator1 i: 6</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,184|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 41 status 1:MTU_EMPTY module Incubator1 i: 7</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,184|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 42 status 1:MTU_EMPTY module Incubator1 i: 8</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,184|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 43 status 1:MTU_EMPTY module Incubator1 i: 9</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,185|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 44 status 1:MTU_EMPTY module Incubator1 i: 10</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,185|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 45 status 1:MTU_EMPTY module Incubator1 i: 11</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,185|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 46 status 1:MTU_EMPTY module Incubator1 i: 12</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,186|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 47 status 1:MTU_EMPTY module Incubator1 i: 13</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,186|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 48 status 1:MTU_EMPTY module Incubator1 i: 14</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,186|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 49 status 1:MTU_EMPTY module Incubator1 i: 15</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,187|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 50 status 1:MTU_EMPTY module Incubator1 i: 16</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,187|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 51 status 1:MTU_EMPTY module Incubator1 i: 17</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,187|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 52 status 1:MTU_EMPTY module Incubator1 i: 18</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,188|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 53 status 2:MTU_OCCUPIED module Incubator2 i: 1</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,188|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 54 status 1:MTU_EMPTY module Incubator2 i: 2</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,189|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 55 status 1:MTU_EMPTY module Incubator2 i: 3</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,189|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 56 status 1:MTU_EMPTY module Incubator2 i: 4</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,190|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 57 status 1:MTU_EMPTY module Incubator2 i: 5</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,190|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 58 status 1:MTU_EMPTY module Incubator2 i: 6</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,190|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 59 status 1:MTU_EMPTY module Incubator2 i: 7</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,191|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 60 status 1:MTU_EMPTY module Incubator2 i: 8</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,191|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 61 status 1:MTU_EMPTY module Incubator2 i: 9</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,191|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 62 status 1:MTU_EMPTY module Incubator2 i: 10</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,191|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 63 status 1:MTU_EMPTY module Incubator2 i: 11</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,192|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 64 status 1:MTU_EMPTY module Incubator2 i: 12</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,192|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 65 status 1:MTU_EMPTY module Incubator2 i: 13</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,192|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 66 status 1:MTU_EMPTY module Incubator2 i: 14</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,193|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 67 status 2:MTU_OCCUPIED module Incubator2 i: 15</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,193|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 68 status 1:MTU_EMPTY module Incubator2 i: 16</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,193|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 69 status 1:MTU_EMPTY module Incubator2 i: 17</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,194|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 70 status 2:MTU_OCCUPIED module Incubator2 i: 18</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,194|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 71 status 1:MTU_EMPTY module Incubator3 i: 1</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,194|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 72 status 1:MTU_EMPTY module Incubator3 i: 2</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,195|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 73 status 1:MTU_EMPTY module Incubator3 i: 3</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,195|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 74 status 1:MTU_EMPTY module Incubator3 i: 4</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,195|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 75 status 1:MTU_EMPTY module Incubator3 i: 5</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,196|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 76 status 1:MTU_EMPTY module Incubator3 i: 6</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,196|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 77 status 1:MTU_EMPTY module Incubator3 i: 7</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,196|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 78 status 1:MTU_EMPTY module Incubator3 i: 8</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,197|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 79 status 1:MTU_EMPTY module Incubator3 i: 9</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,197|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 80 status 1:MTU_EMPTY module Incubator3 i: 10</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,197|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 81 status 1:MTU_EMPTY module Incubator3 i: 11</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,198|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 82 status 1:MTU_EMPTY module Incubator3 i: 12</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,198|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 83 status 1:MTU_EMPTY module Incubator3 i: 13</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,198|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 84 status 1:MTU_EMPTY module Incubator3 i: 14</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,199|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 85 status 1:MTU_EMPTY module Incubator3 i: 15</p>
+                                        <p style="font-family: 'Arial Narrow';">-02-02 11:07:46,199|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 86 status 1:MTU_EMPTY module Incubator3 i: 16</p>
+                                        <p style="font-family: 'Arial Narrow';">10071 2021-02-02 11:07:46,199|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 87 status 1:MTU_EMPTY module Incubator3 i: 17</p>
+                                        <p style="font-family: 'Arial Narrow';">2021-02-02 11:07:46,200|[RS232Ctrl]|InstrumentCommObject|InstrumentEvent|Info|Normal|IMTUs: pos 88 status 1:MTU_EMPTY module Incubator3 i: 18</p>
+                                        <h3>Resolution</h3>
+                                        <p>Inspect incubator carefully:</p>
+                                        <ul>
+                                            <li value="1">Debris</li>
+                                            <li value="2">Carousel, belt, teeth, mtu slots</li>
+                                            <li value="3">Sensor not calibrated</li>
+                                            <li value="4">Dirty sensor</li>
+                                            <li value="5">Misaligned sensor</li>
+                                            <li value="6">Damaged sensor</li>
+                                        </ul>
+                                        <h3>Panther Case Study –  MTU Unload Unsuccessful.  Instrument 01217, 2016.12.08.</h3>
+                                        <h4>Health Report shows:</h4>
+                                        <p>“MTU Unload unsuccessful. Could not unload one position. Please run Force MTU Unload.”</p>
+                                        <p>Followed by:</p>
+                                        <p>“No MTU was detected, unloading of MTUs is completed.”</p>
+                                        <h4>Health Report Screen Shot:</h4>
+                                        <p>
+                                            <img src="../../../Resources/Images/MagWash/MTU_Unload_Unsuccessful-01_880x296.png" style="width: 880;height: 296;" />
+                                        </p>
+                                        <h4>Background on how the instrument works:</h4>
+                                        <p>When the instrument starts up, there is an MTU count.  How this happens is the LD checks all of the slots, except the incubators.  For the MTU check in the incubators, each incubator does a “check all slots” command (incubator command 54).  This is how the instrument knows if there are any MTUs to unload.</p>
+                                        <h4>What is happening on this Instrument:</h4>
+                                        <p>What can happen is that the incubator MTU sensor gets dirty (or malfunctions), and the sensor sees an MTU when there isn’t actually one there.  So, the incubator “tells” the Distributor there is an MTU to unload, and the Distributor goes to get it, but there isn’t actually an MTU, so the “MTU Unload Unsuccessful” error happens.</p>
+                                        <p>To find which incubator is faulty, you search the low level logs for the following strings:</p>
+                                        <table style="caption-side: top;mc-caption-repeat: false;mc-table-style: url('../../../Resources/TableStyles/Blue on White.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle-Blue_on_White" cellspacing="0">
+                                            <col style="width: 230px;" class="TableStyle-Blue_on_White-Column-Column1" />
+                                            <col style="width: 532px;" class="TableStyle-Blue_on_White-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-Blue_on_White-Head-Header1">
+                                                    <th class="TableStyle-Blue_on_White-HeadE-Column1-Header1">Search String</th>
+                                                    <th class="TableStyle-Blue_on_White-HeadD-Column1-Header1">Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Blue_on_White-Body-Body1">
+                                                    <td class="TableStyle-Blue_on_White-BodyE-Column1-Body1" style="font-weight: normal;">COP -&gt; PC  20 54</td>
+                                                    <td class="TableStyle-Blue_on_White-BodyD-Column1-Body1" style="font-weight: normal;">HT Incubator Check all Slots Response</td>
+                                                </tr>
+                                                <tr class="TableStyle-Blue_on_White-Body-Body1">
+                                                    <td class="TableStyle-Blue_on_White-BodyE-Column1-Body1" style="font-weight: normal;">COP -&gt; PC  21 54</td>
+                                                    <td class="TableStyle-Blue_on_White-BodyD-Column1-Body1" style="font-weight: normal;">Trans Incubator Check all Slots Response</td>
+                                                </tr>
+                                                <tr class="TableStyle-Blue_on_White-Body-Body1">
+                                                    <td class="TableStyle-Blue_on_White-BodyB-Column1-Body1" style="font-weight: normal;">COP -&gt; PC  22 54</td>
+                                                    <td class="TableStyle-Blue_on_White-BodyA-Column1-Body1" style="font-weight: normal;">Amp Incubator Check all Slots Response</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p>In this case, the Transition Incubator is the one sensing the Phantom MTU.  Search Result:</p>
+                                        <p>2016-12-07 04:41:24,827|[StSerClient:COP-&gt;PC]|RS232Ctrl|RS232Communication|Info|Normal|COP-&gt;PC  21 54 00 02 00 <span style="background-color: #ffff00;">00 08 00 00</span>.</p>
+                                        <p>If there are no MTUs present, then the last 4 bytes (highlighted in yellow) should be zeros.  In this case, the last 4 bytes are 00 08 00 00.  To see where the MTU is being sensed, you have to invert the bytes and convert from hex to binary:</p>
+                                        <ol>
+                                            <li value="1">Invert:  00 08 00 00 inverts to 00 00 08 00.</li>
+                                            <li value="2">Remove the leading zeros and concatenate: 00 00 08 00 -&gt; 800hex.</li>
+                                            <li value="3">Convert to Binary:  800hex = 100000000000 bin.</li>
+                                            <li value="4">Slots are counted right to left.  So, the incubator is sensing an mtu in slot 12.</li>
+                                        </ol>
+                                        <h4>Service Plan</h4>
+                                        <p>To service, first, always verify that there truly is not an MTU in the incubator slot.  Also verify the Distributor teaching to the suspect incubator is good.</p>
+                                        <p>From there, check / replace the Incubator internal PCB (p/n 902789), which has the MTU sensor on it.  (Part should be in trunk stock.)</p>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../../Resources/Images/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

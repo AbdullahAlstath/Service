@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Output Queue – Good Curves vs. Bad Curves</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/PantherTSGStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/Rows.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+        <script src="../../../Skins/Default/Scripts/Topic Toolbar for Test.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-dropdown" style="display:none;" id="#centralSmallScreen"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Startup/TS_Startup_1.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                    <div class="central-dropdown" style="display:none;" id="#centralTop"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="central-dropdown" style="display:none;"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar_for_Test mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <img alt="Print" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <img alt="Expand all" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherTSG@hologic.onmicrosoft.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="H1_Blue">Output Queue – Good Curves vs. Bad Curves</h1>
+                                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/Rows.css');" class="TableStyle-Rows" cellspacing="0">
+                                            <col class="TableStyle-Rows-Column-Column1" style="width: 101px;" />
+                                            <col class="TableStyle-Rows-Column-Column1" style="width: 164px;" />
+                                            <thead>
+                                                <tr class="TableStyle-Rows-Head-Header1">
+                                                    <th class="TableStyle-Rows-HeadE-Column1-Header1">
+                                                        <p>Channel</p>
+                                                    </th>
+                                                    <th class="TableStyle-Rows-HeadD-Column1-Header1">
+                                                        <p>Description</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">0</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Deactivation Buffer</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body2" style="text-align: center;">1</td>
+                                                    <td class="TableStyle-Rows-BodyA-Column1-Body2">
+                                                        <p>Bleach</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p>Examples of good curves and bad curves for the Output Queue appear below. </p>
+                                        <ul>
+                                            <li value="1">
+                                                <p><a href="#Output" class="MCXref xref">Output Queue: Process Control Region Definitions</a>
+                                                </p>
+                                            </li>
+                                            <li value="2">
+                                                <p><a href="#Normal" class="MCXref xref">Normal Buffer and Bleach Dispense Curves</a>
+                                                </p>
+                                            </li>
+                                            <li value="3">
+                                                <p><a href="#Buffer" class="MCXref xref">Buffer and Bleach Dispense Curves with Bubbles</a>
+                                                </p>
+                                            </li>
+                                            <li value="4">
+                                                <p><a href="#Buffer2" class="MCXref xref">Buffer and Bleach Dispense Curves: Fully Air</a>
+                                                </p>
+                                            </li>
+                                            <li value="5">
+                                                <p><a href="#Output2" class="MCXref xref">Output Queue: Bleach, Fully Fluid</a>
+                                                </p>
+                                            </li>
+                                            <li value="6">
+                                                <p><a href="#Output3" class="MCXref xref">Output Queue: Process Control, More Information</a>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <h3><a name="Output"></a>Output Queue: Process Control Region Definitions</h3>
+                                        <p>The OLV system incorporates a liquid/air sensor near the injector orifice.  The sensor signal for a “good” dispense will start with air (a high signal), then transition to liquid (a low signal) as fluid is dispensed, then remain sensing liquid as the pullback begins, and finally transition to air as the air/liquid interface is drawn up past the sensor.</p>
+                                        <p>The Output Queue Process Control algorithm splits this “air-liquid-air” signal into three distinct regions:</p>
+                                        <ul>
+                                            <li value="1">Region 1: Start (air)</li>
+                                            <li value="2">Region 2: Middle (fluid)</li>
+                                            <li value="3">Region 3: End (air)</li>
+                                        </ul>
+                                        <p>Refer to end of topic for information about how these regions are defined.</p>
+                                        <p>
+                                            <img src="../../Resources/Images/OQ/Output_Queue-1.png" />
+                                        </p>
+                                        <h3><a name="Normal"></a>Normal Buffer and Bleach Dispense Curves</h3>
+                                        <p>
+                                            <img src="../../Resources/Images/OQ/OQ - normal_300x192.bmp" style="width: 300;height: 192;" />
+                                            <img src="../../Resources/Images/OQ/OQ - normal-1_301x196.bmp" style="width: 301;height: 196;" />
+                                        </p>
+                                        <h3><a name="Buffer"></a>Buffer and Bleach Dispense Curves with Bubbles</h3>
+                                        <blockquote>
+                                            <p>
+                                                <img src="../../Resources/Images/OQ/OQ - air bubbles-2.png" />
+                                            </p>
+                                        </blockquote>
+                                        <p>OLV curves indicate bubbles in the line that may lead to undeactivated waste errors.</p>
+                                        <p>See also Error Code <a href="../../Messages/262_Messages/262.000.00054.htm">262.000.00054</a> for undeactivated waste.</p>
+                                        <h3><a name="Buffer2"></a>Buffer and Bleach Dispense Curves: Fully Air</h3>
+                                        <p>
+                                            <img src="../../Resources/Images/OQ/OQ - fully air_333x206.bmp" style="width: 333;height: 206;" />
+                                            <img src="../../Resources/Images/OQ/OQ - fully air-1_325x206.bmp" style="width: 325;height: 206;" />
+                                        </p>
+                                        <h3><a name="Output2"></a>Output Queue: Bleach, Fully Fluid</h3>
+                                        <p>OLV curves indicate the OLV sensor is always detecting fluid.  This can have a few causes:</p>
+                                        <ul>
+                                            <li value="1">Fluid/ Debris blocking the sight holes in the OLV Housing.</li>
+                                            <li value="2">Fluid/ Debris on the OLV Board</li>
+                                            <li value="3">OLV Cable</li>
+                                        </ul>
+                                        <p>
+                                            <img src="../../Resources/Images/OQ/Output_Queue-2.png" />
+                                        </p>
+                                        <p><em>Example of Output Queue losing prime:</em>
+                                        </p>
+                                        <p>Between PRIME and 1st MTUs through during sample processing, there appears to be loss of prime on the Bleach line affecting the front end of the trace {Region 1 or A} through the first 2 tubes/dispenses though MTU4.</p>
+                                        <p>It resolves by MTU5.  Need to investigate the fluidic path for bleach to look for areas that could be contributing to loss of Prime on that line.</p>
+                                        <p>
+                                            <img src="../../Resources/Images/OQ/Output_Queue-3.png" />
+                                        </p>
+                                        <h3><a name="Output3"></a>Output Queue: Process Control, More Information</h3>
+                                        <p>The OLV system incorporates a liquid/air sensor near the injector orifice.  Each dispense is followed by an airgap pullback.  This pulls air back up past the sensor after each dispense.  Therefore, the subsequent dispense starts with air in the tubing in front of the sensor.  The sensor signal for a “good” dispense will start with air (a high signal), then transition to liquid (a low signal) as fluid is dispensed, then remain sensing liquid as the pullback begins, and finally transition to air as the air/liquid interface is drawn up past the sensor.</p>
+                                        <p>The Output Queue Process Control algorithm splits this “air-liquid-air” signal into 3 distinct regions.  These regions are each defined by 4 parameters: Start point, end point, criteria (air or liquid), and minimum number of points required to meet the criteria.  A threshold defined during sensor calibration, as part of the full-priming routine, is used to determine if each data point is considered as “air” or “liquid”.  The threshold calculation sets the threshold at 1/3.5 of the way from the liquid value to the air value.</p>
+                                        <p>For a dispense to be considered “good”, the following conditions must be met:</p>
+                                        <ul>
+                                            <li value="1">Region 2 check passes (this is the liquid phase check).</li>
+                                            <li value="2">Region 1 and/or 3 passes (these are the initial and final air pullback check).</li>
+                                        </ul>
+                                        <p>The “Non-Deactivated waste” message will only appear to the instrument operator after 4 dispense failures in a row or 6 failures out of 20 dispenses.</p>
+                                        <p>The specific region parameters and the acquired sensor signal for each dispense are logged in the ‘Output Queue.curve’ file.  Sensor ID “0” corresponds to Buffer and Sensor ID “1” corresponds to Bleach.</p>
+                                        <h4>Reading the Output Queue Process Control Curves Offline</h4>
+                                        <p>Open the ProcessControlData_OutputQueue OLV curve in CurveTrend</p>
+                                        <p>
+                                            <img src="../../Resources/Images/OQ/Output_Queue-4.png" />
+                                        </p>
+                                        <p>The Sections on the right side of Curve Trend list data and results for each curve.</p>
+                                        <ol>
+                                            <li value="1">Overview Table, listing all MTUs</li>
+                                            <li value="2">Table with the data from only the selected Curve.</li>
+                                        </ol>
+                                        <h4>Explanation of the Process Control Data Curve File:  Output Queue</h4>
+                                        <ul>
+                                            <li value="1"><em>TimeStamp:</em>  The timestamp of when the process control curve was generated.</li>
+                                            <li value="2"><em>TestOrderID:</em>  Test order ID assigned by the system.  ID numbers that are -1 occur on curves generated during System Prime.</li>
+                                            <li value="3"><em>SampleID:</em>  An ID generated from the barcode scanned into the system during sample loading.  ‘Unknown’ ID numbers occur on curves generated during System Prime.</li>
+                                            <li value="4"><em>MTUID:</em>  The ID of the MTU scanned when scanned by the input queue MTU barcode scanner.</li>
+                                            <li value="5"><em>Tube Number:</em>  This is the tube number of the MTU (ranges from 0 to 4 for tubes 1 to 5).  Tube 1 is closest to the MTU barcode and tube 5 is closest to the MTU tab for the distributor hook.</li>
+                                            <li value="6"><em>Sensor ID:</em>  The sensor ID indicates which OLV channel generated the curve (0 or 1).  The injector only goes in one way…  Channel 0 measures the Buffer dispenses.  Channel 1 measures the Bleach dispenses.</li>
+                                        </ul>
+                                        <h5>A note on sections of the process control curve known as Regions 1 through 3:</h5>
+                                        <p>The Output Queue OLV Algorithm checks 3 regions of interest which are defined by the headers in the curve file.</p>
+                                        <p><em>Region 1:</em> The region at the beginning of the curve where air is seen before fluid is dispensed. (high)</p>
+                                        <p><em>Region 2:</em> The region of the curve while fluid is being dispensed. (low)</p>
+                                        <p><em>Region 3:</em> The region of the curve which has undergone fluid pull back by the LCMP and air is observed. (high)</p>
+                                        <p>These Regions are defined by a set of parameters that can be found in the Output Queue OLV Curve File.</p>
+                                        <p><span style="color: #4682b4;"><img src="../../Resources/Images/OQ/Output_Queue-5.png" /></span>
+                                        </p>
+                                        <p><strong>Note:</strong> The Parameters are labeled differently in CurveTrend, vs. the raw OutputQueue.curve file.  In CurveTrend, the region definition parameters start at 4.  In the raw OutputQueue.curve file, they start at 1:</p>
+                                        <p><span style="color: #4682b4;"><img src="../../Resources/Images/OQ/Output_Queue-6.png" /></span>
+                                        </p>
+                                        <table style="mc-table-style: url('../../Resources/TableStyles/Rows.css');border-left-style: solid;border-left-width: 2px;border-left-color: #000000;border-right-style: solid;border-right-width: 2px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;margin-left: 0;margin-right: auto;" class="TableStyle-Rows" cellspacing="0">
+                                            <col class="TableStyle-Rows-Column-Column1" />
+                                            <col class="TableStyle-Rows-Column-Column1" />
+                                            <col class="TableStyle-Rows-Column-Column1" />
+                                            <col class="TableStyle-Rows-Column-Column1" />
+                                            <col class="TableStyle-Rows-Column-Column1" />
+                                            <col class="TableStyle-Rows-Column-Column1" />
+                                            <col class="TableStyle-Rows-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-Rows-Head-Header1">
+                                                    <th class="TableStyle-Rows-HeadE-Column1-Header1">&#160;</th>
+                                                    <th class="TableStyle-Rows-HeadE-Column1-Header1" colspan="2">Region 1</th>
+                                                    <th class="TableStyle-Rows-HeadE-Column1-Header1" colspan="2">Region 2</th>
+                                                    <th class="TableStyle-Rows-HeadD-Column1-Header1" colspan="2">Region 3</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p><b>Parameter
+ Definitions</b>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Parameter #</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Default Value</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Parameter #</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Default Value</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Parameter #</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Default Value</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Value
+ defining the start of the region</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>P1</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>10</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>P5</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>140</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>P9</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>600</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Value
+ defining the end of the region</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>P2</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>80</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>P6</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>480</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>P10</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>990</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Binary
+ number defining if region is looking for high (1/air) or low (0/liquid)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>P3</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>1</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>P7</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>0</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>P11</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>1</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                        <p>Value
+ defining the number of points required to be high or low.</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                        <p>P4</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                        <p>35</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                        <p>P8</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                        <p>200</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body1">
+                                                        <p>P12</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyA-Column1-Body1">
+                                                        <p>10</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h5>Output Queue Process Control Troubleshooting</h5>
+                                        <p>Typically, the process control system will generate failure flags when the system is dispensing air instead of liquid.  This may be observed in the curve file data as Region 2 failures.  In this case, the instrument should be inspected for:</p>
+                                        <ul>
+                                            <li value="1">An empty bleach or buffer bottle</li>
+                                            <li value="2">A disconnected bleach or buffer bottle</li>
+                                            <li value="3">Loose fitting in the fluid line from the bottles to the injector</li>
+                                            <li value="4">Damaged  fitting or tubing in the fluid line from the bottle to the injector</li>
+                                            <li value="5">Kinked or crushed tubing in the fluid line from the bottle to the injector (** This tubing is very thin walled and can easily kink and occlude, particularly when routed through grommets and clips.)</li>
+                                            <li value="6">Air or occlusion in the fluid line from the bottles to the injector</li>
+                                            <li value="7">Old or worn peristaltic pump tubing</li>
+                                        </ul>
+                                        <p>If the injector is actually dispensing properly and the failure is a false flag due to a problem with the process control system, then the instrument should be inspected for:</p>
+                                        <ul>
+                                            <li value="1">Wet or damaged process control circuit board in the Output Queue injector mount assembly.</li>
+                                            <li value="2">Damaged or unplugged process control cable in the Output Queue (from the main PCB to the process control PCB).</li>
+                                            <li value="3">Poor quality of the air/liquid meniscus in the injector tubing during pullback.  Droplets left behind on the inner wall of the tubing in front of the sensor.</li>
+                                        </ul>
+                                        <p>If the instrument has an Output Queue process control system failure, this failure may occur while performing full-prime because the process control system is calibrated during full-prime and is used to check that the bottles are correctly connected during full-prime.  The process control system is not exercised during mini-prime.</p>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../Resources/Images/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

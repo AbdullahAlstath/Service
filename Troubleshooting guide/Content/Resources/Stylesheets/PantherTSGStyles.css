@@ -1,0 +1,585 @@
+/*<meta />*/
+
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+body
+{
+	font-family: Arial;
+}
+
+h1
+{
+	font-weight: bold;
+	font-size: 24.0pt;
+}
+
+h2
+{
+	font-weight: bold;
+	font-size: 18.0pt;
+}
+
+h3
+{
+	font-weight: bold;
+	font-size: 14.0pt;
+	padding-top: 10px;
+	color: #2f5496;
+}
+
+h4
+{
+	font-weight: bold;
+	font-size: 12.0pt;
+	table-layout: inherit;
+}
+
+h5
+{
+	font-weight: bold;
+	font-size: 10.0pt;
+}
+
+h6
+{
+	font-weight: bold;
+	font-size: 8.0pt;
+}
+
+p
+{
+	font-size: 12.0pt;
+	margin-top: 0pt;
+	margin: 4pt;
+	margin-bottom: 12pt;
+	margin-left: 6pt;
+}
+
+ol,
+ul
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+img
+{
+	border: none;
+	max-width: 100%;
+}
+
+a.Popup
+{
+	
+}
+
+MadCap|expandingHead
+{
+	font-style: italic;
+	font-weight: normal;
+	cursor: hand;
+	text-decoration: none;
+	color: #006600;
+}
+
+MadCap|expandingBody
+{
+	color: #777777;
+	font-style: italic;
+}
+
+MadCap|dropDownHotspot
+{
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+	color: #006600;
+}
+
+div.NewRowClass1	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.NewRowClass1::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.NewRowClass1::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.NewRowClass1 > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+div.NewRowClass1 > div:nth-child(1)
+{
+	width: 50%;
+	margin-left: 0%;
+}
+
+div.NewRowClass1 > div:nth-child(2)
+{
+	width: 50%;
+	margin-left: 0%;
+}
+
+div.NewRowClass2	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.NewRowClass2::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.NewRowClass2::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.NewRowClass2 > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+div.NewRowClass2 > div:nth-child(1)
+{
+	width: 41.667%;
+	margin-left: 0%;
+}
+
+div.NewRowClass2 > div:nth-child(2)
+{
+	width: 33.33333%;
+	margin-left: 0%;
+}
+
+div.NewRowClass2 > div:nth-child(3)
+{
+	width: 33.33333%;
+	margin-left: 0%;
+}
+
+a:visited
+{
+	color: #800080;
+}
+
+@media non-print
+{
+	a
+	{
+		border: none;
+		border-bottom: none;
+		border-bottom-color: #ffffff;
+		border-bottom-width: 0px;
+	}
+}
+
+@media print
+{
+	p
+	{
+		padding-bottom: 6pt;
+		padding-left: 4pt;
+		bottom: 6pt;
+		margin-bottom: 6pt;
+		margin: 4pt;
+	}
+
+	ol.Roman_Heads
+	{
+		font-size: 16pt;
+		font-weight: bold;
+	}
+
+	MadCap|toggler
+	{
+		color: #0000ff;
+	}
+
+	h3
+	{
+		mc-heading-level: 0;
+	}
+
+	h4
+	{
+		mc-heading-level: 0;
+	}
+
+	h5
+	{
+		mc-heading-level: 0;
+	}
+
+	h6
+	{
+		mc-heading-level: 0;
+	}
+
+	h1.NoBreak
+	{
+		page-break-before: avoid;
+		mc-auto-number-format: 'GH:{n+}. ';
+	}
+
+	h1.TB_Appndx
+	{
+		mc-auto-number-format: 'Appendix {chapnum}';
+	}
+
+	td.Caution
+	{
+		font-weight: bold;
+	}
+}
+
+li
+{
+	mc-hyphenate: never;
+	margin-bottom: 12pt;
+}
+
+td
+{
+	margin-bottom: 12pt;
+	table-layout: auto;
+}
+
+table
+{
+	margin-bottom: 12pt;
+}
+
+p.Indent
+{
+	font-size: 12.0pt;
+	margin-top: 0pt;
+	margin: 4pt;
+	margin-bottom: 12pt;
+	margin-left: 31pt;
+}
+
+table.Parts_Table
+{
+	margin-bottom: 12pt;
+	margin-left: 0;
+	margin-right: auto;
+	border: solid 1px #87cefa;
+	border-bottom: solid 1px #87cefa;
+	border-color: #87cefa;
+	border-left: solid 1px #87cefa;
+	border-right: solid 1px #87cefa;
+	border-style: solid;
+	border-top: solid 1px #87cefa;
+	background-color: #e0ffff;
+	background-repeat: repeat-x;
+}
+
+li.Numbered_Head
+{
+	margin-bottom: 12pt;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+table.Troubleshoot
+{
+	margin-bottom: 12pt;
+	margin-left: 0;
+	margin-right: auto;
+	background-color: #e0ffff;
+	background-repeat: repeat-x;
+}
+
+ol.Roman_Heads
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	list-style-type: upper-roman;
+	font-size: 16pt;
+	font-weight: bold;
+}
+
+img.Large_img
+{
+	max-width: 100%;
+}
+
+blockquote.No_Margin
+{
+	display: block;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+h1.NoBreak
+{
+	
+}
+
+h1.TB_Appndx
+{
+	font-weight: bold;
+	font-size: 24.0pt;
+}
+
+MadCap|xref
+{
+	mc-format: '{paratext}';
+}
+
+MadCap|xref.h1
+{
+	mc-format: '{h1}';
+}
+
+p.image
+{
+	font-size: 12.0pt;
+	margin-top: 0pt;
+	margin: 4pt;
+	margin-bottom: 12pt;
+	margin-left: 6pt;
+}
+
+td.Note
+{
+	margin-bottom: 12pt;
+	border-radius: 6px;
+	background-color: #b0c4de;
+	font-size: 11pt;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+	padding-top: 0.75em;
+	padding-bottom: 0.75em;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+
+td.Caution
+{
+	margin-bottom: 12pt;
+	background-color: #ffff99;
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+	font-weight: bold;
+	border-radius: 6px;
+}
+
+td.Warning
+{
+	background-color: #f08080;
+	font-weight: bold;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+	padding-top: 0.75em;
+	padding-bottom: 0.75em;
+	border-radius: 6px;
+}
+
+td.Gloves
+{
+	margin-bottom: 12pt;
+	background-color: #ee82ee;
+	font-weight: bold;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+	padding-top: 0.75em;
+	padding-bottom: 0.75em;
+	border-radius: 6px;
+}
+
+td.Clean
+{
+	margin-bottom: 12pt;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+	padding-top: 0.75em;
+	padding-bottom: 0.75em;
+	border-radius: 6px;
+}
+
+ul.Checklist	/*Uses a Webding to make an interactive checklist*/
+{
+	list-style-image: none;
+	list-style-type: disc;
+}
+
+ul.Checklist > li::marker
+{
+	font-family: Webdings;
+	vertical-align: super;
+	content: 'c';
+}
+
+p.ballot
+{
+	font-size: 12.0pt;
+	margin-top: 0pt;
+	margin: 4pt;
+	margin-bottom: 12pt;
+	margin-left: 6pt;
+}
+
+label
+{
+	border: 1px solid #ccc;
+	padding: 1.5em;
+	margin: 0 0 10px;
+	text-indent: -1.5em;
+	display: block;
+}
+
+label:hover
+{
+	background: #eee;
+	cursor: pointer;
+}
+
+MadCap|xref.Step
+{
+	mc-format: '{paranumonly}';
+}
+
+MadCap|xref.h2
+{
+	mc-format: '{paratext}';
+}
+
+td.Hologic_Color
+{
+	font-weight: bold;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+	padding-top: 0.75em;
+	padding-bottom: 0.75em;
+	background-color: #111c61;
+}
+
+@media only screen and (max-width: 1279px)
+{
+	div.NewRowClass1 > div:nth-child(1)
+	{
+		width: 50%;
+		margin-left: 0%;
+	}
+
+	div.NewRowClass1 > div:nth-child(2)
+	{
+		width: 50%;
+		margin-left: 0%;
+	}
+
+	div.NewRowClass2 > div:nth-child(1)
+	{
+		width: 33.33333%;
+		margin-left: 0%;
+	}
+
+	div.NewRowClass2 > div:nth-child(2)
+	{
+		width: 33.33333%;
+		margin-left: 0%;
+	}
+
+	div.NewRowClass2 > div:nth-child(3)
+	{
+		width: 33.33333%;
+		margin-left: 0%;
+	}
+}
+
+@media only screen and (max-width: 767px)
+{
+	div.NewRowClass1 > div:nth-child(1)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.NewRowClass1 > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.NewRowClass2 > div:nth-child(1)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.NewRowClass2 > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.NewRowClass2 > div:nth-child(3)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+}
+
+div.navbar
+{
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	background-color: #ffffff;
+	display: block;
+}
+
+h1.H1_Blue
+{
+	font-weight: bold;
+	font-size: 24.0pt;
+	color: #2f5496;
+}
+
+MadCap|xref:visited
+{
+	color: #800080;
+}
+
+td.Note1
+{
+	margin-bottom: 12pt;
+	padding: 0.75em;
+	border-radius: 6px;
+	background-color: #b0c4de;
+	font-size: 11pt;
+}
+

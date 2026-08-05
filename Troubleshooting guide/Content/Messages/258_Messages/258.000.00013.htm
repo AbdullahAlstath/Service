@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-conditions="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Locking or Stacking of MTUs in the Input Queue Failed / Push MTU Failure</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/PantherTSGStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/Blue on White.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+        <script src="../../../Skins/Default/Scripts/Topic Toolbar for Test.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-dropdown" style="display:none;" id="#centralSmallScreen"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../Startup/TS_Startup_1.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                    <div class="central-dropdown" style="display:none;" id="#centralTop"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="central-dropdown" style="display:none;"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar_for_Test mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <img alt="Print" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <img alt="Expand all" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherTSG@hologic.onmicrosoft.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="H1_Blue">Locking or Stacking of MTUs in the Input Queue Failed / Push MTU Failure</h1>
+                                        <h3>Error Code</h3>
+                                        <table style="caption-side: top;mc-caption-repeat: false;mc-table-style: url('../../Resources/TableStyles/Blue on White.css');margin-left: 0;margin-right: auto;width: 300px;" class="TableStyle-Blue_on_White" cellspacing="0">
+                                            <col style="width: 200px;" class="TableStyle-Blue_on_White-Column-Column1" />
+                                            <col style="width: 200px;" class="TableStyle-Blue_on_White-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-Blue_on_White-Head-Header1">
+                                                    <th class="TableStyle-Blue_on_White-HeadE-Column1-Header1">Dec</th>
+                                                    <th class="TableStyle-Blue_on_White-HeadD-Column1-Header1">Hex</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Blue_on_White-Body-Body1">
+                                                    <td class="TableStyle-Blue_on_White-BodyB-Column1-Body1">
+                                                        <p>258.000.00013</p>
+                                                    </td>
+                                                    <td class="TableStyle-Blue_on_White-BodyA-Column1-Body1">0x102.0x00.0x0D</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h3>Complaint Description</h3>
+                                        <p>Input or MTU Queue Stacking Issue</p>
+                                        <blockquote>
+                                            <p style="font-family: 'Arial Narrow';">05/15/2023 12:32:13 (15 08:32:13)    [E] (Critical    , High  ) [LoadingManagement] Locking or stacking of the MTUs in the Input Queue failed.             [258.000.00013]</p>
+                                            <p style="font-family: 'Arial Narrow';">05/15/2023 16:38:04 (15 12:38:04)    [E] (Critical    , High  ) [InputQueue] Input Queue pack drive motor suffered step loss                      ID=49 InitializeInstrumentResponse: , start=16:36:53.926 end=16:38:04.626. Event [0x50.0x00.0x000A] at 16:37:55.626 bytes:  50 02 03 00 0A  [080.000.00010]</p>
+                                        </blockquote>
+                                        <p>Push MTU failure in service software. “50 20 02 00 34 00”</p>
+                                        <p>
+                                            <img src="../../Resources/Images/Messages/258.000.00013_MTUsInputQueue-0.png" />
+                                        </p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a style="font-style: normal; font-weight: bold; color: #000000;" href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />TABLE&#160;OF&#160;CONTENTS</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><a href="#Technica" class="MCXref xref">Technical Support</a>
+                                                </p>
+                                                <ul>
+                                                    <li value="1">
+                                                        <p><a href="#Check" class="MCXref xref">Check Input Queue</a>
+                                                        </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p><a href="#Next" class="MCXref xref">Next Steps</a>
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                                <p><a href="#Field" class="MCXref xref">Field Service</a>
+                                                </p>
+                                                <ul>
+                                                    <li value="1">
+                                                        <p><a href="#Bad" class="MCXref xref">Bad MTUs</a>
+                                                        </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p><a href="#Loose" class="MCXref xref">Loose Connection</a>
+                                                        </p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p><a href="#Misalign" class="MCXref xref">Misaligned MTU Input Queue Rails</a>
+                                                        </p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p><a href="#Dirty" class="MCXref xref">Dirty, Misaligned, or Faulty MTU Pusher Sensor</a>
+                                                        </p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p><a href="#Faulty" class="MCXref xref">Faulty Encoder</a>
+                                                        </p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p><a href="#Faulty2" class="MCXref xref">Faulty Motor or Drive Mechanism</a>
+                                                        </p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p><a href="#Panther" class="MCXref xref">Spring and Pusher</a>
+                                                        </p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p><a href="#Ball" class="MCXref xref">Ball Detent Latch</a>
+                                                        </p>
+                                                    </li>
+                                                    <li value="9">
+                                                        <p><a href="#Drawer" class="MCXref xref">Drawer Latch Adjustment</a>
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <h1 class="H1_Blue"><a name="Technica"></a>Technical Support</h1>
+                                        <h3><a name="Check"></a>Check Input Queue</h3>
+                                        <ul>
+                                            <li value="1">
+                                                <p>Check if MTUs are placed in front of the pusher.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Check for jammed MTUs or obstructions in the queue.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Make sure only 25 MTUs are loaded in the queue.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Remove incorrectly seated MTUs or obstructions.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Try opening and closing the Input Queue to make sure it will lock correctly.</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>If the pusher is staying in front and is not touching MTU, push it back manually until it meets the MTU. The drawer should now lock.</p>
+                                            </li>
+                                        </ul>
+                                        <h3><a name="Next"></a>Next Steps</h3>
+                                        <ul>
+                                            <li value="1">
+                                                <p>Restart the instrument.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Perform a prime and/or MW clean to test the Input Queue.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Review case history for previous Input Queue errors.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Notify <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">FSE<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Field Service Engineer.</span></a> if there were recent cases.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Instruct customer to monitor instrument.</p>
+                                            </li>
+                                        </ul>
+                                        <h1 class="H1_Blue"><a name="Field"></a>Field Service</h1>
+                                        <h3><a name="Bad"></a>Bad MTUs</h3>
+                                        <h4>Resolution</h4>
+                                        <ol>
+                                            <li value="1">
+                                                <p>If possible, take a photograph of the state of the MTUs.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Remove the MTUs by hand, taking care not to spill tiplets.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Inspect MTUs for any abnormalities.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>If the MTU is suspect as defective note the lot number of the MTUs contact Tech Support to open a complaint and return the suspect bad MTUs for further investigation.</p>
+                                            </li>
+                                        </ol>
+                                        <h4>Test</h4>
+                                        <p>Make sure other MTU lot numbers are able to process through the Input Queue successfully.</p>
+                                        <h3><a name="Loose"></a>Loose Connection</h3>
+                                        <h4>Resolution</h4>
+                                        <p>Reseat loose connection.</p>
+                                        <h4>Test</h4>
+                                        <p>Inspect to make sure all connections are secure.</p>
+                                        <h3><a name="Misalign"></a>Misaligned MTU Input Queue Rails</h3>
+                                        <h4>Resolution</h4>
+                                        <p>Use the alignment tool to properly align the rails per the Panther Service Manual.</p>
+                                        <h4>Test</h4>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Open the MTU Input Queue.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Slide several MTUs back and forth across the rails. The MTUs should slide smoothly.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Also, use the Rail Alignment Tool to check the rail alignment.</p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Messages/258.000.00013_MTUsInputQueue-0a.png" />
+                                                </p>
+                                                <p><strong>Note:</strong> See diagrams and images below to help identify sensors and flags accordingly.</p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Messages/258.000.00013_MTUsInputQueue-1a.png" class="Large_img" />
+                                                </p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Messages/258.000.00013_MTUsInputQueue-1b.png" />
+                                                </p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Messages/258.000.00013_MTUsInputQueue-1c.png" />
+                                                </p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Messages/258.000.00013_MTUsInputQueue-1d.png" />
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <h3><a name="Dirty"></a>Dirty, Misaligned, or Faulty MTU Pusher Sensor</h3>
+                                        <h4>Resolution</h4>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Clean the packing optical sensor.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Verify the white plastic packing button easily moves into the sensor when pressed, and springs forward again when released.  If not, inspect for cleanliness, or broken or damaged spring.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Tighten the three posts and screws that secure the slave PCB.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Replace the auxiliary PCB.</p>
+                                            </li>
+                                        </ol>
+                                        <h4>Test</h4>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Unlock and open the MTU Input Queue, and inspect the MTU Pusher optical sensor behind the white packing button. Note whether the sensor or white plastic packing button are dirty.  Clean as necessary.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Using Service Software, read sensor status.  With no MTU at the pick position, the MTU Pusher Sensor should read “OUT”.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Push the white packing button into the MTU Pusher sensor and re-read sensor status.  When the white plastic packing button interrupts the MTU Pusher, sensor status should change to read “IN”.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Open the MTU Input Queue and inspect the three posts holding the Slave PCB. The posts should be secure, and the screws securing the PCB should be tight.</p>
+                                                <p><strong>Note:  </strong>Some IQs used small washers between posts, and Slave PCB to space the sensor/Slave PCB further away from the white packing button for more accurate changes in state.  Consider removing these washers if present, reassemble, and re-test to see if washer thickness makes a difference in MTU Pusher Sensor States (In vs. Out in Service Software <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">GUI<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Graphical User Interface – allows users to interact with the software using images, graphical icons, and visual indicators rather than text commands.</span></a>).</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Using Service Software, pack some MTUs. If the module packs MTUs correctly, yet the system still reports a packing error, it is likely due to a faulty MTU Pusher sensor.</p>
+                                            </li>
+                                        </ol>
+                                        <h3><a name="Faulty"></a>Faulty Encoder</h3>
+                                        <h4>Resolution</h4>
+                                        <p>Replace the Encoder or the Module.</p>
+                                        <h4>Test</h4>
+                                        <p>Using Service Software, pack some MTUs.</p>
+                                        <p>If the motor does not stop and keeps pushing for an excessive amount of time, it is likely due to a faulty encoder.</p>
+                                        <h3><a name="Faulty2"></a>Faulty Motor or Drive Mechanism</h3>
+                                        <h4>Resolution</h4>
+                                        <p>Replace the motor, belt, or the module.</p>
+                                        <h4>Test</h4>
+                                        <p>Using Service Software, initialize the module.</p>
+                                        <p>Note whether the MTU pusher moves. If it does not move, it is likely due to a faulty motor or drive belt.</p>
+                                        <p>Also check for debris, such as tiplets.</p>
+                                        <h3><a name="Panther"></a>Spring and Pusher</h3>
+                                        <p>The issue in the MTU queue causing the problem is the plastic pusher at the end of the queue, by where the LD picks the MTU. I found the carrier fallen over when trying to pick the empty one from the queue.</p>
+                                        <p>Basically, the springs in the pusher are too strong. Therefore the pusher pushes the MTU down too hard, causing the MTU to be at an angle when it is the last one on the carrier. Because the MTU does not sit perfectly in the slot, the carrier hits into it when being taken out of the queue, or when being put back in. A photograph of the MTU appears below. Since the pusher/springs are not orderable, the entire module needs to be swapped.</p>
+                                        <p>I have run into an issue caused by these springs being too strong in the past. This error came in the form of an <em>MTU stacking error</em> in the queue. I have tried shaving down the plastic part, but the issue came back, so the entire module was replaced. Would it be possible for these springs/pushers to be orderable in the future?</p>
+                                        <p>
+                                            <img src="../../Resources/Images/Messages/258.000.00013_MTUsInputQueue-2.png" /> <img src="../../Resources/Images/Messages/258.000.00013_MTUsInputQueue-3.png" /></p>
+                                        <h4>Resolution</h4>
+                                        <p>There are two springs up top. In the past, sometimes an extra spring would coil together doubling the force. It is worthwhile to check.</p>
+                                        <p>The pusher force can be adjusted by bending the forked pusher spring slightly.</p>
+                                        <p>An obstruction may prevent the input drawer from closing completely. This prevents the latch from falling, which obstructs the pusher movement.</p>
+                                        <h4>Test</h4>
+                                        <p>Using Service Software, pack some MTUs.</p>
+                                        <p>If the motor does not stop and keeps pushing for an excessive amount of time, it is likely due to a faulty encoder.</p>
+                                        <h3><a name="Ball"></a>Ball Detent Latch</h3>
+                                        <p>
+                                            <img src="../../Resources/Images/Messages/258.000.00013_MTUsInputQueue-4_514x665.png" style="width: 514;height: 665;" />
+                                        </p>
+                                        <h3><a name="Drawer"></a>Drawer Latch Adjustment</h3>
+                                        <p>Input queue step loss errors, or unable to initialize due to input queue drawer not pushed in all the way.</p>
+                                        <p>The drawer latch cannot drop, which prevents the pusher from moving into initial position, or away.</p>
+                                        <ol style="list-style-type: upper-alpha;">
+                                            <li value="1">
+                                                <p>Drawer latch and latch block cannot drop into place correctly.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Pin on pusher cannot move if latch does not drop down.</p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Messages/258.000.00013_MTUsInputQueue54.png" />
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Loose detent foot, I do not recall the machined IQ having the same issue.</p>
+                                                <p>New foot, which comes with casted IQ. This design seems problematic, as it often gets loose.  Clamped down with screw, but force is front to back.</p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Messages/258.000.00013_MTUsInputQueue-5.png" />
+                                                </p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Drawer flag / home sensor positioning, protruding too far forward during assembly, or FSE adjusted because detent foot fell off before?</p>
+                                                <p>
+                                                    <img src="../../Resources/Images/Messages/258.000.00013_MTUsInputQueue-6.png" />
+                                                </p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../../Resources/Images/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

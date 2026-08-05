@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-conditions="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Analyze Flags and Message Codes</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/PantherTSGStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../Resources/TableStyles/Rows.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+        <script src="../../Skins/Default/Scripts/Topic Toolbar for Test.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-dropdown" style="display:none;" id="#centralSmallScreen"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../Startup/TS_Startup_1.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                    <div class="central-dropdown" style="display:none;" id="#centralTop"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="central-dropdown" style="display:none;"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar_for_Test mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <img alt="Print" src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <img alt="Expand all" src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherTSG@hologic.onmicrosoft.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="H1_Blue">Analyze Flags and Message Codes</h1>
+                                        <p colspan="2">This topic explains how to analyze flags and message codes, to determine which module generated the code.</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><b style="color: #000000; font-style: normal;">TABLE&#160;OF&#160;CONTENTS<br /></b><br /></a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <ul>
+                                                    <li colspan="2" value="1">
+                                                        <p><a href="#Recommen" class="MCXref xref">Recommended Analysis Procedure
+for Error or Processing Code</a>
+                                                        </p>
+                                                    </li>
+                                                    <li colspan="2" value="2">
+                                                        <p><a href="#Using" class="MCXref xref">Use the Results Log for Flags</a>
+                                                        </p>
+                                                    </li>
+                                                    <li colspan="2" value="3">
+                                                        <p><a href="#Use" class="MCXref xref">Use the Message Log for Error Codes</a>
+                                                        </p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p><a href="#Decipher" class="MCXref xref">Decipher the Event ID Number</a>
+                                                        </p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p><a href="#Discussi" class="MCXref xref">Module ID Number </a>
+                                                        </p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p><a href="#Discussi2" class="MCXref xref">SubUnit Number</a>
+                                                        </p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p><a href="#Discussi3" class="MCXref xref">Message Number</a>
+                                                        </p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p><a href="#Use2" class="MCXref xref">Use the ViewLog</a>
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <h3><a name="Recommen"></a>Recommended Analysis Procedure
+for Error or Processing Code</h3>
+                                        <table style="margin-left: 0;margin-right: auto;width: 638px;">
+                                            <col style="width: 645px;">
+                                            </col>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <p>Perform this procedure for either Error codes, or Processing codes:</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <ol>
+                                                            <li value="1">Review the <i>Result Log</i> for flags (i.e., result and assay processing codes) and <i>Message (Event) Log</i> for messages (i.e., message Event ID error codes).</li>
+                                                        </ol>
+                                                        <p style="margin-left: 30pt;">If no Message/Event Log is available, then review the <i style="font-weight: bold;">When Message/Event Log has been purged</i> section below.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p>
+                                                            <img src="../Resources/Images/Messages_real-time PANTHER screen.png" />
+                                                        </p>
+                                                        <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #0000ff;">1 - PC&#160;Event &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;2 - COP&#160;Event</span></p>
+                                                        <p>The Event ID number signifies what type of event is occurring (i. e., PC or COP&#160;event as shown in the graphic above.)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <ol start="2">
+                                                            <li value="2">Review the <i>Message (Event) Log</i> to find the local time stamp and event/flag that was assigned during assay processing. Search for the <i>oldest entry's</i> local <b>Date and Time</b> and <b>Event ID</b> number.</li>
+                                                        </ol>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p colspan="2">When the Message/Event Log has been purged:</p>
+                                                        <ul>
+                                                            <li colspan="2" value="1"> Select <b>Reports</b> button in the Panther Menu bar.</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p>
+                                                            <img src="../Resources/Images/Reports_real-time PANTHER screen.png" />
+                                                        </p>
+                                                        <p>The <b>Report Menu</b> will appear that shows all of the possible reports, checklists, worklists, and logs available for review.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <ul>
+                                                            <li colspan="2" value="1"> In the Report Menu, select the applicable <b>Creation Date</b> option to find the Panther's Historical Data that contains the particular time period that needs to be investigated in the Message/Event Log information. </li>
+                                                            <li colspan="2" value="2">Select <b>View</b> (or <b>Print</b>) to review the Message Log for the chosen Creation Date. (These buttons are located at the bottom edge of the Report Menu screen.)</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h3><a name="Using"></a>Use the <em style="font-style: normal;">Results Log </em>for Flags</h3>
+                                        <table style="margin-left: 0;margin-right: auto;width: 638px;">
+                                            <col style="width: 647px;">
+                                            </col>
+                                            <col style="width: ;" />
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="2">Perform this procedure to find any result or assay processing codes:</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <ul>
+                                                            <li colspan="2" value="1"> Select <b>Results</b> in the PANTHER Menu bar.</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>&#160;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <p>
+                                                            <img src="../Resources/Images/Results (log)_real-time PANTHER Screen.png" />
+                                                        </p>
+                                                        <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #0000ff;">1 - Assay Processing Code &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;2 - Result Processing Code(s)</span></p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <ul>
+                                                            <li colspan="2" value="1">The Results Log for the <i>selected Completion Date</i> will appear.</li>
+                                                            <li colspan="2" value="2">Review the entire fifth column (moving left-to-right) for both result and/or assay processing codes (i.e., for any result or assay flags).</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>&#160;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h3><a name="Use"></a>Use the Message Log for Error Codes</h3>
+                                        <table style="margin-left: 0;margin-right: auto;width: 638px;">
+                                            <col style="width: 647px;">
+                                            </col>
+                                            <col style="width: ;" />
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="2">Perform this procedure to find any result or assay processing codes:</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <ul>
+                                                            <li colspan="2" value="1"> Select <b>Messages</b> button in the PANTHER Menu bar</li>
+                                                            <li colspan="2" value="2">The Message Log (table) for the <i>selected Completion Date</i> will appear.</li>
+                                                            <li colspan="2" value="3">Review the entire <b>Event ID</b> column for any suspectious result and/or assay processing codes (i.e., for any flags).</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h3><a name="Decipher"></a>Decipher the Event ID Number</h3>
+                                        <p>The Event ID number format is <b>NNN</b>.NNN.NNNNN, where:</p>
+                                        <ul>
+                                            <li value="1">The first number set or <b>NNN</b>." is the Module ID number for all events that post from any COP&#160;or device firmware. </li>
+                                            <li value="2">The second number set or ".NNN." is the SubUnit ID number which specifies the subunit in which the event occurred.</li>
+                                            <li value="3">The third number set or ".NNNNN" is the Message Number which specifies the acutal event that occurred. The message event numbers are documented in the module design description of the firmware. For PC event numbers are defined in the file <i>PCEVENTS.TXT</i>.</li>
+                                        </ul>
+                                        <h3><a name="Discussi"></a>Module ID Number </h3>
+                                        <p>As described in the last section, the Module ID number is the first number set of the Event ID&#160;Number.</p>
+                                        <p>Each PANTHER module's CAN Bus Address is the Module ID number which ranges from 0 to 255. On the PC side, the CAN Bus Address for the Module ID number ranges from 256 to 511.</p>
+                                        <p>The Module ID number is mapped to a certain dynamic link library (.dll) module, and  from this library module is where the event is generated.</p>
+                                        <p>The tables of Module ID numbers for <i>COP and PC&#160;Event Messages</i> are provided as a reference guide for determining the effected module: </p>
+                                        <table class="TableStyle-Rows" style="margin-left: auto;margin-right: auto;caption-side: top;mc-table-style: url('../Resources/TableStyles/Rows.css');" cellspacing="0">
+                                            <caption><strong>Module ID numbers for COP Event Messages</strong>
+                                            </caption>
+                                            <col style="width: 60px;" class="TableStyle-Rows-Column-Column1" />
+                                            <col style="width: 60px;" class="TableStyle-Rows-Column-Column1" />
+                                            <col style="width: 340px;" class="TableStyle-Rows-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-Rows-Head-Header1">
+                                                    <th class="TableStyle-Rows-HeadE-Column1-Header1" colspan="2">Instrument <br />Module ID</th>
+                                                    <th class="TableStyle-Rows-HeadD-Column1-Header1" rowspan="2">&#160; Module Name</th>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Head-Header1">
+                                                    <th class="TableStyle-Rows-HeadE-Column1-Header1" colspan="2" style="padding: 0px;">
+                                                        <table style="width: 100%;">
+                                                            <col />
+                                                            <col />
+                                                            <tbody>
+                                                                <tr bgcolor="#87cefa">
+                                                                    <td>(dec)</td>
+                                                                    <td>(hex)</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">000</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">00</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> COP</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">003</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">03</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> COP_PWRMON</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">004</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">04</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> COP_VALVES</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">005</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">05</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> COP_0x05</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">006</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">06</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> COP_MTUMONITOR</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">016</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">10</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> LINDIST_SLEDGE</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">017</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">11</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> LINDIST_X</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">018</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">12</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> LINDIST_HOOK</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">024</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">18</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> VACUUM_COOLING (aka Cooling Module)</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">025</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">19</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> FRONTCOVER</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">032</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">20</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> HIGH TEMP. INCUBATOR (Incubator1)</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">033</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">21</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> TRANSITION INCUBATOR (Incubator2) </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">034</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">22</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> AMP. INCUBATOR (Incubator3)</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">048</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">30</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> MAGNETIC WASH STATION 1 (Washer 1)</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">049</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">31</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> MAGNETIC&#160;WASH STATION 2  (Washer 2)</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">050</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">32</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> OIL&#160;PUMP (Oil_Injection_Pump)</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">051</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">33</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">WASH&#160;PUMP (Wash_Injection_Pump)</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">052</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">34</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> RFID MODULE</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">064</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">40</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> LUMINOMETER</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">065</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">41</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> AD1 (Autodetect1_Pump)</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">066</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">42</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> AD2 (Autodetect2_Pump)</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">080</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">50</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">MTU INPUT&#160;QUEUE (InputQueue) </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">081</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">51</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> OUTPUTQUEUE</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">082</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">52</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> DEACTIVATION PUMP (Flextube_DQ_Pump)</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">096</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">60</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> SAMPLE&#160;BAY (Sample_Module)</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">097</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">61</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> SAMPLE MIX STATION (Sampleloadstation)</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">098</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">62</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> CHILLER&#160;RAMP&#160;SLOTS (Chiller)</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">112</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">70</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> REAGENT BAY (Reagent_Module)</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">113</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">71</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> TCR_CAROUSEL</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">114</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">72</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> AMPLOADSTATION</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">115</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">73</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> HPALOADSTATION</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">144</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">90</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> REAGENT_PIP_PUMP</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">145</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;">91</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> SAMPLE_PIP_PUMP</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">152</td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;">98</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> PUMPMONITOR</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body1" style="text-align: center;">253</td>
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body1" style="text-align: center;">FD</td>
+                                                    <td class="TableStyle-Rows-BodyA-Column1-Body1"> PIPETTOR</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="TableStyle-Rows" style="margin-left: auto;margin-right: auto;caption-side: top;mc-table-style: url('../Resources/TableStyles/Rows.css');" cellspacing="0">
+                                            <caption><strong>Module ID numbers for PC Event Messages</strong>
+                                            </caption>
+                                            <col style="width: 60px;" class="TableStyle-Rows-Column-Column1" />
+                                            <col style="width: 60px;" class="TableStyle-Rows-Column-Column1" />
+                                            <col style="width: 240px;" class="TableStyle-Rows-Column-Column1" />
+                                            <thead>
+                                                <tr class="TableStyle-Rows-Head-Header1">
+                                                    <th class="TableStyle-Rows-HeadE-Column1-Header1" colspan="2">PC <br />Module ID</th>
+                                                    <th class="TableStyle-Rows-HeadD-Column1-Header1" rowspan="2">&#160; Module Name</th>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Head-Header1">
+                                                    <th class="TableStyle-Rows-HeadE-Column1-Header1" colspan="2" style="padding: 0px;">
+                                                        <p>(dec)</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;" colspan="2">257</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> Manual Actions</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;" colspan="2">258</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> Loading Management</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;" colspan="2">259</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> Process Management</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;" colspan="2">260</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> Maintenance</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;" colspan="2">261</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> Test Order Management</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;" colspan="2">262</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> Inventory Management </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;" colspan="2">263</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> Logging Module</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;" colspan="2">264</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> Pipettor Module</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;" colspan="2">265</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> Hex Dump Manager</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;" colspan="2">266</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> Dummy COP</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;" colspan="2">267</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> IC&#160;Main</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;" colspan="2">268</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> Assay Process Verification</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;" colspan="2">269</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> System State Manager</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;" colspan="2">270</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> Audible Alarm Management</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;" colspan="2">271</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> Assay Manager</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;" colspan="2">272</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> Test Order Factory</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;" colspan="2">273</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">LIS<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Laboratory Information System.</span></a> Interface</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;" colspan="2">356</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> Assay State Manager</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;" colspan="2">357</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> KDT_Data Reduction</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;" colspan="2">358</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> ETF_Data Reduction</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;" colspan="2">359</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> AC2_Data Reduction</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;" colspan="2">360</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> AptimaHPV_Data Reduction</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1" style="text-align: center;" colspan="2">406</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1"> PANTHER UI</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2" style="text-align: center;" colspan="2">407</td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2"> PANTHER Interface</td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body1" style="text-align: center;" colspan="2">456</td>
+                                                    <td class="TableStyle-Rows-BodyA-Column1-Body1"> Data Manager</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h3 style="margin-top: 2em;"><a name="Discussi2"></a>SubUnit Number</h3>
+                                        <p>The SubUnit number further details the origin of the event.</p>
+                                        <h3><a name="Discussi3"></a>Message Number</h3>
+                                        <p>Both COP&#160;and PC&#160;events are subject to localization, specifically, during the build process, the two files are converted into a dot.net assembly file (i.e., Eventmessages.dll). This .dll file contains all Event messages as string resources, which in turn contain the Event ID&#160;number in a period-separated format.</p>
+                                        <h3><a name="Use2"></a>Use the ViewLog</h3>
+                                        <p>This log can be viewed by opening the <i>ViewLog</i> application from within PANTHER Tools or through the Remote Dashboard (using its menu path <b>File</b> &gt; <b>View Log</b>. This log lists all the events or flags with assigned 'local time' and 'UTC&#160;GMT'&#160;time stamps.</p>
+                                        <p>While viewing the ViewLog data, the <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">FSE<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>Field Service Engineer.</span></a>&#160;should perform root cause analysis, then identify the instrument problem by using the step-by-step procedure in the Service Software.</p>
+                                        <table style="border-bottom-style: solid;border-bottom-width: 0px;margin-left: 0;margin-right: auto;caption-side: top;">
+                                            <col style="width: 645px;">
+                                            </col>
+                                            <tbody>
+                                                <tr>
+                                                    <td><span style="color: #0000ff;">&lt;Photo of ViewLog with the EventLogEntries tab selected.&gt;</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p>The EventLogEntries tab</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <ol>
+                                                            <li value="1">Click the EventLogEntries tab to obtain the local and GMT time stamps for all events or flags that occurred during a particular day (see ViewLog capture above).</li>
+                                                        </ol>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="color: #0000ff;"><span style="color: #0000ff;">&lt;Photo of ViewLog with the Log tab selected (with 7 elements in command string being number-labeled.&gt;</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <ol start="2">
+                                                            <li value="2">Click the Log tab to see specific error message codes (listed under the Content column). These message codes are listed by their occurrence associated Date, Time, Thread, Class Name, Category, and Error Level.</li>
+                                                            <li value="3">The Content column contains the Receipt Command String for each message/flag code. This command string includes the affected:</li>
+                                                        </ol>
+                                                        <blockquote>
+                                                            <ul>
+                                                                <li value="1">Device address</li>
+                                                                <li value="2">Answer ID</li>
+                                                                <li value="3">Receive State</li>
+                                                                <li value="4">Subassembly name</li>
+                                                                <li value="5">Error or warning</li>
+                                                                <li value="6">Position</li>
+                                                                <li value="7">Options</li>
+                                                            </ul>
+                                                        </blockquote>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../Resources/Images/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

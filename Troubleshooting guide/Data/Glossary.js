@@ -1,0 +1,1 @@
+define({numchunks:1,prefix:'Glossary_Chunk',terms:[{t:'ASTM',c:0},{t:'ASTM 1381',c:0},{t:'ASTM 1394',c:0},{t:'CLSI',c:0},{t:'Frame',c:0},{t:'FSE',c:0},{t:'GUI',c:0},{t:'Handshaking',c:0},{t:'LIS',c:0},{t:'LIS01-A2',c:0},{t:'LIS02-A2',c:0},{t:'My Term',c:0},{t:'RS-232',c:0},{t:'Serial Port',c:0},{t:'TSE',c:0}]});

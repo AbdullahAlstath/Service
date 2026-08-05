@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Login Failure for Dashboard Command Service Login</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/PantherTSGStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+        <script src="../../Skins/Default/Scripts/Topic Toolbar for Test.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-dropdown" style="display:none;" id="#centralSmallScreen"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../Startup/TS_Startup_1.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                    <div class="central-dropdown" style="display:none;" id="#centralTop"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="central-dropdown" style="display:none;"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar_for_Test mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <img alt="Print" src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <img alt="Expand all" src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherTSG@hologic.onmicrosoft.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="H1_Blue">Login Failure for Dashboard Command Service Login</h1>
+                                        <h3>Error Code</h3>
+                                        <p>When attempting to login to Dashboard Command, received <em>Login failed</em> at the top-right of the browser window.</p>
+                                        <p>
+                                            <img src="../Resources/Images/Networking/LoginFailure-1.png" />
+                                        </p>
+                                        <h5>Pop-up box that appears when login fails.</h5>
+                                        <h3>Complaint Description</h3>
+                                        <p>To log into any Panther Dashboard Command via Service Login, regardless of region, use your Hologic Single Sign-On user nameas the user, also knows as the  Domain User Name, in conjunction with a one-time password generated from an authenticator app, such as Okta Verify, Google Authenticator or Authy.</p>
+                                        <p><strong>Note:</strong> For instructions on generating or creating a one-time password, see TB-01603: <em>Using Time-Based One-Time Authentication</em>.</p>
+                                        <p>Success of time-based authentication is dependent on accurate time on both the device with the authenticator app, as well as the device the one-time passwords are being input on.</p>
+                                        <p>Repeated login failures are likely due to the Dashboard Command time being incorrectly set.</p>
+                                        <p>
+                                            <img src="../Resources/Images/Networking/LoginFailure-2.png" />
+                                        </p>
+                                        <h5>Example shows Dashboard Command’s time at the bottom-left of the screen.</h5>
+                                        <p><strong>Note:</strong> Dashboard Command time cannot be set without an administrator’s password.</p>
+                                        <h1 class="H1_Blue">Technical Support</h1>
+                                        <p>N/A</p>
+                                        <h1 class="H1_Blue">Field Service</h1>
+                                        <p>There are two possible resolutions to this issue: (1) login using the customer’s admin credentials; (2) generate a one-time password based on the Dashboard Command’s current time. Both are equally effective, but the first may not be possible depending on available resources.</p>
+                                        <h3>Properly Set Time via Standard Login, Retry Service Login</h3>
+                                        <p>It is possible to change the time on Dashboard Command without Service Login.</p>
+                                        <h4>Resolution:</h4>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Contact the site’s local Molecular Applications Specialist (MAS) or the customer’s lab manager to retrieve the password for Dashboard Command.</p>
+                                                <p><strong>Note:</strong> The default username for the Dashboard’s administrator account is ‘admin’. The MAS or customer may have set an alternate administrator username.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>With this password, navigate to the Dashboard (Standard) Login.</p>
+                                                <p>
+                                                    <img src="../Resources/Images/Networking/LoginFailure-3.png" /> <img src="../Resources/Images/Networking/LoginFailure-4.png" /></p>
+                                                <h5> Note the difference between Dashboard Login and Service Login.</h5>
+                                            </li>
+                                            <li value="3">
+                                                <p>Login with the credentials from Step 1. Once logged in, the wording at the top-right changes from <em>Login </em>to <em>Logout</em>.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>To change Dashboard Command time, click the menu button at the top-right, and navigate to <em>Administrator &gt; System</em>.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>In the Time Zone / Date and Time pane, select the appropriate location for Time Zone, then set the correct date and time in the <em>Change To</em> field.</p>
+                                                <p>
+                                                    <img src="../Resources/Images/Networking/LoginFailure-5.png" />
+                                                </p>
+                                                <h5>Set date and time in the Time Zone / Date and Time pane.</h5>
+                                                <p><strong>Note:</strong> Dashboard Command will automatically account for the time zone and properly set UTC/GMT time.</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Click <strong>Save </strong>at the bottom-right of the Time Zone / Date and Time pane. If the time changed, the system will automatically reboot. Reboot completes in approximately two to five minutes.</p>
+                                            </li>
+                                        </ol>
+                                        <h4>Test:</h4>
+                                        <p>When reboot completes, reattempt Service Login using Hologic Single Sign-On credentials and One-Time Password from your authenticator app.</p>
+                                        <h3>Retrieve One-Time Password for Specified Time via SalesForce QR Code Generator, Properly Set Time, Retry Login</h3>
+                                        <p>Within SalesForce, and the SalesForce app, it is possible to retrieve the designated one-time password for any given moment in time.</p>
+                                        <h4>Resolution:</h4>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Access SalesForce via web browser or mobile device app on the iPhone or iPad.</p>
+                                                <ol style="list-style-type: lower-alpha;">
+                                                    <li value="1">
+                                                        <p>If using web browser, click the Service Console App drop-down, and find QR Code Generator. If the QR Code Generator app is not available, click the ‘Edit’ button at the bottom, select the ‘Add More Items’ button at the top-right of the window, find ‘QR Code Generator’, and add the Nav Item. Click into the QR Code Generator to access it.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <div class="NewRowClass1">If using SalesForce app, click the Menu button at the bottom-right, click the ‘All Items’ field at the top, and search ‘QR’. It should pull up the QR Code Generator. Click the QR Code Generator.</div>
+                                                        <div class="NewRowClass1">
+                                                            <img src="../Resources/Images/Networking/LoginFailure-6.png" />
+                                                        </div>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                            <li value="2">
+                                                <p>At the QR Code Generator, under Software, click or press ‘Dashboard Command v1.0’ in the box.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Click the radio button for ‘Passcode’. A new section opens below it.</p>
+                                                <p>
+                                                    <img src="../Resources/Images/Networking/LoginFailure-7.png" />
+                                                </p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Under the Date field, input the UTC date listed on Dashboard Command.</p>
+                                                <p><strong>Note:</strong> This may differ from the current date.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Under the time field, input the UTC time listed on Dashboard Command, with a one to two minute buffer.</p>
+                                                <p><strong>Example:</strong> If the UTC time is listed as 15:06:40, enter 15:07:40 for the time. You want to generate a code for 60 seconds in the future, so when Dashboard Command UTC time reaches 15:07:40, you have the appropriate code for that time.</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Click <strong>Generate</strong>. After processing, a section below appears that lists the Time Specific Passcode, valid for the time and dates you specified in steps 4 and 5.</p>
+                                                <p>
+                                                    <img src="../Resources/Images/Networking/LoginFailure-8.png" />
+                                                </p>
+                                            </li>
+                                            <li value="7">
+                                                <p>Attempt Service Login using your Hologic Single Sign-On and the Time Specific Passcode retrieved in Step 6.</p>
+                                            </li>
+                                            <li value="8">
+                                                <p>To change Dashboard Command time, click the menu button at the top-right, and navigate to <em>Administrator &gt; System</em>.</p>
+                                            </li>
+                                            <li value="9">
+                                                <p> In the Time Zone / Date and Time pane, select the appropriate location for Time Zone, and change it to the current time.</p>
+                                                <p>
+                                                    <img src="../Resources/Images/Networking/LoginFailure-9.png" />
+                                                </p>
+                                                <h5>Time Zone / Date and Time location.</h5>
+                                                <p><strong>Note:</strong> Dashboard Command will automatically account for the time zone and properly set UTC/GMT time.</p>
+                                            </li>
+                                            <li value="10">
+                                                <p> Click <strong>Save </strong>at the bottom-right of the Time Zone / Date and Time pane. If the time changed, the system will automatically reboot. Reboot completes in approximately two to five minutes.</p>
+                                            </li>
+                                        </ol>
+                                        <h4>Test:</h4>
+                                        <p>When reboot completes, reattempt Service Login using Hologic Single Sign-On credentials and One-Time Password from your authenticator app.</p>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../Resources/Images/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_Updated_Side_Nav" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-conditions="Default.Shared" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Pipettor Curves</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/PantherTSGStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.expand-all-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/expand.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.feedback-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/Feedback.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.back-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/Back Arrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.forward-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/ForwardArrow.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/collapse.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../Resources/TableStyles/Rows.css" rel="stylesheet" />
+        <script src="../Good_Bad_Curves/mapper.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+        <script src="../../Skins/Default/Scripts/Topic Toolbar for Test.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-dropdown" style="display:none;" id="#centralSmallScreen"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../Startup/TS_Startup_1.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                    <div class="central-dropdown" style="display:none;" id="#centralTop"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="central-dropdown" style="display:none;"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Topic_Toolbar_for_Test mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <img alt="Print" src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <img alt="Expand all" src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie feedback-button" onclick="document.location.href=&quot;mailto:PantherTSG@hologic.onmicrosoft.com?subject=Feedback (Topic: &quot;+document.title+&quot;)&amp;body=File: &quot;+ location.href + &quot;%0A%0AComments:%0A%0A&quot;;">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie back-button" onclick="window.history.back()">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                            <button class="button needs-pie forward-button" onclick="window.history.forward()">
+                                                <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" class="invisible-label" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div role="main" id="mc-main-content">
+                                        <h1 class="H1_Blue">Pipettor Curves</h1>
+                                        <p>Pipettor Curves contains these sections:</p>
+                                        <ul>
+                                            <li value="1">
+                                                <p><a href="#Backgrou" class="MCXref xref">Background</a>
+                                                </p>
+                                            </li>
+                                            <li value="2">
+                                                <p><a href="#Aspirati" class="MCXref xref">AspirationPressureCurve, DispensePressureCurve, ShearingPressure, and SideCarPressure</a>
+                                                </p>
+                                            </li>
+                                            <li value="3">
+                                                <p><a href="#C-LLD," class="MCXref xref">C-LLD, C-LLD1, C-LLD2, PostDispCapLLD, and SidecarCLLD</a>
+                                                </p>
+                                            </li>
+                                            <li value="4">
+                                                <p><a href="#LLDValue" class="MCXref xref">LLDValues, SidecarLLDValues, and SidecarHardstopValues</a>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <h3><a name="Backgrou"></a>Background</h3>
+                                        <p>Pipettor curves are recorded readings of sensor outputs for specific processes.</p>
+                                        <p>Limits are set for each specific assay, to account for differences in formulation and volume needs.</p>
+                                        <p>The pipettor collects data and analyzes it in real time, then transmits it from the pipettor to the COP and over to the local workstation. Then the data is written into the curve file.</p>
+                                        <p><em>Short version:</em> Pipettor curves are generated when pipettor is performing level sense, aspirate, and dispense.</p>
+                                        <p><em>Long version:</em> A pipettor will pick a tip, move to aspirate location, performs level sense fluid (C-LLD, LLDValues).  A shearing step (ShearingPressure) is performed for capped sample tubes, aspirates fluid (AspirationPressureCurve), spits back to prime dispense (DispensePressureCurve), pulls a travelling air gap, then moves to dispense location.</p>
+                                        <ul>
+                                            <li value="1">
+                                                <p>For reagent, fluid will be dispensed (DispensePressureCurve) in tubes with tests.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>For sample, a bubble pop (C-LLD1) then TCR|FCR (C-LLD) will be measured, then sample will be dispensed another bubble pop (C-LLD2) and final measurement(PostDispenseCapLLD).</p>
+                                            </li>
+                                        </ul>
+                                        <p>Pipettor then moves to tip eject location and ejects tip into tip chute.</p>
+                                        <p>Processes performed with Fusion reagent pipettor will have a “Sidecar” prefix.</p>
+                                        <p>References for detailed explanation:</p>
+                                        <ul>
+                                            <li value="1">
+                                                <p>MDD_FW_APP_6319</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>CDD_FW_6319_APE_ZSPip-EC</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>MTU Storyboard</p>
+                                            </li>
+                                        </ul>
+                                        <p>List of curve files for Panther and Fusion Pipettors.</p>
+                                        <p>
+                                            <img src="Images/Curves_Pipettor-1_645x515.png" style="width: 645;height: 515;" />
+                                        </p>
+                                        <p><em>Figure 1 - Curve folder view of pipettor related curve files.</em>
+                                        </p>
+                                        <p>“x” indicates reagent type.  E.g. TCR, TER, FCR, FER, Amplification, Probe, Promoter, Sample, etc.</p>
+                                        <p><em>Table 1 - File type, XY axis and use summary.</em>
+                                        </p>
+                                        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Rows.css');" class="TableStyle-Rows" cellspacing="0">
+                                            <col class="TableStyle-Rows-Column-Column1" />
+                                            <col class="TableStyle-Rows-Column-Column1" style="width: 125px;" />
+                                            <col class="TableStyle-Rows-Column-Column1" style="width: 140px;" />
+                                            <col class="TableStyle-Rows-Column-Column1" style="width: 360px;" />
+                                            <thead>
+                                                <tr class="TableStyle-Rows-Head-Header1">
+                                                    <th class="TableStyle-Rows-HeadE-Column1-Header1">
+                                                        <p>File Type</p>
+                                                    </th>
+                                                    <th class="TableStyle-Rows-HeadE-Column1-Header1">
+                                                        <p>X-axis unit</p>
+                                                    </th>
+                                                    <th class="TableStyle-Rows-HeadE-Column1-Header1">
+                                                        <p>Y-axis unit</p>
+                                                    </th>
+                                                    <th class="TableStyle-Rows-HeadD-Column1-Header1">
+                                                        <p>Typical uses</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>File Type</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Xaxis unit</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Yaxis unit</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Typical uses</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>AspirationPressureCurves</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Time</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Pressure</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>CLT, RAFx</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>C-LLD</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Time</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Frequency</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Used for liquid level detection</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>C-LLD1</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Time</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Frequency</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Pre-dispense bubble pop, MTU only</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>C-LLD2</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Time</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Frequency</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Post-dispense bubble pop, MTU only</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>DispensePressureCurve</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Time</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Pressure</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>RDFx + RDV value</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>LLDValues</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>MTU</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Encoder Steps</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Measures fluid volume, RVHx, RVHLx, VVFS</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>PostDispCapLLD</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Time</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Frequency</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Used for liquid level detection in MTU</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>ShearingPressure</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Time</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Pressure</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>PFS, overpressure</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>SidecarBLLD</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Time</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Pressure</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>Fusion oil pack – RVHO, RBEO</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>SidecarCLLD</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Time</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Frequency</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Level sense recon buffer - RBxxRB</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>SidecarHardstopValues</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>MTU</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body2">
+                                                        <p>Encoder steps</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body2">
+                                                        <p>CHF, MHF</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body1">
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>SidecarLLDValues</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>MTU</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyE-Column1-Body1">
+                                                        <p>Encoder steps</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyD-Column1-Body1">
+                                                        <p>Oil, Recon level sense values</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Rows-Body-Body2">
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body2">
+                                                        <p>SidecarPressure</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body2">
+                                                        <p>Time</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyB-Column1-Body2">
+                                                        <p>Pressure</p>
+                                                    </td>
+                                                    <td class="TableStyle-Rows-BodyA-Column1-Body2">
+                                                        <p>Fusion pipettor aspiration and dispense</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <h3><a name="Aspirati"></a>AspirationPressureCurve, DispensePressureCurve, ShearingPressure, and SideCarPressure</h3>
+                                        <p>X-axis is time scale.  Pipettor firmware will maximize data collection, so shorter aspiration times can have longer traces as the firmware is acquiring data more quickly.  In these instances, it’s better to inspect the final pressure.  Y-axis is pressure units.  Each pressure unit is 0.57 Pa.  “RDV” (reagent dispense verification) parameters define the pressure trace and are set by assay.  While “D” represents dispense; the term “RDV” parameters applies to both aspiration and dispense.   The following parameters can be tested against:</p>
+                                        <p>
+                                            <img src="Images/Curves_Pipettor-2_827x560.png" style="width: 827;height: 560;" />
+                                        </p>
+                                        <p><em>Figure 2 - Dispense signal and thresholds , see MDD for full details.</em>
+                                        </p>
+                                        <p>
+                                            <img src="Images/Curves_Pipettor-3_514x165.png" style="width: 514;height: 165;" />
+                                        </p>
+                                        <p><em>Figure 3 - Time stamps at pipette plunger move profile .  TStop = TPumpStop</em>
+                                        </p>
+                                        <p>RDV parameters can be set for AspirationPressureCurve, DispensePressureCurve and SideCarPressure.  RDV parameters can not be set for ShearingPressure.  Shearing pressure monitors the shearing step for sample tubes with caps.</p>
+                                        <p>Aspiration begins after a successful level sense or successful move to set aspiration depth and shearing step has completed (e.g. pierceable sample tube).  Aspiration pressure curve is recorded and processed at the pipettor.</p>
+                                        <p>During aspiration, the process control at this step is not tightly regulated to prevent excessive flagging.   The only processing flag directly related to aspiration pressure event is the CLT flag.  This flag is triggered when the pressure exceeds -28,672 counts (a pressure count unit is 0.57 Pa) and exists to protect the pressure sensor.</p>
+                                        <p>The next two figures display the same data, using two different groupings methods.</p>
+                                        <p>
+                                            <img src="Images/Curves_Pipettor-4.png" />
+                                        </p>
+                                        <p><em>Figure 4 - Aspiration curve, default view is colored by Tube Number in MTU.  As most MTUs will use all 5 tubes, the majority of the traces are black.</em>
+                                        </p>
+                                        <p>
+                                            <img src="Images/Curves_Pipettor-5.png" />
+                                        </p>
+                                        <p><em>Figure  5 - Same data set as Figure 4, aspiration curve color grouped by "assay" reveals inconsistent aspiration pressure with AC2 assay.  As the variability is within assay, the issue could be kit related or caused by tip issue.  Amplification reagent happens to mix easily so reagent prep is not the issue, which leaves the consumable tip.</em>
+                                        </p>
+                                        <p>Dispenses, include spitbacks.  Spitbacks are performed to prime the pipette tip after reagent aspiration with reagent specific process control disabled.  Spitbacks are expected to not be as uniform as actual dispense in MTU.  Here are the parameters for AC2 – TCR dispense found from an assay definition file or “sequence” file:</p>
+                                        <p class="Indent">&lt;RDVParams&gt;</p>
+                                        <p class="Indent">&lt;PMaxMax&gt;6000&lt;/PMaxMax&gt;</p>
+                                        <p class="Indent">&lt;PMaxMin&gt;0&lt;/PMaxMin&gt;</p>
+                                        <p class="Indent">&lt;PRampDownMin&gt;0&lt;/PRampDownMin&gt;</p>
+                                        <p class="Indent">&lt;PStopMin&gt;0&lt;/PStopMin&gt;</p>
+                                        <p class="Indent">&lt;PStaticMin&gt;0&lt;/PStaticMin&gt;</p>
+                                        <p class="Indent">&lt;PStaticMax&gt;0&lt;/PStaticMax&gt;</p>
+                                        <p class="Indent">&lt;PMeanMin&gt;2200&lt;/PMeanMin&gt;</p>
+                                        <p class="Indent">&lt;TRiseMaxStartDelay&gt;0&lt;/TRiseMaxStartDelay&gt;</p>
+                                        <p class="Indent">&lt;TDownMinStopDelay&gt;0&lt;/TDownMinStopDelay&gt;</p>
+                                        <p class="Indent">&lt;THalfMaxPeriodMin&gt;0&lt;/THalfMaxPeriodMin&gt;</p>
+                                        <p class="Indent">&lt;PRefType&gt;Undefined&lt;/PRefType&gt;</p>
+                                        <p class="Indent">&lt;/RDVParams&gt;</p>
+                                        <p>Each of the parameters are assigned a bit value.  If the parameter is triggered the bit is enabled.  Pmax error = RDV2,   Pmean error = RDV64.  It is possible to trigger multiple parameters.   From the above set RDV parameters notice only PMaxMax and PMeanMin are defined.   PMaxMax = maximum pressure value cannot exceed 6000.  PMeanMin = minimum mean pressure must be greater than 2200.  Below is an example of Pmax triggered, generating RDV 2 flags.  (Dispense Flag 2, InstrFlag 2 are synonymous with RDV 2).</p>
+                                        <p>
+                                            <img src="Images/Curves_Pipettor-6.png" />
+                                        </p>
+                                        <p><em>Figure 6 - Pmax triggered for AC2, when Pmax values exceed 6000.  By scanning the Pmax column in curve trend it's easy to determine the cutoff without opening the assay definition XML file.</em>
+                                        </p>
+                                        <p>
+                                            <img src="Images/Curves_Pipettor-7.png" />
+                                        </p>
+                                        <p><em>Figure 7 - Summary plot view of dispense pressure – TCR – Pmax.  Can clearly see a transition around MTU = 42.</em>
+                                        </p>
+                                        <p>The first line of data is the header line, which explains the data within the column. Commonly used columns:</p>
+                                        <p class="Indent">CurveID: is not a column present in raw data.  This value is assigned by curve trend software.</p>
+                                        <p class="Indent">Assay: as previously mentioned process parameters are tied to assay formulation.</p>
+                                        <p class="Indent">ProcessStep or CommandDescription: determines fluid type</p>
+                                        <p class="Indent">DateTime: UTC time</p>
+                                        <p class="Indent">TestOrderID: test order of sample</p>
+                                        <p class="Indent">SampleID: barcode of sample tube</p>
+                                        <p class="Indent">MTUNumber: MTU # since PantherMain was started</p>
+                                        <p class="Indent">MTUID: MTU barcode</p>
+                                        <p class="Indent">InstrFlag: RDV code</p>
+                                        <p class="Indent">Pmax:  Peak pressure</p>
+                                        <p class="Indent">Pmean: Average pressure from from time of TRampEnd through TPumpStop</p>
+                                        <h3><a name="C-LLD,"></a>C-LLD, C-LLD1, C-LLD2, PostDispCapLLD, and SidecarCLLD</h3>
+                                        <p>Liquid level detection can be performed using barometric or capacitive sensor.  Capacitive is normally used as it increases pipettor life span as it reduces the number of plunger cycles.  Barometric is used for oil which cannot be detected using capacitance.  Normal frequency values of capacitive sensor when pipettor is at z-home is shown in service software.  A normal value is in the range of 9,000Hz to 14,000Hz.  The closer the diti is to ground plane, the higher the frequency reading.  The maximum value is 24,000Hz</p>
+                                        <p>
+                                            <img src="Images/Curves_Pipettor-8.png" />
+                                        </p>
+                                        <p><em>Figure  8 - Basics of any capacitive curve.</em>
+                                        </p>
+                                        <p>
+                                            <img src="Images/Curves_Pipettor-9.png" />
+                                        </p>
+                                        <p><em>Figure  9 - Basics of any barometric curve.</em>
+                                        </p>
+                                        <p>The first line of data is the header line, which explains the data within the column. Commonly used columns for LLD values.</p>
+                                        <p class="Indent">CurveID: is not a column present in raw data.  This value is assigned by curve trend software.</p>
+                                        <p class="Indent">Assay: as previously mentioned, process parameters are tied to assay formulation.</p>
+                                        <p class="Indent">ProcessStep or CommandDescription: determines fluid type.</p>
+                                        <p class="Indent">DateTime: UTC time.</p>
+                                        <p class="Indent">TestOrderID: test order of sample.</p>
+                                        <p class="Indent">SampleID: barcode of sample tube.</p>
+                                        <p class="Indent">MTUNumber: MTU # since PantherMain was started.</p>
+                                        <p class="Indent">MTUID: MTU barcode.</p>
+                                        <h3><a name="LLDValue"></a>LLDValues, SidecarLLDValues, and SidecarHardstopValues</h3>
+                                        <p>These values represent z-axis motor steps (20 steps = 1mm, a step is the minimum movement unit of measure).  LLDValues are used to determine if reagent inventory levels are acceptable range otherwise reagent volume too high, reagent volume too low errors or bottle empty errors are generated.  For open tube assays, a minimum fill height in sample tube is required, if not, a quantity insufficient (QNS) error will be generated.  It is important to note, the implementation of liquid detected height reporting before aspiration is as follows:</p>
+                                        <p class="Indent">Liquid not detected: detected height of fluid fails inventory.  reported height is where fluid was detected. No aspiration step is performed.</p>
+                                        <p class="Indent">Liquid detected: detected height of fluid meets inventory requirement. Pipettor will track down into fluid during aspiration. Reported height is final pipettor position after aspiration and not the initial height where fluid was detected.</p>
+                                        <p class="Indent">This rule also applies to reagents.</p>
+                                        <p>LLDValues  also record the pre- and post-sample dispense heights within the MTU to help determine if enough fluid was dispensed; a VVFS error will be generated when this is incorrect.  SidecarLLDValues, does the same but for the Fusion side of the instrument.</p>
+                                        <p>SidecarHardstopValues is used when capacitive and barometric level sensing are ineffective.  Fusion pipettor will detect the bottom of the MTU or cartridge by driving to a hard stop.  The pipettor will then move away a set distance and aspirate fluid.</p>
+                                        <p>The first line of data is the header line, which explains the data within the column. Commonly used columns for LLD values:</p>
+                                        <p class="Indent">CurveID: is not a column present in raw data.  This value is assigned by curve trend software.</p>
+                                        <p class="Indent">Assay: as previously mentioned, process parameters are tied to assay formulation.</p>
+                                        <p class="Indent">ProcessStep or CommandDescription: determines fluid type.</p>
+                                        <p class="Indent">DateTime: UTC time.</p>
+                                        <p class="Indent">TestOrderID: test order of sample.</p>
+                                        <p class="Indent">SampleID: barcode of sample tube</p>
+                                        <p class="Indent">MTUNumber: MTU # since PantherMain was started.</p>
+                                        <p class="Indent">MTUID: MTU barcode.</p>
+                                        <p class="Indent">LldResultType: reports if level detection was successful or not.</p>
+                                        <p class="Indent">LldHeight: measured fluid height from software defined bottom of container.</p>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <hr width="100%" size="0" align="center" />
+                                    <p>Click the <img src="../Resources/Images/Feedback button1_22x22.png" style="width: 22;height: 22;" /> button at the top of the page to send feedback, comments, or change requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
