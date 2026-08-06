@@ -21,3 +21,6 @@ _mnt_sync_test.txt
 # Temp working dirs
 ppm_pages_tmp/
 test_marks/
+
+# Non-deploy scratch/source (kept locally, excluded from site)
+_deploy_ignore/
