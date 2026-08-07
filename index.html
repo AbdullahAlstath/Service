@@ -1935,7 +1935,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
   <div class="hero">
     <h2><em>ServicePal</em></h2>
     <p class="hero-tag">Service support, elevated to another level</p>
-    <div class="home-actions"><button class="home-action-btn" onclick="if(window.afmsOpenSearch)afmsOpenSearch()">🔎 Search</button><button class="home-action-btn" onclick="if(window.afmsShowDetails)afmsShowDetails()">👤 My details</button><button class="home-action-btn" onclick="if(window.afmsShowHistory)afmsShowHistory()">🗂 Report history</button><button class="home-action-btn" onclick="openModules()" title="How the common lab modules work">📚 Lab Module Reference</button></div>
+    <div class="home-actions"><button class="home-action-btn" onclick="if(window.afmsOpenSearch)afmsOpenSearch()">🔎 Search</button><button class="home-action-btn" onclick="if(window.afmsShowDetails)afmsShowDetails()">👤 My details</button><button class="home-action-btn" onclick="if(window.afmsShowHistory)afmsShowHistory()">🗂 Report history</button><button class="home-action-btn" onclick="openCart()" title="Consolidated parts order cart">🛒 Order cart <span id="cartBadge" class="cart-badge"></span></button><button class="home-action-btn" onclick="openModules()" title="How the common lab modules work">📚 Lab Module Reference</button></div>
     <button class="pwa-install-btn" id="pwaInstallBtn" onclick="pwaInstall()" aria-label="Install ServicePal app">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
       Install App
@@ -3697,7 +3697,7 @@ function bmToggle(device, code, btnEl) {
 
 function bmBtnHtml(device, code) {
   const on = bmGet(device).has(code);
-  return `<button class="pcard-bm sp-tip${on?' bm-on':''}" data-tip="${on?'Remove bookmark':'Save to bookmarks'}" aria-label="${on?'Remove bookmark':'Save to bookmarks'}" onclick="event.stopPropagation();bmToggle('${device}','${code}',this)">${on?'★':'☆'}</button>`;
+  return `<button class="pcard-bm sp-tip${on?' bm-on':''}" data-tip="${on?'Remove bookmark':'Save to bookmarks'}" aria-label="${on?'Remove bookmark':'Save to bookmarks'}" onclick="event.stopPropagation();bmToggle('${device}','${code}',this)">${on?'★':'☆'}</button><button class="pcard-cart sp-tip" data-tip="Add to order cart" aria-label="Add to order cart" onclick="event.stopPropagation();cartAdd(this,'${device}','${code}')">🛒</button>`;
 }
 
 // ── Recently Viewed ──
@@ -9963,5 +9963,165 @@ html.night #viewPANTHER .pcard-badge,html.night #viewAMICORE .pcard-badge{backgr
 html.night .pm-menu .mk{background:#1e293b!important;color:#e2e8f0!important}
 html.night .pm-preset,html.night .pm-gen{background:#16283a!important;border-color:#2c4a63!important}
 </style>
+<style id="cartStyle">
+.pcard-cart{background:none;border:1px solid var(--b1,#d7deea);border-radius:4px;padding:2px 7px;font-size:11px;color:var(--t3,#64748b);cursor:pointer;line-height:1.4;transition:border-color .15s,color .15s;white-space:nowrap}
+.pcard-cart:hover{border-color:#2563eb;color:#2563eb}
+.pcard-cart.cart-added{border-color:#22c55e;color:#22c55e}
+#viewPANTHER .pcard-cart,#viewAMICORE .pcard-cart{background:#f6f8fc;border:1px solid #e5e9f2;color:#4b5563;border-radius:7px;padding:4px 9px;font-weight:600}
+html.night .pcard-cart{border-color:#2c4a63;color:#cfe0f0}
+#mActions .pcard-cart{font-size:13px;padding:8px 13px;border-radius:9px}
+.cart-badge{display:none;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:#e11d48;color:#fff;font-size:11px;font-weight:700;align-items:center;justify-content:center;line-height:18px}
+.cartov{position:fixed;inset:0;background:rgba(6,12,24,.55);backdrop-filter:blur(3px);display:none;align-items:flex-start;justify-content:center;z-index:9999;padding:40px 14px;overflow:auto}
+.cartov.open{display:flex}
+.cartbox{width:100%;max-width:560px;background:#fff;border-radius:16px;box-shadow:0 24px 70px rgba(0,0,0,.4);overflow:hidden}
+html.night .cartbox{background:#101b30;color:#e7edf8}
+.cart-hd{display:flex;align-items:center;gap:10px;padding:16px 18px;border-bottom:1px solid #eef1f6;font-weight:700;font-size:17px}
+html.night .cart-hd{border-color:#22304f}
+.cart-hd .x{margin-left:auto;background:none;border:none;font-size:22px;cursor:pointer;color:#94a3b8;line-height:1}
+.cart-list{max-height:52vh;overflow:auto;padding:6px 10px}
+.cart-item{display:flex;gap:10px;align-items:center;padding:9px 8px;border-bottom:1px solid #f1f4f9}
+html.night .cart-item{border-color:#1c2b45}
+.cart-item img{width:46px;height:46px;object-fit:contain;background:#fff;border:1px solid #eee;border-radius:8px;flex:0 0 46px}
+.ci-ph{width:46px;height:46px;display:flex;align-items:center;justify-content:center;background:#f1f5fb;border-radius:8px;font-size:22px;flex:0 0 46px}
+.ci-name{font-size:13px;font-weight:600;color:#0f172a;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+html.night .ci-name{color:#e7edf8}
+.ci-meta{font-size:11px;color:#64748b;margin-top:3px}
+.ci-code{font-family:ui-monospace,Consolas,monospace;background:#eef2fb;color:#2f4bd0;border:1px solid #dbe3fb;border-radius:5px;padding:1px 6px;font-size:11px}
+html.night .ci-code{background:#13233c;color:#9cc3ff;border-color:#1c3355}
+.ci-qty{display:flex;align-items:center;gap:6px;margin-left:auto}
+.ci-qty button{width:24px;height:24px;border-radius:6px;border:1px solid #d7deea;background:#f7f9fc;cursor:pointer;font-size:15px;color:#334155;line-height:1}
+html.night .ci-qty button{background:#16283a;border-color:#2c4a63;color:#cfe0f0}
+.ci-qty span{min-width:22px;text-align:center;font-weight:700}
+.ci-rm{background:none;border:none;color:#e11d48;cursor:pointer;font-size:15px;margin-left:2px}
+.cart-ft{padding:14px 18px;border-top:1px solid #eef1f6;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+html.night .cart-ft{border-color:#22304f}
+.cart-req{flex:1 1 100%}
+.cart-req input{width:100%;padding:8px 10px;border:1px solid #d7deea;border-radius:8px;font-size:13px;background:#fff;color:#0f172a}
+html.night .cart-req input{background:#0a1428;border-color:#2c4a63;color:#e7edf8}
+.cart-btn{border:none;border-radius:9px;padding:9px 14px;font-size:13px;font-weight:600;cursor:pointer}
+.cart-btn.primary{background:#2563eb;color:#fff}
+.cart-btn.ghost{background:#f1f5fb;color:#334155;border:1px solid #e5e9f2}
+html.night .cart-btn.ghost{background:#16283a;color:#cfe0f0;border-color:#2c4a63}
+.cart-btn.danger{background:none;color:#e11d48;border:1px solid #f3c6d0;margin-left:auto}
+.cart-empty{padding:40px 20px;text-align:center;color:#94a3b8;line-height:1.7}
+.cart-toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:#0f172a;color:#fff;padding:10px 18px;border-radius:10px;font-size:13px;opacity:0;transition:.25s;z-index:10000;pointer-events:none}
+</style>
+<script id="orderCart">
+(function(){
+  var KEY='sp_cart';
+  var DEVNAME={lxl:'LIAISON XL',cl1200:'CL-1200i / 1000i',cl900:'CL-900i',etimax:'ETI-MAX 3000',bioflash:'BIO-FLASH',wadiana:'WADiana',eflexis:'Erytra Eflexis',panther:'Panther System',amicore:'AmiCORE'};
+  function get(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')||[];}catch(e){return[];}}
+  function save(a){try{localStorage.setItem(KEY,JSON.stringify(a));}catch(e){}badge();}
+  function count(){return get().reduce(function(n,i){return n+(i.qty||1);},0);}
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function toast(m){var t=document.getElementById('cartToast');if(!t){t=document.createElement('div');t.id='cartToast';t.className='cart-toast';document.body.appendChild(t);}t.textContent=m;t.style.opacity='1';clearTimeout(t._t);t._t=setTimeout(function(){t.style.opacity='0';},1900);}
+  function badge(){var b=document.getElementById('cartBadge');if(b){var c=count();b.textContent=c?c:'';b.style.display=c?'inline-flex':'none';}}
+  window.cartAdd=function(btn,device,code){
+    var name='',image='';
+    var card=btn.closest('.pcard');
+    if(card){
+      var n=card.querySelector('.pcard-name');name=n?((n.getAttribute('title')||n.textContent)||'').trim():'';
+      var im=card.querySelector('.pcard-photo img')||card.querySelector('img');image=im?im.getAttribute('src'):'';
+    }else{
+      var mt=document.getElementById('mTitle');if(mt)name=(mt.textContent||'').trim();
+      var scope=btn.closest('.pan-modal,#amiModalBox,.afms-modal,.modal-body,[id^=mBody]')||document;
+      if(!name){var h=scope.querySelector('h3,h2,.pcard-name,#mTitle');if(h)name=(h.textContent||'').trim();}
+      var im2=scope.querySelector('img');if(im2)image=im2.getAttribute('src');
+    }
+    if(!code)return;
+    var a=get(),found=null;
+    for(var i=0;i<a.length;i++){if(a[i].code===code&&a[i].device===device){found=a[i];break;}}
+    if(found)found.qty=(found.qty||1)+1;else a.push({device:device,code:code,name:name||code,image:image||'',qty:1});
+    save(a);
+    btn.textContent='✓';btn.classList.add('cart-added');setTimeout(function(){btn.textContent='🛒';btn.classList.remove('cart-added');},1100);
+    toast((found?'Increased quantity in':'Added to')+' order cart');
+  };
+  window.cartInc=function(i,d){var a=get();if(a[i]){a[i].qty=Math.max(1,(a[i].qty||1)+d);save(a);renderCart();}};
+  window.cartRemove=function(i){var a=get();a.splice(i,1);save(a);renderCart();};
+  window.cartClear=function(){if(get().length&&confirm('Clear the whole order cart?')){save([]);renderCart();}};
+  function renderCart(){
+    var a=get(),box=document.getElementById('cartBody');if(!box)return;
+    var cc=document.getElementById('cartCount');if(cc)cc.textContent=count();
+    if(!a.length){box.innerHTML='<div class="cart-empty">🛒 Your order cart is empty.<br>Add parts from any device with the 🛒 button.</div>';return;}
+    var html='';
+    a.forEach(function(it,i){
+      var ph=it.image?('<img src="'+esc(it.image)+'" onerror="this.outerHTML=\'<div class=&quot;ci-ph&quot;>📦</div>\'">'):'<div class="ci-ph">📦</div>';
+      html+='<div class="cart-item">'+ph+'<div style="min-width:0;flex:1"><div class="ci-name" title="'+esc(it.name)+'">'+esc(it.name)+'</div><div class="ci-meta"><span class="ci-code">'+esc(it.code)+'</span> · '+esc(DEVNAME[it.device]||it.device)+'</div></div>'
+        +'<div class="ci-qty"><button onclick="cartInc('+i+',-1)">−</button><span>'+it.qty+'</span><button onclick="cartInc('+i+',1)">+</button></div>'
+        +'<button class="ci-rm" title="Remove" onclick="cartRemove('+i+')">🗑</button></div>';
+    });
+    box.innerHTML=html;
+  }
+  window.renderCart=renderCart;
+  function copyRich(html,plain){
+    function fb(){var ta=document.createElement('textarea');ta.value=plain;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast('Order email copied — paste into your email');}catch(e){toast('Copy failed');}document.body.removeChild(ta);}
+    try{
+      if(navigator.clipboard&&window.ClipboardItem){
+        var item=new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain],{type:'text/plain'})});
+        navigator.clipboard.write([item]).then(function(){toast('Order email copied — paste into your email');}).catch(fb);
+      }else fb();
+    }catch(e){fb();}
+  }
+  window.cartCopyEmail=function(){
+    var a=get();if(!a.length){toast('Cart is empty');return;}
+    var reqBy=(document.getElementById('cartReqBy')||{}).value||'';
+    var rowsP='',rowsH='';
+    a.forEach(function(it){
+      rowsP+=it.code+'\t'+it.name+'\t'+(DEVNAME[it.device]||it.device)+'\t'+it.qty+'\n';
+      rowsH+='<tr><td style="border:1px solid #999;padding:6px 10px">'+esc(it.code)+'</td><td style="border:1px solid #999;padding:6px 10px">'+esc(it.name)+'</td><td style="border:1px solid #999;padding:6px 10px">'+esc(DEVNAME[it.device]||it.device)+'</td><td style="border:1px solid #999;padding:6px 10px;text-align:center">'+it.qty+'</td></tr>';
+    });
+    var plain='Dear [Coordinator Name],\n\nKindly check the availability of the following parts:\n\nPart Number\tPart Name\tDevice\tQuantity\n'+rowsP+'\n'+(reqBy?('Requested by: '+reqBy+'\n\n'):'')+'Regards.';
+    var html='<div>Dear [Coordinator Name],</div><div><br></div><div>Kindly check the availability of the following parts:</div><div><br></div><table style="border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px"><thead><tr><th style="border:1px solid #999;background:#f0f3f7;padding:6px 10px;text-align:left">Part Number</th><th style="border:1px solid #999;background:#f0f3f7;padding:6px 10px;text-align:left">Part Name</th><th style="border:1px solid #999;background:#f0f3f7;padding:6px 10px;text-align:left">Device</th><th style="border:1px solid #999;background:#f0f3f7;padding:6px 10px">Qty</th></tr></thead><tbody>'+rowsH+'</tbody></table><div><br></div>'+(reqBy?('<div>Requested by: '+esc(reqBy)+'</div>'):'')+'<div>Regards.</div>';
+    copyRich(html,plain);
+  };
+  window.cartExportPDF=async function(){
+    var a=get();if(!a.length){toast('Cart is empty');return;}
+    try{
+      var L=PDFLib,doc=await L.PDFDocument.create();
+      var font=await doc.embedFont(L.StandardFonts.Helvetica),bold=await doc.embedFont(L.StandardFonts.HelveticaBold);
+      var page=doc.addPage([595,842]),y=795;
+      function cl(s){return String(s==null?'':s).replace(/[^\x20-\x7E]/g,function(c){var m={'–':'-','—':'-','’':"'","‘":"'",'“':'"','”':'"','°':'deg','µ':'u','·':'-'};return m[c]||'';});}
+      page.drawText('Parts Order Request',{x:40,y:y,size:20,font:bold,color:L.rgb(0.12,0.24,0.45)});y-=16;
+      page.drawText('AFMS ServicePal',{x:40,y:y,size:9,font:font,color:L.rgb(.5,.55,.62)});y-=24;
+      var date=new Date().toISOString().slice(0,10);
+      var reqBy=(document.getElementById('cartReqBy')||{}).value||'';
+      page.drawText('Date: '+date,{x:40,y:y,size:10,font:font});
+      if(reqBy)page.drawText('Requested by: '+cl(reqBy),{x:230,y:y,size:10,font:font});
+      y-=24;
+      var X={no:40,code:70,desc:150,dev:390,qty:528};
+      page.drawRectangle({x:38,y:y-5,width:519,height:20,color:L.rgb(.93,.95,.99)});
+      var hc=L.rgb(.2,.28,.42);
+      page.drawText('#',{x:X.no,y:y,size:9,font:bold,color:hc});page.drawText('Part No',{x:X.code,y:y,size:9,font:bold,color:hc});page.drawText('Description',{x:X.desc,y:y,size:9,font:bold,color:hc});page.drawText('Device',{x:X.dev,y:y,size:9,font:bold,color:hc});page.drawText('Qty',{x:X.qty,y:y,size:9,font:bold,color:hc});
+      y-=20;
+      a.forEach(function(it,i){
+        if(y<50){page=doc.addPage([595,842]);y=795;}
+        page.drawText(String(i+1),{x:X.no,y:y,size:9,font:font});
+        page.drawText(cl(it.code).slice(0,14),{x:X.code,y:y,size:9,font:font});
+        page.drawText(cl(it.name).slice(0,40),{x:X.desc,y:y,size:9,font:font});
+        page.drawText(cl(DEVNAME[it.device]||it.device).slice(0,18),{x:X.dev,y:y,size:9,font:font});
+        page.drawText(String(it.qty),{x:X.qty,y:y,size:9,font:font});
+        y-=17;page.drawLine({start:{x:38,y:y+6},end:{x:557,y:y+6},thickness:.4,color:L.rgb(.9,.92,.95)});
+      });
+      y-=8;page.drawText('Total line items: '+a.length+'    Total quantity: '+count(),{x:40,y:y,size:9,font:bold});
+      var bytes=await doc.save(),blob=new Blob([bytes],{type:'application/pdf'}),url=URL.createObjectURL(blob),el=document.createElement('a');
+      el.href=url;el.download='AFMS_Parts_Order_'+date+'.pdf';document.body.appendChild(el);el.click();el.remove();URL.revokeObjectURL(url);
+      toast('Order PDF downloaded');
+    }catch(e){toast('PDF export failed');console.error(e);}
+  };
+  function ensureModal(){
+    if(document.getElementById('cartOv'))return;
+    var ov=document.createElement('div');ov.id='cartOv';ov.className='cartov';
+    ov.innerHTML='<div class="cartbox" role="dialog" aria-label="Order cart"><div class="cart-hd">🛒 Order Cart <span style="color:#64748b;font-weight:500;font-size:14px">(<span id="cartCount">0</span> qty)</span><button class="x" aria-label="Close" onclick="closeCart()">×</button></div><div class="cart-list" id="cartBody"></div><div class="cart-ft"><div class="cart-req"><input id="cartReqBy" placeholder="Requested by (optional) — added to email &amp; PDF"></div><button class="cart-btn primary" onclick="cartCopyEmail()">✉ Copy order email</button><button class="cart-btn ghost" onclick="cartExportPDF()">⬇ Export PDF</button><button class="cart-btn danger" onclick="cartClear()">Clear</button></div></div>';
+    ov.addEventListener('click',function(e){if(e.target===ov)closeCart();});
+    document.body.appendChild(ov);
+    var ri=ov.querySelector('#cartReqBy');ri.value=localStorage.getItem('sp_cart_reqby')||'';ri.addEventListener('input',function(){localStorage.setItem('sp_cart_reqby',ri.value);});
+  }
+  window.openCart=function(){ensureModal();renderCart();document.getElementById('cartOv').classList.add('open');};
+  window.closeCart=function(){var o=document.getElementById('cartOv');if(o)o.classList.remove('open');};
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')window.closeCart&&window.closeCart();});
+  if(document.readyState!=='loading')badge();else document.addEventListener('DOMContentLoaded',badge);
+})();
+</script>
+
 </body>
 </html>
