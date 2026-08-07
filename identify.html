@@ -91,7 +91,7 @@ function idbSet(k,v){return idb().then(function(db){return new Promise(function(
 function loadImg(src){return new Promise(function(res){var im=new Image();im.onload=function(){res(im);};im.onerror=function(){res(null);};im.src=src;});}
 function squareCanvas(src,sw,sh){var size=224,cv=document.createElement('canvas');cv.width=size;cv.height=size;var ctx=cv.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,size,size);var s=Math.max(sw,sh),dw=sw/s*size,dh=sh/s*size;ctx.drawImage(src,0,0,sw,sh,(size-dw)/2,(size-dh)/2,dw,dh);return cv;}
 function embed(cv){var t=model.infer(cv,true);return t.data().then(function(d){t.dispose();var s=0,k;for(k=0;k<d.length;k++)s+=d[k]*d[k];s=Math.sqrt(s)+1e-6;var v=new Float32Array(d.length);for(k=0;k<d.length;k++)v[k]=d[k]/s;return v;});}
-function ensureModel(){if(modelP)return modelP;status('Loading recognition model…');modelP=mobilenet.load({version:2,alpha:0.50}).then(function(m){model=m;return m;});return modelP;}
+function ensureModel(){if(modelP)return modelP;status('Loading recognition model… (first time only — then cached in your browser)');modelP=mobilenet.load({version:2,alpha:1.0}).then(function(m){model=m;return m;});return modelP;}
 function renderDevices(){var h='';DEVORDER.forEach(function(d){if(!counts[d])return;h+='<div class="dev" onclick="pickDevice(\''+d+'\')"><span class="ic">'+(DEVICON[d]||'🔧')+'</span><div><div class="t">'+DEVNAME[d]+'</div><div class="c">'+counts[d]+' parts</div></div></div>';});document.getElementById('devs').innerHTML=h;}
 async function pickDevice(d){
   sel=d;document.getElementById('deviceScreen').style.display='none';document.getElementById('workspace').style.display='block';
@@ -105,7 +105,7 @@ async function pickDevice(d){
 function backToDevices(){document.getElementById('workspace').style.display='none';document.getElementById('deviceScreen').style.display='block';document.getElementById('subline').style.display='block';document.getElementById('status').style.display='none';document.getElementById('results').innerHTML='<div class="empty">Matches will appear here.</div>';document.getElementById('cropArea').style.display='none';document.getElementById('leftEmpty').style.display='block';loadedImg=null;}
 async function buildDeviceIndex(d){
   IDX=[];for(var i=0;i<N;i++)if(META[i].device===d)IDX.push(i);
-  var key='dev_'+d+'_'+IDX.length;
+  var key='v2full_'+d+'_'+IDX.length;
   try{var c=await idbGet(key);if(c&&c.dim&&c.buf&&c.buf.byteLength===IDX.length*c.dim*4){DIM=c.dim;EMB=new Float32Array(c.buf);return;}}catch(e){}
   EMB=null;DIM=0;
   for(var k=0;k<IDX.length;k++){
@@ -143,9 +143,14 @@ document.getElementById('goBtn').addEventListener('click',async function(){
   if(!loadedImg||!EMB){toast('Pick a photo first');return;}
   var w=srcImg.clientWidth,h=srcImg.clientHeight,sx=loadedImg.naturalWidth/w,sy=loadedImg.naturalHeight/h;
   var bx=parseFloat(cropbox.style.left),by=parseFloat(cropbox.style.top),bw=cropbox.offsetWidth,bh=cropbox.offsetHeight;
-  var cv=squareCanvasCrop(loadedImg,bx*sx,by*sy,bw*sx,bh*sy);
   document.getElementById('results').innerHTML='<div class="empty">Matching…</div>';
-  var q=await embed(cv);showResults(topMatch(q));
+  var rx=bx*sx,ry=by*sy,rw=bw*sx,rh=bh*sy;
+  var q1=await embed(squareCanvasCrop(loadedImg,rx,ry,rw,rh));
+  var ex=rw*0.15,ey=rh*0.15;
+  var q2=await embed(squareCanvasCrop(loadedImg,Math.max(0,rx-ex),Math.max(0,ry-ey),rw+2*ex,rh+2*ey));
+  var q=new Float32Array(DIM),kk,ss=0;for(kk=0;kk<DIM;kk++){q[kk]=q1[kk]+q2[kk];}
+  for(kk=0;kk<DIM;kk++)ss+=q[kk]*q[kk];ss=Math.sqrt(ss)+1e-6;for(kk=0;kk<DIM;kk++)q[kk]/=ss;
+  showResults(topMatch(q));
 });
 function squareCanvasCrop(img,sxp,syp,sw,sh){var size=224,cv=document.createElement('canvas');cv.width=size;cv.height=size;var ctx=cv.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,size,size);ctx.drawImage(img,sxp,syp,sw,sh,0,0,size,size);return cv;}
 // init
