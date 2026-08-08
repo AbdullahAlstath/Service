@@ -155,6 +155,7 @@ document.getElementById('goBtn').addEventListener('click',async function(){
 function squareCanvasCrop(img,sxp,syp,sw,sh){var size=224,cv=document.createElement('canvas');cv.width=size;cv.height=size;var ctx=cv.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,size,size);ctx.drawImage(img,sxp,syp,sw,sh,0,0,size,size);return cv;}
 // init
 renderDevices();
+(function(){var qd=new URLSearchParams(location.search).get('device'); if(qd&&counts[qd]){setTimeout(function(){pickDevice(qd);},50);}})();
 if(typeof mobilenet!=='undefined'&&typeof tf!=='undefined'){ensureModel();}else{status('⚠ Needs internet on first run to load the AI model.');}
 </script><script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}</script>
 </body></html>

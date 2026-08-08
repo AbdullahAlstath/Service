@@ -1935,7 +1935,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
   <div class="hero">
     <h2><em>ServicePal</em></h2>
     <p class="hero-tag">Service support, elevated to another level</p>
-    <div class="home-actions"><button class="home-action-btn" onclick="if(window.afmsOpenSearch)afmsOpenSearch()">🔎 Search</button><button class="home-action-btn" onclick="if(window.afmsShowDetails)afmsShowDetails()">👤 My details</button><button class="home-action-btn" onclick="if(window.afmsShowHistory)afmsShowHistory()">🗂 Report history</button><button class="home-action-btn" onclick="openCart()" title="Consolidated parts order cart">🛒 Order cart <span id="cartBadge" class="cart-badge"></span></button><button class="home-action-btn" onclick="location.href='identify.html'" title="Identify a part from a photo">📷 Identify part</button><button class="home-action-btn" onclick="openModules()" title="How the common lab modules work">📚 Lab Module Reference</button></div>
+    <div class="home-actions"><button class="ha-btn" onclick="if(window.afmsOpenSearch)afmsOpenSearch()"><span class="ha-ic">🔎</span><span class="ha-lb">Search</span></button><button class="ha-btn" onclick="if(window.afmsShowDetails)afmsShowDetails()"><span class="ha-ic">👤</span><span class="ha-lb">My details</span></button><button class="ha-btn" onclick="if(window.afmsShowHistory)afmsShowHistory()"><span class="ha-ic">🗂</span><span class="ha-lb">Report history</span></button><button class="ha-btn" onclick="openCart()" title="Consolidated parts order cart"><span class="ha-ic">🛒<span id="cartBadge" class="cart-badge"></span></span><span class="ha-lb">Order cart</span></button><button class="ha-btn" onclick="location.href='identify.html'" title="Identify a part from a photo"><span class="ha-ic">📷</span><span class="ha-lb">Identify part</span></button><button class="ha-btn" onclick="openModules()" title="How the common lab modules work"><span class="ha-ic">📚</span><span class="ha-lb">Lab Module Ref.</span></button></div>
     <button class="pwa-install-btn" id="pwaInstallBtn" onclick="pwaInstall()" aria-label="Install ServicePal app">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
       Install App
@@ -1959,6 +1959,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
       </ul>
     </div>
   </div>
+  <div class="devices-label">Devices</div>
   <div class="device-grid">
     <div class="device-card" onclick="openDevice('LXL')">
       <div class="dc-banner lxl"><img class="dc-photo" src="assets/img/4a7ca57faa93b582f46199ac61b8026e.jpg" alt="LIAISON XL"></div>
@@ -2131,7 +2132,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
 <div id="lxlPanelParts" class="panel active docs-layout">
   <div class="pLeft" style="width:100%;border-right:none">
     <div class="toolbar">
-      <div class="search-wrap"><span class="sico">🔍</span><input type="text" id="lxlSearchIn" placeholder="Search part name, code, or symptom…" oninput="dbFilter(filterLXLParts)"></div>
+      <button class="id-part-btn" onclick="location.href='identify.html?device=lxl'">📷 Identify a part by photo</button><div class="search-wrap"><span class="sico">🔍</span><input type="text" id="lxlSearchIn" placeholder="Search part name, code, or symptom…" oninput="dbFilter(filterLXLParts)"></div>
       <div class="filter-row"><select id="lxlTypeFilter" onchange="filterLXLParts()"><option value="">All categories</option>
 <option value="ACCESSORY">🔧 ACCESSORY</option>
 <option value="CABINET">🗄️ CABINET</option>
@@ -2185,20 +2186,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
     </div>
   </div>
 </div>
-<div id="lxlPanelChat" class="panel notebook-main">
-  <div class="notebook-futuristic-overlay">
-    <div class="ai-circular-button-container">
-      <div class="ai-orbit-1"><div class="ai-orbit-particle"></div></div>
-      <div class="ai-orbit-2"><div class="ai-orbit-particle"></div></div>
-      <div class="ai-orbit-3"><div class="ai-orbit-particle"></div></div>
-      <a class="ai-circular-btn" id="lxlNbBtn" href="#" target="_blank" rel="noopener noreferrer">
-        <div class="ai-circular-btn-icon">🤖</div>
-        <div class="ai-circular-btn-text">Ask Notebook</div>
-        <div class="ai-circular-btn-subtext">LIAISON XL</div>
-      </a>
-    </div>
-  </div>
-</div>
+<div id="lxlPanelChat" class="panel docs-layout"><div class="ai-hero"><div class="ai-bg"><span class="ai-orb o1"></span><span class="ai-orb o2"></span><span class="ai-orb o3"></span><div class="ai-grid"></div><svg class="ai-net" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><line x1="52" y1="70" x2="150" y2="120"/><line x1="150" y1="120" x2="250" y2="80"/><line x1="250" y1="80" x2="340" y2="140"/><line x1="150" y1="120" x2="120" y2="220"/><line x1="120" y1="220" x2="250" y2="240"/><line x1="250" y1="240" x2="340" y2="140"/><line x1="250" y1="80" x2="250" y2="240"/><line x1="52" y1="70" x2="120" y2="220"/><circle cx="52" cy="70" r="3.2"/><circle cx="150" cy="120" r="4" style="animation-delay:.4s"/><circle cx="250" cy="80" r="3.2" style="animation-delay:.8s"/><circle cx="340" cy="140" r="4" style="animation-delay:1.2s"/><circle cx="120" cy="220" r="3.2" style="animation-delay:1.6s"/><circle cx="250" cy="240" r="4" style="animation-delay:2s"/></svg><span class="ai-scan"></span></div><div class="ai-brain"><span class="ai-ring"></span><span class="ai-ring r2"></span>&#129504;</div><div class="ai-title">LIAISON XL &middot; Ask AI</div><div class="ai-desc">Grounded AI Q&amp;A across the LIAISON XL service manual, procedures &amp; parts.</div><a class="ai-open-btn" href="https://notebooklm.google.com/notebook/f42296ae-021b-4b6e-b54d-d12521c7c650" target="_blank" rel="noopener">&#129504; Open NotebookLM &#8599;</a><div class="ai-cap">Opens your LIAISON XL NotebookLM notebook in a new browser tab</div></div></div>
 <div id="lxlPanelPpm" class="panel"><div class="ppm-wrap" id="lxlPpmWrap"></div></div>
 </div>
 <button class="qc-bubble" id="lxlQcBubble" onclick="toggleQuickChat('lxl')" title="Quick Chat">🔧<span class="qc-bubble-text">Quick Chat</span></button>
@@ -2301,7 +2289,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
 <div id="cl1200PanelParts" class="panel active docs-layout">
   <div class="pLeft" style="width:100%;border-right:none">
     <div class="toolbar">
-      <div class="search-wrap"><span class="sico">🔍</span><input type="text" id="cl1200SearchIn" placeholder="Search part name or code…" oninput="dbFilter(filterCL1200Parts)"></div>
+      <button class="id-part-btn" onclick="location.href='identify.html?device=cl1200'">📷 Identify a part by photo</button><div class="search-wrap"><span class="sico">🔍</span><input type="text" id="cl1200SearchIn" placeholder="Search part name or code…" oninput="dbFilter(filterCL1200Parts)"></div>
       <div class="filter-row"><select id="cl1200TypeFilter" onchange="filterCL1200Parts()"><option value="">All categories</option>
 <option value="PCB">💡 PCB</option>
 <option value="MODULE">🧩 MODULE</option>
@@ -2341,20 +2329,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
     </div>
   </div>
 </div>
-<div id="cl1200PanelChat" class="panel notebook-main">
-  <div class="notebook-futuristic-overlay">
-    <div class="ai-circular-button-container">
-      <div class="ai-orbit-1"><div class="ai-orbit-particle"></div></div>
-      <div class="ai-orbit-2"><div class="ai-orbit-particle"></div></div>
-      <div class="ai-orbit-3"><div class="ai-orbit-particle"></div></div>
-      <a class="ai-circular-btn" id="cl1200NbBtn" href="#" target="_blank" rel="noopener noreferrer">
-        <div class="ai-circular-btn-icon">🤖</div>
-        <div class="ai-circular-btn-text">Ask Notebook</div>
-        <div class="ai-circular-btn-subtext">CL-1200i / CL-1000i</div>
-      </a>
-    </div>
-  </div>
-</div>
+<div id="cl1200PanelChat" class="panel docs-layout"><div class="ai-hero"><div class="ai-bg"><span class="ai-orb o1"></span><span class="ai-orb o2"></span><span class="ai-orb o3"></span><div class="ai-grid"></div><svg class="ai-net" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><line x1="52" y1="70" x2="150" y2="120"/><line x1="150" y1="120" x2="250" y2="80"/><line x1="250" y1="80" x2="340" y2="140"/><line x1="150" y1="120" x2="120" y2="220"/><line x1="120" y1="220" x2="250" y2="240"/><line x1="250" y1="240" x2="340" y2="140"/><line x1="250" y1="80" x2="250" y2="240"/><line x1="52" y1="70" x2="120" y2="220"/><circle cx="52" cy="70" r="3.2"/><circle cx="150" cy="120" r="4" style="animation-delay:.4s"/><circle cx="250" cy="80" r="3.2" style="animation-delay:.8s"/><circle cx="340" cy="140" r="4" style="animation-delay:1.2s"/><circle cx="120" cy="220" r="3.2" style="animation-delay:1.6s"/><circle cx="250" cy="240" r="4" style="animation-delay:2s"/></svg><span class="ai-scan"></span></div><div class="ai-brain"><span class="ai-ring"></span><span class="ai-ring r2"></span>&#129504;</div><div class="ai-title">CL-1200i / 1000i &middot; Ask AI</div><div class="ai-desc">Grounded AI Q&amp;A across the CL-1200i / 1000i service manual, procedures &amp; parts.</div><a class="ai-open-btn" href="https://notebooklm.google.com/notebook/b57b972e-0ab9-4bec-afb0-81118bf62737" target="_blank" rel="noopener">&#129504; Open NotebookLM &#8599;</a><div class="ai-cap">Opens your CL-1200i / 1000i NotebookLM notebook in a new browser tab</div></div></div>
 <div id="cl1200PanelPpm" class="panel"><div class="ppm-wrap" id="cl1200PpmWrap"></div></div>
 </div>
 <button class="qc-bubble" id="cl1200QcBubble" onclick="toggleQuickChat('cl1200')" title="Quick Chat">🔧<span class="qc-bubble-text">Quick Chat</span></button>
@@ -2450,7 +2425,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
 <div id="cl900PanelParts" class="panel active docs-layout">
   <div class="pLeft" style="width:100%;border-right:none">
     <div class="toolbar">
-      <div class="search-wrap"><span class="sico">🔍</span><input type="text" id="cl900SearchIn" placeholder="Search part name, code, or symptom…" oninput="dbFilter(filterCL900Parts)"></div>
+      <button class="id-part-btn" onclick="location.href='identify.html?device=cl900'">📷 Identify a part by photo</button><div class="search-wrap"><span class="sico">🔍</span><input type="text" id="cl900SearchIn" placeholder="Search part name, code, or symptom…" oninput="dbFilter(filterCL900Parts)"></div>
       <div class="filter-row"><select id="cl900TypeFilter" onchange="filterCL900Parts()"><option value="">All categories</option>
 <option value="CABLE">🔌 CABLE</option>
 <option value="CONNECTOR">🔗 CONNECTOR</option>
@@ -2495,20 +2470,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
     </div>
   </div>
 </div>
-<div id="cl900PanelChat" class="panel notebook-main">
-  <div class="notebook-futuristic-overlay">
-    <div class="ai-circular-button-container">
-      <div class="ai-orbit-1"><div class="ai-orbit-particle"></div></div>
-      <div class="ai-orbit-2"><div class="ai-orbit-particle"></div></div>
-      <div class="ai-orbit-3"><div class="ai-orbit-particle"></div></div>
-      <a class="ai-circular-btn" id="cl900NbBtn" href="#" target="_blank" rel="noopener noreferrer">
-        <div class="ai-circular-btn-icon">🤖</div>
-        <div class="ai-circular-btn-text">Ask Notebook</div>
-        <div class="ai-circular-btn-subtext">CL-900i</div>
-      </a>
-    </div>
-  </div>
-</div>
+<div id="cl900PanelChat" class="panel docs-layout"><div class="ai-hero"><div class="ai-bg"><span class="ai-orb o1"></span><span class="ai-orb o2"></span><span class="ai-orb o3"></span><div class="ai-grid"></div><svg class="ai-net" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><line x1="52" y1="70" x2="150" y2="120"/><line x1="150" y1="120" x2="250" y2="80"/><line x1="250" y1="80" x2="340" y2="140"/><line x1="150" y1="120" x2="120" y2="220"/><line x1="120" y1="220" x2="250" y2="240"/><line x1="250" y1="240" x2="340" y2="140"/><line x1="250" y1="80" x2="250" y2="240"/><line x1="52" y1="70" x2="120" y2="220"/><circle cx="52" cy="70" r="3.2"/><circle cx="150" cy="120" r="4" style="animation-delay:.4s"/><circle cx="250" cy="80" r="3.2" style="animation-delay:.8s"/><circle cx="340" cy="140" r="4" style="animation-delay:1.2s"/><circle cx="120" cy="220" r="3.2" style="animation-delay:1.6s"/><circle cx="250" cy="240" r="4" style="animation-delay:2s"/></svg><span class="ai-scan"></span></div><div class="ai-brain"><span class="ai-ring"></span><span class="ai-ring r2"></span>&#129504;</div><div class="ai-title">CL-900i &middot; Ask AI</div><div class="ai-desc">Grounded AI Q&amp;A across the CL-900i service manual, procedures &amp; parts.</div><a class="ai-open-btn" href="https://notebooklm.google.com/notebook/b57b972e-0ab9-4bec-afb0-81118bf62737" target="_blank" rel="noopener">&#129504; Open NotebookLM &#8599;</a><div class="ai-cap">Opens your CL-900i NotebookLM notebook in a new browser tab</div></div></div>
 </div>
 <button class="qc-bubble" id="cl900QcBubble" onclick="toggleQuickChat('cl900')" title="Quick Chat">🔧<span class="qc-bubble-text">Quick Chat</span></button>
 <div class="qc-popup" id="cl900QcPopup">
@@ -2610,7 +2572,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
 <div id="etimaxPanelParts" class="panel active docs-layout">
   <div class="pLeft" style="width:100%;border-right:none">
     <div class="toolbar">
-      <div class="search-wrap"><span class="sico">🔍</span><input type="text" id="etimaxSearchIn" placeholder="Search part name, code, or symptom…" oninput="dbFilter(filterETIMAXParts)"></div>
+      <button class="id-part-btn" onclick="location.href='identify.html?device=etimax'">📷 Identify a part by photo</button><div class="search-wrap"><span class="sico">🔍</span><input type="text" id="etimaxSearchIn" placeholder="Search part name, code, or symptom…" oninput="dbFilter(filterETIMAXParts)"></div>
       <div class="filter-row"><select id="etimaxTypeFilter" onchange="filterETIMAXParts()"><option value="">All categories</option>
 <option value="ACCESSORY">🔧 ACCESSORY</option>
 <option value="WASHER">🚿 WASHER</option>
@@ -2657,20 +2619,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
     </div>
   </div>
 </div>
-<div id="etimaxPanelChat" class="panel notebook-main">
-  <div class="notebook-futuristic-overlay">
-    <div class="ai-circular-button-container">
-      <div class="ai-orbit-1"><div class="ai-orbit-particle"></div></div>
-      <div class="ai-orbit-2"><div class="ai-orbit-particle"></div></div>
-      <div class="ai-orbit-3"><div class="ai-orbit-particle"></div></div>
-      <a class="ai-circular-btn" id="etimaxNbBtn" href="#" target="_blank" rel="noopener noreferrer">
-        <div class="ai-circular-btn-icon">🤖</div>
-        <div class="ai-circular-btn-text">Ask Notebook</div>
-        <div class="ai-circular-btn-subtext">ETIMAX 5</div>
-      </a>
-    </div>
-  </div>
-</div>
+<div id="etimaxPanelChat" class="panel docs-layout"><div class="ai-hero"><div class="ai-bg"><span class="ai-orb o1"></span><span class="ai-orb o2"></span><span class="ai-orb o3"></span><div class="ai-grid"></div><svg class="ai-net" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><line x1="52" y1="70" x2="150" y2="120"/><line x1="150" y1="120" x2="250" y2="80"/><line x1="250" y1="80" x2="340" y2="140"/><line x1="150" y1="120" x2="120" y2="220"/><line x1="120" y1="220" x2="250" y2="240"/><line x1="250" y1="240" x2="340" y2="140"/><line x1="250" y1="80" x2="250" y2="240"/><line x1="52" y1="70" x2="120" y2="220"/><circle cx="52" cy="70" r="3.2"/><circle cx="150" cy="120" r="4" style="animation-delay:.4s"/><circle cx="250" cy="80" r="3.2" style="animation-delay:.8s"/><circle cx="340" cy="140" r="4" style="animation-delay:1.2s"/><circle cx="120" cy="220" r="3.2" style="animation-delay:1.6s"/><circle cx="250" cy="240" r="4" style="animation-delay:2s"/></svg><span class="ai-scan"></span></div><div class="ai-brain"><span class="ai-ring"></span><span class="ai-ring r2"></span>&#129504;</div><div class="ai-title">ETI-MAX 3000 &middot; Ask AI</div><div class="ai-desc">Grounded AI Q&amp;A across the ETI-MAX 3000 service manual, procedures &amp; parts.</div><a class="ai-open-btn" href="https://notebooklm.google.com/notebook/6075b573-fbf5-4f4f-8d9f-6093f52d7e0d" target="_blank" rel="noopener">&#129504; Open NotebookLM &#8599;</a><div class="ai-cap">Opens your ETI-MAX 3000 NotebookLM notebook in a new browser tab</div></div></div>
 <div id="etimaxPanelPpm" class="panel"><div class="ppm-wrap" id="etimaxPpmWrap"></div></div>
 </div>
 <button class="qc-bubble" id="etimaxQcBubble" onclick="toggleQuickChat('etimax')" title="Quick Chat">🔧<span class="qc-bubble-text">Quick Chat</span></button>
@@ -2781,7 +2730,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
 <div id="bioflashPanelParts" class="panel active docs-layout">
   <div class="pLeft" style="width:100%;border-right:none">
     <div class="toolbar">
-      <div class="search-wrap"><span class="sico">🔍</span><input type="text" id="bioflashSearchIn" placeholder="Search part name, code, or symptom…" oninput="dbFilter(filterBIOFLASHParts)"></div>
+      <button class="id-part-btn" onclick="location.href='identify.html?device=bioflash'">📷 Identify a part by photo</button><div class="search-wrap"><span class="sico">🔍</span><input type="text" id="bioflashSearchIn" placeholder="Search part name, code, or symptom…" oninput="dbFilter(filterBIOFLASHParts)"></div>
       <div class="filter-row"><select id="bioflashTypeFilter" onchange="filterBIOFLASHParts()"><option value="">All categories</option>
 <option value="INSTRUMENT">🏭 INSTRUMENT</option>
 <option value="ACCESORIES">🔧 ACCESORIES</option>
@@ -2826,20 +2775,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
     </div>
   </div>
 </div>
-<div id="bioflashPanelChat" class="panel notebook-main">
-  <div class="notebook-futuristic-overlay">
-    <div class="ai-circular-button-container">
-      <div class="ai-orbit-1"><div class="ai-orbit-particle"></div></div>
-      <div class="ai-orbit-2"><div class="ai-orbit-particle"></div></div>
-      <div class="ai-orbit-3"><div class="ai-orbit-particle"></div></div>
-      <a class="ai-circular-btn" id="bioflashNbBtn" href="#" target="_blank" rel="noopener noreferrer">
-        <div class="ai-circular-btn-icon">🤖</div>
-        <div class="ai-circular-btn-text">Ask Notebook</div>
-        <div class="ai-circular-btn-subtext">BIOFLASH 200</div>
-      </a>
-    </div>
-  </div>
-</div>
+<div id="bioflashPanelChat" class="panel docs-layout"><div class="ai-hero"><div class="ai-bg"><span class="ai-orb o1"></span><span class="ai-orb o2"></span><span class="ai-orb o3"></span><div class="ai-grid"></div><svg class="ai-net" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><line x1="52" y1="70" x2="150" y2="120"/><line x1="150" y1="120" x2="250" y2="80"/><line x1="250" y1="80" x2="340" y2="140"/><line x1="150" y1="120" x2="120" y2="220"/><line x1="120" y1="220" x2="250" y2="240"/><line x1="250" y1="240" x2="340" y2="140"/><line x1="250" y1="80" x2="250" y2="240"/><line x1="52" y1="70" x2="120" y2="220"/><circle cx="52" cy="70" r="3.2"/><circle cx="150" cy="120" r="4" style="animation-delay:.4s"/><circle cx="250" cy="80" r="3.2" style="animation-delay:.8s"/><circle cx="340" cy="140" r="4" style="animation-delay:1.2s"/><circle cx="120" cy="220" r="3.2" style="animation-delay:1.6s"/><circle cx="250" cy="240" r="4" style="animation-delay:2s"/></svg><span class="ai-scan"></span></div><div class="ai-brain"><span class="ai-ring"></span><span class="ai-ring r2"></span>&#129504;</div><div class="ai-title">BIO-FLASH &middot; Ask AI</div><div class="ai-desc">Grounded AI Q&amp;A across the BIO-FLASH service manual, procedures &amp; parts.</div><a class="ai-open-btn" href="https://notebooklm.google.com/notebook/fb420bab-ff32-461d-87d6-395c20148259" target="_blank" rel="noopener">&#129504; Open NotebookLM &#8599;</a><div class="ai-cap">Opens your BIO-FLASH NotebookLM notebook in a new browser tab</div></div></div>
 <div id="bioflashPanelPpm" class="panel"><div class="ppm-wrap" id="bioflashPpmWrap"></div></div>
 </div>
 <button class="qc-bubble" id="bioflashQcBubble" onclick="toggleQuickChat('bioflash')" title="Quick Chat">🔧<span class="qc-bubble-text">Quick Chat</span></button>
@@ -2923,7 +2859,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
 <div id="wadianaPanelParts" class="panel active docs-layout">
   <div class="pLeft" style="width:100%;border-right:none">
     <div class="toolbar">
-      <div class="search-wrap"><span class="sico">🔍</span><input type="text" id="wadianaSearchIn" placeholder="Search part name or code…" oninput="dbFilter(filterWADIANAParts)"></div>
+      <button class="id-part-btn" onclick="location.href='identify.html?device=wadiana'">📷 Identify a part by photo</button><div class="search-wrap"><span class="sico">🔍</span><input type="text" id="wadianaSearchIn" placeholder="Search part name or code…" oninput="dbFilter(filterWADIANAParts)"></div>
       <div class="filter-row"><select id="wadianaTypeFilter" onchange="filterWADIANAParts()"><option value="">All categories</option>
 <option value="PCB">💡 PCB / Electronics</option>
 <option value="MECHANICAL">⚙️ Mechanical</option>
@@ -3005,20 +2941,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
     </div>
   </div>
 </div>
-<div id="wadianaPanelChat" class="panel notebook-main">
-  <div class="notebook-futuristic-overlay">
-    <div class="ai-circular-button-container">
-      <div class="ai-orbit-1"><div class="ai-orbit-particle"></div></div>
-      <div class="ai-orbit-2"><div class="ai-orbit-particle"></div></div>
-      <div class="ai-orbit-3"><div class="ai-orbit-particle"></div></div>
-      <a class="ai-circular-btn" id="wadianaNbBtn" href="#" target="_blank" rel="noopener noreferrer">
-        <div class="ai-circular-btn-icon">🤖</div>
-        <div class="ai-circular-btn-text">Ask Notebook</div>
-        <div class="ai-circular-btn-subtext">WADiana</div>
-      </a>
-    </div>
-  </div>
-</div>
+<div id="wadianaPanelChat" class="panel docs-layout"><div class="ai-hero"><div class="ai-bg"><span class="ai-orb o1"></span><span class="ai-orb o2"></span><span class="ai-orb o3"></span><div class="ai-grid"></div><svg class="ai-net" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><line x1="52" y1="70" x2="150" y2="120"/><line x1="150" y1="120" x2="250" y2="80"/><line x1="250" y1="80" x2="340" y2="140"/><line x1="150" y1="120" x2="120" y2="220"/><line x1="120" y1="220" x2="250" y2="240"/><line x1="250" y1="240" x2="340" y2="140"/><line x1="250" y1="80" x2="250" y2="240"/><line x1="52" y1="70" x2="120" y2="220"/><circle cx="52" cy="70" r="3.2"/><circle cx="150" cy="120" r="4" style="animation-delay:.4s"/><circle cx="250" cy="80" r="3.2" style="animation-delay:.8s"/><circle cx="340" cy="140" r="4" style="animation-delay:1.2s"/><circle cx="120" cy="220" r="3.2" style="animation-delay:1.6s"/><circle cx="250" cy="240" r="4" style="animation-delay:2s"/></svg><span class="ai-scan"></span></div><div class="ai-brain"><span class="ai-ring"></span><span class="ai-ring r2"></span>&#129504;</div><div class="ai-title">WADiana &middot; Ask AI</div><div class="ai-desc">Grounded AI Q&amp;A across the WADiana service manual, procedures &amp; parts.</div><a class="ai-open-btn" href="https://notebooklm.google.com/notebook/6e5c6a7b-5e7d-4c9d-959c-c9d77fe88f4b" target="_blank" rel="noopener">&#129504; Open NotebookLM &#8599;</a><div class="ai-cap">Opens your WADiana NotebookLM notebook in a new browser tab</div></div></div>
 <div id="wadianaPanelPpm" class="panel"><div class="ppm-wrap" id="wadianaPpmWrap"></div></div>
 </div>
 <button class="qc-bubble" id="wadianaQcBubble" onclick="toggleQuickChat('wadiana')" title="Quick Chat">🔧<span class="qc-bubble-text">Quick Chat</span></button>
@@ -3089,7 +3012,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
   <div id="pantherPanelParts" class="panel active docs-layout">
     <div class="pLeft" style="width:100%;border-right:none">
       <div class="toolbar">
-        <div class="search-wrap"><span class="sico">🔍</span><input type="text" id="pantherSearchIn" placeholder="Search part #, SAP #, or description…" oninput="filterPANTHERParts()"></div>
+        <button class="id-part-btn" onclick="location.href='identify.html?device=panther'">📷 Identify a part by photo</button><div class="search-wrap"><span class="sico">🔍</span><input type="text" id="pantherSearchIn" placeholder="Search part #, SAP #, or description…" oninput="filterPANTHERParts()"></div>
         <div class="filter-row">
           <select id="pantherTypeFilter" onchange="filterPANTHERParts()"><option value="">All categories</option></select>
           <select id="pantherArtFilter" onchange="filterPANTHERParts()"><option value="">Classic + ART</option><option value="classic">Classic only</option><option value="art">ART only</option></select>
@@ -3137,13 +3060,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
     </div>
   </div>
   <div id="pantherPanelNotebook" class="panel docs-layout">
-    <div style="padding:48px 20px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center">
-      <div style="width:78px;height:78px;border-radius:22px;background:#eef1ff;display:flex;align-items:center;justify-content:center;font-size:38px">&#129504;</div>
-      <div style="font-weight:700;font-size:18px;color:var(--tx)">Panther &middot; Ask AI</div>
-      <div style="color:var(--tx3);font-size:13.5px;max-width:390px;line-height:1.5">Grounded AI Q&amp;A across the Panther service manual, troubleshooting guide &amp; parts library.</div>
-      <a href="https://notebook.google.com/notebook/53e6ebb0-66ca-49d9-86f6-3d40abc440ee" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#2f4bd0;color:#fff;padding:14px 32px;border-radius:14px;font-weight:700;font-size:16px;text-decoration:none;box-shadow:0 6px 18px rgba(47,75,208,.32)">&#129504; Open NotebookLM &nbsp;&#8599;</a>
-      <div style="color:var(--tx3);font-size:12px">Opens your Panther NotebookLM notebook in a new browser tab</div>
-    </div>
+    <div class="ai-hero"><div class="ai-bg"><span class="ai-orb o1"></span><span class="ai-orb o2"></span><span class="ai-orb o3"></span><div class="ai-grid"></div><svg class="ai-net" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><line x1="52" y1="70" x2="150" y2="120"/><line x1="150" y1="120" x2="250" y2="80"/><line x1="250" y1="80" x2="340" y2="140"/><line x1="150" y1="120" x2="120" y2="220"/><line x1="120" y1="220" x2="250" y2="240"/><line x1="250" y1="240" x2="340" y2="140"/><line x1="250" y1="80" x2="250" y2="240"/><line x1="52" y1="70" x2="120" y2="220"/><circle cx="52" cy="70" r="3.2"/><circle cx="150" cy="120" r="4" style="animation-delay:.4s"/><circle cx="250" cy="80" r="3.2" style="animation-delay:.8s"/><circle cx="340" cy="140" r="4" style="animation-delay:1.2s"/><circle cx="120" cy="220" r="3.2" style="animation-delay:1.6s"/><circle cx="250" cy="240" r="4" style="animation-delay:2s"/></svg><span class="ai-scan"></span></div><div class="ai-brain"><span class="ai-ring"></span><span class="ai-ring r2"></span>&#129504;</div><div class="ai-title">Panther &middot; Ask AI</div><div class="ai-desc">Grounded AI Q&amp;A across the Panther service manual, troubleshooting guide &amp; parts library.</div><a class="ai-open-btn" href="https://notebook.google.com/notebook/53e6ebb0-66ca-49d9-86f6-3d40abc440ee" target="_blank" rel="noopener">&#129504; Open NotebookLM &#8599;</a><div class="ai-cap">Opens your Panther NotebookLM notebook in a new browser tab</div></div>
   </div>
   <div id="pantherPanelPpm" class="panel docs-layout">
     <div style="padding:14px 16px 60px;max-width:1000px;margin:0 auto;width:100%">
@@ -3224,7 +3141,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
   <div id="amicorePanelParts" class="panel active docs-layout">
     <div class="pLeft" style="width:100%;border-right:none">
       <div class="toolbar">
-        <div class="search-wrap"><span class="sico">&#128269;</span><input type="text" id="amicoreSearchIn" placeholder="Search part name or part #&hellip;" oninput="filterAMICOREParts()"></div>
+        <button class="id-part-btn" onclick="location.href='identify.html?device=amicore'">📷 Identify a part by photo</button><div class="search-wrap"><span class="sico">&#128269;</span><input type="text" id="amicoreSearchIn" placeholder="Search part name or part #&hellip;" oninput="filterAMICOREParts()"></div>
         <div class="filter-row"><select id="amicoreTypeFilter" onchange="filterAMICOREParts()"><option value="">All categories</option></select></div>
         <div class="filter-meta"><span class="filter-count" id="amicoreFilterCount"></span></div>
       </div>
@@ -3243,13 +3160,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
     </div>
   </div>
   <div id="amicorePanelNotebook" class="panel docs-layout">
-    <div style="padding:48px 20px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center">
-      <div style="width:78px;height:78px;border-radius:22px;background:#eef1ff;display:flex;align-items:center;justify-content:center;font-size:38px">&#129504;</div>
-      <div style="font-weight:700;font-size:18px;color:var(--tx)">AmiCORE &middot; Ask AI</div>
-      <div style="color:var(--tx3);font-size:13.5px;max-width:390px;line-height:1.5">Grounded AI Q&amp;A across the AmiCORE service manual, operator manual &amp; parts.</div>
-      <a href="https://notebook.google.com/notebook/da7feeb0-f122-4912-9fba-7270d85d4a1e" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;background:#2f4bd0;color:#fff;padding:14px 32px;border-radius:14px;font-weight:700;font-size:16px;text-decoration:none;box-shadow:0 6px 18px rgba(47,75,208,.32)">&#129504; Open NotebookLM &nbsp;&#8599;</a>
-      <div style="color:var(--tx3);font-size:12px">Opens your AmiCORE NotebookLM notebook in a new browser tab</div>
-    </div>
+    <div class="ai-hero"><div class="ai-bg"><span class="ai-orb o1"></span><span class="ai-orb o2"></span><span class="ai-orb o3"></span><div class="ai-grid"></div><svg class="ai-net" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><line x1="52" y1="70" x2="150" y2="120"/><line x1="150" y1="120" x2="250" y2="80"/><line x1="250" y1="80" x2="340" y2="140"/><line x1="150" y1="120" x2="120" y2="220"/><line x1="120" y1="220" x2="250" y2="240"/><line x1="250" y1="240" x2="340" y2="140"/><line x1="250" y1="80" x2="250" y2="240"/><line x1="52" y1="70" x2="120" y2="220"/><circle cx="52" cy="70" r="3.2"/><circle cx="150" cy="120" r="4" style="animation-delay:.4s"/><circle cx="250" cy="80" r="3.2" style="animation-delay:.8s"/><circle cx="340" cy="140" r="4" style="animation-delay:1.2s"/><circle cx="120" cy="220" r="3.2" style="animation-delay:1.6s"/><circle cx="250" cy="240" r="4" style="animation-delay:2s"/></svg><span class="ai-scan"></span></div><div class="ai-brain"><span class="ai-ring"></span><span class="ai-ring r2"></span>&#129504;</div><div class="ai-title">AmiCORE &middot; Ask AI</div><div class="ai-desc">Grounded AI Q&amp;A across the AmiCORE service manual, operator manual &amp; parts.</div><a class="ai-open-btn" href="https://notebook.google.com/notebook/da7feeb0-f122-4912-9fba-7270d85d4a1e" target="_blank" rel="noopener">&#129504; Open NotebookLM &#8599;</a><div class="ai-cap">Opens your AmiCORE NotebookLM notebook in a new browser tab</div></div>
   </div>
   <div id="amicorePanelPpm" class="panel docs-layout">
     <div style="padding:14px 16px 60px;max-width:900px;margin:0 auto;width:100%">
@@ -3359,7 +3270,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
 <div id="eflexisPanelParts" class="panel active docs-layout">
   <div class="pLeft" style="width:100%;border-right:none">
     <div class="toolbar">
-      <div class="search-wrap"><span class="sico">🔍</span><input type="text" id="eflexisSearchIn" placeholder="Search part name or code…" oninput="dbFilter(filterEFLEXISParts)"></div>
+      <button class="id-part-btn" onclick="location.href='identify.html?device=eflexis'">📷 Identify a part by photo</button><div class="search-wrap"><span class="sico">🔍</span><input type="text" id="eflexisSearchIn" placeholder="Search part name or code…" oninput="dbFilter(filterEFLEXISParts)"></div>
       <div class="filter-row"><select id="eflexisTypeFilter" onchange="filterEFLEXISParts()"><option value="">All categories</option>
 <option value="PCB">🔌 PCB / Electronics</option>
 <option value="MECHANICAL">⚙️ Mechanical</option>
@@ -3398,20 +3309,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
     </div>
   </div>
 </div>
-<div id="eflexisPanelChat" class="panel notebook-main">
-  <div class="notebook-futuristic-overlay">
-    <div class="ai-circular-button-container">
-      <div class="ai-orbit-1"><div class="ai-orbit-particle"></div></div>
-      <div class="ai-orbit-2"><div class="ai-orbit-particle"></div></div>
-      <div class="ai-orbit-3"><div class="ai-orbit-particle"></div></div>
-      <a class="ai-circular-btn" id="eflexisNbBtn" href="#" target="_blank" rel="noopener noreferrer">
-        <div class="ai-circular-btn-icon">🤖</div>
-        <div class="ai-circular-btn-text">Ask Notebook</div>
-        <div class="ai-circular-btn-subtext">Erytra Eflexis</div>
-      </a>
-    </div>
-  </div>
-</div>
+<div id="eflexisPanelChat" class="panel docs-layout"><div class="ai-hero"><div class="ai-bg"><span class="ai-orb o1"></span><span class="ai-orb o2"></span><span class="ai-orb o3"></span><div class="ai-grid"></div><svg class="ai-net" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><line x1="52" y1="70" x2="150" y2="120"/><line x1="150" y1="120" x2="250" y2="80"/><line x1="250" y1="80" x2="340" y2="140"/><line x1="150" y1="120" x2="120" y2="220"/><line x1="120" y1="220" x2="250" y2="240"/><line x1="250" y1="240" x2="340" y2="140"/><line x1="250" y1="80" x2="250" y2="240"/><line x1="52" y1="70" x2="120" y2="220"/><circle cx="52" cy="70" r="3.2"/><circle cx="150" cy="120" r="4" style="animation-delay:.4s"/><circle cx="250" cy="80" r="3.2" style="animation-delay:.8s"/><circle cx="340" cy="140" r="4" style="animation-delay:1.2s"/><circle cx="120" cy="220" r="3.2" style="animation-delay:1.6s"/><circle cx="250" cy="240" r="4" style="animation-delay:2s"/></svg><span class="ai-scan"></span></div><div class="ai-brain"><span class="ai-ring"></span><span class="ai-ring r2"></span>&#129504;</div><div class="ai-title">Erytra Eflexis &middot; Ask AI</div><div class="ai-desc">Grounded AI Q&amp;A across the Erytra Eflexis service manual, procedures &amp; parts.</div><a class="ai-open-btn" href="https://notebooklm.google.com/notebook/7e573191-5ab7-4372-9f9b-bb97b56ad3db" target="_blank" rel="noopener">&#129504; Open NotebookLM &#8599;</a><div class="ai-cap">Opens your Erytra Eflexis NotebookLM notebook in a new browser tab</div></div></div>
 <div id="eflexisPanelPpm" class="panel"><div class="ppm-wrap" id="eflexisPpmWrap"></div></div>
 </div>
 <button class="qc-bubble" id="eflexisQcBubble" onclick="toggleQuickChat('eflexis')" title="Quick Chat">🔧<span class="qc-bubble-text">Quick Chat</span></button>
@@ -9531,7 +9429,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
     'box-shadow:0 3px 12px rgba(30,58,138,.08);transition:transform .15s,box-shadow .2s,border-color .2s}'+
     '.home-action-btn:hover{transform:translateY(-2px);box-shadow:0 9px 24px rgba(37,99,235,.2);border-color:#2563eb}'+
     'html.night .home-action-btn{background:#16283a;border-color:#2c4a63;color:#cfe0f0}'+
-    'html.night .home-action-btn:hover{border-color:#5ea0ff}'+
+    'html.night .home-action-btn:hover{border-color:#5ea0ff}'+'.home-actions{flex-wrap:nowrap;gap:6px;overflow-x:auto;padding:6px 10px 2px;align-items:flex-start}'+'.ha-btn{display:flex;flex-direction:column;align-items:center;gap:7px;background:none;border:none;cursor:pointer;width:80px;flex:0 0 auto;padding:0}'+'.ha-ic{position:relative;width:70px;height:70px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;background:rgba(255,255,255,.94);border:3px solid rgba(37,99,235,.18);box-shadow:0 6px 20px rgba(0,0,0,.12),0 1px 4px rgba(0,0,0,.06);transition:transform .16s,box-shadow .2s,border-color .2s}'+'.ha-btn:hover .ha-ic{transform:scale(1.1);border-color:rgba(37,99,235,.55);box-shadow:0 12px 30px rgba(37,99,235,.25)}'+'.ha-btn:active .ha-ic{transform:scale(1.04)}'+'.ha-lb{font-size:11px;font-weight:700;color:#1d3a5f;text-align:center;line-height:1.2}'+'.ha-ic .cart-badge{position:absolute;top:-3px;right:-3px}'+'html.night .ha-ic{background:#16283a;border-color:#2c4a63}'+'html.night .ha-btn:hover .ha-ic{border-color:#5ea0ff}'+'html.night .ha-lb{color:#cfe0f0}'+
     /* hide the previous injected banner illustrations; keep the banner itself */
     '.wdb-art,.wdb-photo{display:none!important}'+
     '.ws-device-banner{position:relative;overflow:hidden}'+
@@ -10124,5 +10022,39 @@ html.night .cart-btn.ghost{background:#16283a;color:#cfe0f0;border-color:#2c4a63
 </script>
 
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}</script>
+<style id="aiHeroStyle">
+.ai-hero{position:relative;overflow:hidden;border-radius:16px;margin:10px;padding:54px 22px;min-height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;text-align:center;background:radial-gradient(120% 120% at 50% 0%,#1a2a5e 0%,#0c1436 55%,#070b1e 100%);isolation:isolate}
+.ai-bg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.ai-bg::before{content:"";position:absolute;top:-40%;left:-20%;width:140%;height:190%;background:conic-gradient(from 0deg,rgba(59,116,255,0),rgba(99,102,241,.28),rgba(34,211,238,.2),rgba(168,85,247,.24),rgba(59,116,255,0));filter:blur(60px);animation:aiSpin 18s linear infinite}
+.ai-orb{position:absolute;border-radius:50%;filter:blur(20px);opacity:.5;mix-blend-mode:screen;animation:aiFloat 9s ease-in-out infinite}
+.ai-orb.o1{width:150px;height:150px;background:#3b74ff;top:10%;left:12%}
+.ai-orb.o2{width:120px;height:120px;background:#22d3ee;bottom:12%;right:14%;animation-delay:-3s}
+.ai-orb.o3{width:90px;height:90px;background:#a855f7;top:54%;left:54%;animation-delay:-6s}
+.ai-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(120,160,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(120,160,255,.08) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:radial-gradient(circle at 50% 40%,#000 0%,transparent 75%);mask-image:radial-gradient(circle at 50% 40%,#000 0%,transparent 75%);animation:aiDrift 24s linear infinite}
+.ai-net{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.ai-net line{stroke:rgba(120,180,255,.32);stroke-width:1}
+.ai-net circle{fill:#8fc2ff;animation:aiNode 3s ease-in-out infinite}
+.ai-scan{position:absolute;left:0;right:0;height:130px;background:linear-gradient(180deg,transparent,rgba(90,150,255,.16),transparent);animation:aiScan 6.5s ease-in-out infinite}
+.ai-brain{position:relative;z-index:1;width:94px;height:94px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:44px;background:radial-gradient(circle,#1c2c5e,#0e1636);box-shadow:0 0 40px rgba(59,116,255,.5),inset 0 0 20px rgba(59,116,255,.35);animation:aiPulse 3.2s ease-in-out infinite}
+.ai-ring{position:absolute;inset:-8px;border-radius:50%;border:2px solid rgba(99,160,255,.45);animation:aiRing 3.2s ease-out infinite}
+.ai-ring.r2{animation-delay:1.6s}
+.ai-title{position:relative;z-index:1;font-weight:800;font-size:22px;background:linear-gradient(90deg,#9cc3ff,#22d3ee,#c4b5fd,#9cc3ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:aiShimmer 6s linear infinite}
+.ai-desc{position:relative;z-index:1;color:#b9c6e6;font-size:13.5px;max-width:400px;line-height:1.55}
+.ai-open-btn{position:relative;z-index:1;display:inline-flex;align-items:center;gap:9px;background:linear-gradient(90deg,#3b74ff,#6d5bf5);color:#fff;padding:14px 34px;border-radius:14px;font-weight:800;font-size:15px;text-decoration:none;box-shadow:0 10px 30px rgba(59,116,255,.45);overflow:hidden;transition:transform .16s,box-shadow .2s}
+.ai-open-btn:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(59,116,255,.6)}
+.ai-open-btn::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-20deg);animation:aiShine 3.4s ease-in-out infinite}
+.ai-cap{position:relative;z-index:1;color:#8a9ac2;font-size:12px}
+@keyframes aiSpin{to{transform:rotate(360deg)}}
+@keyframes aiFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(12px,-22px)}}
+@keyframes aiDrift{to{background-position:34px 34px}}
+@keyframes aiScan{0%{top:-25%}50%{top:100%}100%{top:-25%}}
+@keyframes aiPulse{0%,100%{box-shadow:0 0 30px rgba(59,116,255,.4),inset 0 0 18px rgba(59,116,255,.3)}50%{box-shadow:0 0 55px rgba(59,116,255,.75),inset 0 0 26px rgba(59,116,255,.5)}}
+@keyframes aiRing{0%{transform:scale(.9);opacity:.7}100%{transform:scale(1.75);opacity:0}}
+@keyframes aiShimmer{to{background-position:200% center}}
+@keyframes aiShine{0%{left:-120%}45%,100%{left:130%}}
+@keyframes aiNode{0%,100%{opacity:.35}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.ai-bg::before,.ai-orb,.ai-grid,.ai-scan,.ai-brain,.ai-ring,.ai-title,.ai-open-btn::after,.ai-net circle{animation:none!important}}
+.devices-label{text-align:center;font-size:21px;font-weight:800;color:#0f172a;letter-spacing:.4px;margin:20px 0 2px;position:relative;z-index:2}.devices-label::after{content:"";display:block;width:46px;height:3px;border-radius:2px;background:linear-gradient(90deg,#3b74ff,#22d3ee);margin:7px auto 0}html.night .devices-label{color:#e7edf8}.id-part-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:linear-gradient(90deg,#3b74ff,#6d5bf5);color:#fff;border:none;border-radius:10px;padding:11px;font-size:13.5px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(59,116,255,.35);transition:transform .15s,box-shadow .2s}.id-part-btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(59,116,255,.5)}.ai-hero{flex:1 1 auto;align-self:stretch;min-width:0}</style>
+
 </body>
 </html>
