@@ -156,4 +156,5 @@ function squareCanvasCrop(img,sxp,syp,sw,sh){var size=224,cv=document.createElem
 // init
 renderDevices();
 if(typeof mobilenet!=='undefined'&&typeof tf!=='undefined'){ensureModel();}else{status('⚠ Needs internet on first run to load the AI model.');}
-</script></body></html>
+</script><script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}</script>
+</body></html>
