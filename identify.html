@@ -139,18 +139,24 @@ cropbox.addEventListener('pointerdown',function(e){if(e.target===document.getEle
 document.getElementById('crophandle').addEventListener('pointerdown',function(e){drag={m:'sz',x:e.clientX,y:e.clientY,s:parseFloat(cropbox.style.width),l:parseFloat(cropbox.style.left),t:parseFloat(cropbox.style.top)};e.target.setPointerCapture(e.pointerId);e.stopPropagation();e.preventDefault();});
 window.addEventListener('pointermove',function(e){if(!drag)return;var w=srcImg.clientWidth,h=srcImg.clientHeight;if(drag.m==='mv'){cropbox.style.left=clamp(drag.l+(e.clientX-drag.x),0,w-cropbox.offsetWidth)+'px';cropbox.style.top=clamp(drag.t+(e.clientY-drag.y),0,h-cropbox.offsetHeight)+'px';}else{var ns=clamp(drag.s+(e.clientX-drag.x),40,Math.min(w-drag.l,h-drag.t));cropbox.style.width=ns+'px';cropbox.style.height=ns+'px';}});
 window.addEventListener('pointerup',function(){drag=null;});
+
+window.cvReady=false;
+(function(){var os=document.createElement('script');os.async=true;os.src='https://docs.opencv.org/4.10.0/opencv.js';os.onload=function(){var c=window.cv;if(!c)return;if(typeof c.then==='function'){c.then(function(mm){window.cv=mm;window.cvReady=true;});}else if(c.Mat){window.cvReady=true;}else{c.onRuntimeInitialized=function(){window.cvReady=true;};}};os.onerror=function(){};document.body.appendChild(os);})();
+function topMatchMulti(qs){var best=[],rows=IDX.length;for(var i=0;i<rows;i++){var off=i*DIM,mx=-2,qi,k;for(qi=0;qi<qs.length;qi++){var q=qs[qi],dot=0;for(k=0;k<DIM;k++)dot+=q[k]*EMB[off+k];if(dot>mx)mx=dot;}if(best.length<8){best.push([mx,i]);if(best.length===8)best.sort(function(a,b){return a[0]-b[0];});}else if(mx>best[0][0]){best[0]=[mx,i];best.sort(function(a,b){return a[0]-b[0];});}}best.sort(function(a,b){return b[0]-a[0];});return best;}
+function grabcutWhite(img,sx,sy,sw,sh){if(!window.cvReady||!window.cv||!window.cv.Mat)return null;var cv=window.cv;try{var S=320,c=document.createElement('canvas');c.width=S;c.height=S;var ctx=c.getContext('2d');ctx.drawImage(img,sx,sy,sw,sh,0,0,S,S);var src=cv.imread(c),rgb=new cv.Mat();cv.cvtColor(src,rgb,cv.COLOR_RGBA2RGB);var mask=new cv.Mat(),bgd=new cv.Mat(),fgd=new cv.Mat();var m=Math.round(S*0.08),rect=new cv.Rect(m,m,S-2*m,S-2*m);cv.grabCut(rgb,mask,rect,bgd,fgd,3,cv.GC_INIT_WITH_RECT);var comp=new cv.Mat(S,S,cv.CV_8UC4),d=src.data,md=mask.data,fg=0,i;for(i=0;i<S*S;i++){var keep=(md[i]===1||md[i]===3);if(keep){fg++;comp.data[i*4]=d[i*4];comp.data[i*4+1]=d[i*4+1];comp.data[i*4+2]=d[i*4+2];comp.data[i*4+3]=255;}else{comp.data[i*4]=255;comp.data[i*4+1]=255;comp.data[i*4+2]=255;comp.data[i*4+3]=255;}}var ratio=fg/(S*S);var cc=document.createElement('canvas');cc.width=S;cc.height=S;cv.imshow(cc,comp);var out=document.createElement('canvas');out.width=224;out.height=224;var octx=out.getContext('2d');octx.fillStyle='#fff';octx.fillRect(0,0,224,224);octx.drawImage(cc,0,0,S,S,0,0,224,224);src.delete();rgb.delete();mask.delete();bgd.delete();fgd.delete();comp.delete();if(ratio<0.03||ratio>0.985)return null;return out;}catch(e){return null;}}
+
 document.getElementById('goBtn').addEventListener('click',async function(){
   if(!loadedImg||!EMB){toast('Pick a photo first');return;}
   var w=srcImg.clientWidth,h=srcImg.clientHeight,sx=loadedImg.naturalWidth/w,sy=loadedImg.naturalHeight/h;
   var bx=parseFloat(cropbox.style.left),by=parseFloat(cropbox.style.top),bw=cropbox.offsetWidth,bh=cropbox.offsetHeight;
   document.getElementById('results').innerHTML='<div class="empty">Matching…</div>';
   var rx=bx*sx,ry=by*sy,rw=bw*sx,rh=bh*sy;
-  var q1=await embed(squareCanvasCrop(loadedImg,rx,ry,rw,rh));
-  var ex=rw*0.15,ey=rh*0.15;
-  var q2=await embed(squareCanvasCrop(loadedImg,Math.max(0,rx-ex),Math.max(0,ry-ey),rw+2*ex,rh+2*ey));
-  var q=new Float32Array(DIM),kk,ss=0;for(kk=0;kk<DIM;kk++){q[kk]=q1[kk]+q2[kk];}
-  for(kk=0;kk<DIM;kk++)ss+=q[kk]*q[kk];ss=Math.sqrt(ss)+1e-6;for(kk=0;kk<DIM;kk++)q[kk]/=ss;
-  showResults(topMatch(q));
+  var qs=[];
+  qs.push(await embed(squareCanvasCrop(loadedImg,rx,ry,rw,rh)));
+  var ex=rw*0.14,ey=rh*0.14;
+  qs.push(await embed(squareCanvasCrop(loadedImg,Math.max(0,rx-ex),Math.max(0,ry-ey),rw+2*ex,rh+2*ey)));
+  try{var seg=grabcutWhite(loadedImg,rx,ry,rw,rh);if(seg){qs.push(await embed(seg));}}catch(e){}
+  showResults(topMatchMulti(qs));
 });
 function squareCanvasCrop(img,sxp,syp,sw,sh){var size=224,cv=document.createElement('canvas');cv.width=size;cv.height=size;var ctx=cv.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,size,size);ctx.drawImage(img,sxp,syp,sw,sh,0,0,size,size);return cv;}
 // init

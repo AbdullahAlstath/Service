@@ -8,6 +8,7 @@ self.addEventListener('fetch', e=>{
   const immutable = url.includes('cdn.jsdelivr.net')            // tfjs + mobilenet libraries
                  || url.includes('storage.googleapis.com')      // MobileNet model weights
                  || url.includes('tfhub.dev')
+                 || url.includes('docs.opencv.org')      // OpenCV.js (background removal)
                  || /\.(png|jpe?g|webp|gif|pdf|woff2?)$/i.test(url); // part photos, fonts, pdfs
   if(!immutable) return; // let HTML/JS go to network so the app stays fresh
   e.respondWith(
