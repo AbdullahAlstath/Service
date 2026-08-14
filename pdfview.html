@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+<title>Procedure · AFMS ServicePal</title><style>
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:#0e1524;color:#e7edf8;font:14px -apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.bar{display:flex;align-items:center;gap:8px;padding:8px 12px;background:#111c30;border-bottom:1px solid #22304f;position:sticky;top:0;z-index:5}
+.bar a.back{color:#9fb0cf;text-decoration:none;font-size:20px;padding:2px 6px}
+.bar .ttl{font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.bar button{background:#16283a;border:1px solid #2c4a63;color:#cfe0f0;border-radius:8px;padding:6px 10px;font-size:15px;cursor:pointer;line-height:1}
+.bar input{width:46px;text-align:center;background:#0a1428;border:1px solid #2c4a63;color:#e7edf8;border-radius:6px;padding:5px;font-size:14px}
+.bar .tot{color:#9fb0cf;font-size:13px}
+.wrap{position:absolute;top:49px;bottom:0;left:0;right:0;overflow:auto;-webkit-overflow-scrolling:touch;display:flex;justify-content:center;padding:12px;background:#0e1524}
+canvas{max-width:100%;height:auto;background:#fff;box-shadow:0 4px 24px rgba(0,0,0,.5);border-radius:4px}
+.msg{padding:40px 20px;text-align:center;color:#9fb0cf}
+@media(max-width:600px){.bar .ttl{font-size:12px}.bar button{padding:6px 8px}}
+</style></head><body>
+<div class="bar">
+  <a class="back" href="javascript:history.length>1?history.back():window.close()" title="Back">‹</a>
+  <span class="ttl" id="ttl">Service Manual</span>
+  <button onclick="prev()" aria-label="Previous page">‹</button>
+  <input id="pg" type="number" min="1" onchange="goto(this.value)">
+  <span class="tot" id="tot">/ –</span>
+  <button onclick="next()" aria-label="Next page">›</button>
+  <button onclick="zoom(-1)" aria-label="Zoom out">−</button>
+  <button onclick="zoom(1)" aria-label="Zoom in">+</button>
+</div>
+<div class="wrap" id="wrap"><div class="msg" id="msg">Loading…</div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+var qs=new URLSearchParams(location.search);
+var FILE=qs.get('f')||''; var PAGE=parseInt(qs.get('p'))||1; var NAME=qs.get('n');
+if(NAME) document.getElementById('ttl').textContent=NAME;
+var doc=null,cur=PAGE,zf=null,task=null;
+var cv=document.createElement('canvas');
+async function load(){
+  try{
+    doc=await pdfjsLib.getDocument(FILE).promise;
+    document.getElementById('tot').textContent='/ '+doc.numPages;
+    document.getElementById('pg').max=doc.numPages;
+    var w=document.getElementById('wrap'); w.innerHTML=''; w.appendChild(cv);
+    render(PAGE);
+  }catch(e){ document.getElementById('msg').textContent='Could not open the manual. '+(e&&e.message||''); }
+}
+async function render(n){
+  if(!doc) return; n=Math.max(1,Math.min(doc.numPages,n)); cur=n;
+  document.getElementById('pg').value=n;
+  var page=await doc.getPage(n);
+  var wrapW=document.getElementById('wrap').clientWidth-24;
+  if(zf===null){ var v1=page.getViewport({scale:1}); zf=Math.min(2.2, wrapW/v1.width); }
+  var dpr=Math.min(2, window.devicePixelRatio||1);
+  var vp=page.getViewport({scale:zf*dpr});
+  cv.width=vp.width; cv.height=vp.height; cv.style.width=(vp.width/dpr)+'px';
+  if(task){try{task.cancel();}catch(e){}}
+  task=page.render({canvasContext:cv.getContext('2d'),viewport:vp});
+  try{await task.promise;}catch(e){}
+  document.getElementById('wrap').scrollTo(0,0);
+}
+function goto(n){render(parseInt(n)||1);}
+function prev(){render(cur-1);}
+function next(){render(cur+1);}
+function zoom(d){ if(zf===null)zf=1; zf=Math.max(0.4,Math.min(4,zf+d*0.2)); render(cur); }
+window.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')prev();else if(e.key==='ArrowRight')next();});
+load();
+</script></body></html>
