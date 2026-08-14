@@ -1960,85 +1960,16 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
     </div>
   </div>
   <div class="devices-label">Devices</div>
-  <div class="device-grid">
-    <div class="device-card" onclick="openDevice('LXL')">
-      <div class="dc-banner lxl"><img class="dc-photo" src="assets/img/4a7ca57faa93b582f46199ac61b8026e.jpg" alt="LIAISON XL"></div>
-      <div class="dc-body">
-        <div class="dc-title">LIAISON XL</div><div class="dc-maker-label">DiaSorin</div>
-        <div class="dc-cta">Open Workspace →</div>
-      </div>
-    </div>
-    <div class="device-card" onclick="openDevice('ETIMAX')">
-      <div class="dc-banner etimax"><img class="dc-photo" src="assets/img/e0ccac4608575feaf62a534b53a5ee0f.jpg" alt="ETI-MAX 3000"></div>
-      <div class="dc-body">
-        <div class="dc-title">ETI-MAX 3000</div><div class="dc-maker-label">DiaSorin</div>
-        <div class="dc-cta">Open Workspace →</div>
-      </div>
-    </div>
-    <div class="device-card" onclick="openDevice('BIOFLASH')">
-      <div class="dc-banner bioflash"><img class="dc-photo" src="assets/img/9ba3dfd06bb16c0b15186804024c8469.png" alt="BIO-FLASH"></div>
-      <div class="dc-body">
-        <div class="dc-title">BIO-FLASH</div><div class="dc-maker-label">Werfen</div>
-        <div class="dc-cta">Open Workspace →</div>
-      </div>
-    </div>
-    <div class="device-card" onclick="openDevice('WADIANA')">
-      <div class="dc-banner wadiana"><img class="dc-photo" src="assets/img/b3e1fa24c54839b72abb2696c5174f9d.jpg" alt="WADiana" style="object-fit:cover;"/></div>
-      <div class="dc-body">
-        <div class="dc-title">WADiana</div><div class="dc-maker-label">Grifols · Diagnostics</div>
-        <div class="dc-cta">Open Workspace →</div>
-      </div>
-    </div>
+<div class="hg-bar"><button class="hg-tog" onclick="hgAll(true)">Expand all</button><button class="hg-tog" onclick="hgAll(false)">Collapse all</button></div>
+<div class="hg-wrap">
+<section class="hg-mfr" style="--acc:#2fa84f;--soft:#e6f6ea;--glow:rgba(47,168,79,.32)"><div class="hg-head" onclick="this.parentNode.classList.toggle('closed')"><div class="hg-badge" style="background:linear-gradient(135deg,#2fa84f,#2fa84fcc)">DS</div><div class="hg-t"><div class="hg-nm">DiaSorin</div><div class="hg-sub">Immunodiagnostics</div></div><div class="hg-count">2 devices</div><div class="hg-chev">&#9662;</div></div><div class="hg-pane"><div class="hg-in"><div class="hg-grid"><div class="hg-dev" onclick="openDevice('ETIMAX')" role="button" tabindex="0"><div class="hg-circ"><img src="assets/img/cut/e0ccac4608575feaf62a534b53a5ee0f.png" alt="ETI-MAX 3000" loading="lazy"></div><div class="hg-dnm">ETI-MAX 3000</div><div class="hg-dmd">ELISA processor</div></div><div class="hg-dev" onclick="openDevice('LXL')" role="button" tabindex="0"><div class="hg-circ"><img src="assets/img/cut/4a7ca57faa93b582f46199ac61b8026e.png" alt="LIAISON XL" loading="lazy"></div><div class="hg-dnm">LIAISON XL</div><div class="hg-dmd">Chemiluminescence</div></div></div></div></div></section>
+<section class="hg-mfr" style="--acc:#e6541b;--soft:#fdece2;--glow:rgba(230,84,27,.32)"><div class="hg-head" onclick="this.parentNode.classList.toggle('closed')"><div class="hg-badge" style="background:linear-gradient(135deg,#e6541b,#e6541bcc)">FK</div><div class="hg-t"><div class="hg-nm">Fresenius Kabi</div><div class="hg-sub">Transfusion technology</div></div><div class="hg-count">1 device</div><div class="hg-chev">&#9662;</div></div><div class="hg-pane"><div class="hg-in"><div class="hg-grid"><div class="hg-dev" onclick="openDevice('AMICORE')" role="button" tabindex="0"><div class="hg-circ"><img src="assets/img/cut/86851a0a5cc867e3e12a5f9701f14d4e.png" alt="AmiCORE" loading="lazy"></div><div class="hg-dnm">AmiCORE</div><div class="hg-dmd">Apheresis system</div></div></div></div></div></section>
+<section class="hg-mfr" style="--acc:#0e79c8;--soft:#e6f0fb;--glow:rgba(14,121,200,.34)"><div class="hg-head" onclick="this.parentNode.classList.toggle('closed')"><div class="hg-badge" style="background:linear-gradient(135deg,#0e79c8,#0e79c8cc)">GR</div><div class="hg-t"><div class="hg-nm">Grifols</div><div class="hg-sub">Immunohematology</div></div><div class="hg-count">4 devices</div><div class="hg-chev">&#9662;</div></div><div class="hg-pane"><div class="hg-in"><div class="hg-grid"><div class="hg-dev" onclick="openDevice('DGSPIN')" role="button" tabindex="0"><div class="hg-circ"><span class="hg-ntag" style="background:#0e79c8">NEW</span><img src="assets/img/cut/dgspin.png" alt="DG Spin" loading="lazy"></div><div class="hg-dnm">DG Spin</div><div class="hg-dmd">DG-320 · Card system</div></div><div class="hg-dev" onclick="openDevice('DGTHERM')" role="button" tabindex="0"><div class="hg-circ"><span class="hg-ntag" style="background:#0e79c8">NEW</span><img src="assets/img/cut/dgtherm.png" alt="DG Therm" loading="lazy"></div><div class="hg-dnm">DG Therm</div><div class="hg-dmd">DG-319 · Card system</div></div><div class="hg-dev" onclick="openDevice('EFLEXIS')" role="button" tabindex="0"><div class="hg-circ"><img src="assets/img/cut/747005dc07c8cc4bdb857c82edba239b.png" alt="Erytra Eflexis" loading="lazy"></div><div class="hg-dnm">Erytra Eflexis</div><div class="hg-dmd">Blood typing</div></div><div class="hg-dev" onclick="openDevice('WADIANA')" role="button" tabindex="0"><div class="hg-circ"><img src="assets/img/cut/b3e1fa24c54839b72abb2696c5174f9d.png" alt="WADiana" loading="lazy"></div><div class="hg-dnm">WADiana</div><div class="hg-dmd">Blood typing</div></div></div></div></div></section>
+<section class="hg-mfr" style="--acc:#e0219a;--soft:#fce7f4;--glow:rgba(224,33,154,.32)"><div class="hg-head" onclick="this.parentNode.classList.toggle('closed')"><div class="hg-badge" style="background:linear-gradient(135deg,#e0219a,#e0219acc)">HL</div><div class="hg-t"><div class="hg-nm">Hologic</div><div class="hg-sub">Molecular diagnostics</div></div><div class="hg-count">1 device</div><div class="hg-chev">&#9662;</div></div><div class="hg-pane"><div class="hg-in"><div class="hg-grid"><div class="hg-dev" onclick="openDevice('PANTHER')" role="button" tabindex="0"><div class="hg-circ"><img src="assets/img/cut/318d4b2dbe91c316825e1e64a9d93aa9.png" alt="Panther System" loading="lazy"></div><div class="hg-dnm">Panther System</div><div class="hg-dmd">Molecular / TMA</div></div></div></div></div></section>
+<section class="hg-mfr" style="--acc:#c8102e;--soft:#fdeaec;--glow:rgba(200,16,46,.34)"><div class="hg-head" onclick="this.parentNode.classList.toggle('closed')"><div class="hg-badge" style="background:linear-gradient(135deg,#c8102e,#c8102ecc)">MR</div><div class="hg-t"><div class="hg-nm">Mindray</div><div class="hg-sub">Hematology &amp; Immunoassay</div></div><div class="hg-count">3 devices</div><div class="hg-chev">&#9662;</div></div><div class="hg-pane"><div class="hg-in"><div class="hg-grid"><div class="hg-dev" onclick="openDevice('BC760')" role="button" tabindex="0"><div class="hg-circ"><span class="hg-ntag" style="background:#c8102e">NEW</span><img src="assets/img/cut/bc760.png" alt="BC-760 / BC-780" loading="lazy"></div><div class="hg-dnm">BC-760 / BC-780</div><div class="hg-dmd">Auto Hematology</div></div><div class="hg-dev" onclick="openDevice('CL1200')" role="button" tabindex="0"><div class="hg-circ"><img src="assets/img/cut/935d949143c2a77df631b31005ee699a.png" alt="CL-1200i / 1000i" loading="lazy"></div><div class="hg-dnm">CL-1200i / 1000i</div><div class="hg-dmd">Immunoassay</div></div><div class="hg-dev" onclick="openDevice('CL900')" role="button" tabindex="0"><div class="hg-circ"><img src="assets/img/cut/bcd7895f7ff27c14b1f3b3382230d3cd.png" alt="CL-900i" loading="lazy"></div><div class="hg-dnm">CL-900i</div><div class="hg-dmd">Immunoassay</div></div></div></div></div></section>
+<section class="hg-mfr" style="--acc:#7c3aed;--soft:#efe9fe;--glow:rgba(124,58,237,.32)"><div class="hg-head" onclick="this.parentNode.classList.toggle('closed')"><div class="hg-badge" style="background:linear-gradient(135deg,#7c3aed,#7c3aedcc)">WF</div><div class="hg-t"><div class="hg-nm">Werfen</div><div class="hg-sub">Autoimmunity</div></div><div class="hg-count">1 device</div><div class="hg-chev">&#9662;</div></div><div class="hg-pane"><div class="hg-in"><div class="hg-grid"><div class="hg-dev" onclick="openDevice('BIOFLASH')" role="button" tabindex="0"><div class="hg-circ"><img src="assets/img/cut/9ba3dfd06bb16c0b15186804024c8469.png" alt="BIO-FLASH" loading="lazy"></div><div class="hg-dnm">BIO-FLASH</div><div class="hg-dmd">Chemiluminescence</div></div></div></div></div></section>
+</div>
 
-    <div class="device-card" onclick="openDevice('CL1200')">
-      <div class="dc-banner cl1200"><img class="dc-photo" src="assets/img/935d949143c2a77df631b31005ee699a.jpg" alt="CL-1200i"></div>
-      <div class="dc-body">
-        <div class="dc-title">CL-1200i / CL-1000i</div><div class="dc-maker-label">Mindray</div>
-        <div class="dc-cta">Open Workspace →</div>
-      </div>
-    </div>
-    <div class="device-card" onclick="openDevice('CL900')">
-      <div class="dc-banner cl900"><img class="dc-photo" src="assets/img/bcd7895f7ff27c14b1f3b3382230d3cd.jpg" alt="CL-900i"></div>
-      <div class="dc-body">
-        <div class="dc-title">CL-900i</div><div class="dc-maker-label">Mindray</div>
-        <div class="dc-cta">Open Workspace →</div>
-      </div>
-    </div>
-  
-        <div class="device-card" onclick="openDevice('PANTHER')">
-      <div class="dc-banner panther"><img class="dc-photo" src="assets/img/318d4b2dbe91c316825e1e64a9d93aa9.jpg" alt="Panther"></div>
-      <div class="dc-body">
-        <div class="dc-title">Panther System</div><div class="dc-maker-label">Hologic</div>
-        <div class="dc-cta">Open Workspace &#8594;</div>
-      </div>
-    </div>
-    <div class="device-card" onclick="openDevice('AMICORE')">
-      <div class="dc-banner amicore"><img class="dc-photo" src="assets/img/86851a0a5cc867e3e12a5f9701f14d4e.jpg" alt="AmiCORE"></div>
-      <div class="dc-body">
-        <div class="dc-title">AmiCORE</div><div class="dc-maker-label">Fresenius Kabi</div>
-        <div class="dc-cta">Open Workspace &#8594;</div>
-      </div>
-    </div>
-    <div class="device-card" onclick="openDevice('EFLEXIS')" style="animation-delay:.5s">
-      <div class="dc-banner">
-        <img class="dc-photo" src="assets/img/747005dc07c8cc4bdb857c82edba239b.jpg">
-      </div>
-      <div class="dc-body">
-        <div class="dc-maker-label">Grifols</div>
-        <div class="dc-title">Erytra Eflexis</div>
-        <div class="dc-cta">Open Workspace ›</div>
-      </div>
-    </div>
-    <div class="device-card" onclick="openDevice('BC760')">
-      <div class="dc-banner bc760"><img class="dc-photo" src="assets/img/bc760.jpg" alt="BC-760/780" style="object-fit:contain;"/></div>
-      <div class="dc-body">
-        <div class="dc-title">BC-760 / BC-780</div><div class="dc-maker-label">Mindray</div>
-        <div class="dc-cta">Open Workspace &#8594;</div>
-      </div>
-    </div>
-
-    
-    </div>
 
     
 </div>
@@ -2132,7 +2063,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
 <rect width="900" height="96" fill="url(#fl_lxl)"/></svg><div class="wdb-overlay"><div class="wdb-title">LIAISON<sup>® XL</sup></div><div class="wdb-tech">Chemiluminescent Immunoassay · CLIA</div></div></div>
 <div id="tabs">
   <button class="tab active" data-tab="parts" onclick="switchLXLTab('parts')">📋 Spare Parts</button>
-  <button class="tab" data-tab="manual" onclick="switchLXLTab('manual')">📖 Service Manual</button>
+  <button class="tab" data-tab="manual" onclick="switchLXLTab('manual')">📖 Manuals &amp; Procedures</button>
   <button class="tab" data-tab="chat" onclick="switchLXLTab('chat')">💬 Ask Notebook</button>
   <button class="tab" data-tab="ppm" onclick="switchLXLTab('ppm')">✅ PPM Checklist</button>
 </div>
@@ -2192,6 +2123,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
       </a>
       <div class="pdf-newtab-hint">Opens in a new browser tab with native PDF viewer</div>
     </div>
+    <div class="pdf-newtab-card" style="max-width:760px;width:100%"><div class="pdf-newtab-glow"></div><div style="font-weight:800;font-size:15px;color:#0f172a;margin-bottom:2px">🎬 Decontamination &mdash; WPRP Waste Line Cleaning</div><div class="pdf-newtab-meta" style="margin-bottom:10px">Video tutorial &middot; 4:15 &middot; DiaSorin</div><video controls preload="metadata" style="width:100%;border-radius:10px;background:#000;max-height:440px" src="assets/video/lxl_wprp_decontamination.mp4"></video></div>
   </div>
 </div>
 <div id="lxlPanelChat" class="panel docs-layout"><div class="ai-hero"><div class="ai-bg"><span class="ai-orb o1"></span><span class="ai-orb o2"></span><span class="ai-orb o3"></span><div class="ai-grid"></div><svg class="ai-net" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><line x1="52" y1="70" x2="150" y2="120"/><line x1="150" y1="120" x2="250" y2="80"/><line x1="250" y1="80" x2="340" y2="140"/><line x1="150" y1="120" x2="120" y2="220"/><line x1="120" y1="220" x2="250" y2="240"/><line x1="250" y1="240" x2="340" y2="140"/><line x1="250" y1="80" x2="250" y2="240"/><line x1="52" y1="70" x2="120" y2="220"/><circle cx="52" cy="70" r="3.2"/><circle cx="150" cy="120" r="4" style="animation-delay:.4s"/><circle cx="250" cy="80" r="3.2" style="animation-delay:.8s"/><circle cx="340" cy="140" r="4" style="animation-delay:1.2s"/><circle cx="120" cy="220" r="3.2" style="animation-delay:1.6s"/><circle cx="250" cy="240" r="4" style="animation-delay:2s"/></svg><span class="ai-scan"></span></div><div class="ai-brain"><span class="ai-ring"></span><span class="ai-ring r2"></span>&#129504;</div><div class="ai-title">LIAISON XL &middot; Ask AI</div><div class="ai-desc">Grounded AI Q&amp;A across the LIAISON XL service manual, procedures &amp; parts.</div><a class="ai-open-btn" href="https://notebooklm.google.com/notebook/f42296ae-021b-4b6e-b54d-d12521c7c650" target="_blank" rel="noopener">&#129504; Open NotebookLM &#8599;</a><div class="ai-cap">Opens your LIAISON XL NotebookLM notebook in a new browser tab</div></div></div>
@@ -2510,6 +2442,28 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
 <div id="bc760PanelManual" class="panel"><div class="pdf-newtab-wrap" style="display:flex;gap:18px;flex-wrap:wrap;justify-content:center"><div class="pdf-newtab-card"><div class="pdf-newtab-glow"></div><div class="pdf-newtab-icon">&#128214;</div><div class="pdf-newtab-title">BC-760/780 Service Manual</div><div class="pdf-newtab-meta">1,532 pages &middot; Mindray &middot; V12.0</div><div class="pdf-newtab-tip"><span class="pdf-tip-key">Ctrl+F</span> to search &nbsp;&middot;&nbsp; <span class="pdf-tip-key">Ctrl+G</span> to jump to page</div><a class="pdf-newtab-btn" href="manuals/bc760_service.pdf" target="_blank" rel="noopener">Open Manual &nbsp;&#8599;</a><div class="pdf-newtab-hint">Part &#128214; Procedure buttons jump straight to the right page</div></div><div class="pdf-newtab-card"><div class="pdf-newtab-glow"></div><div class="pdf-newtab-icon">&#128202;</div><div class="pdf-newtab-title">BC-760 &amp; BC-780 Product Training</div><div class="pdf-newtab-meta">189 slides &middot; Mindray</div><a class="pdf-newtab-btn" href="manuals/bc760_training.pdf" target="_blank" rel="noopener">Open &nbsp;&#8599;</a><div class="pdf-newtab-hint">Opens in a new browser tab</div></div><div class="pdf-newtab-card"><div class="pdf-newtab-glow"></div><div class="pdf-newtab-icon">&#9989;</div><div class="pdf-newtab-title">PPM Checklist (blank form)</div><div class="pdf-newtab-meta">3 pages &middot; GDSS PPM</div><a class="pdf-newtab-btn" href="manuals/bc760_ppm_checklist.pdf" target="_blank" rel="noopener">Open &nbsp;&#8599;</a><div class="pdf-newtab-hint">Use the PPM tab to fill &amp; generate</div></div></div></div>
 <div id="bc760PanelChat" class="panel docs-layout"><div class="ai-hero"><div class="ai-bg"><span class="ai-orb o1"></span><span class="ai-orb o2"></span><span class="ai-orb o3"></span><div class="ai-grid"></div><svg class="ai-net" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><line x1="52" y1="70" x2="150" y2="120"/><line x1="150" y1="120" x2="250" y2="80"/><line x1="250" y1="80" x2="340" y2="140"/><line x1="150" y1="120" x2="120" y2="220"/><line x1="120" y1="220" x2="250" y2="240"/><line x1="250" y1="240" x2="340" y2="140"/><line x1="250" y1="80" x2="250" y2="240"/><line x1="52" y1="70" x2="120" y2="220"/><circle cx="52" cy="70" r="3.2"/><circle cx="150" cy="120" r="4" style="animation-delay:.4s"/><circle cx="250" cy="80" r="3.2" style="animation-delay:.8s"/><circle cx="340" cy="140" r="4" style="animation-delay:1.2s"/><circle cx="120" cy="220" r="3.2" style="animation-delay:1.6s"/><circle cx="250" cy="240" r="4" style="animation-delay:2s"/></svg><span class="ai-scan"></span></div><div class="ai-brain"><span class="ai-ring"></span><span class="ai-ring r2"></span>&#129504;</div><div class="ai-title">BC-760 / BC-780 &middot; Ask AI</div><div class="ai-desc">Grounded AI Q&amp;A across the BC-760/780 service manual, procedures &amp; parts.</div><a class="ai-open-btn" href="https://notebooklm.google.com/notebook/cf16b646-7c29-4b17-aa08-7f793da178be" target="_blank" rel="noopener">&#129504; Open NotebookLM &#8599;</a><div class="ai-cap">Opens your BC-760/780 NotebookLM notebook in a new browser tab</div></div></div>
 <div id="bc760PanelPpm" class="panel"><div class="ppm-wrap" id="bc760PpmWrap"></div></div>
+</div>
+</div>
+<div id="viewDGSPIN" class="view">
+<div class="ws-hdr"><div class="ws-brand"><span class="home-link sp-tip" data-tip="Back to all devices" role="button" tabindex="0" aria-label="Back to device picker" onclick="goHome()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goHome();}">⌂ Home</span><div class="ws-logo dgspin">DG</div><div><div class="ws-title">DG Spin Service Tool</div><div class="ws-sub">Grifols · DG-320 · Card Dispenser System</div></div></div><div class="ws-pills"><div class="ws-pill"><span>31</span> parts</div><div class="ws-pill"><span>5</span> manuals</div><div class="ws-pill live">Grounded AI</div></div></div>
+<div class="ws-device-banner wdb-dgspin" style="background:linear-gradient(90deg,#071f3a 0%,#071f3a 55%,rgba(7,31,58,0) 100%),radial-gradient(circle at 78% 40%,#0e4c86 0,#071f3a 70%)"><div class="wdb-ai" aria-hidden="true"><span class="wo wo1"></span><span class="wo wo2"></span><span class="wo wo3"></span><div class="wgrid"></div><svg class="wnet" viewBox="0 0 900 120" preserveAspectRatio="xMidYMid slice"><line x1="70" y1="45" x2="190" y2="82"/><line x1="190" y1="82" x2="300" y2="38"/><line x1="70" y1="45" x2="210" y2="22"/><line x1="210" y1="22" x2="300" y2="38"/><line x1="190" y1="82" x2="120" y2="100"/><line x1="300" y1="38" x2="400" y2="72"/><circle cx="70" cy="45" r="3"/><circle cx="190" cy="82" r="3.6" style="animation-delay:.5s"/><circle cx="300" cy="38" r="3" style="animation-delay:1s"/><circle cx="210" cy="22" r="3" style="animation-delay:1.5s"/><circle cx="120" cy="100" r="3" style="animation-delay:2s"/><circle cx="400" cy="72" r="3.4" style="animation-delay:2.4s"/></svg><span class="wscan"></span></div><div class="wdb-overlay"><div class="wdb-title">DG Spin<sup>Grifols</sup></div><div class="wdb-tech">DG-320 · Immunohematology card system</div></div></div>
+<div id="tabs"><button class="tab active" data-tab="parts" onclick="dgSwitchTab('dgspin','parts')">📋 Spare Parts</button><button class="tab" data-tab="manual" onclick="dgSwitchTab('dgspin','manual')">📖 Manuals &amp; Procedures</button><button class="tab" data-tab="chat" onclick="dgSwitchTab('dgspin','chat')">💬 Ask AI</button><button class="tab" data-tab="ppm" onclick="dgSwitchTab('dgspin','ppm')">✅ PPM Checklist</button></div>
+<div class="ws-body">
+<div id="dgspinPanelParts" class="panel active docs-layout"><div class="pLeft" style="width:100%;border-right:none"><div class="toolbar"><button class="id-part-btn" onclick="location.href='identify.html?device=dgspin'">📷 Identify a part by photo</button><div class="search-wrap"><span class="sico">🔍</span><input type="text" id="dgspinSearchIn" placeholder="Search part name or P/N…" oninput="dbFilter(function(){dgFilterParts('dgspin');},'dgspin')"></div><div class="filter-row"><select id="dgspinTypeFilter" onchange="dgFilterParts('dgspin')"><option value="">All categories</option><option value="ELECTRONICS">💡 Electronics</option><option value="MECHANICS">⚙️ Mechanics</option><option value="MOTORS">🔩 Motors</option><option value="WIRING">🔌 Wiring</option><option value="MISCELANEA">📦 Miscellanea</option></select></div><div class="filter-row"><button class="filter-toggle bm-filter-btn" id="dgspinFtBm" onclick="toggleBmFilter('dgspin','dgspinFtBm',function(){dgFilterParts('dgspin');})">★ Bookmarked</button><button class="filter-toggle bm-filter-btn" id="dgspinFtRv" onclick="toggleRvFilter('dgspin','dgspinFtRv',function(){dgFilterParts('dgspin');})">⏱ Recent</button></div><div class="filter-meta"><span class="filter-count" id="dgspinFilterCount"></span></div></div><div class="pList" id="dgspinPList"></div><button class="scroll-top-btn" id="dgspinScrollTop" aria-label="Scroll to top" onclick="document.getElementById('dgspinPList').scrollTo({top:0,behavior:'smooth'})">↑</button></div></div>
+<div id="dgspinPanelManual" class="panel"><div class="pdf-newtab-wrap" style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center"><div class="pdf-newtab-card"><div class="pdf-newtab-glow"></div><div class="pdf-newtab-icon">📖</div><div class="pdf-newtab-title">DG Spin Service Manual</div><div class="pdf-newtab-meta">Grifols · DG-320 · Mar 2022</div><a class="pdf-newtab-btn" href="manuals/dgspin_service.pdf" target="_blank" rel="noopener">Open &nbsp;↗</a><div class="pdf-newtab-hint">Service manual</div></div><div class="pdf-newtab-card"><div class="pdf-newtab-glow"></div><div class="pdf-newtab-icon">📗</div><div class="pdf-newtab-title">DG Spin User Manual</div><div class="pdf-newtab-meta">Instructions for Use (EN)</div><a class="pdf-newtab-btn" href="manuals/dgspin_user.pdf" target="_blank" rel="noopener">Open &nbsp;↗</a><div class="pdf-newtab-hint">User / operator manual</div></div><div class="pdf-newtab-card"><div class="pdf-newtab-glow"></div><div class="pdf-newtab-icon">✅</div><div class="pdf-newtab-title">PPM Checklist (blank)</div><div class="pdf-newtab-meta">Yearly maintenance form</div><a class="pdf-newtab-btn" href="manuals/dgspin_ppm.pdf" target="_blank" rel="noopener">Open &nbsp;↗</a><div class="pdf-newtab-hint">Use the PPM tab to fill &amp; generate</div></div><div class="pdf-newtab-card"><div class="pdf-newtab-glow"></div><div class="pdf-newtab-icon">🧾</div><div class="pdf-newtab-title">IQ — Installation Qual.</div><div class="pdf-newtab-meta">SOP · REGD-0008372</div><a class="pdf-newtab-btn" href="manuals/dgspin_iq.pdf" target="_blank" rel="noopener">Open &nbsp;↗</a><div class="pdf-newtab-hint">Installation qualification</div></div><div class="pdf-newtab-card"><div class="pdf-newtab-glow"></div><div class="pdf-newtab-icon">🧪</div><div class="pdf-newtab-title">OQ — Operational Qual.</div><div class="pdf-newtab-meta">SOP · REGD-0008373</div><a class="pdf-newtab-btn" href="manuals/dgspin_oq.pdf" target="_blank" rel="noopener">Open &nbsp;↗</a><div class="pdf-newtab-hint">Operational qualification</div></div></div></div>
+<div id="dgspinPanelChat" class="panel docs-layout"><div class="ai-hero"><div class="ai-bg"><span class="ai-orb o1"></span><span class="ai-orb o2"></span><span class="ai-orb o3"></span><div class="ai-grid"></div><svg class="ai-net" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><line x1="52" y1="70" x2="150" y2="120"/><line x1="150" y1="120" x2="250" y2="80"/><line x1="250" y1="80" x2="340" y2="140"/><line x1="150" y1="120" x2="120" y2="220"/><line x1="120" y1="220" x2="250" y2="240"/><line x1="250" y1="240" x2="340" y2="140"/><line x1="250" y1="80" x2="250" y2="240"/><line x1="52" y1="70" x2="120" y2="220"/><circle cx="52" cy="70" r="3.2"/><circle cx="150" cy="120" r="4"/><circle cx="250" cy="80" r="3.2"/><circle cx="340" cy="140" r="4"/><circle cx="120" cy="220" r="3.2"/><circle cx="250" cy="240" r="4"/></svg><span class="ai-scan"></span></div><div class="ai-brain"><span class="ai-ring"></span><span class="ai-ring r2"></span>🧠</div><div class="ai-title">DG Spin · Ask AI</div><div class="ai-desc">Grounded AI Q&amp;A across the DG Spin service &amp; user manuals, SOPs and parts.</div><a class="ai-open-btn disabled" style="opacity:.6;pointer-events:none" href="#" onclick="return false">🧠 NotebookLM — coming soon</a><div class="ai-cap">A DG Spin NotebookLM notebook will be connected here soon</div></div></div>
+<div id="dgspinPanelPpm" class="panel"><div class="ppm-wrap" id="dgspinPpmWrap"></div></div>
+</div>
+</div>
+<div id="viewDGTHERM" class="view">
+<div class="ws-hdr"><div class="ws-brand"><span class="home-link sp-tip" data-tip="Back to all devices" role="button" tabindex="0" aria-label="Back to device picker" onclick="goHome()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goHome();}">⌂ Home</span><div class="ws-logo dgtherm">DG</div><div><div class="ws-title">DG Therm Service Tool</div><div class="ws-sub">Grifols · DG-319 · Card Dispenser System</div></div></div><div class="ws-pills"><div class="ws-pill"><span>27</span> parts</div><div class="ws-pill"><span>5</span> manuals</div><div class="ws-pill live">Grounded AI</div></div></div>
+<div class="ws-device-banner wdb-dgtherm" style="background:linear-gradient(90deg,#071f3a 0%,#071f3a 55%,rgba(7,31,58,0) 100%),radial-gradient(circle at 78% 40%,#0e4c86 0,#071f3a 70%)"><div class="wdb-ai" aria-hidden="true"><span class="wo wo1"></span><span class="wo wo2"></span><span class="wo wo3"></span><div class="wgrid"></div><svg class="wnet" viewBox="0 0 900 120" preserveAspectRatio="xMidYMid slice"><line x1="70" y1="45" x2="190" y2="82"/><line x1="190" y1="82" x2="300" y2="38"/><line x1="70" y1="45" x2="210" y2="22"/><line x1="210" y1="22" x2="300" y2="38"/><line x1="190" y1="82" x2="120" y2="100"/><line x1="300" y1="38" x2="400" y2="72"/><circle cx="70" cy="45" r="3"/><circle cx="190" cy="82" r="3.6" style="animation-delay:.5s"/><circle cx="300" cy="38" r="3" style="animation-delay:1s"/><circle cx="210" cy="22" r="3" style="animation-delay:1.5s"/><circle cx="120" cy="100" r="3" style="animation-delay:2s"/><circle cx="400" cy="72" r="3.4" style="animation-delay:2.4s"/></svg><span class="wscan"></span></div><div class="wdb-overlay"><div class="wdb-title">DG Therm<sup>Grifols</sup></div><div class="wdb-tech">DG-319 · Immunohematology card system</div></div></div>
+<div id="tabs"><button class="tab active" data-tab="parts" onclick="dgSwitchTab('dgtherm','parts')">📋 Spare Parts</button><button class="tab" data-tab="manual" onclick="dgSwitchTab('dgtherm','manual')">📖 Manuals &amp; Procedures</button><button class="tab" data-tab="chat" onclick="dgSwitchTab('dgtherm','chat')">💬 Ask AI</button><button class="tab" data-tab="ppm" onclick="dgSwitchTab('dgtherm','ppm')">✅ PPM Checklist</button></div>
+<div class="ws-body">
+<div id="dgthermPanelParts" class="panel active docs-layout"><div class="pLeft" style="width:100%;border-right:none"><div class="toolbar"><button class="id-part-btn" onclick="location.href='identify.html?device=dgtherm'">📷 Identify a part by photo</button><div class="search-wrap"><span class="sico">🔍</span><input type="text" id="dgthermSearchIn" placeholder="Search part name or P/N…" oninput="dbFilter(function(){dgFilterParts('dgtherm');},'dgtherm')"></div><div class="filter-row"><select id="dgthermTypeFilter" onchange="dgFilterParts('dgtherm')"><option value="">All categories</option><option value="ELECTRONICS">💡 Electronics</option><option value="MECHANICS">⚙️ Mechanics</option><option value="MOTORS">🔩 Motors</option><option value="WIRING">🔌 Wiring</option><option value="MISCELANEA">📦 Miscellanea</option></select></div><div class="filter-row"><button class="filter-toggle bm-filter-btn" id="dgthermFtBm" onclick="toggleBmFilter('dgtherm','dgthermFtBm',function(){dgFilterParts('dgtherm');})">★ Bookmarked</button><button class="filter-toggle bm-filter-btn" id="dgthermFtRv" onclick="toggleRvFilter('dgtherm','dgthermFtRv',function(){dgFilterParts('dgtherm');})">⏱ Recent</button></div><div class="filter-meta"><span class="filter-count" id="dgthermFilterCount"></span></div></div><div class="pList" id="dgthermPList"></div><button class="scroll-top-btn" id="dgthermScrollTop" aria-label="Scroll to top" onclick="document.getElementById('dgthermPList').scrollTo({top:0,behavior:'smooth'})">↑</button></div></div>
+<div id="dgthermPanelManual" class="panel"><div class="pdf-newtab-wrap" style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center"><div class="pdf-newtab-card"><div class="pdf-newtab-glow"></div><div class="pdf-newtab-icon">📖</div><div class="pdf-newtab-title">DG Therm Service Manual</div><div class="pdf-newtab-meta">Grifols · DG-319 · Mar 2022</div><a class="pdf-newtab-btn" href="manuals/dgtherm_service.pdf" target="_blank" rel="noopener">Open &nbsp;↗</a><div class="pdf-newtab-hint">Service manual</div></div><div class="pdf-newtab-card"><div class="pdf-newtab-glow"></div><div class="pdf-newtab-icon">📗</div><div class="pdf-newtab-title">DG Therm User Manual</div><div class="pdf-newtab-meta">Instructions for Use (EN)</div><a class="pdf-newtab-btn" href="manuals/dgtherm_user.pdf" target="_blank" rel="noopener">Open &nbsp;↗</a><div class="pdf-newtab-hint">User / operator manual</div></div><div class="pdf-newtab-card"><div class="pdf-newtab-glow"></div><div class="pdf-newtab-icon">✅</div><div class="pdf-newtab-title">PPM Checklist (blank)</div><div class="pdf-newtab-meta">Yearly maintenance form</div><a class="pdf-newtab-btn" href="manuals/dgtherm_ppm.pdf" target="_blank" rel="noopener">Open &nbsp;↗</a><div class="pdf-newtab-hint">Use the PPM tab to fill &amp; generate</div></div><div class="pdf-newtab-card"><div class="pdf-newtab-glow"></div><div class="pdf-newtab-icon">🧾</div><div class="pdf-newtab-title">IQ — Installation Qual.</div><div class="pdf-newtab-meta">SOP · REGD-0008374</div><a class="pdf-newtab-btn" href="manuals/dgtherm_iq.pdf" target="_blank" rel="noopener">Open &nbsp;↗</a><div class="pdf-newtab-hint">Installation qualification</div></div><div class="pdf-newtab-card"><div class="pdf-newtab-glow"></div><div class="pdf-newtab-icon">🧪</div><div class="pdf-newtab-title">OQ — Operational Qual.</div><div class="pdf-newtab-meta">SOP · REGD-0008375</div><a class="pdf-newtab-btn" href="manuals/dgtherm_oq.pdf" target="_blank" rel="noopener">Open &nbsp;↗</a><div class="pdf-newtab-hint">Operational qualification</div></div></div></div>
+<div id="dgthermPanelChat" class="panel docs-layout"><div class="ai-hero"><div class="ai-bg"><span class="ai-orb o1"></span><span class="ai-orb o2"></span><span class="ai-orb o3"></span><div class="ai-grid"></div><svg class="ai-net" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><line x1="52" y1="70" x2="150" y2="120"/><line x1="150" y1="120" x2="250" y2="80"/><line x1="250" y1="80" x2="340" y2="140"/><line x1="150" y1="120" x2="120" y2="220"/><line x1="120" y1="220" x2="250" y2="240"/><line x1="250" y1="240" x2="340" y2="140"/><line x1="250" y1="80" x2="250" y2="240"/><line x1="52" y1="70" x2="120" y2="220"/><circle cx="52" cy="70" r="3.2"/><circle cx="150" cy="120" r="4"/><circle cx="250" cy="80" r="3.2"/><circle cx="340" cy="140" r="4"/><circle cx="120" cy="220" r="3.2"/><circle cx="250" cy="240" r="4"/></svg><span class="ai-scan"></span></div><div class="ai-brain"><span class="ai-ring"></span><span class="ai-ring r2"></span>🧠</div><div class="ai-title">DG Therm · Ask AI</div><div class="ai-desc">Grounded AI Q&amp;A across the DG Therm service &amp; user manuals, SOPs and parts.</div><a class="ai-open-btn disabled" style="opacity:.6;pointer-events:none" href="#" onclick="return false">🧠 NotebookLM — coming soon</a><div class="ai-cap">A DG Therm NotebookLM notebook will be connected here soon</div></div></div>
+<div id="dgthermPanelPpm" class="panel"><div class="ppm-wrap" id="dgthermPpmWrap"></div></div>
 </div>
 </div>
 <div id="viewETIMAX" class="view">
@@ -4733,6 +4687,135 @@ async function ppmDoBuildBC760(){
   }catch(err){ alert('Could not generate report: '+err.message); }
 }
 function bc760OpenPdfPage(page){ window.open('manuals/bc760_service.pdf#page='+page,'_blank'); }
+
+/* ================= DG Spin / DG Therm (Grifols) ================= */
+const DG_TYPE_ICONS={ELECTRONICS:'💡',MECHANICS:'⚙️',MOTORS:'🔩',WIRING:'🔌',MISCELANEA:'📦',MISC:'📦'};
+const DG_TYPE_LABEL={ELECTRONICS:'Electronics',MECHANICS:'Mechanics',MOTORS:'Motors',WIRING:'Wiring',MISCELANEA:'Miscellanea',MISC:'Misc'};
+const DG_REG={
+  dgspin:{label:'DG Spin',maker:'Grifols',model:'DG-320',manual:'manuals/dgspin_service.pdf',parts:[{"code": "230665", "description": "KEYBOARD DG-SPIN", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgspin_230665.jpg"}, {"code": "230668", "description": "PCA DC MOTOR CONTROL (with screws)", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgspin_230668.jpg"}, {"code": "230670", "description": "PCA UNBALANCE DETECTOR (with screws)", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgspin_230670.jpg"}, {"code": "230683", "description": "MAINS SOCKET WITH FILTER (with screws)", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgspin_230683.jpg"}, {"code": "230818", "description": "FUSE 2A 250V MAINS SOCKET", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgspin_230818.jpg"}, {"code": "230887", "description": "PCA DISPLAY (with screws and plates)", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgspin_230887.jpg"}, {"code": "240917", "description": "CLOCK LITHIUM BATTERY", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgspin_240917.jpg"}, {"code": "734810", "description": "SCREWS/WIRE)", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgspin_734810.jpg"}, {"code": "735094", "description": "POWER SUPPLY v2 (W/SCREWS) CABLES KIT v4 (WITH GROUND", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgspin_735094.jpg"}, {"code": "735096", "description": "POWER SUPPLY UPGRADE KIT", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgspin_735096.jpg"}, {"code": "735344", "description": "PCA DISTRIBUTION (w/screws) (Ver. 3)", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgspin_735344.jpg"}, {"code": "230672", "description": "CARD HOLDERS (24 units)", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgspin_230672.jpg"}, {"code": "230674", "description": "HOUSING LATERAL PANEL (W/SCREWS)", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgspin_230674.jpg"}, {"code": "230676", "description": "LID JOINT (with screws)", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgspin_230676.jpg"}, {"code": "230677", "description": "LID SPRING", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgspin_230677.jpg"}, {"code": "230678", "description": "MOTOR COVER (with screws)", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgspin_230678.jpg"}, {"code": "230679", "description": "SHOCK ABSORBERS (3 units with nuts) W/NUTS)", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgspin_230679.jpg"}, {"code": "230686", "description": "LID (w_joint, latch & screws) (Ver.2)", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgspin_230686.jpg"}, {"code": "230687", "description": "HOUSING DG SPIN (w/screws) VER. 2", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgspin_230687.jpg"}, {"code": "230688", "description": "HINGE AXIS", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgspin_230688.jpg"}, {"code": "230890", "description": "DISPLAY WINDOW", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgspin_230890.jpg"}, {"code": "230897", "description": "RS-232 PROTECTIVE COVER", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgspin_230897.jpg"}, {"code": "240024", "description": "RUBBER FOOT (Grey)", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgspin_240024.jpg"}, {"code": "735760", "description": "DG SPIN HEAD v2", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgspin_735760.jpg"}, {"code": "732418", "description": "PACKAGING (DG SPIN) CABLES KIT v3 (WITH GROUND", "type": "MISCELANEA", "section": "Miscelanea", "image": "assets/img/dgspin_732418.jpg"}, {"code": "230680", "description": "MOTOR (without unbalance sensor) SENSOR)", "type": "MOTORS", "section": "Motors", "image": "assets/img/dgspin_230680.jpg"}, {"code": "230909", "description": "POWER CORD with lock v2", "type": "WIRING", "section": "Wiring", "image": "assets/img/dgspin_230909.jpg"}, {"code": "230910", "description": "POWER CORD U.S.A. with lock v2", "type": "WIRING", "section": "Wiring", "image": "assets/img/dgspin_230910.jpg"}, {"code": "231943", "description": "RS-232 COMMUNICATION CABLE", "type": "WIRING", "section": "Wiring", "image": "assets/img/dgspin_231943.jpg"}, {"code": "734239", "description": "SCREW) LID ELECTRIC LOCK SWITCH v3 (WITH LID ELECTRIC LOCK SWITCH v3 (WITH", "type": "WIRING", "section": "Wiring", "image": "assets/img/dgspin_734239.jpg"}, {"code": "735095", "description": "SCREW)", "type": "WIRING", "section": "Wiring", "image": "assets/img/dgspin_735095.jpg"}],ppm:{"title": "", "fields": [{"k": "work_order", "l": "Work Order No"}, {"k": "ppm_date", "l": "PPM Date"}, {"k": "region", "l": "Region", "default": "Western"}, {"k": "hospital", "l": "Hospital"}, {"k": "serial", "l": "Serial No"}, {"k": "department", "l": "Department", "default": "Blood Bank"}, {"k": "engineer", "l": "Service Engineer"}], "sections": [{"name": "General checks", "rows": ["Visual inspection: instrument general status.", "Mains Inlet Status"]}, {"name": "Touch buttons and LCD functionality check", "rows": ["Check and verify the functionality of touch buttons", "Check if the Display is Working properly"]}, {"name": "Decontamination & Cleaning", "rows": ["Turn off the instrument, disconnect the power cord.", "If there is spillage, wipe it with disposable absorbent material (paper towels, gauze, or cloth).", "Wipe the entire instrument with disposable towels or cotton balls dipped in a 0.5% (v/v) aqueous solution of sodium hypochlorite.", "Rinse the surface with a soft detergent and water to eliminate odors and any residual solution.", "Dry the surface.", "Dispose of contaminated materials used during decontamination in a container for biological waste."]}]}},
+  dgtherm:{label:'DG Therm',maker:'Grifols',model:'DG-319',manual:'manuals/dgtherm_service.pdf',parts:[{"code": "230818", "description": "FUSE 2A 250V MAINS SOCKET FUSE 2A", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgtherm_230818.jpg"}, {"code": "230881", "description": "TEMPERATURE PROBE PT-100 FOR", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgtherm_230881.jpg"}, {"code": "230886", "description": "KEYBOARD DG THERM", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgtherm_230886.jpg"}, {"code": "230887", "description": "PCA DISPLAY (with screws and plates) | PCB DISPLAY (W/SCREWS)", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgtherm_230887.jpg"}, {"code": "230890", "description": "DISPLAY WINDOW", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgtherm_230890.jpg"}, {"code": "230900", "description": "CABLE PCA DISPLAY to PCA CABLE PCB DISPLAY TO PCB", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgtherm_230900.jpg"}, {"code": "230904", "description": "TEMP. PROBE PT-100 FOR TUBES — TEMP. PROBE PT100 FOR TUBES -", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgtherm_230904.jpg"}, {"code": "230905", "description": "TEMP. PROBE PT-100 FOR CARDS — _—| TEMP. PROBE PT100 FOR CARDS -", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgtherm_230905.jpg"}, {"code": "230908", "description": "PCA INCUBATOR DG THERM (w/ PCB INCUBATOR DG THERM", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgtherm_230908.jpg"}, {"code": "240917", "description": "CLOCK LITHIUM BATTERY", "type": "ELECTRONICS", "section": "Electronics", "image": "assets/img/dgtherm_240917.jpg"}, {"code": "230891", "description": "ELEVATION CARDS PLATE PUSHER", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgtherm_230891.jpg"}, {"code": "230892", "description": "GROUNDING PLATE (w/ screws) GROUNDING PLATE (W/SCREWS)", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgtherm_230892.jpg"}, {"code": "230894", "description": "HEATING BLOCK DG THERM SEALING | HEATING BLOCK SEALING JOINT", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgtherm_230894.jpg"}, {"code": "230896", "description": "LID DG THERM", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgtherm_230896.jpg"}, {"code": "230906", "description": "MAINS CONNECTOR FIXING PLATE (w | MAINS CONNECTOR FIXING PLATE (w", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgtherm_230906.jpg"}, {"code": "230907", "description": "HOUSING DG THERM (w/screws) VER. | HOUSING DG THERM (w/screws) VER", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgtherm_230907.jpg"}, {"code": "240024", "description": "RUBBER FOOT (Grey) FOOT RUBBER", "type": "MECHANICS", "section": "Mechanics", "image": "assets/img/dgtherm_240024.jpg"}, {"code": "732417", "description": "PACKAGING (DG THERM)", "type": "MECHANICS", "section": "Mechanics"}, {"code": "230893", "description": "HEATING BLOCK DG THERM (w/ HEATING BLOCK (W/SCREWS & TH", "type": "MISCELANEA", "section": "Miscelanea", "image": "assets/img/dgtherm_230893.jpg"}, {"code": "230898", "description": "SCREWS & WASHERS SET DG THERM | SCREWS AND WASHERS SET DG", "type": "MISCELANEA", "section": "Miscelanea", "image": "assets/img/dgtherm_230898.jpg"}, {"code": "230899", "description": "THERMAL SILICON ADHESIVE TAPE (2 | THERMAL SILICON ADHESIVE TAPE (2", "type": "MISCELANEA", "section": "Miscelanea", "image": "assets/img/dgtherm_230899.jpg"}, {"code": "230903", "description": "DIGITAL THERMOMETER HIBOK-15", "type": "MISCELANEA", "section": "Miscelanea", "image": "assets/img/dgtherm_230903.jpg"}, {"code": "230889", "description": "THERMAL BLANKET (w/ wire & plug) THERMAL BLANKET (W/WIRE + PLUG)", "type": "WIRING", "section": "Wiring", "image": "assets/img/dgtherm_230889.jpg"}, {"code": "230897", "description": "RS-232 PROTECTIVE COVER", "type": "WIRING", "section": "Wiring", "image": "assets/img/dgtherm_230897.jpg"}, {"code": "230909", "description": "POWER CORD with lock v2", "type": "WIRING", "section": "Wiring", "image": "assets/img/dgtherm_230909.jpg"}, {"code": "230910", "description": "POWER CORD U.S.A. with lock v2", "type": "WIRING", "section": "Wiring", "image": "assets/img/dgtherm_230910.jpg"}, {"code": "231943", "description": "RS-232 COMMUNICATION CABLE RS-232 CONNECTION CABLE", "type": "WIRING", "section": "Wiring", "image": "assets/img/dgtherm_231943.jpg"}],ppm:{"title": "", "fields": [{"k": "work_order", "l": "Work Order No"}, {"k": "ppm_date", "l": "PPM Date"}, {"k": "region", "l": "Region", "default": "Western"}, {"k": "hospital", "l": "Hospital"}, {"k": "serial", "l": "Serial No"}, {"k": "department", "l": "Department", "default": "Blood Bank"}, {"k": "engineer", "l": "Service Engineer"}], "sections": [{"name": "Visual Inspection", "rows": ["Visual inspection: instrument general status.", "Mains Inlet Status"]}, {"name": "Touch buttons and LCD functionality check", "rows": ["Check and verify the functionality of touch buttons", "Check if the Display is Working properly"]}, {"name": "Decontamination & Cleaning", "rows": ["Turn off the instrument, disconnect the power cord.", "If there is spillage, wipe it with disposable absorbent material (paper towels, gauze, or cloth).", "Wipe the entire instrument with disposable towels or cotton balls dipped in a 0.5% (v/v) aqueous solution of sodium hypochlorite.", "Rinse the surface with a soft detergent and water to eliminate odors and any residual solution.", "Dry the surface.", "Dispose of contaminated materials used during decontamination in a container for biological waste."]}]}}
+};
+var dgState={dgspin:{filtered:[],ppm:{fields:{},done:{}}},dgtherm:{filtered:[],ppm:{fields:{},done:{}}}};
+window.initDGSPIN=function(){ dgInit('dgspin'); };
+window.initDGTHERM=function(){ dgInit('dgtherm'); };
+function dgInit(dev){ dgState[dev].filtered=DG_REG[dev].parts.slice(); dgFilterParts(dev); dgPpmRender(dev); }
+function dgSwitchTab(dev,tab){
+  var root=document.getElementById('view'+dev.toUpperCase()); if(!root)return;
+  root.querySelectorAll('#tabs .tab').forEach(function(b){b.classList.toggle('active',b.dataset.tab===tab);});
+  root.querySelectorAll('.ws-body > .panel').forEach(function(p){p.classList.remove('active');});
+  var el=document.getElementById(dev+'Panel'+tab.charAt(0).toUpperCase()+tab.slice(1)); if(el)el.classList.add('active');
+}
+function dgFilterParts(dev){
+  var q=(document.getElementById(dev+'SearchIn').value||'').toLowerCase().trim();
+  var type=document.getElementById(dev+'TypeFilter').value;
+  var f=DG_REG[dev].parts.filter(function(p){ if(q&&p.description.toLowerCase().indexOf(q)<0&&p.code.toLowerCase().indexOf(q)<0)return false; if(type&&p.type!==type)return false; return true; });
+  document.getElementById(dev+'FilterCount').textContent=f.length<DG_REG[dev].parts.length?f.length+' shown':DG_REG[dev].parts.length+' parts';
+  if(bmFilterActive(dev)){var _bm=bmGet(dev); f=f.filter(function(p){return _bm.has(p.code);});}
+  if(rvFilterActive(dev)){var _rv=new Set(rvGet(dev).map(function(x){return x.code;})); f=f.filter(function(p){return _rv.has(p.code);});}
+  dgState[dev].filtered=f; dgRenderList(dev);
+}
+function dgRenderList(dev){
+  vsInit(dev+'PList', dgState[dev].filtered, function(p){return dgBuildRow(dev,p);}, function(items){
+    var g={}; items.forEach(function(p){var t=p.type||'MISC';(g[t]=g[t]||[]).push(p);});
+    return Object.keys(g).sort().map(function(t){return {head:'<div class="grp-head"><span class="grp-icon">'+(DG_TYPE_ICONS[t]||'📦')+'</span><span class="grp-label">'+(DG_TYPE_LABEL[t]||t)+'</span><div class="grp-line"></div><span class="grp-cnt">'+g[t].length+'</span></div>',items:g[t]};});
+  });
+}
+function dgBuildRow(dev,p){
+  var idx=DG_REG[dev].parts.indexOf(p); var ic=DG_TYPE_ICONS[p.type]||'🔩'; var photo=p.image?('<img src="'+p.image+'" alt="'+p.code+'" loading="lazy">'):('<span class="ni">'+ic+'</span>');
+  return '<div class="pcard" id="'+dev+'-row-'+idx+'" onclick="dgOpenModal(\''+dev+'\','+idx+')"><div class="pcard-photo">'+photo+'<span class="pcard-badge" title="'+p.type+'">'+ic+'</span></div><div class="pcard-body"><div class="pcard-code">'+p.code+'</div><div class="pcard-actions"><button class="pcard-copy sp-tip" data-tip="Copy part number" aria-label="Copy part number" onclick="copyCode(\''+p.code+'\',this)">⧉ Copy</button><button class="pcard-copy sp-tip" data-tip="Copy request email" aria-label="Copy request email" onclick="copyPartEmail(this)">✉ Request</button>'+bmBtnHtml(dev,p.code)+'</div><div class="pcard-name" title="'+escHtml(p.description)+'">'+p.description+'</div><div class="pcard-footer"><span class="pcard-noproc">'+(DG_TYPE_LABEL[p.type]||p.type)+'</span></div></div></div>';
+}
+function dgOpenModal(dev,idx){
+  var p=DG_REG[dev].parts[idx]; rvRecord(dev,p.code,p.description);
+  document.getElementById('mTitle').textContent=p.description;
+  document.getElementById('mCode').textContent='P/N: '+p.code;
+  document.getElementById('mType').textContent=(DG_TYPE_ICONS[p.type]||'')+' '+(DG_TYPE_LABEL[p.type]||p.type);
+  document.getElementById('mNote').textContent=DG_REG[dev].label+' ('+DG_REG[dev].model+') · Grifols spare part';
+  var _mi=document.getElementById('mImg'); if(p.image){_mi.src=p.image;_mi.style.display='block';}else{_mi.style.display='none';}
+  document.getElementById('mSymp').innerHTML='<p class="no-symp">No specific symptoms documented for this part.</p>';
+  document.getElementById('mManual').innerHTML='<div class="manual-card"><div class="manual-icon">📖</div><div class="manual-info"><div class="manual-name">'+DG_REG[dev].label+' Service Manual</div><div class="manual-ref">Grifols · '+DG_REG[dev].model+' (March 2022)</div></div><button class="manual-btn" onclick="window.open(\''+DG_REG[dev].manual+'\',\'_blank\');closeModal()">Open Manual ↗</button></div>';
+  document.querySelectorAll('#view'+dev.toUpperCase()+' .pcard.active').forEach(function(r){r.classList.remove('active');});
+  var row=document.getElementById(dev+'-row-'+idx); if(row)row.classList.add('active');
+  document.getElementById('modal').classList.add('open'); document.body.style.overflow='hidden';
+}
+/* ---- DG PPM (freshly drawn report) ---- */
+function dgPpmRender(dev){
+  var wrap=document.getElementById(dev+'PpmWrap'); if(!wrap)return;
+  var L=DG_REG[dev].ppm, st=dgState[dev].ppm, total=0; L.sections.forEach(function(s){total+=s.rows.length;});
+  var done=0; for(var k in st.done){if(st.done[k])done++;}
+  var pct=total?Math.round(done/total*100):0;
+  var h='<div class="ppm-hdr"><div><div class="ppm-title">✅ Yearly Maintenance — '+DG_REG[dev].label+'</div><div class="ppm-sub">Grifols '+DG_REG[dev].model+' · '+total+' checks</div></div></div>';
+  h+='<button class="ppm-import-row" onclick="afmsImportDetails(&quot;'+dev+'&quot;)">👤 Import my details</button>';
+  h+='<div class="ppm-fields">'+L.fields.map(function(f){var v=(st.fields[f.k]!==undefined?st.fields[f.k]:(f.default||'')); var ty=f.k.indexOf('date')>=0?'date':'text'; return '<div><label class="ppm-field-label">'+f.l+'</label><input class="ppm-field-input" type="'+ty+'" value="'+(''+v).replace(/"/g,'&quot;')+'" placeholder="'+f.l+'" onblur="dgPpmSetField(\''+dev+'\',\''+f.k+'\',this.value)"></div>';}).join('')+'</div>';
+  h+='<div class="ppm-progress-wrap"><div class="ppm-progress-bar-track"><div class="ppm-progress-bar-fill" style="width:'+pct+'%"></div></div><div class="ppm-progress-label"><span>'+done+' / '+total+' checks done</span><span>'+pct+'%</span></div></div>';
+  h+='<button class="ppm-generate-btn ppm-generate-top" onclick="dgPpmGenerate(\''+dev+'\')">⬇ Generate Report</button>';
+  h+='<div class="ppm-select-all-bar"><span class="ppm-select-all-label">All '+total+' checks</span><div style="display:flex;gap:6px"><button class="ppm-select-all-btn" onclick="dgPpmAll(\''+dev+'\',true)">✓ Mark all done</button><button class="ppm-select-all-btn clear" onclick="dgPpmAll(\''+dev+'\',false)">Clear all</button></div></div>';
+  var ri=0;
+  L.sections.forEach(function(s){
+    h+='<div class="ppm-section-hdr"><div class="ppm-section-title">'+s.name+'</div></div><div class="ppm-table">';
+    s.rows.forEach(function(txt){ var id='r'+ri; var on=!!st.done[id];
+      h+='<div class="ppm-row'+(on?' marked':'')+'"><div class="ppm-row-stack"><div class="ppm-row-main"><div class="ppm-mark-picker"><button class="ppm-mark-btn'+(on?' active':'')+'" title="Done" onclick="dgPpmToggle(\''+dev+'\',\''+id+'\')">✓</button></div><div class="ppm-row-body"><div class="ppm-row-proc">'+txt+'</div></div></div></div></div>'; ri++; });
+    h+='</div>';
+  });
+  h+='<button class="ppm-generate-btn" onclick="dgPpmGenerate(\''+dev+'\')">⬇ Generate Report</button><div class="ppm-generate-hint">Generates a filled DG maintenance report PDF</div>';
+  wrap.innerHTML=h;
+}
+function dgPpmSetField(dev,k,v){ dgState[dev].ppm.fields[k]=v; }
+function dgPpmToggle(dev,id){ var d=dgState[dev].ppm.done; d[id]=!d[id]; dgPpmRender(dev); }
+function dgPpmAll(dev,val){ var L=DG_REG[dev].ppm,st=dgState[dev].ppm,ri=0; L.sections.forEach(function(s){s.rows.forEach(function(){st.done['r'+ri]=val;ri++;});}); dgPpmRender(dev); }
+function dgWrap(font,size,maxw,text){ var words=(''+text).split(' '),lines=[],cur=''; for(var i=0;i<words.length;i++){var t=cur?cur+' '+words[i]:words[i]; if(font.widthOfTextAtSize(t,size)>maxw&&cur){lines.push(cur);cur=words[i];}else{cur=t;}} if(cur)lines.push(cur); return lines; }
+async function dgPpmGenerate(dev){
+  try{
+    var P=PDFLib,PD=P.PDFDocument,rgb=P.rgb,SF=P.StandardFonts;
+    var L=DG_REG[dev].ppm, st=dgState[dev].ppm;
+    var doc=await PD.create(); var page=doc.addPage([595.28,841.89]);
+    var fB=await doc.embedFont(SF.HelveticaBold), fR=await doc.embedFont(SF.Helvetica);
+    var PW=595.28,PH=841.89,m=42,y=PH-46;
+    var blue=rgb(0.05,0.22,0.45), dark=rgb(0.12,0.12,0.12), grey=rgb(0.42,0.42,0.42), line=rgb(0.75,0.78,0.82), shade=rgb(0.90,0.93,0.97), green=rgb(0.04,0.48,0.24);
+    page.drawText('AFMS ServicePal',{x:m,y:y,size:10,font:fB,color:blue});
+    page.drawText('GRIFOLS',{x:PW-m-70,y:y,size:12,font:fB,color:blue}); y-=22;
+    page.drawText(DG_REG[dev].label+' — Yearly Maintenance Checklist',{x:m,y:y,size:15,font:fB,color:dark}); y-=8;
+    page.drawText('Grifols '+DG_REG[dev].model,{x:m,y:y-6,size:9,font:fR,color:grey}); y-=24;
+    // header fields box (3 rows x 2 cols)
+    var fields=L.fields.filter(function(f){return f.k!=='engineer';});
+    var colw=(PW-2*m)/2, rowh=18; var rows=Math.ceil(fields.length/2);
+    var top=y; 
+    for(var r=0;r<rows;r++){ for(var c=0;c<2;c++){ var f=fields[r*2+c]; if(!f)continue; var bx=m+c*colw, by=y-r*rowh;
+      page.drawRectangle({x:bx,y:by-rowh,width:colw,height:rowh,borderColor:line,borderWidth:0.7});
+      page.drawText(f.l+':',{x:bx+5,y:by-13,size:8.5,font:fB,color:dark});
+      var v=(st.fields[f.k]!==undefined?st.fields[f.k]:(f.default||''));
+      page.drawText(''+v,{x:bx+90,y:by-13,size:8.5,font:fR,color:dark});
+    }}
+    y=top-rows*rowh-16;
+    // checklist
+    var ri=0;
+    L.sections.forEach(function(s){
+      page.drawRectangle({x:m,y:y-16,width:PW-2*m,height:16,color:shade});
+      page.drawText(s.name,{x:m+5,y:y-12,size:9.5,font:fB,color:blue}); y-=16;
+      s.rows.forEach(function(txt){ var on=!!st.done['r'+ri]; ri++;
+        var lines=dgWrap(fR,9,PW-2*m-58,txt); var cellh=Math.max(18,lines.length*11+7);
+        page.drawRectangle({x:m,y:y-cellh,width:PW-2*m,height:cellh,borderColor:line,borderWidth:0.6});
+        page.drawRectangle({x:PW-m-40,y:y-cellh,width:40,height:cellh,borderColor:line,borderWidth:0.6});
+        // checkbox
+        var cbx=PW-m-25, cby=y-cellh/2;
+        page.drawRectangle({x:cbx,y:cby-5,width:10,height:10,borderColor:rgb(0.3,0.3,0.3),borderWidth:0.9});
+        if(on){ page.drawLine({start:{x:cbx+1,y:cby-1},end:{x:cbx+4,y:cby-4.5},thickness:1.4,color:green}); page.drawLine({start:{x:cbx+4,y:cby-4.5},end:{x:cbx+10,y:cby+4},thickness:1.4,color:green}); }
+        var ty=y-12; lines.forEach(function(ln){ page.drawText(ln,{x:m+8,y:ty,size:9,font:fR,color:dark}); ty-=11; });
+        y-=cellh;
+      });
+      y-=6;
+    });
+    y-=6;
+    page.drawRectangle({x:m,y:y-22,width:PW-2*m,height:22,borderColor:line,borderWidth:0.7});
+    page.drawText('Service Engineer:',{x:m+5,y:y-14,size:9,font:fB,color:dark});
+    page.drawText((st.fields.engineer||''),{x:m+110,y:y-14,size:9,font:fR,color:dark});
+    page.drawText('Date: '+(st.fields.ppm_date||''),{x:PW-m-160,y:y-14,size:9,font:fR,color:dark});
+    var out=await doc.save(); var blob=new Blob([out],{type:'application/pdf'}); var url=URL.createObjectURL(blob);
+    var a=document.createElement('a'); a.href=url; a.download=afmsReport(dev.toUpperCase()+'_PPM_',{fields:st.fields}); document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){URL.revokeObjectURL(url);},4000);
+  }catch(err){ alert('Could not generate report: '+err.message); }
+}
+/* ================= end DG ================= */
+
 /* ===================== end BC-760 ===================== */
 
 
@@ -4829,6 +4912,8 @@ function openDevice(device, fromPop) {
     if (device === 'PANTHER' && !STATE.panther.inited){ STATE.panther.inited=true; if(window.initPANTHER) window.initPANTHER(); }
     if (device === 'AMICORE' && !STATE.amicore.inited){ STATE.amicore.inited=true; if(window.initAMICORE) window.initAMICORE(); }
     if (device === 'BC760' && !STATE.bc760.inited){ STATE.bc760.inited=true; if(window.initBC760) window.initBC760(); }
+    if (device === 'DGSPIN' && !STATE.dgspin.inited){ STATE.dgspin.inited=true; if(window.initDGSPIN) window.initDGSPIN(); }
+    if (device === 'DGTHERM' && !STATE.dgtherm.inited){ STATE.dgtherm.inited=true; if(window.initDGTHERM) window.initDGTHERM(); }
     initScrollTopBtns();
   }));
 }
@@ -4844,6 +4929,8 @@ const STATE = {
   panther: { inited: false },
   amicore: { inited: false },
   bc760: { inited: false },
+  dgspin: { inited: false },
+  dgtherm: { inited: false },
 };
 preloadAllIndexes(); // start building indexes in background immediately
 
@@ -4873,6 +4960,8 @@ const API_PROXY_URL = ''; // e.g. 'https://your-worker.your-name.workers.dev/cha
    ═══════════════════════════════════════════════════════════════ */
 const NOTEBOOK_URLS = {
   bc760:  'https://notebooklm.google.com/notebook/cf16b646-7c29-4b17-aa08-7f793da178be',
+  dgspin: '',
+  dgtherm: '',
   lxl:    'https://notebooklm.google.com/notebook/f42296ae-021b-4b6e-b54d-d12521c7c650',
   cl1200: 'https://notebooklm.google.com/notebook/b57b972e-0ab9-4bec-afb0-81118bf62737',
   cl900:  'https://notebooklm.google.com/notebook/b57b972e-0ab9-4bec-afb0-81118bf62737',
@@ -10202,5 +10291,45 @@ html.night .cart-btn.ghost{background:#16283a;color:#cfe0f0;border-color:#2c4a63
 .devices-label{text-align:center;font-size:21px;font-weight:800;color:#0f172a;letter-spacing:.4px;margin:20px 0 2px;position:relative;z-index:2}.devices-label::after{content:"";display:block;width:46px;height:3px;border-radius:2px;background:linear-gradient(90deg,#3b74ff,#22d3ee);margin:7px auto 0}html.night .devices-label{color:#e7edf8}.id-part-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:linear-gradient(90deg,#3b74ff,#6d5bf5);color:#fff;border:none;border-radius:10px;padding:11px;font-size:13.5px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(59,116,255,.35);transition:transform .15s,box-shadow .2s}.id-part-btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(59,116,255,.5)}.ai-hero{flex:1 1 auto;align-self:stretch;min-width:0}.ws-device-banner>.wdb-ai{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none}.wdb-ai .wo{position:absolute;border-radius:50%;filter:blur(16px);opacity:.55;mix-blend-mode:screen;animation:aiFloat 9s ease-in-out infinite}.wdb-ai .wo1{width:90px;height:90px;background:#3b74ff;top:-34%;left:8%}.wdb-ai .wo2{width:74px;height:74px;background:#22d3ee;bottom:-44%;left:40%;animation-delay:-3s}.wdb-ai .wo3{width:60px;height:60px;background:#a855f7;top:-24%;right:20%;animation-delay:-5s}.wdb-ai .wgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(120,160,255,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(120,160,255,.10) 1px,transparent 1px);background-size:26px 26px;-webkit-mask-image:linear-gradient(90deg,#000,transparent 72%);mask-image:linear-gradient(90deg,#000,transparent 72%);animation:aiDrift 24s linear infinite}.wdb-ai .wnet{position:absolute;inset:0;width:100%;height:100%;opacity:.62}.wdb-ai .wnet line{stroke:rgba(120,180,255,.3);stroke-width:1}.wdb-ai .wnet circle{fill:#8fc2ff;animation:aiNode 3s ease-in-out infinite}.wdb-ai .wscan{position:absolute;top:0;bottom:0;width:130px;background:linear-gradient(90deg,transparent,rgba(90,150,255,.16),transparent);animation:wdbScan 7s ease-in-out infinite}@keyframes wdbScan{0%{left:-18%}50%{left:100%}100%{left:-18%}}@media (prefers-reduced-motion:reduce){.wdb-ai .wo,.wdb-ai .wgrid,.wdb-ai .wnet circle,.wdb-ai .wscan{animation:none!important}}.ws-device-banner{isolation:isolate}</style>
 
 <style id="bc760Style">.ws-logo.bc760{background:linear-gradient(135deg,#b91c1c,#7f1d1d);color:#fff}.dc-banner.bc760{background:linear-gradient(135deg,#2a0808,#7f1d1d)}.wdb-bc760{}</style>
+<style id="dgStyle">.ws-logo.dgspin,.ws-logo.dgtherm{background:linear-gradient(135deg,#0e4c86,#071f3a);color:#fff}.dc-banner.dgspin,.dc-banner.dgtherm{background:linear-gradient(135deg,#0a3a6a,#071f3a)}</style>
+<style id="hgHomeStyle">
+#viewHome .hg-bar{display:flex;gap:9px;justify-content:center;margin:2px 0 2px;flex-wrap:wrap}
+#viewHome .hg-tog{border:1px solid rgba(15,23,42,.1);cursor:pointer;font-weight:700;font-size:12px;color:#475569;background:rgba(255,255,255,.75);padding:7px 14px;border-radius:30px;transition:transform .15s}
+#viewHome .hg-tog:hover{transform:translateY(-2px)}
+#viewHome .hg-wrap{max-width:1120px;margin:8px auto 0;width:100%}
+#viewHome .hg-mfr{margin-top:16px;background:rgba(255,255,255,.62);backdrop-filter:blur(12px);border:1px solid rgba(15,23,42,.06);border-radius:22px;overflow:hidden;box-shadow:0 10px 30px rgba(15,23,42,.05)}
+#viewHome .hg-head{display:flex;align-items:center;gap:14px;padding:16px 20px;cursor:pointer;user-select:none;position:relative}
+#viewHome .hg-head::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--acc)}
+#viewHome .hg-badge{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:17px;position:relative;overflow:hidden;box-shadow:0 8px 18px var(--glow);flex-shrink:0}
+#viewHome .hg-badge::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.5),transparent 60%)}
+#viewHome .hg-t{flex:1;min-width:0}
+#viewHome .hg-nm{font-size:19px;font-weight:800;letter-spacing:-.4px;line-height:1;color:#0f172a}
+#viewHome .hg-sub{font-size:12px;color:#5b6b85;margin-top:4px;font-weight:600}
+#viewHome .hg-count{font-size:12px;font-weight:800;color:var(--acc);background:var(--soft);border-radius:30px;padding:6px 13px;white-space:nowrap}
+#viewHome .hg-chev{font-size:15px;color:#5b6b85;transition:transform .3s;width:20px;text-align:center}
+#viewHome .hg-mfr.closed .hg-chev{transform:rotate(-90deg)}
+#viewHome .hg-pane{display:grid;grid-template-rows:1fr;transition:grid-template-rows .4s cubic-bezier(.22,1,.36,1)}
+#viewHome .hg-mfr.closed .hg-pane{grid-template-rows:0fr}
+#viewHome .hg-in{overflow:hidden;min-height:0}
+#viewHome .hg-grid{display:flex;flex-wrap:wrap;gap:24px 26px;padding:10px 24px 26px}
+#viewHome .hg-dev{width:146px;display:flex;flex-direction:column;align-items:center;gap:10px;cursor:pointer;text-align:center;outline:none}
+#viewHome .hg-circ{width:116px;height:116px;border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 34%,var(--soft),#fff 74%);border:1px solid rgba(15,23,42,.08);box-shadow:0 8px 22px rgba(15,23,42,.08);transition:transform .25s cubic-bezier(.22,1,.36,1),box-shadow .3s,border-color .25s}
+#viewHome .hg-circ::after{content:"";position:absolute;inset:-3px;border-radius:50%;border:2px solid var(--acc);opacity:0;transition:opacity .25s}
+#viewHome .hg-circ img{max-width:76%;max-height:76%;object-fit:contain;filter:drop-shadow(0 6px 12px rgba(15,23,42,.2));transition:transform .3s}
+#viewHome .hg-dev:hover .hg-circ,#viewHome .hg-dev:focus-visible .hg-circ{transform:translateY(-7px);box-shadow:0 22px 42px -10px var(--glow);border-color:var(--acc)}
+#viewHome .hg-dev:hover .hg-circ::after,#viewHome .hg-dev:focus-visible .hg-circ::after{opacity:1}
+#viewHome .hg-dev:hover .hg-circ img{transform:scale(1.09)}
+#viewHome .hg-dnm{font-size:13px;font-weight:800;letter-spacing:-.2px;line-height:1.2;color:#0f172a}
+#viewHome .hg-dmd{font-size:11px;color:#5b6b85;font-weight:600}
+#viewHome .hg-ntag{position:absolute;top:2px;right:2px;font-size:9px;font-weight:800;color:#fff;padding:2px 7px;border-radius:20px;box-shadow:0 3px 8px rgba(0,0,0,.2)}
+html.night #viewHome .hg-mfr{background:rgba(255,255,255,.05);border-color:rgba(150,180,255,.12)}
+html.night #viewHome .hg-nm,html.night #viewHome .hg-dnm{color:#e7edf8}
+html.night #viewHome .hg-sub,html.night #viewHome .hg-dmd,html.night #viewHome .hg-chev{color:#9fb4d8}
+html.night #viewHome .hg-circ{background:radial-gradient(circle at 50% 34%,var(--soft),rgba(255,255,255,.05) 74%);border-color:rgba(150,180,255,.16)}
+html.night #viewHome .hg-tog{background:rgba(255,255,255,.06);color:#bcd0f0;border-color:rgba(150,180,255,.2)}
+@media (max-width:560px){#viewHome .hg-grid{gap:18px 14px;justify-content:center;padding:8px 12px 20px}#viewHome .hg-dev{width:104px}#viewHome .hg-circ{width:94px;height:94px}}
+</style>
+<script id="hgHomeJs">function hgAll(o){document.querySelectorAll('#viewHome .hg-mfr').forEach(function(e){e.classList.toggle('closed',!o);});}
+document.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&e.target&&e.target.classList&&e.target.classList.contains('hg-dev')){e.preventDefault();e.target.click();}});</script>
 </body>
 </html>
