@@ -243,6 +243,11 @@ input.pdf-slider{flex:1;height:3px;accent-color:var(--blue);cursor:pointer;borde
 .pcard-body{padding:10px 11px 11px;display:flex;flex-direction:column;gap:3px;flex:1}
 .pcard-code{font-size:9.5px;font-weight:700;color:var(--blue);font-family:var(--mono);letter-spacing:.3px}
 .pcard-altcode{color:#8a94a6;font-weight:600}
+.xref-box{margin:8px 0 2px;padding:10px 12px;background:rgba(120,140,170,.08);border:1px solid rgba(120,140,170,.22);border-radius:10px}
+.xref-lbl{font-size:12px;font-weight:700;margin-bottom:7px;opacity:.85}
+.xref-chips{display:flex;flex-wrap:wrap;gap:6px}
+.xref-chip{font:inherit;font-size:12px;font-weight:600;cursor:pointer;padding:5px 11px;border-radius:999px;border:1px solid rgba(120,140,170,.4);background:rgba(120,140,170,.10);color:inherit}
+.xref-chip:hover{background:var(--acc,#0a58a8);color:#fff;border-color:transparent}
 .pcard-name{font-size:12px;font-weight:600;color:var(--t1);line-height:1.32;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:31px}
 .pcard-symp{font-size:10px;color:var(--amber);opacity:.9;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:1px}
 .pcard-footer{margin-top:auto;padding-top:8px}
@@ -3418,6 +3423,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
     <img class="modal-img" id="mImg" src="" alt="" style="display:none">
     <div class="modal-body">
       <div id="mActions" class="modal-actions"></div>
+      <div id="mXref"></div>
       <div class="modal-sh">Category</div><div class="modal-sv" id="mType"></div>
       <div class="modal-sh">Description / Notes</div><div class="modal-sv" id="mNote"></div>
       <div class="modal-sh">⚠ Common Failure Symptoms</div><div id="mSymp"></div>
@@ -3462,6 +3468,66 @@ const ETIMAX_CASES = [{"title": "Plate Transport Errors — Code ERA: Argument e
 const ETIMAX_PDF_B64_URL = "manuals/etimax.pdf";
 
 </script>
+<script>/* ServicePal smart search — number-words, hyphen/space-insensitive, synonyms, plurals */
+var SP_NUMW={zero:'0',one:'1',two:'2',three:'3',four:'4',five:'5',six:'6',seven:'7',eight:'8',nine:'9',ten:'10',eleven:'11',twelve:'12'};
+var SP_SYN={
+  psu:['power supply'],
+  pcb:['board','pca'],pca:['board','pcb'],board:['pcb','pca'],
+  temp:['temperature'],temperature:['temp'],
+  config:['configuration'],configuration:['config'],
+  elec:['electric','electrical','electronic','electronics'],electrical:['elec','electronic'],
+  valve:['electrovalve'],electrovalve:['valve'],
+  bcr:['barcode'],barcode:['bcr'],
+  lube:['lubricant','grease'],grease:['lubricant','lube'],oil:['lubricant'],
+  hdd:['hard disk'],ssd:['hard disk'],
+  needle:['probe'],probe:['needle'],
+  hose:['tube','tubing'],tube:['tubing','hose'],tubing:['tube','hose'],
+  led:['light','lamp'],light:['led','lamp'],lamp:['led','light']
+};
+function spCanon(s){
+  s=(s||'').toString().toLowerCase().replace(/[-_/\\.,()]/g,' ').replace(/[^\w\s]/g,' ');
+  s=s.replace(/\b(zero|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\b/g,function(m){return SP_NUMW[m];});
+  return s.replace(/\s+/g,' ').trim();
+}
+function spLev(a,b,max){
+  var la=a.length,lb=b.length; if(Math.abs(la-lb)>max) return max+1;
+  var prev=[],cur=[],i,j; for(j=0;j<=lb;j++) prev[j]=j;
+  for(i=1;i<=la;i++){ cur[0]=i; var best=cur[0];
+    for(j=1;j<=lb;j++){ var cost=a.charAt(i-1)===b.charAt(j-1)?0:1;
+      cur[j]=Math.min(prev[j]+1,cur[j-1]+1,prev[j-1]+cost); if(cur[j]<best)best=cur[j]; }
+    if(best>max) return max+1; for(j=0;j<=lb;j++) prev[j]=cur[j]; }
+  return prev[lb];
+}
+function spSmartMatch(query,fields){
+  var raw=spCanon(query); if(!raw) return true;
+  var hay=spCanon(fields); var hayC=hay.replace(/ /g,''); var padded=' '+hay+' ';
+  var toks=raw.split(' '); var htoks=null;
+  for(var i=0;i<toks.length;i++){
+    var tok=toks[i]; if(!tok) continue;
+    var vars=[tok];
+    if(tok.length>3&&tok.charAt(tok.length-1)==='s') vars.push(tok.slice(0,-1)); else vars.push(tok+'s');
+    var syn=SP_SYN[tok]; if(syn){for(var k=0;k<syn.length;k++) vars.push(syn[k]);}
+    var ok=false;
+    for(var j=0;j<vars.length;j++){
+      var v=vars[j];
+      if(/^\d+$/.test(v)){ if(padded.indexOf(' '+v+' ')>-1){ok=true;break;} continue; }
+      var vc=v.replace(/ /g,'');
+      if(hay.indexOf(v)>-1||hayC.indexOf(vc)>-1){ok=true;break;}
+    }
+    if(!ok && tok.length>=4 && /^[a-z]+$/.test(tok)){
+      var thr=tok.length<=5?1:2;
+      if(htoks===null) htoks=hay.split(' ');
+      for(var t=0;t<htoks.length;t++){ var ht=htoks[t];
+        if(ht.length<4) continue;
+        if(spLev(tok,ht,thr)<=thr){ok=true;break;} }
+    }
+    if(!ok) return false;
+  }
+  return true;
+}
+window.spSmartMatch=spSmartMatch;window.spCanon=spCanon;
+</script>
+
 <script>
 /* ═══════════════════════════════════════════════════════════════
    VIEW ROUTING (Homepage <-> Device Workspaces)
@@ -4691,7 +4757,7 @@ function filterBC760Parts(){
   var q=(document.getElementById('bc760SearchIn').value||'').toLowerCase().trim();
   var type=document.getElementById('bc760TypeFilter').value;
   bc760Filtered=BC760_PARTS.filter(function(p){
-    if(q && p.description.toLowerCase().indexOf(q)<0 && p.code.toLowerCase().indexOf(q)<0) return false;
+    if(q && !spSmartMatch(q, p.description+' '+p.code)) return false;
     if(type && p.type!==type) return false; return true; });
   document.getElementById('bc760FilterCount').textContent = bc760Filtered.length<BC760_PARTS.length ? bc760Filtered.length+' shown' : BC760_PARTS.length+' parts';
   if(bmFilterActive('bc760')){var _bm=bmGet('bc760'); bc760Filtered=bc760Filtered.filter(function(p){return _bm.has(p.code);});}
@@ -4711,7 +4777,7 @@ function buildBC760Row(p){
   return '<div class="pcard" id="bc760-row-'+idx+'" onclick="openBC760Modal('+idx+')"><div class="pcard-photo">'+photo+'<span class="pcard-badge" title="'+p.type+'">'+(BC760_TYPE_ICONS[p.type]||'\u{1F529}')+'</span></div><div class="pcard-body"><div class="pcard-code">'+p.code+'</div><div class="pcard-actions"><button class="pcard-copy sp-tip" data-tip="Copy part number" aria-label="Copy part number" onclick="copyCode(\''+p.code+'\',this)">⧉ Copy</button><button class="pcard-copy sp-tip" data-tip="Copy request email" aria-label="Copy request email" onclick="copyPartEmail(this)">✉ Request</button>'+bmBtnHtml('bc760',p.code)+'</div><div class="pcard-name" title="'+escHtml(p.description)+'">'+p.description+'</div><div class="pcard-footer">'+meta+'</div></div></div>';
 }
 function openBC760Modal(idx){
-  var p=BC760_PARTS[idx];
+  var p=BC760_PARTS[idx]; spSetXref(p.code,'BC760');
   rvRecord('bc760',p.code,p.description);
   document.getElementById('mTitle').textContent=p.description;
   document.getElementById('mCode').textContent='Order No: '+p.code;
@@ -4805,7 +4871,7 @@ function filterBC6800Parts(){
   var q=(document.getElementById('bc6800SearchIn').value||'').toLowerCase().trim();
   var type=document.getElementById('bc6800TypeFilter').value;
   bc6800Filtered=BC6800_PARTS.filter(function(p){
-    if(q && p.description.toLowerCase().indexOf(q)<0 && p.code.toLowerCase().indexOf(q)<0) return false;
+    if(q && !spSmartMatch(q, p.description+' '+p.code)) return false;
     if(type && p.type!==type) return false; return true; });
   document.getElementById('bc6800FilterCount').textContent = bc6800Filtered.length<BC6800_PARTS.length ? bc6800Filtered.length+' shown' : BC6800_PARTS.length+' items';
   if(bmFilterActive('bc6800')){var _bm=bmGet('bc6800'); bc6800Filtered=bc6800Filtered.filter(function(p){return _bm.has(p.code);});}
@@ -4826,7 +4892,7 @@ function buildBC6800Row(p){
   return '<div class="pcard" id="bc6800-row-'+idx+'" onclick="openBC6800Modal('+idx+')"><div class="pcard-photo">'+photo+'<span class="pcard-badge" title="'+p.type+'">'+(BC6800_TYPE_ICONS[p.type]||'\u{1F529}')+'</span></div><div class="pcard-body"><div class="pcard-code">'+codeShow+'</div><div class="pcard-actions"><button class="pcard-copy sp-tip" data-tip="Copy reference" aria-label="Copy reference" onclick="copyCode(\''+p.code+'\',this)">⧉ Copy</button><button class="pcard-copy sp-tip" data-tip="Copy request email" aria-label="Copy request email" onclick="copyPartEmail(this)">✉ Request</button>'+bmBtnHtml('bc6800',p.code)+'</div><div class="pcard-name" title="'+escHtml(p.description)+'">'+p.description+'</div><div class="pcard-footer">'+meta+'</div></div></div>';
 }
 function openBC6800Modal(idx){
-  var p=BC6800_PARTS[idx];
+  var p=BC6800_PARTS[idx]; spSetXref(p.code,'BC6800');
   rvRecord('bc6800',p.code,p.description);
   document.getElementById('mTitle').textContent=p.description;
   document.getElementById('mCode').textContent=(p.code&&p.code!=='N/A')?('P/N: '+p.code):'Reference: see Operator’s Manual';
@@ -4924,7 +4990,7 @@ function filterERYTRAParts(){
   var q=(document.getElementById('erytraSearchIn').value||'').toLowerCase().trim();
   var type=document.getElementById('erytraTypeFilter').value;
   erytraFiltered=ERYTRA_PARTS.filter(function(p){
-    if(q && p.description.toLowerCase().indexOf(q)<0 && p.code.toLowerCase().indexOf(q)<0) return false;
+    if(q && !spSmartMatch(q, p.description+' '+p.code)) return false;
     if(type && p.type!==type) return false; return true; });
   document.getElementById('erytraFilterCount').textContent = erytraFiltered.length<ERYTRA_PARTS.length ? erytraFiltered.length+' shown' : ERYTRA_PARTS.length+' parts';
   if(bmFilterActive('erytra')){var _bm=bmGet('erytra'); erytraFiltered=erytraFiltered.filter(function(p){return _bm.has(p.code);});}
@@ -4944,7 +5010,7 @@ function buildERYTRARow(p){
   return '<div class="pcard" id="erytra-row-'+idx+'" onclick="openERYTRAModal('+idx+')"><div class="pcard-photo">'+photo+'<span class="pcard-badge" title="'+p.type+'">'+(ERYTRA_TYPE_ICONS[p.type]||'\u{1F529}')+'</span></div><div class="pcard-body"><div class="pcard-code">'+p.code+'</div><div class="pcard-actions"><button class="pcard-copy sp-tip" data-tip="Copy part number" aria-label="Copy part number" onclick="copyCode(\''+p.code+'\',this)">⧉ Copy</button><button class="pcard-copy sp-tip" data-tip="Copy request email" aria-label="Copy request email" onclick="copyPartEmail(this)">✉ Request</button>'+bmBtnHtml('erytra',p.code)+'</div><div class="pcard-name" title="'+escHtml(p.description)+'">'+p.description+'</div><div class="pcard-footer">'+meta+'</div></div></div>';
 }
 function openERYTRAModal(idx){
-  var p=ERYTRA_PARTS[idx];
+  var p=ERYTRA_PARTS[idx]; spSetXref(p.code,'ERYTRA');
   rvRecord('erytra',p.code,p.description);
   document.getElementById('mTitle').textContent=p.description;
   document.getElementById('mCode').textContent='Grifols P/N: '+p.code;
@@ -5046,7 +5112,7 @@ function dgSwitchTab(dev,tab){
 function dgFilterParts(dev){
   var q=(document.getElementById(dev+'SearchIn').value||'').toLowerCase().trim();
   var type=document.getElementById(dev+'TypeFilter').value;
-  var f=DG_REG[dev].parts.filter(function(p){ if(q&&p.description.toLowerCase().indexOf(q)<0&&p.code.toLowerCase().indexOf(q)<0)return false; if(type&&p.type!==type)return false; return true; });
+  var f=DG_REG[dev].parts.filter(function(p){ if(q&&!spSmartMatch(q,p.description+' '+p.code))return false; if(type&&p.type!==type)return false; return true; });
   document.getElementById(dev+'FilterCount').textContent=f.length<DG_REG[dev].parts.length?f.length+' shown':DG_REG[dev].parts.length+' parts';
   if(bmFilterActive(dev)){var _bm=bmGet(dev); f=f.filter(function(p){return _bm.has(p.code);});}
   if(rvFilterActive(dev)){var _rv=new Set(rvGet(dev).map(function(x){return x.code;})); f=f.filter(function(p){return _rv.has(p.code);});}
@@ -5063,7 +5129,7 @@ function dgBuildRow(dev,p){
   return '<div class="pcard" id="'+dev+'-row-'+idx+'" onclick="dgOpenModal(\''+dev+'\','+idx+')"><div class="pcard-photo">'+photo+'<span class="pcard-badge" title="'+p.type+'">'+ic+'</span></div><div class="pcard-body"><div class="pcard-code">'+p.code+'</div><div class="pcard-actions"><button class="pcard-copy sp-tip" data-tip="Copy part number" aria-label="Copy part number" onclick="copyCode(\''+p.code+'\',this)">⧉ Copy</button><button class="pcard-copy sp-tip" data-tip="Copy request email" aria-label="Copy request email" onclick="copyPartEmail(this)">✉ Request</button>'+bmBtnHtml(dev,p.code)+'</div><div class="pcard-name" title="'+escHtml(p.description)+'">'+p.description+'</div><div class="pcard-footer"><button class="pcard-procbtn" onclick="event.stopPropagation();dgSwitchTab(\''+dev+'\',\'manual\')">📖 Procedure</button><span class="pcard-noproc" style="margin-left:auto">'+(DG_TYPE_LABEL[p.type]||p.type)+'</span></div></div></div>';
 }
 function dgOpenModal(dev,idx){
-  var p=DG_REG[dev].parts[idx]; rvRecord(dev,p.code,p.description);
+  var p=DG_REG[dev].parts[idx]; rvRecord(dev,p.code,p.description); spSetXref(p.code, dev.toUpperCase());
   document.getElementById('mTitle').textContent=p.description;
   document.getElementById('mCode').textContent='P/N: '+p.code;
   document.getElementById('mType').textContent=(DG_TYPE_ICONS[p.type]||'')+' '+(DG_TYPE_LABEL[p.type]||p.type);
@@ -6130,7 +6196,7 @@ function filterLXLParts() {
   const q = document.getElementById('lxlSearchIn').value.toLowerCase().trim();
   const type = document.getElementById('lxlTypeFilter').value;
   lxlFiltered = LXL_PARTS.filter(p => {
-    if (q && !p.description.toLowerCase().includes(q) && !p.code.toLowerCase().includes(q) && !(p.symptoms||[]).join(' ').toLowerCase().includes(q) && !((LXL_OLD_CODES[p.code]||[]).join(' ').toLowerCase().includes(q))) return false;
+    if (q && !spSmartMatch(q, p.description+' '+p.code+' '+(p.symptoms||[]).join(' ')+' '+(LXL_OLD_CODES[p.code]||[]).join(' '))) return false;
     if (type && p.type !== type) return false;
     if (lxlShowLinkedOnly && !p.pdf_page) return false;
     if (lxlShowSympOnly && !(p.symptoms||[]).length) return false;
@@ -6176,7 +6242,7 @@ function buildLXLRow(p) {
 }
 
 function openLXLModal(idx) {
-  const p = LXL_PARTS[idx];
+  const p = LXL_PARTS[idx]; spSetXref(p.code,'LXL');
   rvRecord('lxl', p.code, p.description);
   document.getElementById('mTitle').textContent = p.description;
   document.getElementById('mCode').textContent = 'Part No: ' + p.code;
@@ -6468,7 +6534,7 @@ function filterCL1200Parts() {
   const q = document.getElementById('cl1200SearchIn').value.toLowerCase().trim();
   const type = document.getElementById('cl1200TypeFilter').value;
   cl1200Filtered = CL1200_PARTS.filter(p => {
-    if (q && !p.description.toLowerCase().includes(q) && !p.code.toLowerCase().includes(q)) return false;
+    if (q && !spSmartMatch(q, p.description+' '+p.code)) return false;
     if (type && p.type !== type) return false;
     return true;
   });
@@ -6504,7 +6570,7 @@ function buildCL1200Row(p) {
   </div>`;
 }
 function openCL1200Modal(idx) {
-  const p = CL1200_PARTS[idx];
+  const p = CL1200_PARTS[idx]; spSetXref(p.code,'CL1200');
   rvRecord('cl1200', p.code, p.description);
   document.getElementById('mTitle').textContent = p.description;
   document.getElementById('mCode').textContent = 'Order No: ' + p.code;
@@ -6806,7 +6872,7 @@ function filterCL900Parts() {
   const q = document.getElementById('cl900SearchIn').value.toLowerCase().trim();
   const type = document.getElementById('cl900TypeFilter').value;
   cl900Filtered = CL900_PARTS.filter(p => {
-    if (q && !p.description.toLowerCase().includes(q) && !p.code.toLowerCase().includes(q) && !(p.symptoms||[]).join(' ').toLowerCase().includes(q)) return false;
+    if (q && !spSmartMatch(q, p.description+' '+p.code+' '+(p.symptoms||[]).join(' '))) return false;
     if (type && p.type !== type) return false;
     return true;
   });
@@ -6845,7 +6911,7 @@ function buildCL900Row(p) {
   </div>`;
 }
 function openCL900Modal(idx) {
-  const p = CL900_PARTS[idx];
+  const p = CL900_PARTS[idx]; spSetXref(p.code,'CL900');
   rvRecord('cl900', p.code, p.description);
   document.getElementById('mTitle').textContent = p.description;
   document.getElementById('mCode').textContent = 'Ordering Code: ' + p.code;
@@ -7069,7 +7135,44 @@ function renderCL900Welcome() {
 /* ═══════════════════════════════════════════════════════════════
    SHARED MODAL CLOSE
    ═══════════════════════════════════════════════════════════════ */
-function closeModal() { document.getElementById('modal').classList.remove('open'); document.body.style.overflow = ''; }
+var SP_XREF_LABELS={BC760:'BC-760/780',BC6800:'BC-6800Plus',ERYTRA:'Erytra',LXL:'LIAISON XL',ETIMAX:'ETI-MAX 3000',CL1200:'CL-1200i',CL900:'CL-900i',BIOFLASH:'BIO-FLASH',WADIANA:'Wadiana',EFLEXIS:'Erytra Eflexis'};
+var SP_XREF=null;
+function spBuildXref(){
+  if(SP_XREF) return SP_XREF; SP_XREF={};
+  function add(id,label,arr){ if(!arr||!arr.length) return;
+    for(var j=0;j<arr.length;j++){ var c=(arr[j].code||'').toString().trim().toUpperCase();
+      if(!c||c==='N/A') continue; if(!SP_XREF[c]) SP_XREF[c]=[];
+      SP_XREF[c].push({id:id,label:label,desc:arr[j].description||arr[j].name||''}); } }
+  var B=[['BC760',typeof BC760_PARTS!=='undefined'?BC760_PARTS:null],['BC6800',typeof BC6800_PARTS!=='undefined'?BC6800_PARTS:null],
+   ['ERYTRA',typeof ERYTRA_PARTS!=='undefined'?ERYTRA_PARTS:null],['LXL',typeof LXL_PARTS!=='undefined'?LXL_PARTS:null],
+   ['ETIMAX',typeof ETIMAX_PARTS!=='undefined'?ETIMAX_PARTS:null],['CL1200',typeof CL1200_PARTS!=='undefined'?CL1200_PARTS:null],
+   ['CL900',typeof CL900_PARTS!=='undefined'?CL900_PARTS:null],['BIOFLASH',typeof BIOFLASH_PARTS!=='undefined'?BIOFLASH_PARTS:null],
+   ['WADIANA',typeof WADIANA_PARTS!=='undefined'?WADIANA_PARTS:null],['EFLEXIS',typeof EFLEXIS_PARTS!=='undefined'?EFLEXIS_PARTS:null]];
+  for(var i=0;i<B.length;i++) add(B[i][0], SP_XREF_LABELS[B[i][0]]||B[i][0], B[i][1]);
+  if(typeof DG_REG!=='undefined'){ for(var k in DG_REG){ if(DG_REG.hasOwnProperty(k)) add(k.toUpperCase(), (DG_REG[k]&&DG_REG[k].label)||k, DG_REG[k]&&DG_REG[k].parts); } }
+  return SP_XREF;
+}
+function spXrefHtml(code,selfId){
+  var x=spBuildXref(); var c=(code||'').toString().trim().toUpperCase();
+  var list=x[c]||[]; var out=[]; var seen={};
+  for(var i=0;i<list.length;i++){ var e=list[i]; if(e.id===selfId||seen[e.id]) continue; seen[e.id]=1; out.push(e); }
+  if(!out.length) return '';
+  var chips=''; for(var j=0;j<out.length;j++){ var e=out[j];
+    chips+='<button class="xref-chip" title="'+escHtml(e.desc)+'" onclick="spJumpTo(\''+e.id+'\',\''+String(code).replace(/\\/g,"\\\\").replace(/'/g,"\\'")+'\')">'+escHtml(e.label)+'</button>'; }
+  return '<div class="xref-box"><div class="xref-lbl">\ud83d\udd01 Same part also fits '+out.length+' other '+(out.length>1?'analyzers':'analyzer')+':</div><div class="xref-chips">'+chips+'</div></div>';
+}
+function spSetXref(code,selfId){ var el=document.getElementById('mXref'); if(el) el.innerHTML=spXrefHtml(code,selfId); }
+function spJumpTo(id,code){
+  try{ closeModal(); }catch(e){}
+  try{ openDevice(id); }catch(e){ return; }
+  setTimeout(function(){
+    var inp=document.getElementById(id.toLowerCase()+'SearchIn'); if(inp) inp.value=code;
+    var fn=window['filter'+id+'Parts'];
+    if(typeof fn==='function'){ try{fn();}catch(e){} }
+    else { try{ dgFilterParts(id.toLowerCase()); }catch(e){} }
+  },70);
+}
+function closeModal() { var _x=document.getElementById('mXref'); if(_x) _x.innerHTML=''; document.getElementById('modal').classList.remove('open'); document.body.style.overflow = ''; }
 function closeModalOuter(e) { if (e.target === document.getElementById('modal')) closeModal(); }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') { var _mm=document.getElementById('modal'); if(_mm&&_mm.classList.contains('open')){ e.stopImmediatePropagation(); e.preventDefault(); closeModal(); } } });
 
@@ -7153,7 +7256,7 @@ function filterETIMAXParts() {
   const q = document.getElementById('etimaxSearchIn').value.toLowerCase().trim();
   const type = document.getElementById('etimaxTypeFilter').value;
   etimaxFiltered = ETIMAX_PARTS.filter(p => {
-    if (q && !p.description.toLowerCase().includes(q) && !p.code.toLowerCase().includes(q) && !(p.symptoms||[]).join(' ').toLowerCase().includes(q) && !((ETIMAX_OLD_CODES[p.code]||[]).join(' ').toLowerCase().includes(q))) return false;
+    if (q && !spSmartMatch(q, p.description+' '+p.code+' '+(p.symptoms||[]).join(' ')+' '+(ETIMAX_OLD_CODES[p.code]||[]).join(' '))) return false;
     if (type && p.type !== type) return false;
     if (etimaxShowLinkedOnly && !p.pdf_page) return false;
     if (etimaxShowSympOnly && !(p.symptoms||[]).length) return false;
@@ -7199,7 +7302,7 @@ function buildETIMAXRow(p) {
 }
 
 function openETIMAXModal(idx) {
-  const p = ETIMAX_PARTS[idx];
+  const p = ETIMAX_PARTS[idx]; spSetXref(p.code,'ETIMAX');
   rvRecord('etimax', p.code, p.description);
   document.getElementById('mTitle').textContent = p.description;
   document.getElementById('mCode').textContent = 'Part No: ' + p.code + (p.old_codes&&p.old_codes.length ? '  (also: ' + p.old_codes.join(', ') + ')' : '');
@@ -7544,7 +7647,7 @@ function filterBIOFLASHParts() {
   const q = document.getElementById('bioflashSearchIn').value.toLowerCase().trim();
   const type = document.getElementById('bioflashTypeFilter').value;
   bioflashFiltered = BIOFLASH_PARTS.filter(p => {
-    if (q && !p.description.toLowerCase().includes(q) && !p.code.toLowerCase().includes(q) && !(p.symptoms||[]).join(' ').toLowerCase().includes(q)) return false;
+    if (q && !spSmartMatch(q, p.description+' '+p.code+' '+(p.symptoms||[]).join(' '))) return false;
     if (type && p.type !== type) return false;
     if (bioflashShowLinkedOnly && !p.pdf_page) return false;
     if (bioflashShowSympOnly && !(p.symptoms||[]).length) return false;
@@ -7590,7 +7693,7 @@ function buildBIOFLASHRow(p) {
 }
 
 function openBIOFLASHModal(idx) {
-  const p = BIOFLASH_PARTS[idx];
+  const p = BIOFLASH_PARTS[idx]; spSetXref(p.code,'BIOFLASH');
   rvRecord('bioflash', p.code, p.description);
   document.getElementById('mTitle').textContent = p.description;
   document.getElementById('mCode').textContent = 'Part No: ' + p.code;
@@ -8093,7 +8196,7 @@ function filterWADIANAParts() {
   const bm = JSON.parse(localStorage.getItem('bm_wadiana')||'[]');
   const rv = JSON.parse(localStorage.getItem('rv_wadiana')||'[]');
   wadianaFiltered = WADIANA_PARTS.filter(p => {
-    if (q && !p.description.toLowerCase().includes(q) && !p.code.includes(q)) return false;
+    if (q && !spSmartMatch(q, p.description+' '+p.code)) return false;
     if (t && p.type !== t) return false;
     if (bmOnly && !bm.includes(p.code)) return false;
     if (rvOnly && !rv.includes(p.code)) return false;
@@ -8135,7 +8238,7 @@ function buildWADIANARow(p) {
 }
 
 function openWADIANAModal(idx) {
-  const p = WADIANA_PARTS[idx];
+  const p = WADIANA_PARTS[idx]; spSetXref(p.code,'WADIANA');
   if (!p) return;
   rvRecord('wadiana', p.code, p.description);
   document.getElementById('mTitle').textContent = p.description;
@@ -8884,7 +8987,7 @@ function filterEFLEXISParts() {
   const q = document.getElementById('eflexisSearchIn').value.toLowerCase().trim();
   const type = document.getElementById('eflexisTypeFilter').value;
   eflexisFiltered = EFLEXIS_PARTS.filter(p => {
-    if (q && !p.description.toLowerCase().includes(q) && !p.code.toLowerCase().includes(q)) return false;
+    if (q && !spSmartMatch(q, p.description+' '+p.code)) return false;
     if (type && p.type !== type) return false;
     return true;
   });
@@ -8920,7 +9023,7 @@ function buildEFLEXISRow(p) {
 }
 
 function openEFLEXISModal(idx) {
-  const p = EFLEXIS_PARTS[idx];
+  const p = EFLEXIS_PARTS[idx]; spSetXref(p.code,'EFLEXIS');
   if (!p) return;
   rvRecord('eflexis', p.code, p.description);
   document.getElementById('mTitle').textContent = p.description;
@@ -10273,7 +10376,7 @@ window.filterPANTHERParts=function(){
   if(af==='art'&&!p.art)return false;
   if(af==='classic'&&p.art)return false;
   if(!q)return true;
-  return (p.code+' '+p.sap+' '+p.description+' '+p.type+' '+(p.module||'')).toLowerCase().indexOf(q)>-1;
+  return spSmartMatch(q, p.code+' '+p.sap+' '+p.description+' '+p.type+' '+(p.module||''));
  });
  render();
 };
@@ -10479,7 +10582,7 @@ var filtered=PARTS.slice();
 window.filterAMICOREParts=function(){
  var q=(document.getElementById('amicoreSearchIn').value||'').toLowerCase().trim();
  var ty=document.getElementById('amicoreTypeFilter').value;
- filtered=PARTS.filter(function(p){if(ty&&p.type!==ty)return false;if(!q)return true;return (p.code+' '+p.name+' '+p.type).toLowerCase().indexOf(q)>-1;});
+ filtered=PARTS.filter(function(p){if(ty&&p.type!==ty)return false;if(!q)return true;return spSmartMatch(q, p.code+' '+p.name+' '+p.type);});
  renderParts();
 };
 function renderParts(){
