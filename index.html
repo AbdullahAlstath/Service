@@ -248,6 +248,53 @@ input.pdf-slider{flex:1;height:3px;accent-color:var(--blue);cursor:pointer;borde
 .xref-chips{display:flex;flex-wrap:wrap;gap:6px}
 .xref-chip{font:inherit;font-size:12px;font-weight:600;cursor:pointer;padding:5px 11px;border-radius:999px;border:1px solid rgba(120,140,170,.4);background:rgba(120,140,170,.10);color:inherit}
 .xref-chip:hover{background:var(--acc,#0a58a8);color:#fff;border-color:transparent}
+.sp-ac{position:absolute;z-index:70;left:0;right:0;top:100%;margin-top:5px;background:var(--card,#fff);border:1px solid rgba(120,140,170,.28);border-radius:11px;box-shadow:0 12px 34px rgba(0,0,0,.16);overflow:hidden;display:none}
+.sp-ac.open{display:block}
+.sp-ac-item{display:flex;gap:9px;align-items:center;padding:8px 11px;cursor:pointer;border-bottom:1px solid rgba(120,140,170,.12)}
+.sp-ac-item:last-child{border-bottom:none}
+.sp-ac-item:hover,.sp-ac-item.sel{background:rgba(120,140,170,.13)}
+.sp-ac-thumb{width:30px;height:30px;border-radius:6px;object-fit:cover;background:rgba(120,140,170,.12);flex:none;display:flex;align-items:center;justify-content:center;font-size:15px}
+.sp-ac-tx{min-width:0}
+.sp-ac-nm{font-size:12.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sp-ac-cd{font-size:11px;color:#8a94a6;font-family:var(--mono,monospace)}
+.sp-ac-dym{padding:10px 12px;font-size:12.5px}
+.sp-ac-dym b{cursor:pointer;color:var(--acc,#0a58a8);text-decoration:underline}
+.sp-chips{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 6px}
+.sp-chip{font:inherit;font-size:12px;font-weight:600;cursor:pointer;padding:5px 10px;border-radius:999px;border:1px solid rgba(120,140,170,.35);background:rgba(120,140,170,.08);color:inherit;white-space:nowrap}
+.sp-chip.on{background:var(--acc,#0a58a8);color:#fff;border-color:transparent}
+.sp-chip .c{opacity:.6;font-weight:700;margin-left:5px}
+.sp-recent{margin:2px 0 10px}
+.sp-recent-lbl{font-size:11px;font-weight:700;opacity:.55;margin-bottom:5px;text-transform:uppercase;letter-spacing:.4px}
+.sp-recent-row{display:flex;gap:6px;flex-wrap:wrap}
+.sp-recent-chip{font:inherit;font-size:12px;cursor:pointer;padding:5px 10px;border-radius:8px;border:1px solid rgba(120,140,170,.3);background:rgba(120,140,170,.06);color:inherit;max-width:230px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sp-recent-chip:hover{border-color:var(--acc,#0a58a8)}
+#mOldCodes .mold{font-size:12px;margin-top:4px;color:#8a94a6}
+.sib-box{margin:12px 0 2px}
+.sib-lbl{font-size:12px;font-weight:700;opacity:.8;margin-bottom:7px}
+.sib-row{display:flex;flex-wrap:wrap;gap:6px}
+.sib-chip{font:inherit;font-size:12px;cursor:pointer;padding:5px 10px;border-radius:8px;border:1px solid rgba(120,140,170,.3);background:rgba(120,140,170,.06);color:inherit;max-width:260px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sib-chip:hover{background:var(--acc,#0a58a8);color:#fff;border-color:transparent}
+#spLightbox{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.86);display:none;align-items:center;justify-content:center;touch-action:none}
+#spLightbox.open{display:flex}
+#spLightbox img{max-width:92vw;max-height:92vh;transform-origin:center center;user-select:none;-webkit-user-drag:none}
+#spLightbox .lb-close{position:absolute;top:14px;right:18px;font-size:26px;line-height:1;color:#fff;background:none;border:none;cursor:pointer}
+#spLightbox .lb-hint{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:rgba(255,255,255,.7);font-size:12px}
+.modal-img{cursor:zoom-in}
+.gsearch{max-width:1100px;margin:10px auto 0}
+.gsearch-wrap{position:relative}
+.gsearch input{width:100%;box-sizing:border-box;padding:13px 15px 13px 42px;font:inherit;font-size:15px;border:1px solid rgba(120,140,170,.3);border-radius:12px;background:var(--card,#fff);color:inherit}
+.gsearch .gs-ico{position:absolute;left:15px;top:50%;transform:translateY(-50%);opacity:.5}
+.gsearch-res{margin-top:10px;display:none;max-height:60vh;overflow:auto}
+.gsearch-res.open{display:block}
+.gs-grp{margin-bottom:12px}
+.gs-grp-h{font-size:12px;font-weight:800;opacity:.7;margin:0 0 6px;text-transform:uppercase;letter-spacing:.4px}
+.gs-item{display:flex;gap:10px;align-items:center;padding:8px 11px;border:1px solid rgba(120,140,170,.18);border-radius:9px;margin-bottom:5px;cursor:pointer;background:var(--card,#fff)}
+.gs-item:hover{border-color:var(--acc,#0a58a8)}
+.gs-thumb{width:34px;height:34px;border-radius:6px;object-fit:cover;background:rgba(120,140,170,.12);flex:none;display:flex;align-items:center;justify-content:center}
+.gs-nm{font-size:13px;font-weight:600}
+.gs-cd{font-size:11px;color:#8a94a6;font-family:var(--mono,monospace)}
+.gs-empty{padding:14px;text-align:center;opacity:.6;font-size:13px}
+
 .pcard-name{font-size:12px;font-weight:600;color:var(--t1);line-height:1.32;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:31px}
 .pcard-symp{font-size:10px;color:var(--amber);opacity:.9;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:1px}
 .pcard-footer{margin-top:auto;padding-top:8px}
@@ -1974,6 +2021,7 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
       <div class="hp-coverage"><strong>Now covering 16 analyzers across 7 manufacturers</strong> — DiaSorin, Grifols, Mindray, Hologic, Werfen, Fresenius Kabi and 77 Elektronika. Latest additions: Mindray <strong>BC-700</strong>, 77 Elektronika <strong>UriSed 3 PRO</strong> and <strong>LabUMat 2</strong>.</div>
     </div>
   </div>
+  <div class="gsearch"><div class="gsearch-wrap"><span class="gs-ico">🔍</span><input type="text" id="gSearchIn" placeholder="Search any part across all analyzers — name, code, or symptom…" autocomplete="off"></div><div class="gsearch-res" id="gSearchRes"></div></div>
   <div class="devices-label">Devices</div>
 <div class="hg-bar"><button class="hg-tog" onclick="hgAll(true)">Expand all</button><button class="hg-tog" onclick="hgAll(false)">Collapse all</button></div>
 <div class="hg-wrap">
@@ -3428,10 +3476,12 @@ html.night #navWipe{background:radial-gradient(circle at 50% 50%, rgba(13,25,52,
       <div class="modal-sh">Description / Notes</div><div class="modal-sv" id="mNote"></div>
       <div class="modal-sh">⚠ Common Failure Symptoms</div><div id="mSymp"></div>
       <div class="modal-sh">Service Manual Procedure</div><div id="mManual"></div>
+      <div id="mSiblings"></div>
     </div>
   </div>
 </div>
 
+<div id="spLightbox"><button class="lb-close" aria-label="Close">✕</button><img src="" alt=""><div class="lb-hint">Scroll or pinch to zoom · drag to pan · tap outside to close</div></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
 <script>
@@ -4777,7 +4827,7 @@ function buildBC760Row(p){
   return '<div class="pcard" id="bc760-row-'+idx+'" onclick="openBC760Modal('+idx+')"><div class="pcard-photo">'+photo+'<span class="pcard-badge" title="'+p.type+'">'+(BC760_TYPE_ICONS[p.type]||'\u{1F529}')+'</span></div><div class="pcard-body"><div class="pcard-code">'+p.code+'</div><div class="pcard-actions"><button class="pcard-copy sp-tip" data-tip="Copy part number" aria-label="Copy part number" onclick="copyCode(\''+p.code+'\',this)">⧉ Copy</button><button class="pcard-copy sp-tip" data-tip="Copy request email" aria-label="Copy request email" onclick="copyPartEmail(this)">✉ Request</button>'+bmBtnHtml('bc760',p.code)+'</div><div class="pcard-name" title="'+escHtml(p.description)+'">'+p.description+'</div><div class="pcard-footer">'+meta+'</div></div></div>';
 }
 function openBC760Modal(idx){
-  var p=BC760_PARTS[idx]; spSetXref(p.code,'BC760');
+  var p=BC760_PARTS[idx]; spModalExtras('BC760',p);
   rvRecord('bc760',p.code,p.description);
   document.getElementById('mTitle').textContent=p.description;
   document.getElementById('mCode').textContent='Order No: '+p.code;
@@ -4892,7 +4942,7 @@ function buildBC6800Row(p){
   return '<div class="pcard" id="bc6800-row-'+idx+'" onclick="openBC6800Modal('+idx+')"><div class="pcard-photo">'+photo+'<span class="pcard-badge" title="'+p.type+'">'+(BC6800_TYPE_ICONS[p.type]||'\u{1F529}')+'</span></div><div class="pcard-body"><div class="pcard-code">'+codeShow+'</div><div class="pcard-actions"><button class="pcard-copy sp-tip" data-tip="Copy reference" aria-label="Copy reference" onclick="copyCode(\''+p.code+'\',this)">⧉ Copy</button><button class="pcard-copy sp-tip" data-tip="Copy request email" aria-label="Copy request email" onclick="copyPartEmail(this)">✉ Request</button>'+bmBtnHtml('bc6800',p.code)+'</div><div class="pcard-name" title="'+escHtml(p.description)+'">'+p.description+'</div><div class="pcard-footer">'+meta+'</div></div></div>';
 }
 function openBC6800Modal(idx){
-  var p=BC6800_PARTS[idx]; spSetXref(p.code,'BC6800');
+  var p=BC6800_PARTS[idx]; spModalExtras('BC6800',p);
   rvRecord('bc6800',p.code,p.description);
   document.getElementById('mTitle').textContent=p.description;
   document.getElementById('mCode').textContent=(p.code&&p.code!=='N/A')?('P/N: '+p.code):'Reference: see Operator’s Manual';
@@ -5010,7 +5060,7 @@ function buildERYTRARow(p){
   return '<div class="pcard" id="erytra-row-'+idx+'" onclick="openERYTRAModal('+idx+')"><div class="pcard-photo">'+photo+'<span class="pcard-badge" title="'+p.type+'">'+(ERYTRA_TYPE_ICONS[p.type]||'\u{1F529}')+'</span></div><div class="pcard-body"><div class="pcard-code">'+p.code+'</div><div class="pcard-actions"><button class="pcard-copy sp-tip" data-tip="Copy part number" aria-label="Copy part number" onclick="copyCode(\''+p.code+'\',this)">⧉ Copy</button><button class="pcard-copy sp-tip" data-tip="Copy request email" aria-label="Copy request email" onclick="copyPartEmail(this)">✉ Request</button>'+bmBtnHtml('erytra',p.code)+'</div><div class="pcard-name" title="'+escHtml(p.description)+'">'+p.description+'</div><div class="pcard-footer">'+meta+'</div></div></div>';
 }
 function openERYTRAModal(idx){
-  var p=ERYTRA_PARTS[idx]; spSetXref(p.code,'ERYTRA');
+  var p=ERYTRA_PARTS[idx]; spModalExtras('ERYTRA',p);
   rvRecord('erytra',p.code,p.description);
   document.getElementById('mTitle').textContent=p.description;
   document.getElementById('mCode').textContent='Grifols P/N: '+p.code;
@@ -5129,7 +5179,7 @@ function dgBuildRow(dev,p){
   return '<div class="pcard" id="'+dev+'-row-'+idx+'" onclick="dgOpenModal(\''+dev+'\','+idx+')"><div class="pcard-photo">'+photo+'<span class="pcard-badge" title="'+p.type+'">'+ic+'</span></div><div class="pcard-body"><div class="pcard-code">'+p.code+'</div><div class="pcard-actions"><button class="pcard-copy sp-tip" data-tip="Copy part number" aria-label="Copy part number" onclick="copyCode(\''+p.code+'\',this)">⧉ Copy</button><button class="pcard-copy sp-tip" data-tip="Copy request email" aria-label="Copy request email" onclick="copyPartEmail(this)">✉ Request</button>'+bmBtnHtml(dev,p.code)+'</div><div class="pcard-name" title="'+escHtml(p.description)+'">'+p.description+'</div><div class="pcard-footer"><button class="pcard-procbtn" onclick="event.stopPropagation();dgSwitchTab(\''+dev+'\',\'manual\')">📖 Procedure</button><span class="pcard-noproc" style="margin-left:auto">'+(DG_TYPE_LABEL[p.type]||p.type)+'</span></div></div></div>';
 }
 function dgOpenModal(dev,idx){
-  var p=DG_REG[dev].parts[idx]; rvRecord(dev,p.code,p.description); spSetXref(p.code, dev.toUpperCase());
+  var p=DG_REG[dev].parts[idx]; rvRecord(dev,p.code,p.description); spModalExtras(dev.toUpperCase(),p);
   document.getElementById('mTitle').textContent=p.description;
   document.getElementById('mCode').textContent='P/N: '+p.code;
   document.getElementById('mType').textContent=(DG_TYPE_ICONS[p.type]||'')+' '+(DG_TYPE_LABEL[p.type]||p.type);
@@ -5438,6 +5488,7 @@ function openDevice(device, fromPop) {
   document.body.dataset.device = device;
   if (!fromPop) history.pushState({ device }, '', '#' + device);
   window.scrollTo(0, 0);
+  try{ setTimeout(function(){ spOnDeviceOpen(device); },160); }catch(e){}
 
   // 2) Defer ALL initialization to the next frame so the browser paints the
   //    shell first. Heavy work (list build, PDF decode) never blocks the
@@ -6242,7 +6293,7 @@ function buildLXLRow(p) {
 }
 
 function openLXLModal(idx) {
-  const p = LXL_PARTS[idx]; spSetXref(p.code,'LXL');
+  const p = LXL_PARTS[idx]; spModalExtras('LXL',p);
   rvRecord('lxl', p.code, p.description);
   document.getElementById('mTitle').textContent = p.description;
   document.getElementById('mCode').textContent = 'Part No: ' + p.code;
@@ -6570,7 +6621,7 @@ function buildCL1200Row(p) {
   </div>`;
 }
 function openCL1200Modal(idx) {
-  const p = CL1200_PARTS[idx]; spSetXref(p.code,'CL1200');
+  const p = CL1200_PARTS[idx]; spModalExtras('CL1200',p);
   rvRecord('cl1200', p.code, p.description);
   document.getElementById('mTitle').textContent = p.description;
   document.getElementById('mCode').textContent = 'Order No: ' + p.code;
@@ -6911,7 +6962,7 @@ function buildCL900Row(p) {
   </div>`;
 }
 function openCL900Modal(idx) {
-  const p = CL900_PARTS[idx]; spSetXref(p.code,'CL900');
+  const p = CL900_PARTS[idx]; spModalExtras('CL900',p);
   rvRecord('cl900', p.code, p.description);
   document.getElementById('mTitle').textContent = p.description;
   document.getElementById('mCode').textContent = 'Ordering Code: ' + p.code;
@@ -7172,7 +7223,206 @@ function spJumpTo(id,code){
     else { try{ dgFilterParts(id.toLowerCase()); }catch(e){} }
   },70);
 }
-function closeModal() { var _x=document.getElementById('mXref'); if(_x) _x.innerHTML=''; document.getElementById('modal').classList.remove('open'); document.body.style.overflow = ''; }
+/* ===== ServicePal: find-faster module (registry, autocomplete, DYM, global search, chips, siblings, recent) ===== */
+function spReg(){
+  if(window.__spReg) return window.__spReg;
+  var R={};
+  function B(slug,id,label,arr,modal,filt){ if(typeof arr==='undefined'||!arr) return;
+    R[slug]={slug:slug,id:id,label:label,getParts:function(){return arr;},openIdx:modal,filter:filt,search:slug+'SearchIn',type:slug+'TypeFilter',list:slug+'PList'}; }
+  B('bc760','BC760','BC-760 / 780', typeof BC760_PARTS!=='undefined'?BC760_PARTS:null, typeof openBC760Modal!=='undefined'?openBC760Modal:null, typeof filterBC760Parts!=='undefined'?filterBC760Parts:null);
+  B('bc6800','BC6800','BC-6800Plus', typeof BC6800_PARTS!=='undefined'?BC6800_PARTS:null, typeof openBC6800Modal!=='undefined'?openBC6800Modal:null, typeof filterBC6800Parts!=='undefined'?filterBC6800Parts:null);
+  B('erytra','ERYTRA','Erytra', typeof ERYTRA_PARTS!=='undefined'?ERYTRA_PARTS:null, typeof openERYTRAModal!=='undefined'?openERYTRAModal:null, typeof filterERYTRAParts!=='undefined'?filterERYTRAParts:null);
+  B('lxl','LXL','LIAISON XL', typeof LXL_PARTS!=='undefined'?LXL_PARTS:null, typeof openLXLModal!=='undefined'?openLXLModal:null, typeof filterLXLParts!=='undefined'?filterLXLParts:null);
+  B('etimax','ETIMAX','ETI-MAX 3000', typeof ETIMAX_PARTS!=='undefined'?ETIMAX_PARTS:null, typeof openETIMAXModal!=='undefined'?openETIMAXModal:null, typeof filterETIMAXParts!=='undefined'?filterETIMAXParts:null);
+  B('cl1200','CL1200','CL-1200i', typeof CL1200_PARTS!=='undefined'?CL1200_PARTS:null, typeof openCL1200Modal!=='undefined'?openCL1200Modal:null, typeof filterCL1200Parts!=='undefined'?filterCL1200Parts:null);
+  B('cl900','CL900','CL-900i', typeof CL900_PARTS!=='undefined'?CL900_PARTS:null, typeof openCL900Modal!=='undefined'?openCL900Modal:null, typeof filterCL900Parts!=='undefined'?filterCL900Parts:null);
+  B('bioflash','BIOFLASH','BIO-FLASH', typeof BIOFLASH_PARTS!=='undefined'?BIOFLASH_PARTS:null, typeof openBIOFLASHModal!=='undefined'?openBIOFLASHModal:null, typeof filterBIOFLASHParts!=='undefined'?filterBIOFLASHParts:null);
+  B('wadiana','WADIANA','Wadiana', typeof WADIANA_PARTS!=='undefined'?WADIANA_PARTS:null, typeof openWADIANAModal!=='undefined'?openWADIANAModal:null, typeof filterWADIANAParts!=='undefined'?filterWADIANAParts:null);
+  B('eflexis','EFLEXIS','Erytra Eflexis', typeof EFLEXIS_PARTS!=='undefined'?EFLEXIS_PARTS:null, typeof openEFLEXISModal!=='undefined'?openEFLEXISModal:null, typeof filterEFLEXISParts!=='undefined'?filterEFLEXISParts:null);
+  if(typeof DG_REG!=='undefined'){ for(var k in DG_REG){ if(!DG_REG.hasOwnProperty(k))continue; (function(k){
+    R[k]={slug:k,id:k.toUpperCase(),label:(DG_REG[k].label||k),getParts:function(){return DG_REG[k].parts;},
+      openIdx:function(i){ dgOpenModal(k,i); },filter:function(){ dgFilterParts(k); },search:k+'SearchIn',type:k+'TypeFilter',list:k+'PList'}; })(k); } }
+  if(window.PANTHER_PARTS){ R['panther']={slug:'panther',id:'PANTHER',label:'Panther',getParts:function(){return window.PANTHER_PARTS;},openIdx:null,filter:null,search:'pantherSearchIn',type:'pantherTypeFilter',list:'pantherPList'}; }
+  // normalize alternate/old codes from *_OLD_CODES maps onto part objects
+  var OM={ lxl:(typeof LXL_OLD_CODES!=='undefined'?LXL_OLD_CODES:null), etimax:(typeof ETIMAX_OLD_CODES!=='undefined'?ETIMAX_OLD_CODES:null) };
+  for(var sl in OM){ if(!OM[sl]||!R[sl]) continue; var pa=R[sl].getParts()||[]; for(var z=0;z<pa.length;z++){ var oc=OM[sl][pa[z].code]; if(oc&&oc.length&&!(pa[z].old_codes&&pa[z].old_codes.length)) pa[z].old_codes=oc; } }
+  window.__spReg=R; return R;
+}
+function spFields(p){ return (p.description||p.name||'')+' '+(p.code||'')+' '+((p.symptoms||[]).join(' '))+' '+(p.type||'')+' '+(p.module||'')+' '+((p.old_codes||[]).join(' ')); }
+function spOpenPartByCode(slug,code){
+  var R=spReg(),d=R[slug]; if(!d) return;
+  var arr=d.getParts()||[], t=String(code).toUpperCase(), idx=-1;
+  for(var i=0;i<arr.length;i++){ if(String(arr[i].code).toUpperCase()===t){ idx=i; break; } }
+  if(idx>=0 && d.openIdx){ try{ d.openIdx(idx); return; }catch(e){} }
+  try{ var inp=document.getElementById(d.search); if(inp){ inp.value=code; if(d.filter) d.filter(); } }catch(e){}
+}
+window.spOpenPartByCode=spOpenPartByCode;
+function spClosestPart(q,arr){
+  var qc=spCanon(q); if(!qc) return null; var qt=qc.split(' ');
+  var best=null,bestd=99;
+  for(var i=0;i<arr.length;i++){ var toks=spCanon(spFields(arr[i])).split(' ');
+    for(var t=0;t<toks.length;t++){ var w=toks[t]; if(w.length<3) continue;
+      for(var k=0;k<qt.length;k++){ var Q=qt[k]; if(Q.length<3||/^\d+$/.test(Q)) continue;
+        var mx=Q.length<=5?1:2; var dd=spLev(Q,w,mx); if(dd<bestd){ bestd=dd; best=arr[i]; } } } }
+  return bestd<=2?best:null;
+}
+
+/* ---- autocomplete + did-you-mean ---- */
+(function(){
+  var box=null,curSlug=null,sel=-1;
+  function wrapOf(inp){ return inp.closest?inp.closest('.search-wrap'):null; }
+  function hide(){ if(box){ box.classList.remove('open'); } box=null; curSlug=null; sel=-1; }
+  function render(inp,slug){
+    var R=spReg(),d=R[slug]; if(!d){ return; }
+    var wrap=wrapOf(inp); if(!wrap) return;
+    if(getComputedStyle(wrap).position==='static') wrap.style.position='relative';
+    var b=wrap.querySelector('.sp-ac'); if(!b){ b=document.createElement('div'); b.className='sp-ac'; wrap.appendChild(b); }
+    var q=(inp.value||'').trim();
+    if(!q){ b.classList.remove('open'); box=null; return; }
+    var arr=d.getParts()||[], out=[];
+    for(var i=0;i<arr.length && out.length<6;i++){ if(spSmartMatch(q,spFields(arr[i]))) out.push(arr[i]); }
+    box=b; curSlug=slug; sel=-1;
+    if(out.length){
+      var html='';
+      for(var j=0;j<out.length;j++){ var p=out[j];
+        var th=p.image?('<img class="sp-ac-thumb" src="'+p.image+'" alt="">'):('<span class="sp-ac-thumb">\ud83d\udd29</span>');
+        html+='<div class="sp-ac-item" data-code="'+escHtml(p.code||'')+'">'+th+'<div class="sp-ac-tx"><div class="sp-ac-nm">'+escHtml(p.description||p.name||'')+'</div><div class="sp-ac-cd">'+escHtml(p.code||'')+'</div></div></div>'; }
+      b.innerHTML=html;
+    } else {
+      var best=spClosestPart(q,arr);
+      if(best) b.innerHTML='<div class="sp-ac-dym">No exact match \u2014 did you mean <b data-code="'+escHtml(best.code||'')+'">'+escHtml(best.description||best.name||'')+'</b>?</div>';
+      else b.innerHTML='<div class="sp-ac-dym">No matching parts.</div>';
+    }
+    b.classList.add('open');
+  }
+  document.addEventListener('input',function(e){ var t=e.target; if(!t||!t.id) return; var m=/^(.*)SearchIn$/.exec(t.id); if(!m) return; var slug=m[1]; if(spReg()[slug]) render(t,slug); });
+  document.addEventListener('click',function(e){
+    var it=e.target.closest?e.target.closest('.sp-ac-item'):null;
+    if(it){ var code=it.getAttribute('data-code'); var s=curSlug; hide(); if(s&&code) spOpenPartByCode(s,code); return; }
+    var dym=e.target.closest?e.target.closest('.sp-ac-dym b'):null;
+    if(dym){ var c=dym.getAttribute('data-code'); var s2=curSlug; hide(); if(s2&&c) spOpenPartByCode(s2,c); return; }
+    if(!(e.target.closest&&e.target.closest('.search-wrap'))) hide();
+  });
+  document.addEventListener('keydown',function(e){ if(!box||!box.classList.contains('open')) return;
+    var its=box.querySelectorAll('.sp-ac-item'); if(!its.length){ if(e.key==='Escape') hide(); return; }
+    if(e.key==='ArrowDown'){ e.preventDefault(); sel=Math.min(sel+1,its.length-1); }
+    else if(e.key==='ArrowUp'){ e.preventDefault(); sel=Math.max(sel-1,0); }
+    else if(e.key==='Enter'){ if(sel>=0){ e.preventDefault(); its[sel].click(); } return; }
+    else if(e.key==='Escape'){ hide(); return; } else return;
+    for(var i=0;i<its.length;i++) its[i].classList.toggle('sel',i===sel);
+  });
+})();
+
+/* ---- global home search ---- */
+(function(){
+  function boot(){
+    var inp=document.getElementById('gSearchIn'), res=document.getElementById('gSearchRes'); if(!inp||!res) return;
+    function run(){
+      var q=(inp.value||'').trim(); if(!q){ res.classList.remove('open'); res.innerHTML=''; return; }
+      var R=spReg(), groups=[];
+      for(var slug in R){ if(!R.hasOwnProperty(slug)) continue; var d=R[slug]; var arr=d.getParts()||[]; var hits=[];
+        for(var i=0;i<arr.length && hits.length<8;i++){ if(spSmartMatch(q,spFields(arr[i]))) hits.push(arr[i]); }
+        if(hits.length) groups.push({d:d,hits:hits}); }
+      groups.sort(function(a,b){ return b.hits.length-a.hits.length; });
+      if(!groups.length){ res.innerHTML='<div class="gs-empty">No parts match \u201c'+escHtml(q)+'\u201d across any analyzer.</div>'; res.classList.add('open'); return; }
+      var html='';
+      for(var g=0;g<groups.length;g++){ var gr=groups[g];
+        html+='<div class="gs-grp"><div class="gs-grp-h">'+escHtml(gr.d.label)+' \u00b7 '+gr.hits.length+'</div>';
+        for(var j=0;j<gr.hits.length;j++){ var p=gr.hits[j];
+          var th=p.image?('<img class="gs-thumb" src="'+p.image+'" alt="">'):('<span class="gs-thumb">\ud83d\udd29</span>');
+          html+='<div class="gs-item" data-slug="'+gr.d.slug+'" data-code="'+escHtml(p.code||'')+'">'+th+'<div><div class="gs-nm">'+escHtml(p.description||p.name||'')+'</div><div class="gs-cd">'+escHtml(p.code||'')+'</div></div></div>'; }
+        html+='</div>'; }
+      res.innerHTML=html; res.classList.add('open');
+    }
+    inp.addEventListener('input',run);
+    res.addEventListener('click',function(e){ var it=e.target.closest('.gs-item'); if(!it) return;
+      var slug=it.getAttribute('data-slug'), code=it.getAttribute('data-code');
+      res.classList.remove('open'); inp.value='';
+      try{ openDevice(spReg()[slug].id); }catch(e){}
+      setTimeout(function(){ spOpenPartByCode(slug,code); },90); });
+  }
+  if(document.readyState!=='loading') boot(); else document.addEventListener('DOMContentLoaded',boot);
+})();
+
+/* ---- filter chips + recent row (on device open) ---- */
+function spInjectChips(slug){
+  var R=spReg(),d=R[slug]; if(!d) return;
+  var sel=document.getElementById(d.type); if(!sel) return;
+  var fr=(sel.closest?sel.closest('.filter-row'):null)||sel.parentNode; if(!fr||!fr.parentNode) return;
+  if(fr.parentNode.querySelector('.sp-chips')) return;
+  var arr=d.getParts()||[], counts={}; for(var i=0;i<arr.length;i++){ var t=arr[i].type||'Other'; counts[t]=(counts[t]||0)+1; }
+  var types=Object.keys(counts).sort();
+  if(types.length<2) return;
+  var html='<div class="sp-chips"><button type="button" class="sp-chip on" data-v="">All<span class="c">'+arr.length+'</span></button>';
+  for(var k=0;k<types.length;k++){ html+='<button type="button" class="sp-chip" data-v="'+escHtml(types[k])+'">'+escHtml(types[k])+'<span class="c">'+counts[types[k]]+'</span></button>'; }
+  html+='</div>';
+  sel.style.display='none';
+  var tmp=document.createElement('div'); tmp.innerHTML=html; var chips=tmp.firstChild;
+  fr.parentNode.insertBefore(chips,fr);
+  chips.addEventListener('click',function(e){ var b=e.target.closest('.sp-chip'); if(!b) return;
+    var all=chips.querySelectorAll('.sp-chip'); for(var i=0;i<all.length;i++) all[i].classList.remove('on'); b.classList.add('on');
+    sel.value=b.getAttribute('data-v'); try{ if(d.filter) d.filter(); else if(sel.onchange) sel.onchange(); }catch(e){} });
+}
+function spRenderRecent(slug){
+  var R=spReg(),d=R[slug]; if(!d) return;
+  var list=document.getElementById(d.list); if(!list||!list.parentNode) return;
+  var rv=(typeof rvGet==='function')?rvGet(slug):[];
+  var host=document.getElementById('sp-recent-'+slug);
+  if(!rv||!rv.length){ if(host) host.parentNode.removeChild(host); return; }
+  if(!host){ host=document.createElement('div'); host.id='sp-recent-'+slug; host.className='sp-recent'; list.parentNode.insertBefore(host,list); }
+  var chips='';
+  for(var i=0;i<rv.length && i<8;i++){ var x=rv[i];
+    chips+='<button type="button" class="sp-recent-chip" title="'+escHtml(x.code||'')+'" onclick="spOpenPartByCode(\''+slug+'\',\''+String(x.code||'').replace(/\\/g,"\\\\").replace(/'/g,"\\'")+'\')">'+escHtml(x.name||x.code||'')+'</button>'; }
+  host.innerHTML='<div class="sp-recent-lbl">\u21ba Recently viewed</div><div class="sp-recent-row">'+chips+'</div>';
+}
+function spOnDeviceOpen(id){ var slug=(id||'').toLowerCase(); if(!spReg()[slug]) return; window.__spActive=slug; try{ spInjectChips(slug); }catch(e){} try{ spRenderRecent(slug); }catch(e){} }
+
+/* ---- modal extras: also-fits (xref) + others-in-module + supersedes ---- */
+function spSiblingsHtml(slug,p){
+  var R=spReg(),d=R[slug]; if(!d) return '';
+  var arr=d.getParts()||[]; var useSection=!!(p.section&&String(p.section).trim()); var key=useSection?p.section:(p.type||'');
+  if(!key) return '';
+  var out=[];
+  for(var i=0;i<arr.length && out.length<10;i++){ var q=arr[i]; if(q===p||String(q.code)===String(p.code)) continue;
+    var k2=useSection?(q.section||''):(q.type||''); if(k2 && k2===key) out.push(q); }
+  if(!out.length) return '';
+  var lbl=useSection?('\u201c'+escHtml(key)+'\u201d'):('category \u201c'+escHtml(key)+'\u201d');
+  var chips='';
+  for(var j=0;j<out.length;j++){ var q2=out[j];
+    chips+='<button type="button" class="sib-chip" title="'+escHtml(q2.code||'')+'" onclick="spOpenPartByCode(\''+slug+'\',\''+String(q2.code||'').replace(/\\/g,"\\\\").replace(/'/g,"\\'")+'\')">'+escHtml(q2.description||q2.name||'')+'</button>'; }
+  return '<div class="sib-box"><div class="sib-lbl">\ud83e\udde9 Others in '+lbl+':</div><div class="sib-row">'+chips+'</div></div>';
+}
+function spModalExtras(devId,p){
+  if(!p) return;
+  var slug=(devId||'').toLowerCase();
+  var x=document.getElementById('mXref'); if(x) x.innerHTML=spXrefHtml(p.code,devId);
+  var sib=document.getElementById('mSiblings'); if(sib) sib.innerHTML=spSiblingsHtml(slug,p);
+}
+
+/* ---- image lightbox (zoom/pan/pinch) ---- */
+(function(){
+  function boot(){
+    var lb=document.getElementById('spLightbox'); if(!lb) return; var img=lb.querySelector('img');
+    var scale=1,tx=0,ty=0,sx=0,sy=0,drag=false,pd=0,px=0,py=0;
+    function apply(){ img.style.transform='translate('+tx+'px,'+ty+'px) scale('+scale+')'; }
+    function open(src){ scale=1;tx=0;ty=0; img.src=src; apply(); lb.classList.add('open'); }
+    function close(){ lb.classList.remove('open'); img.src=''; }
+    window.spOpenLightbox=open;
+    document.addEventListener('click',function(e){ if(e.target&&e.target.id==='mImg'){ var s=e.target.getAttribute('src'); if(s) open(s); } });
+    lb.querySelector('.lb-close').addEventListener('click',close);
+    lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
+    lb.addEventListener('wheel',function(e){ e.preventDefault(); scale=Math.min(6,Math.max(1,scale*(e.deltaY<0?1.15:0.87))); if(scale<=1){tx=0;ty=0;} apply(); },{passive:false});
+    img.addEventListener('mousedown',function(e){ if(scale<=1) return; drag=true; sx=e.clientX-tx; sy=e.clientY-ty; e.preventDefault(); });
+    window.addEventListener('mousemove',function(e){ if(!drag) return; tx=e.clientX-sx; ty=e.clientY-sy; apply(); });
+    window.addEventListener('mouseup',function(){ drag=false; });
+    lb.addEventListener('touchstart',function(e){ if(e.touches.length===1){ px=e.touches[0].clientX-tx; py=e.touches[0].clientY-ty; } pd=0; },{passive:false});
+    lb.addEventListener('touchmove',function(e){ if(e.touches.length===2){ e.preventDefault(); var dx=e.touches[0].clientX-e.touches[1].clientX,dy=e.touches[0].clientY-e.touches[1].clientY,dd=Math.sqrt(dx*dx+dy*dy); if(pd){ scale=Math.min(6,Math.max(1,scale*(dd/pd))); apply(); } pd=dd; } else if(e.touches.length===1&&scale>1){ e.preventDefault(); tx=e.touches[0].clientX-px; ty=e.touches[0].clientY-py; apply(); } },{passive:false});
+    lb.addEventListener('touchend',function(){ pd=0; if(scale<=1){tx=0;ty=0;apply();} });
+  }
+  if(document.readyState!=='loading') boot(); else document.addEventListener('DOMContentLoaded',boot);
+})();
+
+function closeModal() { var _x=document.getElementById('mXref'); if(_x) _x.innerHTML=''; document.getElementById('modal').classList.remove('open'); document.body.style.overflow = ''; try{ if(window.__spActive) spRenderRecent(window.__spActive); }catch(e){} }
 function closeModalOuter(e) { if (e.target === document.getElementById('modal')) closeModal(); }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') { var _mm=document.getElementById('modal'); if(_mm&&_mm.classList.contains('open')){ e.stopImmediatePropagation(); e.preventDefault(); closeModal(); } } });
 
@@ -7302,10 +7552,10 @@ function buildETIMAXRow(p) {
 }
 
 function openETIMAXModal(idx) {
-  const p = ETIMAX_PARTS[idx]; spSetXref(p.code,'ETIMAX');
+  const p = ETIMAX_PARTS[idx]; spModalExtras('ETIMAX',p);
   rvRecord('etimax', p.code, p.description);
   document.getElementById('mTitle').textContent = p.description;
-  document.getElementById('mCode').textContent = 'Part No: ' + p.code + (p.old_codes&&p.old_codes.length ? '  (also: ' + p.old_codes.join(', ') + ')' : '');
+  document.getElementById('mCode').textContent = 'Part No: ' + p.code;
   document.getElementById('mType').textContent = (ETIMAX_TYPE_ICONS[p.type] || '') + ' ' + p.type;
   document.getElementById('mNote').textContent = p.note || 'No additional description.';
   const img = document.getElementById('mImg');
@@ -7693,7 +7943,7 @@ function buildBIOFLASHRow(p) {
 }
 
 function openBIOFLASHModal(idx) {
-  const p = BIOFLASH_PARTS[idx]; spSetXref(p.code,'BIOFLASH');
+  const p = BIOFLASH_PARTS[idx]; spModalExtras('BIOFLASH',p);
   rvRecord('bioflash', p.code, p.description);
   document.getElementById('mTitle').textContent = p.description;
   document.getElementById('mCode').textContent = 'Part No: ' + p.code;
@@ -8238,7 +8488,7 @@ function buildWADIANARow(p) {
 }
 
 function openWADIANAModal(idx) {
-  const p = WADIANA_PARTS[idx]; spSetXref(p.code,'WADIANA');
+  const p = WADIANA_PARTS[idx]; spModalExtras('WADIANA',p);
   if (!p) return;
   rvRecord('wadiana', p.code, p.description);
   document.getElementById('mTitle').textContent = p.description;
@@ -9023,7 +9273,7 @@ function buildEFLEXISRow(p) {
 }
 
 function openEFLEXISModal(idx) {
-  const p = EFLEXIS_PARTS[idx]; spSetXref(p.code,'EFLEXIS');
+  const p = EFLEXIS_PARTS[idx]; spModalExtras('EFLEXIS',p);
   if (!p) return;
   rvRecord('eflexis', p.code, p.description);
   document.getElementById('mTitle').textContent = p.description;
