@@ -11630,8 +11630,9 @@ async function srvGenerate(){
 
 
 <style>
-.qual-host{max-width:1000px;margin:0 auto;padding:4px 2px 40px}
-.qual-doc{display:flex;flex-direction:column;gap:2px}
+#eflexisPanelQual,#erytraPanelQual{flex-direction:column}
+.qual-host{flex:1 1 auto;min-height:0;overflow-y:auto;padding:6px 24px 42px;background:var(--bg)}
+.qual-doc{display:flex;flex-direction:column;gap:2px;max-width:1000px;margin:0 auto}
 .qual-head{margin:6px 0 14px}
 .qual-ttl{font-size:19px;font-weight:800;color:var(--t1,#0f172a);letter-spacing:-.01em}
 .qual-sub{font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--blue,#2563eb);margin-top:2px}
@@ -11665,9 +11666,10 @@ async function srvGenerate(){
 html.night .qual-sec{background:linear-gradient(90deg,#0d2d4d,#10243a)}
 html.night .qual-pf.pass.on{background:#123524;color:#53d08a}
 html.night .qual-pf.fail.on{background:#3a1414;color:#ff8b8b}
-.qual-seg{display:flex;gap:8px;flex-wrap:wrap;padding:14px 2px 2px;max-width:1000px;margin:0 auto}
-.qual-segbtn{font:inherit;font-size:13px;font-weight:700;padding:9px 16px;border:1px solid var(--b1,#d7deea);border-radius:9px;background:var(--bg2,#fff);color:var(--t2,#3a465a);cursor:pointer;transition:.12s}
-.qual-segbtn.active{background:var(--blue,#2563eb);color:#fff;border-color:transparent}
+.qual-seg{display:flex;align-items:center;gap:4px;padding:10px 24px;background:var(--bg);border-bottom:1px solid rgba(148,163,184,.18);flex:0 0 auto;flex-wrap:wrap}
+.qual-segbtn{font:inherit;background:transparent;border:none;border-bottom:2px solid transparent;padding:7px 12px;cursor:pointer;font-size:12.5px;font-weight:700;color:#64748b;white-space:nowrap;transition:color .2s,border-color .2s}
+.qual-segbtn:hover{color:var(--t1,#0f172a)}
+.qual-segbtn.active{color:var(--dev,#0d6ea0);border-bottom-color:var(--dev,#0d6ea0)}
 
 </style>
 <script>
