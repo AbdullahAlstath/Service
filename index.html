@@ -11570,8 +11570,8 @@ function srvBuildForm(){
   h+='<div class="srv-sec">Problem Description</div><div class="srv-f full"><textarea id="srv_problem" class="big" placeholder="Describe the reported problem..."></textarea></div>';
   h+='<div class="srv-sec">Work Performed</div><div class="srv-f full"><textarea id="srv_performed" class="big" placeholder="Describe the work performed..."></textarea></div>';
   h+='<div class="srv-sec">Work Order Closure Details</div><div class="srv-f full"><textarea id="srv_closure" placeholder="Closure details..."></textarea></div><div class="srv-sec">Comments &amp; Recommendation</div><div class="srv-f full"><textarea id="srv_comments" placeholder="Comments and recommendations..."></textarea></div>';
-  h+='<div class="srv-sec">Parts Used</div><table class="srv-tbl"><thead><tr><th>Part Number</th><th>Part Description</th><th>Part Serial Number</th><th style="width:60px">Qty</th><th style="width:34px"></th></tr></thead><tbody id="srvParts"></tbody></table><button class="srv-addrow" onclick="srvAddPart()">+ Add part</button>';
-  h+='<div class="srv-sec">Work Time Details</div><table class="srv-tbl"><thead><tr><th>Name</th><th>Start</th><th>End</th><th>Hours</th><th>Activity</th><th>Line</th><th style="width:34px"></th></tr></thead><tbody id="srvTimes"></tbody></table><button class="srv-addrow" onclick="srvAddTime()">+ Add time entry</button>';
+  h+='<div class="srv-sec">Parts Used <span style="opacity:.6;font-weight:600;text-transform:none">(form holds 4 rows)</span></div><table class="srv-tbl"><thead><tr><th>Part Number</th><th>Part Description</th><th>Part Serial Number</th><th style="width:60px">Qty</th><th style="width:34px"></th></tr></thead><tbody id="srvParts"></tbody></table><button class="srv-addrow" onclick="srvAddPart()">+ Add part</button>';
+  h+='<div class="srv-sec">Work Time Details <span style="opacity:.6;font-weight:600;text-transform:none">(form holds 2 rows)</span></div><table class="srv-tbl"><thead><tr><th>Name</th><th>Start</th><th>End</th><th>Hours</th><th>Activity</th><th>Line</th><th style="width:34px"></th></tr></thead><tbody id="srvTimes"></tbody></table><button class="srv-addrow" onclick="srvAddTime()">+ Add time entry</button>';
   h+='<div class="srv-sec">Closure &amp; Signatures</div><div class="srv-grid">'+srvF('custname','Customer Name')+'<div class="srv-f"><label>Abdulla Fouad FSE Name</label><input id="srv_fse" value=""></div>'+srvF('custsign','Customer Signature (name)')+srvF('fsesign','FSE Signature (name)')+'</div>';
   b.innerHTML=h;
   srvAddPart();srvAddTime();
@@ -11579,6 +11579,66 @@ function srvBuildForm(){
 function srvAddPart(){var tb=document.getElementById('srvParts');var tr=document.createElement('tr');tr.innerHTML='<td><input class="p-num"></td><td><input class="p-desc"></td><td><input class="p-sn"></td><td><input class="p-qty" style="width:56px"></td><td><button class="srv-delrow" onclick="this.closest(\'tr\').remove()">✕</button></td>';tb.appendChild(tr);}
 function srvAddTime(){var tb=document.getElementById('srvTimes');var tr=document.createElement('tr');tr.innerHTML='<td><input class="t-name"></td><td><input class="t-start"></td><td><input class="t-end"></td><td><input class="t-hrs" style="width:52px"></td><td><input class="t-act"></td><td><input class="t-line"></td><td><button class="srv-delrow" onclick="this.closest(\'tr\').remove()">✕</button></td>';tb.appendChild(tr);}
 function srvV(k){var el=document.getElementById('srv_'+k);return el?el.value.trim():'';}
+function srvDraw(pg,font,D,rgb){
+  // All coordinates measured from the form's own cell geometry / placeholder baselines (top-origin, pt).
+  var H=pg.getHeight(), ink=rgb(0.06,0.12,0.4);
+  function W(t,s){return font.widthOfTextAtSize(t,s);}
+  function draw(t,x,top,s){ if(t) pg.drawText(t,{x:x,y:H-top,size:s,font:font,color:ink}); }
+  function clip(t,maxw,s){ if(W(t,s)<=maxw)return t; while(t.length&&W(t+'…',s)>maxw)t=t.slice(0,-1); return t+'…'; }
+  // one line in a cell: shrink to fit between x and right, never crossing the cell border
+  function cell(t,x,top,right,sz,min){ t=(t||'').replace(/\s+/g,' ').trim(); if(!t)return; var s=sz||9, m=min||6.5, w=right-x;
+    while(s>m&&W(t,s)>w)s-=0.25; draw(clip(t,w,s),x,top,s); }
+  function wrap(t,maxw,s){ var out=[]; (t||'').replace(/\r/g,'').split('\n').forEach(function(pa){ var ws=pa.split(/\s+/).filter(Boolean), ln='';
+    if(!ws.length){out.push('');return;}
+    ws.forEach(function(w){ while(W(w,s)>maxw){ var k=w.length; while(k>1&&W(w.slice(0,k),s)>maxw)k--; if(ln){out.push(ln);ln='';} out.push(w.slice(0,k)); w=w.slice(k);} if(!w)return;
+      var tt=ln?ln+' '+w:w; if(W(tt,s)>maxw&&ln){out.push(ln);ln=w;}else ln=tt; }); out.push(ln); });
+    while(out.length&&!out[out.length-1])out.pop(); return out; }
+  // multi-line box: exactly one text line per ruled row (baselines = the form's rows)
+  function rows(t,x,right,bases,sz){ t=(t||'').trim(); if(!t)return; var w=right-x, s=sz||9, ls;
+    for(;;){ ls=wrap(t,w,s); if(ls.length<=bases.length||s<=6.5)break; s-=0.25; }
+    if(ls.length>bases.length){ ls=ls.slice(0,bases.length); ls[ls.length-1]=clip(ls[ls.length-1]+' …',w,s); }
+    ls.forEach(function(l,i){ draw(l,x,bases[i],s); }); }
+
+  // ---- header ----
+  cell(D.wo,141,120.86,268,10);
+  var dt=(D.datetime||'').trim(), m=dt.match(/^(\d{1,2})\s*[\/.\-]\s*(\d{1,2})\s*[\/.\-]\s*(\d{2,4})\s*(.*)$/), iso=dt.match(/^(\d{4})-(\d{1,2})-(\d{1,2})[T\s]*(.*)$/);
+  if(iso)m=[0,iso[3],iso[2],iso[1],iso[4]];
+  if(m){ var dd=('0'+m[1]).slice(-2), mm=('0'+m[2]).slice(-2), yy=m[3], tm=(m[4]||'').trim(), s=9.5;
+    draw(dd,135.6-W(dd,s)/2,133.58,s);            // between "TIME:" and first "/"
+    draw(mm,152.0-W(mm,s)/2,133.58,s);            // between the two "/"
+    draw(yy,166,133.58,s);                        // after second "/"
+    if(tm) cell(tm,166+W(yy,s)+8,133.58,268,s);
+  } else cell(dt,166,133.58,268,9.5);
+  // ---- account block ----
+  cell(D.account,125,158.66,303);
+  cell(D.contact,96,176.18,303);
+  cell(D.mobile,127,193.7,303);
+  (function(){ var t=(D.location||'').replace(/\s+/g,' ').trim(); if(!t)return; var s=9, first=541-356, rest=541-311.5;
+    var ws=t.split(' '), l1='', i=0; while(i<ws.length){ var tt=l1?l1+' '+ws[i]:ws[i]; if(W(tt,s)>first&&l1)break; l1=tt; i++; }
+    draw(clip(l1,first,s),356,158.66,s); if(i<ws.length) rows(ws.slice(i).join(' '),311.5,541,[173.2,187.7],s); })();
+  // ---- work order details ----
+  cell(D.afco,103,231.02,197); cell(D.sn,261,231.02,343); cell(D.otype,435.1,231.02,542);
+  cell(D.model,103,248.78,197); cell(D.status,261,248.78,343); cell(D.purpose,435.1,248.78,542);
+  // ---- free-text boxes ----
+  rows(D.problem,54.2,541,[284.33,301.85]);
+  rows(D.performed,54.2,541,[337.25,354.77,372.29,389.81,407.33]);
+  rows(D.closure,54.2,297,[442.87,460.27]);
+  rows(D.comments,306,541,[442.87,460.27]);
+  // ---- parts used (4 rows) ----
+  var pB=[513.55,531.07,548.59,566.11], pTop=[498.8,516.8,534.3,551.7,569.0];
+  (D.parts||[]).slice(0,4).forEach(function(r,i){ var b=pB[i];
+    cell(r[0],54.2,b,175,9,6); cell(r[2],422.5,b,518,9,6); cell(r[3],525.1,b,543.5,9,6);
+    var t=(r[1]||'').replace(/\s+/g,' ').trim(); if(!t)return;
+    var s=9; while(s>6.5&&W(t,s)>415-182.2)s-=0.25;
+    if(W(t,s)<=415-182.2) draw(t,182.2,b,s);
+    else { var mid=(pTop[i]+pTop[i+1])/2; rows(t,182.2,415,[mid-1.4,mid+6.2],6.5); } });
+  // ---- work time (2 rows) ----
+  var tB=[619.3,636.82], tX=[[54.2,175],[182.2,268.5],[275.2,352],[358.6,415.5],[422.5,486.5],[493.3,543.5]];
+  (D.times||[]).slice(0,2).forEach(function(r,i){ for(var j=0;j<6;j++) cell(r[j],tX[j][0],tB[i],tX[j][1],9,6); });
+  // ---- closure / signatures ----
+  cell(D.custname,143.5,655.54,298,10); cell(D.fse,438.5,655.54,543,10);
+  cell(D.custsign,165,669.22,298,10);   cell(D.fsesign,359,669.22,543,10);
+}
 async function srvGenerate(){
  try{
   var P=PDFLib,PD=P.PDFDocument,rgb=P.rgb,SF=P.StandardFonts;
@@ -11589,38 +11649,11 @@ async function srvGenerate(){
   function wrap(maxw,sz,txt){txt=(txt||'').replace(/\r/g,'');var out=[];txt.split('\n').forEach(function(pa){var ws=pa.split(' '),ln='';for(var i=0;i<ws.length;i++){var tt=ln?ln+' '+ws[i]:ws[i];if(font.widthOfTextAtSize(tt,sz)>maxw&&ln){out.push(ln);ln=ws[i];}else ln=tt;}out.push(ln);});return out;}
   function box(x,topY,w,maxlines,sz,txt){var ls=wrap(w,sz,txt);var lh=sz+2.5;for(var i=0;i<ls.length&&i<maxlines;i++){pg.drawText(ls[i],{x:x,y:topY-i*lh,size:sz,font:font,color:ink});}}
   var V=srvV;
-  // header inline
-  put(142,718.7,V('wo'));
-  put(135,706.0,V('datetime'));
-  put(125,681.4,V('account'));
-  put(357,681.4,V('location'));
-  put(96,663.8,V('contact'));
-  put(127,646.3,V('mobile'));
-  // work order details
-  put(112,609.0,V('afco'));
-  put(228,609.0,V('sn'));
-  put(412,609.0,V('otype'));
-  put(112,591.3,V('model'));
-  put(240,591.3,V('status'));
-  put(428,591.3,V('purpose'));
-  // big boxes
-  box(57,561,480,3,9,V('problem'));
-  box(57,508,480,7,9,V('performed'));
-  box(57,402,235,3,9,V('closure')||'');
-  box(310,402,228,3,9,V('comments'));
-  // parts table (4 rows)
   var parts=[].map.call(document.querySelectorAll('#srvParts tr'),function(tr){return[tr.querySelector('.p-num').value,tr.querySelector('.p-desc').value,tr.querySelector('.p-sn').value,tr.querySelector('.p-qty').value];}).filter(function(r){return r.some(function(c){return c.trim();});});
-  var pY=[329.4,311.9,294.5,276.9];
-  for(var i=0;i<parts.length&&i<pY.length;i++){ put(57,pY[i],parts[i][0],8); box(185,pY[i]+3,232,2,8,parts[i][1]); put(425,pY[i],parts[i][2],8); put(527,pY[i],parts[i][3],8); }
-  // work time table (2 rows)
   var times=[].map.call(document.querySelectorAll('#srvTimes tr'),function(tr){return[tr.querySelector('.t-name').value,tr.querySelector('.t-start').value,tr.querySelector('.t-end').value,tr.querySelector('.t-hrs').value,tr.querySelector('.t-act').value,tr.querySelector('.t-line').value];}).filter(function(r){return r.some(function(c){return c.trim();});});
-  var tY=[223,206];var tX=[57,185,278,361,425,496];
-  for(var i=0;i<times.length&&i<tY.length;i++){ for(var j=0;j<6;j++) put(tX[j],tY[i],times[i][j],8); }
-  // signatures
-  put(144,184.2,V('custname'));
-  put(440,184.2,V('fse'));
-  put(164,170.5,V('custsign'));
-  put(360,170.5,V('fsesign'));
+  if(parts.length>4||times.length>2){ if(!confirm('The paper form has room for 4 parts and 2 time entries. Extra rows will be left off. Continue?'))return; }
+  var D={parts:parts,times:times};['wo','datetime','account','location','contact','mobile','afco','sn','otype','model','status','purpose','problem','performed','closure','comments','custname','fse','custsign','fsesign'].forEach(function(k){D[k]=V(k);});
+  srvDraw(pg,font,D,rgb);
   var out=await doc.save();var blob=new Blob([out],{type:'application/pdf'});var url=URL.createObjectURL(blob);
   var a=document.createElement('a');a.href=url;a.download='AFMS_Service_Report_'+(V('wo')||'form')+'.pdf';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},4000);
   if(typeof afmsToast==='function')afmsToast('Service report generated');
